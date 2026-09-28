@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resumen Proyecto PAN-CBA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#808080;--bg:#fff;--soft:#FFF4E5;--line:#E6E6E6;--exp:#B12028;--crit:#F18A00;--norm:#F7C27A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500;font-size:13px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 40px}
+header{border-bottom:3px solid var(--brand);padding:18px 0 12px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px;letter-spacing:.5px;color:var(--brand)}.logo small{display:block;font-size:10px;font-weight:500;color:var(--tx2);letter-spacing:1.5px}
+.meta{text-align:right;color:var(--tx2);font-size:11px}
+h1{font-weight:800;color:var(--brand);font-size:26px;margin:22px 0 4px}
+h2{font-weight:700;color:var(--brand);font-size:17px;margin:28px 0 10px;border-left:4px solid var(--brand);padding-left:8px}
+.sub{color:var(--tx2);margin:0 0 12px}
+.badge{display:inline-block;background:var(--soft);color:var(--brand2);border:1px solid var(--brand);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0}
+.kpi{border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:6px;padding:10px 12px}.kpi b{display:block;font-size:22px;font-weight:800;color:var(--tx)}.kpi span{color:var(--tx2);font-size:11px}
+.mils{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.mil{display:flex;gap:10px;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:12px}.mil span{color:var(--tx2);font-size:11px}
+.mil .md{font-weight:800;color:var(--brand);min-width:62px}
+.mil.cut{border-color:var(--brand2);background:#FBEDEE}.mil.cut .md{color:var(--brand2)}
+.mil.open{background:var(--brand);color:#fff;border-color:var(--brand)}.mil.open .md,.mil.open span{color:#fff}
+.gw{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+.gantt{border-collapse:collapse;width:100%;min-width:1080px;font-size:10.5px}
+.gantt th{font-weight:700;color:var(--tx2);padding:3px 0;border-bottom:1px solid var(--line)}
+.gantt th.mon{color:var(--brand);text-transform:uppercase;font-size:10px;border-left:1px solid var(--line)}
+.gantt th.wk span{display:block;font-size:8.5px;font-weight:500}
+.gantt td{padding:0;border-bottom:1px solid #f3f3f3}
+.gantt td.ws,.gantt th.ws{text-align:left;padding:3px 6px;width:290px}
+.gantt td.own,.gantt th.own{text-align:left;padding:3px 6px;color:var(--tx2);width:130px;font-size:10px}
+.gantt tr.grp td{background:var(--soft);font-weight:700;color:var(--tx);padding:4px 6px;font-size:11px}
+.gantt td.c{width:28px;height:18px;border-left:1px solid #f5f5f5}
+.gantt td.on.n{background:var(--norm)}.gantt td.on.k{background:var(--crit)}.gantt td.on.x{background:var(--exp)}
+.gantt td.on.m{color:var(--brand2);text-align:center;font-size:14px;font-weight:800;background:transparent}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--tx2);margin:8px 0}.legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:middle}
+table.t{border-collapse:collapse;width:100%;font-size:12px}table.t th{background:var(--brand);color:#fff;text-align:left;padding:6px 8px;font-weight:700}table.t td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.tw{overflow-x:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+ul{margin:6px 0 6px 18px;padding:0}li{margin:3px 0}
+.note{font-size:11px;color:var(--tx2)}
+.box{border:1px solid var(--brand);background:var(--soft);border-radius:6px;padding:10px 14px}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:8px;font-size:10px;color:var(--tx2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media print{@page{size:A4 portrait;margin:10mm}.wrap{max-width:none;padding:0}.gw{overflow:visible;border:none}.gantt{min-width:0}h2{break-after:avoid}.pb{break-before:page}.gantt tr{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.code{font-weight:800;color:#B12028;white-space:nowrap}.st{font-size:10.5px;font-weight:700;border-radius:3px;padding:1px 6px;white-space:nowrap}.ok{background:#E8F5E9;color:#2E7D32}.pend{background:#FFF4E5;color:#B45F00}.crit{background:#FBEDEE;color:#B12028}table.t td,table.t th{font-size:11.5px}</style></head><body><div class="wrap">
+<header><div class="logo">CANALSENSES<small>ULTRACONGELADOS CANALSENSES S.R.L. · PROYECTO PANADERÍA</small></div>
+<div class="meta">Entregable E-03 · Resumen ejecutivo para socios · 28/09/2026<br>Proyecto PAN-CBA · Gate actual: G0</div></header>
+<h1>Proyecto Panadería Córdoba — Resumen para socios</h1>
+<p class="sub">Qué es el proyecto, dónde estamos, qué se decidió, qué falta decidir y qué necesitamos de cada uno.</p>
+
+<div class="kpis">
+<div class="kpi"><b>G0</b><span>Gate actual: definición del proyecto (casi cerrado)</span></div>
+<div class="kpi"><b>6 aprobadas</b><span>decisiones D001–D006</span></div>
+<div class="kpi"><b>3 urgentes</b><span>decisiones por tomar esta semana: PD029, PD031, PD002</span></div>
+<div class="kpi"><b>01–08/03/27</b><span>apertura objetivo (23 semanas)</span></div>
+</div>
+
+<h2>1. El proyecto en una página</h2>
+<div class="two"><div>
+<p><b>Objetivo corto plazo:</b> diseñar, abrir y validar una primera panadería en Córdoba Capital, como <b>subsidiaria de Ultracongelados Canalsenses (UC)</b>.</p>
+<p><b>Objetivo largo plazo:</b> convertirla en un modelo estandarizado, replicable y franquiciable.</p>
+<p><b>Por qué le interesa a UC:</b> más volumen para su capacidad ociosa (~40%), llegar al consumidor final y quedarse con la diferencia entre el precio mayorista y el de venta al público, y construir una marca conocida.</p>
+</div><div>
+<p><b>Cómo trabajamos:</b> investigar → generar alternativas → analizar → <b>decisión de los socios</b> → documentar → ejecutar → medir.</p>
+<p><b>Regla central:</b> cada decisión se evalúa dos veces: ¿sirve para el primer local? y ¿sirve para 10, 50 o 100 locales?</p>
+<p><b>Todavía no hay concepto de panadería elegido.</b> Es intencional: se define con evidencia a más tardar el 13/11.</p>
+</div></div>
+
+<h2>2. Cómo leer los códigos</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Qué es</th><th>Cantidad hoy</th><th>Dónde está</th></tr>
+<tr><td class="code">D###</td><td>Decisión <b>aprobada</b> por los socios</td><td>6 (D001–D006)</td><td>00_MASTER/DECISIONS.md</td></tr>
+<tr><td class="code">PD###</td><td>Decisión <b>pendiente</b> (todavía no tomada)</td><td>32 (PD001–PD032; 26 abiertas)</td><td>00_MASTER/DECISIONS.md</td></tr>
+<tr><td class="code">A###</td><td>Hipótesis a validar (no es una conclusión)</td><td>20 (A001–A020), todas no validadas</td><td>00_MASTER/ASSUMPTIONS.md</td></tr>
+<tr><td class="code">Q###</td><td>Pregunta abierta</td><td>71 (Q001–Q071), 66 abiertas</td><td>00_MASTER/OPEN_QUESTIONS.md</td></tr>
+<tr><td class="code">R###</td><td>Riesgo, con severidad 1–9 (probabilidad × impacto)</td><td>25 (R001–R025)</td><td>00_MASTER/RISKS.md</td></tr>
+<tr><td class="code">T###</td><td>Tarea</td><td>26 (T001–T026)</td><td>00_MASTER/TASKS.md</td></tr>
+<tr><td class="code">I###</td><td>Investigación</td><td>38 planificadas; 5 hechas</td><td>18_INVESTIGACIONES / 02_COMPETENCIA</td></tr>
+<tr><td class="code">E###</td><td>Experimento de validación con clientes</td><td>5 planificados (E001–E005)</td><td>19_EXPERIMENTOS</td></tr>
+<tr><td class="code">E-0#</td><td>Entregable para socios (PDF + HTML)</td><td>3 (E-01 a E-03)</td><td>Según tema</td></tr>
+<tr><td class="code">G#</td><td>Gate: punto de control donde los socios deciden si se avanza</td><td>16 (G0–G15)</td><td>00_MASTER/ROADMAP.md</td></tr>
+<tr><td class="code">F###</td><td>Fuente externa (URL + fecha)</td><td>~165 registradas</td><td>00_MASTER/SOURCES.md</td></tr>
+</table></div>
+
+<h2>3. Decisiones aprobadas</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Decisión</th></tr>
+<tr><td class="code">D001</td><td>Se aprueban la estructura del proyecto, la metodología y el roadmap G0–G15. No se avanza de Gate sin aprobación de los socios. GitHub es la fuente única de verdad.</td></tr>
+<tr><td class="code">D002</td><td>El negocio será una <b>subsidiaria de UC</b>. Las decisiones se aprueban por mayoría. Lo opera un encargado contratado, bajo control de los hermanos. <i>(Parcial: falta Q046–Q048.)</i></td></tr>
+<tr><td class="code">D003</td><td>Inversión de <b>USD 100.000</b> más <b>USD 20.000</b> de reserva, aportados por UC hasta marzo 2027. Se acepta financiamiento externo si hace falta. Hay capital para las unidades 2 a 5. El objetivo no es solo rentabilidad: también probar que el modelo escala.</td></tr>
+<tr><td class="code">D004</td><td>Apertura objetivo <b>a más tardar en marzo 2027</b> (inicio de clases y temporada fuerte).</td></tr>
+<tr><td class="code">D005</td><td>Se autorizó la investigación de escritorio (I001, I002, I010, I013, I018).</td></tr>
+<tr><td class="code">D006</td><td>Revisión <b>semanal</b> del avance. Entregables importantes en PDF y HTML.</td></tr>
+</table></div>
+
+<h2 class="pb">4. Decisiones que necesitamos de ustedes</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Decisión</th><th>Recomendación de la IA</th><th>Urgencia</th></tr>
+<tr><td class="code">PD029</td><td>Plan acelerado para abrir en marzo con 3 <b>fechas de corte</b>: 13/11 concepto · 15/12 local firmado · 14/02 obra terminada. Si alguna no se cumple, la apertura pasa a abril o mayo.</td><td>Aprobar. Dejar como plan B un formato chico de solo para llevar.</td><td><span class="st crit">Esta semana</span></td></tr>
+<tr><td class="code">PD031</td><td>Quién hace el trabajo de campo (entrevistas, conteos de gente, visitas como cliente incógnito, degustaciones) y con qué presupuesto. La IA no puede hacer trabajo presencial.</td><td>Mixto: encuestadores o estudiantes más los hermanos. USD 3.000–5.000.</td><td><span class="st crit">Esta semana</span></td></tr>
+<tr><td class="code">PD002</td><td>Completar la gobernanza: Q046 (¿mayoría por persona o por capital?), Q047 (dedicación de cada uno), Q048 (interlocutor principal).</td><td>Interlocutor: Oscar. Responsables: Oscar operaciones, obra y productos UC · Fabiola finanzas y societario · Laura legal y habilitaciones.</td><td><span class="st crit">Esta semana</span></td></tr>
+<tr><td class="code">PD030</td><td>Expansión 2027: ¿segunda unidad propia? ¿Franquicias?</td><td>Segunda unidad propia en el segundo semestre de 2027 si se cumplen los indicadores. Franquicias desde 2028 (riesgo de marca y requisitos legales, R023).</td><td><span class="st pend">Puede esperar</span></td></tr>
+<tr><td class="code">PD032</td><td>Política de canal: cómo convive la marca propia con las panaderías y cafeterías que hoy le compran a UC.</td><td>A definir en G4 con datos de clientes de UC (Q055, Q068).</td><td><span class="st pend">Noviembre</span></td></tr>
+<tr><td class="code">PD027</td><td>Forma jurídica de la subsidiaria y precios de transferencia con UC.</td><td>A cargo de Fabiola y Laura.</td><td><span class="st pend">Octubre–noviembre</span></td></tr>
+</table></div>
+
+<h2>5. Cronograma a marzo 2027 (E-01)</h2>
+<div class="tw"><table class="t"><tr><th>Fecha</th><th>Hito</th><th>Gate</th></tr>
+<tr><td>09/10</td><td>Gate Review G0 (con PD029, PD031 y PD002 decididas)</td><td>G0</td></tr>
+<tr><td>30/10</td><td>Revisión de mercado, cliente y competencia</td><td>G1–G3</td></tr>
+<tr><td><b>13/11</b></td><td><b>CORTE 1:</b> concepto elegido, con degustación ciega (E002) y test de concepto (E001)</td><td>G4–G5</td></tr>
+<tr><td>04/12</td><td>Luz verde económica: el modelo financiero cierra</td><td>G6–G7</td></tr>
+<tr><td><b>15/12</b></td><td><b>CORTE 2:</b> contrato del local firmado</td><td>G8</td></tr>
+<tr><td>15/01</td><td>Proyecto cerrado, equipos comprados, habilitación iniciada, encargado contratado</td><td>G9–G10</td></tr>
+<tr><td><b>14/02</b></td><td><b>CORTE 3:</b> obra terminada</td><td>G10</td></tr>
+<tr><td>22/02</td><td>Soft opening</td><td>G11</td></tr>
+<tr><td><b>01–08/03</b></td><td><b>APERTURA</b></td><td>G11 → G12</td></tr>
+</table></div>
+
+<h2 class="pb">6. Qué aprendimos hasta ahora (E-02)</h2>
+<p class="note">Datos obtenidos de extractos de buscador: hay que verificarlos en origen antes de decidir.</p>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Hallazgo clave</th></tr>
+<tr><td class="code">I001</td><td>Córdoba Capital tiene ~1,5 M de habitantes y ~200 mil universitarios. Crecen Nueva Córdoba, Manantiales y la zona norte. Pobreza de 31% y desempleo de 10,5% en el Gran Córdoba (2026). Aumentaron los locales vacíos, lo que da margen para negociar alquileres.</td></tr>
+<tr><td class="code">I002</td><td>La panadería tradicional está en crisis: ventas −30/40% en Córdoba en 2025 y ~2.850 cierres en el país. El pan común tiene márgenes comprimidos. Al 72% le importa que sea "hecho a mano" y al 41% que esté "horneado en el local".</td></tr>
+<tr><td class="code">I010</td><td>UC: planta en Canals (~320 km), 200–250 t/mes, ~35 variedades, 3 turnos. Hoy entrega en Córdoba cada 15 días, lo que obliga a mucho stock en el local o a cambiar la logística.</td></tr>
+<tr><td class="code">I013</td><td>44 competidores relevados. <b>Del Pilar</b> (45 locales, planta de ultracongelado propia, franquicias) y <b>Lo+Rico</b> (26–30 locales) ya aplican el modelo en Córdoba. Las cadenas de café porteñas fracasan en la calle. Posible espacio para un formato local de pan de calidad y buen café a precio medio.</td></tr>
+<tr><td class="code">I018</td><td>Los fabricantes que franquician ganan con el margen del producto, no con regalías (Havanna, Bonafide, Costumbres Argentinas). La clave es que el precio del producto le deje rentabilidad al franquiciado.</td></tr>
+</table></div>
+
+<h2>7. Principales riesgos</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Riesgo</th><th>Severidad</th></tr>
+<tr><td class="code">R021</td><td>El plazo comprimido lleva a decidir con poca evidencia o a firmar un mal local</td><td><span class="st crit">9</span></td></tr>
+<tr><td class="code">R002</td><td>La inflación y la volatilidad de costos erosionan los márgenes</td><td><span class="st crit">9</span></td></tr>
+<tr><td class="code">R019</td><td>Conflicto con las panaderías y cafeterías que hoy le compran a UC</td><td><span class="st pend">6</span></td></tr>
+<tr><td class="code">R020</td><td>El equipo no tiene experiencia en gastronomía ni en venta al público</td><td><span class="st pend">6</span></td></tr>
+<tr><td class="code">R025</td><td>Competidores locales ya escalados con el mismo modelo (Del Pilar, Lo+Rico)</td><td><span class="st pend">6</span></td></tr>
+<tr><td class="code">R006</td><td>Percepción negativa del producto "de freezer"</td><td><span class="st pend">6</span></td></tr>
+<tr><td class="code">R023 / R024</td><td>Requisitos legales para franquiciar · precio de producto que no le deje margen al franquiciado</td><td><span class="st pend">6</span></td></tr>
+<tr><td class="code">R022</td><td>La logística desde Canals, cada 15 días, obliga a mucho stock en el local</td><td><span class="st pend">4</span></td></tr>
+</table></div>
+
+<h2>8. Preguntas abiertas críticas</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Pregunta</th><th>Quién</th></tr>
+<tr><td class="code">Q046–Q048</td><td>¿La mayoría se cuenta por persona o por capital? ¿Cuánto se dedica cada uno? ¿Quién es el interlocutor principal?</td><td>Socios</td></tr>
+<tr><td class="code">Q053</td><td>Los panes crudos, ¿fermentan en el local o van directo del freezer al horno? ¿Qué equipamiento requieren?</td><td>Oscar</td></tr>
+<tr><td class="code">Q054</td><td>¿Cómo abastecer el local: frecuencia semanal o depósito en Córdoba? ¿Cuánto cuesta por caja?</td><td>Oscar</td></tr>
+<tr><td class="code">Q055 / Q068</td><td>¿Cuántos clientes tiene UC en Córdoba Capital? ¿Del Pilar o Lo+Rico le compran a UC?</td><td>Oscar</td></tr>
+<tr><td class="code">Q050</td><td>¿Qué opinan los clientes que ya hornean productos UC en su local? Necesitamos contactos de 3 a 5.</td><td>Oscar</td></tr>
+<tr><td class="code">Q064</td><td>¿Qué exige el Código Civil y Comercial antes de franquiciar?</td><td>Laura</td></tr>
+<tr><td class="code">Q003</td><td>¿Qué payback y retorno mínimo son aceptables? (La IA propondrá números en G7.)</td><td>Socios / Fabiola</td></tr>
+</table></div>
+
+<h2>9. Pedidos concretos por persona</h2>
+<div class="tw"><table class="t"><tr><th>Quién</th><th>Qué necesitamos</th><th>Tarea</th></tr>
+<tr><td><b>Todos</b></td><td>Decidir PD029, PD031 y PD002 (Q046–Q048) antes del Gate Review del 09/10</td><td class="code">T022, T023</td></tr>
+<tr><td><b>Oscar</b></td><td>Catálogo de UC con precios de transferencia · contactos de clientes que hornean en su local · respuestas a Q053, Q054, Q055 y Q068</td><td class="code">T024</td></tr>
+<tr><td><b>Laura</b></td><td>Relevamiento de plazos de habilitación municipal y bromatología, que puede demorar la apertura · Q064</td><td class="code">T020</td></tr>
+<tr><td><b>Fabiola</b></td><td>Estructura de la subsidiaria y criterio de precios de transferencia</td><td class="code">PD027</td></tr>
+<tr><td><b>IA</b></td><td>Normativa (I035), modelos productivos (I011), fichas de los 10 principales competidores (I014), protocolos de campo, verificación de datos</td><td class="code">T014–T016, T020</td></tr>
+</table></div>
+
+<h2>10. Entregables emitidos</h2>
+<div class="tw"><table class="t"><tr><th>Código</th><th>Entregable</th><th>Ubicación</th></tr>
+<tr><td class="code">E-01</td><td>Roadmap de trabajo para abrir en marzo 2027</td><td>15_APERTURA/</td></tr>
+<tr><td class="code">E-02</td><td>Resumen de primeros hallazgos</td><td>18_INVESTIGACIONES/</td></tr>
+<tr><td class="code">E-03</td><td>Este resumen ejecutivo</td><td>00_MASTER/</td></tr>
+<tr><td class="code">I013 · I018</td><td>Censo competitivo de Córdoba · Franquicias de panadería y café</td><td>02_COMPETENCIA/</td></tr>
+<tr><td class="code">Memo</td><td>Memo de decisión PD029–PD031</td><td>00_MASTER/MEMOS/</td></tr>
+</table></div>
+
+<footer><span>Ultracongelados Canalsenses S.R.L. · Proyecto PAN-CBA · Repositorio: omdecoberti-ctrl/claudegeneral → panaderia_cordoba/</span><span>Actualizado al 28/09/2026</span></footer>
+</div></body></html>

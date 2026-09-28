@@ -15,6 +15,7 @@
 |---|---|---|
 | E-01 | Roadmap de apertura marzo 2027 (HTML + PDF) | `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.html` / `.pdf` |
 | E-02 | Primeros hallazgos (I001, I002, I010, I013, I018) — HTML + PDF | `18_INVESTIGACIONES/E02_RESUMEN_HALLAZGOS_G1_G3.*` |
+| E-03 | Resumen ejecutivo del proyecto para socios, con códigos — HTML + PDF | `00_MASTER/E03_RESUMEN_PROYECTO_SOCIOS.*` |
 | — | Memo de decisión PD029–PD031 | `00_MASTER/MEMOS/PD029_fast_track_marzo_2027.md` |
 
 ## Investigaciones activas

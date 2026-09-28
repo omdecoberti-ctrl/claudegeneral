@@ -13,3 +13,5 @@
 - En curso: I001, I002, I013, I018.
 - I001, I002, I013, I018 finalizadas (v1) e integradas: fuentes F001–F246, preguntas Q057–Q071, riesgos R023–R025, hipótesis A006, A007, A018 y A020 actualizadas.
 - Entregable E-02: resumen de primeros hallazgos (HTML + PDF).
+- Análisis de competencia (I013, I018) movido a 02_COMPETENCIA con versiones HTML y PDF.
+- Entregable E-03: resumen ejecutivo para socios (HTML + PDF).
