@@ -20,7 +20,7 @@
 | Código | Tema | Estado |
 |---|---|---|
 | I010 | Relevamiento de Canalsenses (fase 1, pública) | **FINALIZADA fase 1**; fase 2 espera datos internos (T024) |
-| I001 | Demografía y socioeconomía de Córdoba | EN PROCESO |
+| I001 | Demografía y socioeconomía de Córdoba | **FINALIZADA v1** (datos a verificar en origen) |
 | I002 | Consumo de pan y panificados | EN PROCESO |
 | I013 | Censo competitivo de Córdoba | EN PROCESO |
 | I018 | Franquicias de panadería y café | EN PROCESO |

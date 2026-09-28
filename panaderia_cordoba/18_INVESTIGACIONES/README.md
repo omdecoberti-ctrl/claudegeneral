@@ -17,3 +17,4 @@ Todas — ver RESEARCH_BACKLOG
 | Documento | Descripción | Estado | Fecha |
 |---|---|---|---|
 | I010_relevamiento_canalsenses.md | Relevamiento de UC, fase 1 (información pública + datos de socios) | Fase 1 finalizada | 2026-09-28 |
+| I001_demografia_socioeconomia_cordoba.md | Demografía, NSE, universidades, oficinas, vacancia, expansión urbana | v1 finalizada | 2026-09-28 |

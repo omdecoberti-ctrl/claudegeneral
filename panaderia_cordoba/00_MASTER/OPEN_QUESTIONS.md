@@ -91,3 +91,6 @@
 | Q054 | ¿Cómo abastecer un local en Córdoba Capital (a ~320 km de Canals)? ¿Frecuencia semanal o depósito en la ciudad? ¿Costo por caja? | G4/G9 | P1 | R022 | ABIERTA |
 | Q055 | ¿Cuántos clientes tiene UC en Córdoba Capital, dónde están y hay exclusividades? ¿Cómo reaccionarían a una marca propia al público? | G4 | P1 | R019, PD032 | ABIERTA |
 | Q056 | ¿La marca al público es "Canalsenses" o una nueva? (el objetivo es una "marca conocida por la gente") | G5/G10 | P2 | PD024, PD032 | ABIERTA |
+| Q057 | ¿Qué relevamiento de vacancia de locales sirve para buscar local (CPI 13,8% vs. 4,3% en corredores) y cuál es el alquiler en $/m² por corredor? | G8 | P1 | I001, I029 | ABIERTA |
+| Q058 | ¿Cuántas personas trabajan (no residen) en el Centro, Nueva Córdoba y la zona norte? | G8 | P2 | I001, I027 | ABIERTA |
+| Q059 | ¿Cómo afecta al consumo la suba de pobreza (31,1%) y de desempleo (10,5%) en el Gran Córdoba en 2026? | G1 | P1 | A018, I002 | ABIERTA |
