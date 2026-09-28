@@ -15,9 +15,7 @@ En el proyecto ya creado en Vercel:
    | Framework Preset | **Other** |
    | Root Directory | **`panaderia_cordoba/site`** |
    | Build / Output / Install Command | dejar en automático: los toma de `vercel.json` |
-3. **Settings → Environments → Production → Branch Tracking:** poner la rama **`claude/stoic-hawking-6pkd67`**.
-   - Es la rama donde está hoy el proyecto.
-   - Otra opción: pedirle a la IA que pase todo a `main` y dejar `main`.
+3. **Settings → Environments → Production → Branch Tracking:** `main`, que es la rama de producción del proyecto.
 4. **Deployments → Redeploy** (o subir cualquier cambio). A los 1–2 minutos el sitio queda en `https://<proyecto>.vercel.app`.
 5. **Probar:** tiene que pedir usuario y contraseña. Probar también con una contraseña incorrecta, que tiene que rechazar.
 

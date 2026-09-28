@@ -57,6 +57,7 @@ Los códigos nunca se reutilizan ni se renumeran. Lo obsoleto se marca como tal 
 
 ## 7. Sitio web del proyecto
 - `site/build.py` genera un sitio estático a partir de todos los `.md`. Se publica en **Vercel** con cada push (D008). El acceso es por usuario y contraseña de cada socio (`site/middleware.js`, `site/crear_usuarios.py`). Ver `site/DEPLOY.md`.
+- **Rama de producción: `main`** (la que publica Vercel). Cada trabajo se sube a la rama de trabajo y también a `main`.
 - **Nunca** guardar contraseñas en el repositorio: solo hashes, en `auth_users.js`.
 - Para que el sitio funcione bien:
   - **mantener el formato de las tablas de registro** (primera columna = código; columnas "Estado" y "Responsable");
