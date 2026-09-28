@@ -1,0 +1,1730 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Censo Competitivo Córdoba</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet"><style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#808080;--bg:#fff;--soft:#FFF4E5;--line:#E6E6E6;--exp:#B12028;--crit:#F18A00;--norm:#F7C27A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500;font-size:13px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 40px}
+header{border-bottom:3px solid var(--brand);padding:18px 0 12px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px;letter-spacing:.5px;color:var(--brand)}.logo small{display:block;font-size:10px;font-weight:500;color:var(--tx2);letter-spacing:1.5px}
+.meta{text-align:right;color:var(--tx2);font-size:11px}
+h1{font-weight:800;color:var(--brand);font-size:26px;margin:22px 0 4px}
+h2{font-weight:700;color:var(--brand);font-size:17px;margin:28px 0 10px;border-left:4px solid var(--brand);padding-left:8px}
+.sub{color:var(--tx2);margin:0 0 12px}
+.badge{display:inline-block;background:var(--soft);color:var(--brand2);border:1px solid var(--brand);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0}
+.kpi{border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:6px;padding:10px 12px}.kpi b{display:block;font-size:22px;font-weight:800;color:var(--tx)}.kpi span{color:var(--tx2);font-size:11px}
+.mils{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.mil{display:flex;gap:10px;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:12px}.mil span{color:var(--tx2);font-size:11px}
+.mil .md{font-weight:800;color:var(--brand);min-width:62px}
+.mil.cut{border-color:var(--brand2);background:#FBEDEE}.mil.cut .md{color:var(--brand2)}
+.mil.open{background:var(--brand);color:#fff;border-color:var(--brand)}.mil.open .md,.mil.open span{color:#fff}
+.gw{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+.gantt{border-collapse:collapse;width:100%;min-width:1080px;font-size:10.5px}
+.gantt th{font-weight:700;color:var(--tx2);padding:3px 0;border-bottom:1px solid var(--line)}
+.gantt th.mon{color:var(--brand);text-transform:uppercase;font-size:10px;border-left:1px solid var(--line)}
+.gantt th.wk span{display:block;font-size:8.5px;font-weight:500}
+.gantt td{padding:0;border-bottom:1px solid #f3f3f3}
+.gantt td.ws,.gantt th.ws{text-align:left;padding:3px 6px;width:290px}
+.gantt td.own,.gantt th.own{text-align:left;padding:3px 6px;color:var(--tx2);width:130px;font-size:10px}
+.gantt tr.grp td{background:var(--soft);font-weight:700;color:var(--tx);padding:4px 6px;font-size:11px}
+.gantt td.c{width:28px;height:18px;border-left:1px solid #f5f5f5}
+.gantt td.on.n{background:var(--norm)}.gantt td.on.k{background:var(--crit)}.gantt td.on.x{background:var(--exp)}
+.gantt td.on.m{color:var(--brand2);text-align:center;font-size:14px;font-weight:800;background:transparent}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--tx2);margin:8px 0}.legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:middle}
+table.t{border-collapse:collapse;width:100%;font-size:12px}table.t th{background:var(--brand);color:#fff;text-align:left;padding:6px 8px;font-weight:700}table.t td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.tw{overflow-x:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+ul{margin:6px 0 6px 18px;padding:0}li{margin:3px 0}
+.note{font-size:11px;color:var(--tx2)}
+.box{border:1px solid var(--brand);background:var(--soft);border-radius:6px;padding:10px 14px}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:8px;font-size:10px;color:var(--tx2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media print{@page{size:A4 landscape;margin:10mm}.wrap{max-width:none;padding:0}.gw{overflow:visible;border:none}.gantt{min-width:0}h2{break-after:avoid}.pb{break-before:page}.gantt tr{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.doc h1{font-size:24px}.doc h2{font-size:17px}.doc h3{color:#B12028;font-size:14px;margin:18px 0 6px}
+.doc table{border-collapse:collapse;width:100%;font-size:10.5px;margin:8px 0}
+.doc th{background:#F18A00;color:#fff;text-align:left;padding:5px 6px;font-weight:700}
+.doc td{border-bottom:1px solid #E6E6E6;padding:4px 6px;vertical-align:top;word-break:break-word}
+.doc tr:nth-child(even) td{background:#FFFAF2}
+.doc code{background:#f4f4f4;padding:0 3px;border-radius:3px;font-size:11px}
+.doc blockquote{border-left:3px solid #F18A00;margin:8px 0;padding:4px 10px;background:#FFF4E5}
+.doc a{color:#B12028;word-break:break-all}
+</style></head><body><div class="wrap">
+<header><div class="logo">CANALSENSES<small>ULTRACONGELADOS CANALSENSES S.R.L. · PROYECTO PANADERÍA</small></div><div class="meta">Investigación I013 · 28/09/2026<br>Proyecto PAN-CBA · 02_COMPETENCIA</div></header>
+<p style="margin-top:12px"><span class="badge">Datos obtenidos de extractos de buscador: verificar en origen antes de decidir</span></p>
+<div class="doc"><h1>I013 — Censo y mapa competitivo inicial de Córdoba Capital</h1>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Código</td>
+<td>I013</td>
+</tr>
+<tr>
+<td>Gate</td>
+<td>G3</td>
+</tr>
+<tr>
+<td>Fecha inicio / fin</td>
+<td>2026-09-28 / 2026-09-28 (primera pasada desk)</td>
+</tr>
+<tr>
+<td>Responsable</td>
+<td>IA (analista de competencia) — revisión pendiente de socios</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>FINALIZADA (fase desk inicial; requiere validación de campo → I014–I017)</td>
+</tr>
+<tr>
+<td>Preguntas que responde</td>
+<td>Q010 (parcial)</td>
+</tr>
+<tr>
+<td>Hipótesis que testea</td>
+<td>A007 (parcial — no la valida ni la refuta; genera candidatos)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>1. Pregunta de investigación</h2>
+<p>¿Quiénes compiten en Córdoba Capital por las ocasiones <strong>desayuno, merienda, compra de pan/facturas para el hogar, almuerzo rápido y café al paso</strong>, dónde están, con qué formato y a qué precio?</p>
+<h2>2. Objetivo</h2>
+<ol>
+<li>Relevar ≥30 actores (priorizando cadenas y marcas con varias sucursales) en 10 categorías.</li>
+<li>Armar una <strong>tabla maestra</strong> con los datos verificables (tipo, sucursales, zonas, formato, propuesta, precio, horario, delivery, modelo operativo).</li>
+<li>Hacer un primer mapa de concentración por zona y proponer <strong>espacios en blanco tentativos</strong> <b style="color:#B12028">[INTERPRETACIÓN]</b> para validar en campo.</li>
+<li>Elegir los 10 competidores que merecen ficha profunda (I014).</li>
+</ol>
+<h2>3. Metodología</h2>
+<ul>
+<li><strong>Tipo:</strong> desk research. Fecha de consulta de <strong>todas</strong> las fuentes: <strong>2026-09-28</strong>.</li>
+<li><strong>Herramientas:</strong> buscador web (resultados + resúmenes de fragmentos). <strong>Limitación crítica:</strong> la descarga directa de páginas (WebFetch) estuvo bloqueada por el proxy de red para todos los dominios probados (infonegocios, perfil, puntal, cafemartinez, havanna, starbucks, circuitogastronomico, lomasricopanaderias, webretail). Por lo tanto <strong>los datos provienen de fragmentos indexados por el buscador</strong>, no de lectura completa de las páginas. Esto baja la confiabilidad de fechas de publicación y números (ver §7).</li>
+<li><strong>Cupo de búsquedas:</strong> se agotó el cupo de búsquedas de la sesión antes de cerrar algunos datos (Havanna listado actual, conteo de YPF Full en la ciudad, Shell/Axion en Capital, ratings Google, seguidores de Instagram).</li>
+<li><strong>Criterios de inclusión:</strong> actor con presencia física o de entrega en Córdoba Capital que compita por al menos una de las 5 ocasiones. Se incluyen 2 actores fuera del ejido (Le Pain Quotidien en La Calera; Tostado/Juan Valdez en aeropuerto) por su relevancia como señal de entrada de cadenas.</li>
+<li><strong>Exclusiones:</strong> resultados de <strong>Córdoba (España)</strong> y <strong>Córdoba (Veracruz, México)</strong> que el buscador mezcló (p. ej. "Pastelería Roldán", "Confitería Savoy", Starbucks Mezquita, La Flor de Córdoba, Loops and Coffee) → <strong>descartados</strong>.</li>
+<li><strong>Datos no relevados sistemáticamente</strong> (no accesibles con las herramientas): puntaje y cantidad de reseñas en Google, seguidores de Instagram, cartas completas con precios. Quedan como <strong>s/d</strong> y se derivan a I015/I016.</li>
+<li><strong>Regla:</strong> si un número no pudo verificarse → "s/d". Cuando dos fuentes dan números distintos, se muestran ambos con fecha/fuente.</li>
+</ul>
+<h2>4. Fuentes</h2>
+<blockquote>
+<p>Confiabilidad: <strong>A</strong> = fuente oficial/empresa o medio con dato atribuido y fecha clara · <strong>M</strong> = medio/directorio con dato plausible pero fecha de publicación no confirmada o leído solo vía fragmento · <strong>B</strong> = directorio agregador, dato probablemente desactualizado, o resumen ambiguo del buscador.
+Todas consultadas 2026-09-28 vía fragmento de buscador (sin lectura completa, ver §3).</p>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>F###</th>
+<th>Fuente</th>
+<th>URL</th>
+<th>Fecha consulta</th>
+<th>Dato principal</th>
+<th>Confiabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F100</td>
+<td>Lo+Rico Panaderías — Facebook oficial</td>
+<td>https://www.facebook.com/LoMasRico.Panaderias/</td>
+<td>2026-09-28</td>
+<td>"26 sucursales en Córdoba", foco medialunas</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F101</td>
+<td>Puntal — "Lo+Rico Group y su crecimiento empresarial en Córdoba"</td>
+<td>https://www.puntal.com.ar/gastronomia/lorico-group-y-su-crecimiento-empresarial-cordoba-n209816</td>
+<td>2026-09-28</td>
+<td>30 locales (22 panaderías + 8 empanadas); fundada 2018; franquicias; empanadas desde 2022; foco panaderías en interior de Córdoba</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F102</td>
+<td>PedidosYa — Lo+Rico Panaderías Rondeau</td>
+<td>https://www.pedidosya.com.ar/restaurantes/cordoba/lo-rico-panaderias-rondeau-menu</td>
+<td>2026-09-28</td>
+<td>½ doc. medialunas + criollos $9.880; promo ½ doc + ¼ criollos $7.740 (lista $9.675); 2 medialunas + 100 g chipá $4.845</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F103</td>
+<td>La Helvética Online — Perdú (ficha)</td>
+<td>https://lahelveticaonline.com.ar/panaderia/perdu-2/</td>
+<td>2026-09-28</td>
+<td>Cadena con sucursales en Gral. Paz, Alta Córdoba, Alberdi; medialunas, sándwiches de miga; delivery</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F104</td>
+<td>Rappi — Perdú Panaderías Nueva Córdoba</td>
+<td>https://www.rappi.com.ar/restaurantes/216835-perdu-panaderias</td>
+<td>2026-09-28</td>
+<td>Presencia en Rappi (NC); direcciones Rondeau 278, Duarte Quirós 1790, Fragueiro 315, Bv. San Juan 309, Santa Rosa 700 (vía directorios)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F105</td>
+<td>InfoNegocios — "Panadería del Pilar avanza en tres frentes…"</td>
+<td>https://infonegocios.info/bien-de-familia/panaderia-del-pilar-avanza-en-tres-frentes-locales-propios-y-franquicias-empresas-y-supermercados</td>
+<td>2026-09-28</td>
+<td>45 locales (8 propios + 37 franquicias) en Córdoba, Río Ceballos, Unquillo, Mendiolaza, Villa Allende; nodo industrial que abastece locales, empresas y supermercados</td>
+<td>M (fecha publ. s/d)</td>
+</tr>
+<tr>
+<td>F106</td>
+<td>Panadería Del Pilar — Franquicias (oficial)</td>
+<td>https://panaderiadelpilar.ar/franquicias/</td>
+<td>2026-09-28</td>
+<td>2 módulos franquiciables: "Panadería Del Pilar" y "Del Pilar Coffee"; planta industrial 2.000 m²; maquinaria para ultracongelado; +150 años</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F107</td>
+<td>Circuito Gastronómico — "Los mejores lugares para comer croissant y medialunas"</td>
+<td>https://circuitogastronomico.com/los-mejores-lugares-para-comer-croissant-y-medialunas/</td>
+<td>2026-09-28</td>
+<td>Superanfibio (masa madre), Culpa de los dos, Del Pilar (Salta 42), Brunchería (Achával Rodríguez 244, Güemes), Verasens</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F108</td>
+<td>Turismo Córdoba Capital (Municipalidad) — Superanfibio</td>
+<td>https://turismo.cordoba.gob.ar/superanfibio/</td>
+<td>2026-09-28</td>
+<td>3 locales: J. R. Funes 1789 (Cerro), Manantiales, Buenos Aires 1415 (NC); café de especialidad desde 2020</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F109</td>
+<td>Pluria — Superanfibio Manantiales</td>
+<td>https://pluria.co/es/cafes/argentina/cordoba/2506--superanfibio-manantiales</td>
+<td>2026-09-28</td>
+<td>Horario L–V 9–19; wifi, terraza (formato "trabajo")</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F110</td>
+<td>Perfil Córdoba — "Del antojo al fenómeno: Culpa de los Dos…"</td>
+<td>https://www.perfil.com/noticias/cordoba/del-antojo-al-fenomeno-culpa-de-los-dos-y-el-arte-de-emprender-sin-perder-el-sabor.phtml</td>
+<td>2026-09-28</td>
+<td>5 locales en la ciudad + 1 en Villa General Belgrano; Belgrano 884 (Güemes), Av. Gauss 5500; medialunas y mafaldas estrella</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F111</td>
+<td>InfoNegocios — "Panadería Independencia suma de a dos (ya tiene 8 locales…)"</td>
+<td>https://infonegocios.info/y-ademas/panaderia-independencia-suma-de-a-dos-ya-tiene-8-locales-y-va-por-mas</td>
+<td>2026-09-28</td>
+<td>8 locales, franquicias, fundada 1863</td>
+<td>M (fecha publ. s/d, probablemente 2018)</td>
+</tr>
+<tr>
+<td>F112</td>
+<td>Centrofranchising — Panadería Independencia suma franquicia en NC</td>
+<td>https://centrofranchising.com/panaderia-independencia-suma-otra-franquicia-en-nueva-cordoba/</td>
+<td>2026-09-28</td>
+<td>Llegó a 15 locales (dato ~2014 según resumen); objetivo 50 franquicias; aperturas NC, Gral. Paz, Urca</td>
+<td>B (fechas contradictorias)</td>
+</tr>
+<tr>
+<td>F113</td>
+<td>InfoNegocios — La Vene abre dos sucursales en Córdoba</td>
+<td>https://infonegocios.info/plus/la-vene-la-marca-mendocina-de-pastas-y-panaderia-abre-dos-sucursales-en-cordoba-general-paz-y-nueva-cordoba</td>
+<td>2026-09-28</td>
+<td>Obispo Trejo 887 (NC, "Pick &amp; Go") y 25 de Mayo 1152 (Gral. Paz, "Brunch &amp; Coffee"); 24 locales Mza/SJ/Cba; nov-2018</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F114</td>
+<td>Comercio y Justicia — La Vene suma tres franquicias en Córdoba</td>
+<td>https://comercioyjusticia.info/negocios/con-su-nuevo-local-en-el-centro-la-vene-suma-tres-franquicias-en-cordoba/</td>
+<td>2026-09-28</td>
+<td>3er local: 27 de Abril 586 (Centro)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F115</td>
+<td>Comercio y Justicia — Havanna inauguró en Nuevocentro el local más grande del interior</td>
+<td>https://comercioyjusticia.info/negocios/havanna-inauguro-en-nuevocentro-el-local-mas-grande-del-interior-del-pais/</td>
+<td>2026-09-28</td>
+<td>US$120.000; 230 m² (180 cubiertos); concepto "Haireado" con menú ampliado; ~15 empleados</td>
+<td>M (fecha publ. s/d)</td>
+</tr>
+<tr>
+<td>F116</td>
+<td>iProfesional — Invertir en una franquicia de Havanna 2025</td>
+<td>https://www.iprofesional.com/finanzas/441494-invertir-en-una-franquicia-de-havanna-cuanto-cuesta-en-2025-y-que-rentabilidad-deja</td>
+<td>2026-09-28</td>
+<td>266 locales país (49 propios/217 franq., cierre 2024); fee US$19.500; obra ~US$150.000; mercadería inicial ~US$25.000; "7 locales en Córdoba" (dato 2022)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F117</td>
+<td>Latinoplaces — Havanna Patio Olmos</td>
+<td>https://ar.latinoplaces.com/cordoba-province/havanna-local-patio-olmos-shopping-1290032</td>
+<td>2026-09-28</td>
+<td>Vélez Sarsfield 361; 10–22 h</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F118</td>
+<td>Nuevocentro Shopping — Starbucks</td>
+<td>https://nuevocentro.com.ar/starbucks/</td>
+<td>2026-09-28</td>
+<td>Duarte Quirós 1400 (Alberdi) y Paseo del Jockey, Elías Yofre 1050 (B° Jardín); 10–22 h</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F119</td>
+<td>Yelp — Starbucks Av. Colón 608</td>
+<td>https://www.yelp.com/biz/starbucks-c%C3%B3rdoba-3</td>
+<td>2026-09-28</td>
+<td>L–V 7–21:30; fds 8–21; 62 reseñas Yelp</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F120</td>
+<td>Yelp — Starbucks Virgen de la Merced 2300</td>
+<td>https://m.yelp.com/biz/starbucks-c%C3%B3rdoba-2</td>
+<td>2026-09-28</td>
+<td>Local listado (zona Mercado de Abasto/Alta Córdoba — s/d)</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F121</td>
+<td>Rappi — Starbucks Nueva Córdoba</td>
+<td>https://www.rappi.com.ar/restaurantes/226266-starbucks</td>
+<td>2026-09-28</td>
+<td>Delivery por Rappi en NC; otra dirección listada San Lorenzo 25 (vía Tripadvisor)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F122</td>
+<td>Perfil Córdoba — "Café Martínez va por la revancha en Córdoba…"</td>
+<td>https://www.perfil.com/noticias/cordoba/cafe-martinez-va-por-la-revancha-en-cordoba-con-inversor-local-se-vienen-nuevas-aperturas.phtml</td>
+<td>2026-09-28</td>
+<td>Llegó a tener 4 locales en Córdoba Capital, cerró la mayoría; solo Río Cuarto; acuerdo con inversor local; plan de 7 puntos</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F123</td>
+<td>Web Retail — "Café Martínez planea una expansión en Córdoba"</td>
+<td>https://www.webretail.com.ar/cafe-martinez-planea-una-expansion-en-cordoba/</td>
+<td>2026-09-28</td>
+<td>Master franquicia territorial; 5 locales corto plazo (+2); zonas Centro, NC, Cerro; aperturas 2024–2025</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F124</td>
+<td>Thebrandsoup — Café Martínez 40 nuevas sucursales 2025</td>
+<td>https://thebrandsoup.com/life-style/bizlife/cafe-martinez-y-40-nuevas-sucursales-para-2025/</td>
+<td>2026-09-28</td>
+<td>Córdoba es "Tier 1" de expansión 2025</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F125</td>
+<td>InfoNegocios — "GoldCafé abre su cuarto local de Bonafide en Córdoba"</td>
+<td>https://infonegocios.info/y-ademas/goldcafe-abre-su-cuarto-local-de-bonafide-en-cordoba</td>
+<td>2026-09-28</td>
+<td>14ª franquicia en la provincia; Colón 4800 (Sodimac), H. Yrigoyen, Córdoba Shopping, Alta Gracia</td>
+<td>M (fecha s/d)</td>
+</tr>
+<tr>
+<td>F126</td>
+<td>Sucursales24 — Bonafide Córdoba Capital</td>
+<td>https://www.sucursales24.com.ar/cordoba-capital/bonafide/</td>
+<td>2026-09-28</td>
+<td>10 locales listados (Rivera Indarte, Lugones, Peatonal, Figueroa Alcorta 192, etc.)</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F127</td>
+<td>Punto a Punto — Tostado Café Club apuesta por Córdoba</td>
+<td>https://puntoapunto.com.ar/tostado-cafe-club-apuesta-fuerte-por-cordoba-y-proyecta-seguir-creciendo-en-todo-el-pais</td>
+<td>2026-09-28</td>
+<td>Locales en Aeropuerto Córdoba y WO Carlos Paz (abr-2025); franquicias</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F128</td>
+<td>Tostado Café Club — Locales (oficial)</td>
+<td>https://tostadocafeclub.com/locales/</td>
+<td>2026-09-28</td>
+<td>Aeropuerto Córdoba 4–23 h</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F129</td>
+<td>InfoNegocios — Le Pain Quotidien ya puso un pie en Córdoba</td>
+<td>https://infonegocios.info/plus/le-pain-quotidien-ya-puso-un-pie-en-cordoba-donde-funciona-el-primer-local-de-la-cadena-que-se-propone-como-el-pan-de-cada-dia</td>
+<td>2026-09-28</td>
+<td>Primer local en Corteza Mall (Av. Los Álamos 1015, La Calera)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F130</td>
+<td>Forbes Argentina — Entrevista CEO LPQ Argentina</td>
+<td>https://www.forbesargentina.com/negocios/federico-lantaron-ceo-le-pain-quotidien-argentina-somos-segundo-pais-mas-locales-nivel-mundial-detras-eeuu-n63846</td>
+<td>2026-09-28</td>
+<td>42 puntos de venta (mayoría AMBA); Argentina 2º país del mundo en locales</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F131</td>
+<td>PedidosYa — Le Pain Quotidien Córdoba</td>
+<td>https://www.pedidosya.com.ar/restaurantes/cordoba/le-pain-quotidien-cordoba-4181aaf9-75cc-413d-b77c-16a3cbeb8021-menu</td>
+<td>2026-09-28</td>
+<td>Delivery vía PedidosYa en Córdoba</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F132</td>
+<td>The Cook Girl — Ninina Bakery</td>
+<td>https://thecookgirl.com/ninina-bakery/</td>
+<td>2026-09-28</td>
+<td>Ninina opera en Buenos Aires (3 locales); sin evidencia de Córdoba</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F133</td>
+<td>La Derecha Diario — Juan Valdez abrió su primer local en Córdoba</td>
+<td>https://derechadiario.com.ar/negocios-finanzas/juan-valdez-abrio-su-local-cordoba-y-proyecta-mas-inversiones-argentina</td>
+<td>2026-09-28</td>
+<td>1er local en Aeropuerto Taravella (4º del país); 2º en preembarque previsto; estudia 3º fuera del aeropuerto; Córdoba 3er mercado online</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F134</td>
+<td>Comercio y Justicia — McDonald's abrió su 21º local en Córdoba</td>
+<td>https://comercioyjusticia.info/negocios/mcdonalds-abrio-su-21o-local-en-la-ciudad-de-cordoba/</td>
+<td>2026-09-28</td>
+<td>21º local (Av. Sabattini 3250), oct-2019</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F135</td>
+<td>El Diario del Centro del País — Arcos Dorados</td>
+<td>https://www.eldiariocba.com.ar/locales/2026/2/17/los-arcos-dorados-cada-vez-mas-cerca-de-nuestra-ciudad-143736.html</td>
+<td>2026-09-28</td>
+<td>Córdoba Capital con "más de 20" locales (feb-2026)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F136</td>
+<td>InfoNegocios — Mostaza local 350 m² frente a Plaza España</td>
+<td>https://infonegocios.info/plus/mostaza-copa-el-corazon-de-nueva-cordoba-con-un-local-de-350-m2-frente-a-plaza-espana-y-compite-con-mcdonald-s-con-su-open-24</td>
+<td>2026-09-28</td>
+<td>H. Yrigoyen 562 (NC), 350 m², ~158–168 cubiertos, tótems, PedidosYa/Rappi, formato "Open 24"</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F137</td>
+<td>InfoNegocios — Mostaza ya tiene 9 locales en Córdoba</td>
+<td>https://infonegocios.info/y-ademas/mostaza-tiene-planes-de-seguir-consolidando-su-presencia-en-cordoba-ya-tiene-9-locales-y-genero-mas-de-240-empleos</td>
+<td>2026-09-28</td>
+<td>9 locales, +240 empleos (fecha publ. s/d)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F138</td>
+<td>Mostaza — Cafetería (oficial)</td>
+<td>https://www.mostazaweb.com.ar/categoria_comida/cafeteria/</td>
+<td>2026-09-28</td>
+<td>Línea "Desayuna por menos de $5.999": 3 medialunas + café; tostado chico + café</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F139</td>
+<td>Ámbito — Los números de las tiendas YPF Full</td>
+<td>https://www.ambito.com/energia/los-increibles-numeros-las-tiendas-ypf-full-venden-millones-cafe-medialunas-alfajores-y-hamburguesas-n6178561</td>
+<td>2026-09-28</td>
+<td>1.114 tiendas Full en 1.680 estaciones; 29.316.448 medialunas vendidas ene–jul 2025; combo café + 2 medialunas ~$7.700 en CABA</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F140</td>
+<td>Yelp — Full YPF Av. Monseñor Pablo Cabrera 4650</td>
+<td>https://m.yelp.com/biz/full-ypf-c%C3%B3rdoba</td>
+<td>2026-09-28</td>
+<td>Tienda Full 24 h en zona norte; otra en Duarte Quirós 3607</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F141</td>
+<td>Surtidores.com.ar — Diseño tiendas Spot de Axion</td>
+<td>https://surtidores.com.ar/los-detalles-del-diseno-de-las-tiendas-de-conveniencia-spot-con-las-que-axion-energy-renueva-el-mercado/</td>
+<td>2026-09-28</td>
+<td>Spot con panadería propia (facturas/medialunas horneadas en tienda) — ejemplos en AMBA</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F142</td>
+<td>Shell Argentina — Shell Select</td>
+<td>https://www.shell.com.ar/conductores/shellselect.html</td>
+<td>2026-09-28</td>
+<td>Concepto café + pastelería en tienda; presencia en Córdoba Capital s/d</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F143</td>
+<td>Sucursales24 — Disco Córdoba Capital</td>
+<td>https://www.sucursales24.com.ar/cordoba-capital/supermercado-disco/</td>
+<td>2026-09-28</td>
+<td>12 sucursales listadas; J. L. Cabrera 493, R. Núñez 3657, Colón 683, Goyechea 2851; horarios 8:30/9:30–21/21:30</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F144</td>
+<td>Sucursales24 — Vea Córdoba Capital</td>
+<td>https://www.sucursales24.com.ar/cordoba-capital/vea/</td>
+<td>2026-09-28</td>
+<td>4 sucursales listadas (ej. R. Núñez 5557, Argüello)</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F145</td>
+<td>Revista Mercado — Carrefour supera los 60 locales en Córdoba</td>
+<td>https://mercado.com.ar/negocios/carrefour-se-expande-en-cordoba-con-su-primera-tienda-express-en-jesus-maria-y-supera-los-60-locales-en-la-provincia/</td>
+<td>2026-09-28</td>
+<td>+60 locales en la provincia (Express, Market, Maxi, Hiper)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F146</td>
+<td>Sucursales24 — Carrefour Express Córdoba Capital</td>
+<td>https://www.sucursales24.com.ar/cordoba-capital/carrefour-express/</td>
+<td>2026-09-28</td>
+<td>19 Express listados en Capital</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F147</td>
+<td>La Nación — De Narváez acelera para comprar Carrefour</td>
+<td>https://www.lanacion.com.ar/economia/negocios/de-narvaez-acelera-para-comprar-carrefour-y-negocia-los-contratos-finales-nid02122025/</td>
+<td>2026-09-28</td>
+<td>GDN negociando compra de Carrefour Argentina (dic-2025); traspaso previsto 2026</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F148</td>
+<td>Cadena 3 — La Anónima compra 12 hipermercados Libertad, incluidos los cuatro de Córdoba</td>
+<td>https://www.cadena3.com/noticia/sociedad/la-anonima-compra-12-hipermercados-libertad-incluidos-los-cuatro-de-cordoba_530850</td>
+<td>2026-09-28</td>
+<td>4 hipers Libertad en Córdoba pasan a La Anónima (cambio de marca paulatino)</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F149</td>
+<td>Cordiez — Quiénes somos (oficial)</td>
+<td>https://www.cordiez.com.ar/institucionales/quienes-somos</td>
+<td>2026-09-28</td>
+<td>33 sucursales (Córdoba, Sgo. del Estero, Catamarca); desde 1970; 9 en Capital (vía Sucursales24)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F150</td>
+<td>Super MaMi (Grupo Dinosaurio) — Panadería online</td>
+<td>https://www.dinoonline.com.ar/super/promociones/supermami-almacen-panaderia-y-sandwiches-panaderia/_/N-1yoqqio</td>
+<td>2026-09-28</td>
+<td>Sección panadería; medialunas de marca industrial (Pugliese) x12</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F151</td>
+<td>Los Andes — Oferta de De Narváez / Changomás</td>
+<td>https://www.losandes.com.ar/economia/la-oferta-que-hizo-narvaez-comprar-carrefour-desaparece-la-marca-rival-changomas-n5970543</td>
+<td>2026-09-28</td>
+<td>Changomás: 6 locales en la provincia de Córdoba</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F152</td>
+<td>Circuito Gastronómico — Mejores cafeterías de especialidad de Córdoba</td>
+<td>https://circuitogastronomico.com/las-mejores-cafeterias-de-especialidad-de-cordoba/</td>
+<td>2026-09-28</td>
+<td>Krake (Güemes, slow coffee), Ethiopia (Güemes), Caffé del Popolo (NC, al paso), Lattertulia (Estrada 284, masa madre propia), La Vereda de Achával (Obispo Trejo 805), Le Dureau (Independencia 180)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F153</td>
+<td>Canal C — Meriendas temáticas y café de especialidad</td>
+<td>https://canalc.com.ar/tres-lugares-que-sirven-meriendas-tematicas-y-cafe-de-especialidad-en-cordoba/</td>
+<td>2026-09-28</td>
+<td>Pink Café (R. Núñez 4545, Cerro; mié–dom 16–20); De a Deveras (R. Núñez 4580); Goulu (R. Núñez 4308)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F154</td>
+<td>InfoNegocios — Cherry Season abre nueva sucursal en NC</td>
+<td>https://infonegocios.info/plus/cherry-season-abre-una-nueva-sucursal-en-nueva-cordoba-a-metros-de-plaza-espana-y-estrena-un-cafe-inspirado-en-el-paladar-local</td>
+<td>2026-09-28</td>
+<td>R. Núñez 4401 (Cerro), H. Yrigoyen 171 y Chacabuco 591 (NC); próximas Estrada y Buenos Aires; evolución de ES Tostadores</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F155</td>
+<td>Circuito Gastronómico — Cherry Season puesto 63 Sudamérica</td>
+<td>https://circuitogastronomico.com/cherry-season-quedo-en-el-puesto-63-entre-las-mejores-cafeterias-de-sudamerica/</td>
+<td>2026-09-28</td>
+<td>Ranking regional (puesto 63)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F156</td>
+<td>Circuito Gastronómico — Verasens</td>
+<td>https://circuitogastronomico.com/verasens-la-heladeria-de-nueva-cordoba-donde-tambien-podes-comer-sandwiches/</td>
+<td>2026-09-28</td>
+<td>Buenos Aires 599 y Chacabuco 625 (NC); heladería + café + panadería + sándwiches</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F157</td>
+<td>Cba24n — Nuevo aumento del pan en Córdoba</td>
+<td>https://www.cba24n.com.ar/cordoba/nuevo-aumento-del-pan-en-cordoba--a-cuanto-se-vende-el-kilo_a69d3e25fe7704c4561032b09</td>
+<td>2026-09-28</td>
+<td>Precio sugerido Centro de Panaderos: francés $3.500/kg, mignón $4.000/kg, criollos $8.000/kg (2026 según resumen; mes exacto a verificar)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F158</td>
+<td>Perfil Córdoba — Aumento 15%, criollos $5.800</td>
+<td>https://www.perfil.com/noticias/cordoba/cordoba-aumento-del-15-en-el-precio-del-pan-y-el-kilo-de-criollos-ahora-cuesta-5800.phtml</td>
+<td>2026-09-28</td>
+<td>Ene-2025: francés $2.650/kg; mignón $2.900; criollos $5.800; factura sugerida $600</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F159</td>
+<td>ElDoce.tv — Facturas y criollos del día anterior en Córdoba</td>
+<td>https://eldoce.tv/actualidad/2025/04/04/una-opcion-en-la-crisis-cuanto-salen-las-facturas-y-criollos-del-dia-anterior-en-cordoba/</td>
+<td>2026-09-28</td>
+<td>Abr-2025: factura $750 en NC; $600 en B° Pueyrredón; venta de "día anterior" a mitad de precio</td>
+<td>A</td>
+</tr>
+<tr>
+<td>F160</td>
+<td>Vía Córdoba — Panadería de Córdoba con los mejores criollos</td>
+<td>https://viapais.com.ar/cordoba/una-panaderia-de-cordoba-hace-los-mejores-criollos-de-argentina-segun-un-prestigioso-torneo/</td>
+<td>2026-09-28</td>
+<td>Campeonato Nacional del Criollito (Fithep 2025): 3º Artesanos del Sabor (Monte Cristo y Córdoba Capital)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F161</td>
+<td>Instagram — alimentari.ar</td>
+<td>https://www.instagram.com/alimentari.ar/</td>
+<td>2026-09-28</td>
+<td>"Medialunas premium", cafetería, menú ejecutivo, catering, PedidosYa (ubicación exacta s/d)</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F162</td>
+<td>Desayunos Córdoba (sitio)</td>
+<td>https://desayunoscordoba.com/</td>
+<td>2026-09-28</td>
+<td>Desayunos sorpresa a domicilio en Córdoba Capital</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F163</td>
+<td>iProUP — Dark kitchens en Argentina</td>
+<td>https://www.iproup.com/innovacion/20594-dark-kitchens-que-son-y-cuanto-cuesta-entrar-al-negocio</td>
+<td>2026-09-28</td>
+<td>Blimp lanzó plataforma de cocooking en Córdoba Capital (2019)</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F164</td>
+<td>Wanderlog — Panadería Hermanos Fernández</td>
+<td>https://wanderlog.com/place/details/1558654/panadería-hermanos-fernández</td>
+<td>2026-09-28</td>
+<td>Panadería chica, masa madre, horneado diario, "corazón de Córdoba"</td>
+<td>B</td>
+</tr>
+<tr>
+<td>F165</td>
+<td>Punto a Punto — Havanna inauguró sucursal en Nuevocentro (US$120.000)</td>
+<td>https://puntoapunto.com.ar/con-una-inversion-de-us-120-000-havanna-inauguro-sucursal-en-nuevocentro-shopping</td>
+<td>2026-09-28</td>
+<td>Confirma F115</td>
+<td>M</td>
+</tr>
+<tr>
+<td>F166</td>
+<td>TripAdvisor — Starbucks Córdoba (d13122080)</td>
+<td>https://www.tripadvisor.com/Restaurant_Review-g312768-d13122080-Reviews-Starbucks-Cordoba_Province_of_Cordoba_Central_Argentina.html</td>
+<td>2026-09-28</td>
+<td>Listado adicional (dirección San Lorenzo 25 según resumen)</td>
+<td>B</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>5. Datos</h2>
+<blockquote>
+<p>Etiquetas: <b style="color:#B12028">[HECHO]</b> = dato publicado por fuente citada (aunque la fuente pueda estar desactualizada) · <b style="color:#B12028">[ESTIMACIÓN]</b> · <b style="color:#B12028">[INTERPRETACIÓN]</b> · <b style="color:#B12028">[SUPUESTO]</b>.
+"s/d" = sin dato verificable en esta pasada. Precios en ARS corrientes, con fecha de la fuente.</p>
+</blockquote>
+<h3>5.1 Tabla maestra de competidores (44 actores)</h3>
+<p><strong>Leyenda modelo operativo:</strong> IS = produce in situ · C = producción centralizada con distribución · CG = congelado/bake-off · ? = no verificado.
+<strong>Ocasiones:</strong> D = desayuno · M = merienda · P = pan/facturas para el hogar · A = almuerzo rápido · C = café al paso.</p>
+<h4>A. Cadenas de panadería cordobesas y franquicias de panadería</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Tipo</th>
+<th>Suc. Córdoba</th>
+<th>Zonas / direcciones</th>
+<th>Formato</th>
+<th>Propuesta de valor aparente</th>
+<th>Público <b style="color:#B12028">[INTERPRETACIÓN]</b></th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Delivery</th>
+<th>Ocasiones</th>
+<th>Modelo op.</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Lo+Rico Panaderías</strong></td>
+<td>Cadena cordobesa, franquicia</td>
+<td>26 <b style="color:#B12028">[HECHO F100]</b> / 22 panaderías + 8 empanadas = 30 <b style="color:#B12028">[HECHO F101]</b></td>
+<td>Rondeau (NC), Centro (Rappi) — resto s/d</td>
+<td>Panadería de barrio con mostrador</td>
+<td>Medialunas, precio accesible, promos</td>
+<td>Masivo, barrio, estudiantes</td>
+<td>½ doc. medialunas + criollos $9.880; promo $7.740; 2 medialunas + 100 g chipá $4.845 <b style="color:#B12028">[HECHO F102, fecha precio s/d, 2026]</b></td>
+<td>s/d</td>
+<td>PedidosYa, Rappi <b style="color:#B12028">[HECHO F102]</b></td>
+<td>P, D, M</td>
+<td>C/CG? [SUPUESTO: una red de 30 bocas fundada en 2018 con franquicias difícilmente produce todo in situ]</td>
+<td>F100–F102</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Panadería Del Pilar</strong></td>
+<td>Cadena cordobesa histórica (+150 años), franquicia</td>
+<td>45 (8 propios + 37 franq.) incl. Río Ceballos, Unquillo, Mendiolaza, Villa Allende <b style="color:#B12028">[HECHO F105, fecha s/d]</b></td>
+<td>Salta 42 (Centro) [F107]; resto s/d</td>
+<td>2 módulos: Panadería / "Del Pilar Coffee" (cafetería, sándwiches, menú mediodía)</td>
+<td>Tradición, marca, red densa, canal empresas y súper</td>
+<td>Masivo, familias, oficinas</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>P, D, M, A, C</td>
+<td><strong>C + CG</strong> <b style="color:#B12028">[HECHO F106: planta 2.000 m², ultracongelado]</b></td>
+<td>F105–F107</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Perdú Panaderías</strong></td>
+<td>Cadena cordobesa (~20 años)</td>
+<td>s/d (≥5 direcciones halladas)</td>
+<td>Rondeau 278 (NC), Duarte Quirós 1790, Fragueiro 315 (Alta Cba), Bv. San Juan 309, Santa Rosa 700; Gral. Paz, Alberdi [F103, F104]</td>
+<td>Panadería-cafetería ("Delicias y Café")</td>
+<td>Rolls de canela, masa madre, miga</td>
+<td>Barrio + estudiantes</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Rappi <b style="color:#B12028">[HECHO F104]</b></td>
+<td>P, D, M</td>
+<td>?</td>
+<td>F103, F104</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Panadería Independencia</strong></td>
+<td>Cadena cordobesa (desde 1863), franquicia</td>
+<td>8 <b style="color:#B12028">[HECHO F111, ~2018]</b> / "15" [F112, ~2014]; <strong>actual s/d</strong></td>
+<td>NC, Gral. Paz, Urca; 24 de Septiembre 846 (Gral. Paz)</td>
+<td>Panadería + cafetería</td>
+<td>Tradición</td>
+<td>Barrio</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>P, D, M</td>
+<td>?</td>
+<td>F111, F112</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>La Vene</strong></td>
+<td>Franquicia mendocina (pastas + panadería)</td>
+<td>3 al menos (2018–2019) <b style="color:#B12028">[HECHO F113, F114]</b>; <strong>actual s/d</strong></td>
+<td>Obispo Trejo 887 (NC, "Pick &amp; Go"), 25 de Mayo 1152 (Gral. Paz, "Brunch &amp; Coffee"), 27 de Abril 586 (Centro)</td>
+<td>2 formatos</td>
+<td>Pastas + pan + brunch</td>
+<td>Oficinistas, estudiantes</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>P, D, M, A</td>
+<td>C (red de 24 locales) <b style="color:#B12028">[INTERPRETACIÓN]</b></td>
+<td>F113, F114</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Artesanos del Sabor</strong></td>
+<td>Panadería (Monte Cristo + Capital)</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Panadería tradicional</td>
+<td>3º "mejor criollito del país" (Fithep 2025)</td>
+<td>Barrio</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>P, D, M</td>
+<td>IS <b style="color:#B12028">[INTERPRETACIÓN]</b></td>
+<td>F160</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Panadería Hermanos Fernández</strong></td>
+<td>Panadería artesanal independiente</td>
+<td>1 [s/d confirmado]</td>
+<td>"Centro"</td>
+<td>Panadería de masa madre</td>
+<td>Pan diario artesanal</td>
+<td>Nicho pan de calidad</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>P</td>
+<td>IS</td>
+<td>F164</td>
+</tr>
+</tbody>
+</table></div>
+<h4>B. Bakery cafés y cafés-pastelería con marca local</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Tipo</th>
+<th>Suc.</th>
+<th>Zonas</th>
+<th>Formato</th>
+<th>Propuesta</th>
+<th>Público [INT.]</th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Delivery</th>
+<th>Ocasiones</th>
+<th>Modelo</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td><strong>Culpa de los dos</strong></td>
+<td>Marca cordobesa (alfajores → medialunas)</td>
+<td>5 en la ciudad + 1 VGB <b style="color:#B12028">[HECHO F110]</b></td>
+<td>Belgrano 884 (Güemes), Av. Gauss 5500 (V. Belgrano); Gral. Paz [F107]</td>
+<td>Taller/tienda + café</td>
+<td>Alfajores XL, medialunas y "mafaldas" estrella; fenómeno con colas</td>
+<td>Jóvenes, foodies, regalo</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Pedidos por redes [F110]</td>
+<td>M, D, P (dulce)</td>
+<td>IS/C?</td>
+<td>F107, F110</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Superanfibio</strong></td>
+<td>Café de especialidad con panificación</td>
+<td>3 <b style="color:#B12028">[HECHO F108]</b></td>
+<td>Cerro (J. R. Funes 1789), Manantiales, NC (Buenos Aires 1415)</td>
+<td>Coffee bar</td>
+<td>Café de origen + medialuna de masa madre</td>
+<td>ABC1 joven, home office</td>
+<td>s/d</td>
+<td>Manantiales L–V 9–19 [F109]</td>
+<td>s/d</td>
+<td>D, M, C</td>
+<td>IS?</td>
+<td>F107–F109</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Verasens</strong></td>
+<td>Heladería + café + panadería</td>
+<td>2 <b style="color:#B12028">[HECHO F156]</b></td>
+<td>Buenos Aires 599 y Chacabuco 625 (NC, frente a Buen Pastor)</td>
+<td>Café-heladería</td>
+<td>Todo el día: helado, café, pastelería, sándwiches</td>
+<td>Estudiantes, turistas</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Pedidos online (ola.click)</td>
+<td>D, M, A</td>
+<td>?</td>
+<td>F107, F156</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Brunchería</strong></td>
+<td>Café-brunch</td>
+<td>1</td>
+<td>Achával Rodríguez 244 (Güemes)</td>
+<td>Brunch</td>
+<td>Variedad de brunch y medialunas</td>
+<td>Jóvenes</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>D, M</td>
+<td>?</td>
+<td>F107</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Lattertulia</strong></td>
+<td>Café boutique con panificación propia</td>
+<td>1</td>
+<td>Estrada 284 (NC, Plaza España)</td>
+<td>Café</td>
+<td>Masa madre propia</td>
+<td>Estudiantes / jóvenes profesionales</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>D, M, C</td>
+<td>IS</td>
+<td>F152</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>La Vereda de Achával</strong></td>
+<td>Café de especialidad + panadería</td>
+<td>1</td>
+<td>Obispo Trejo 805 (NC)</td>
+<td>Café</td>
+<td>Especialidad + panadería</td>
+<td>Idem</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>D, M, C</td>
+<td>?</td>
+<td>F152</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Pink Café</strong></td>
+<td>Café temático + pastelería de especialidad</td>
+<td>1</td>
+<td>R. Núñez 4545 (Cerro)</td>
+<td>Café temático</td>
+<td>"Primer café rosa de Córdoba"</td>
+<td>Merienda "instagrameable"</td>
+<td>s/d</td>
+<td>mié–dom 16–20 [F153]</td>
+<td>s/d</td>
+<td>M</td>
+<td>?</td>
+<td>F153</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>De a Deveras</strong></td>
+<td>Café saludable</td>
+<td>1</td>
+<td>R. Núñez 4580 (Cerro)</td>
+<td>Café</td>
+<td>Desayuno/merienda saludables, muffins, croissants</td>
+<td>ABC1</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>D, M</td>
+<td>?</td>
+<td>F153</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Goulu</strong></td>
+<td>Café-pastelería</td>
+<td>1</td>
+<td>R. Núñez 4308 (Cerro)</td>
+<td>Café</td>
+<td>Pastelería + sándwiches</td>
+<td>ABC1</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>D, M, A</td>
+<td>?</td>
+<td>F153</td>
+</tr>
+</tbody>
+</table></div>
+<h4>C. Cafeterías de especialidad (cadena local y independientes)</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Tipo</th>
+<th>Suc.</th>
+<th>Zonas</th>
+<th>Formato</th>
+<th>Propuesta</th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Ocasiones</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td><strong>Cherry Season</strong></td>
+<td>Cadena local de especialidad (ex ES Tostadores: tostador + escuela + mayorista)</td>
+<td>3 + 2 proyectadas <b style="color:#B12028">[HECHO F154]</b></td>
+<td>R. Núñez 4401 (Cerro); H. Yrigoyen 171 y Chacabuco 591 (NC); próximas Estrada y Buenos Aires (NC)</td>
+<td>Café de especialidad</td>
+<td>Puesto 63 mejores cafeterías de Sudamérica [F155]; integración vertical (tuesta)</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>C, D, M</td>
+<td>F154, F155</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Krake Café</strong></td>
+<td>Independiente</td>
+<td>1</td>
+<td>Güemes</td>
+<td>Slow coffee, solo filtrado</td>
+<td>Repostería casera</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>M, C</td>
+<td>F152</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>Ethiopia Café</strong></td>
+<td>Independiente</td>
+<td>1</td>
+<td>Güemes</td>
+<td>Especialidad</td>
+<td>—</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>C, M</td>
+<td>F152</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Caffé del Popolo</strong></td>
+<td>Independiente</td>
+<td>1</td>
+<td>NC</td>
+<td>Café al paso con barra</td>
+<td>Café al paso + pastelería y salados</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>C, D</td>
+<td>F152</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Le Dureau</strong></td>
+<td>Independiente</td>
+<td>1</td>
+<td>Independencia 180 (Centro/NC)</td>
+<td>Especialidad</td>
+<td>Blend propio + filtrados</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>C, M</td>
+<td>F152</td>
+</tr>
+</tbody>
+</table></div>
+<h4>D. Cadenas nacionales / internacionales de café</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Suc. Córdoba Capital</th>
+<th>Zonas</th>
+<th>Formato</th>
+<th>Propuesta</th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Delivery</th>
+<th>Modelo</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td><strong>Havanna</strong></td>
+<td>"7 en Córdoba" (2022) <b style="color:#B12028">[HECHO F116]</b>; <strong>actual s/d</strong></td>
+<td>Patio Olmos (Vélez Sarsfield 361), Nuevocentro (local "Haireado" 230 m², el más grande del interior), Dinosaurio Mall [F115, F117]</td>
+<td>Cafetería de shopping, franquicia</td>
+<td>Marca-regalo (alfajor), menú ampliado en Nuevocentro</td>
+<td>s/d</td>
+<td>Patio Olmos 10–22 [F117]</td>
+<td>s/d</td>
+<td>C (alfajores de fábrica) + franquicia (fee US$19.500; obra ~US$150k) [F116]</td>
+<td>F115–F117, F165</td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>Starbucks</strong></td>
+<td>≥4–5 direcciones halladas; <strong>conteo oficial s/d</strong></td>
+<td>Nuevocentro (Alberdi), Paseo del Jockey (B° Jardín), Av. Colón 608 (Centro), San Lorenzo 25 (NC/Centro), Virgen de la Merced 2300 [F118–F121, F166]</td>
+<td>Tienda propia (operador local)</td>
+<td>Experiencia/"tercer lugar", marca global</td>
+<td>s/d</td>
+<td>Colón 608: L–V 7–21:30, fds 8–21; shoppings 10–22</td>
+<td>Rappi (NC), Uber Eats</td>
+<td>C/CG (pastelería provista) <b style="color:#B12028">[INTERPRETACIÓN]</b></td>
+<td>F118–F121</td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>Café Martínez</strong></td>
+<td><strong>s/d — probablemente 0–1 operativo</strong>. Tuvo 4 en Capital, cerró la mayoría <b style="color:#B12028">[HECHO F122]</b>; relanzamiento con master franquicia (plan 5 + 2) [F123]</td>
+<td>Históricamente Sobremonte 80, R. Núñez 4543, Ituzaingó (NC)</td>
+<td>Cafetería franquicia</td>
+<td>Café tostado propio</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Franquicia</td>
+<td>F122–F124</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>Bonafide (Expresso)</strong></td>
+<td>10 listados [F126, B]; operador GoldCafé con ≥4 [F125]</td>
+<td>Colón 4800 (Sodimac), H. Yrigoyen, Córdoba Shopping, Rivera Indarte, Lugones, Peatonal, Figueroa Alcorta 192, Paseo del Jockey/B° Jardín</td>
+<td>Cafetería franquicia + venta de café/chocolates</td>
+<td>Marca tradicional, reuniones</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Franquicia</td>
+<td>F125, F126</td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong>Tostado Café Club</strong></td>
+<td>0 en ejido urbano; 1 en Aeropuerto (+ WO Carlos Paz) <b style="color:#B12028">[HECHO F127]</b></td>
+<td>Aeropuerto</td>
+<td>Café + comida saludable</td>
+<td>Especialidad + healthy</td>
+<td>s/d</td>
+<td>4–23 [F128]</td>
+<td>s/d</td>
+<td>Franquicia</td>
+<td>F127, F128</td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong>Juan Valdez</strong></td>
+<td>1 en Aeropuerto (2º en preembarque previsto; 3º fuera del aeropuerto en estudio) <b style="color:#B12028">[HECHO F133]</b></td>
+<td>Aeropuerto</td>
+<td>Tienda propia</td>
+<td>Café colombiano premium</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Propio</td>
+<td>F133</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>Le Pain Quotidien</strong></td>
+<td>0 en ejido; 1 en Corteza Mall, La Calera <b style="color:#B12028">[HECHO F129]</b></td>
+<td>Gran Córdoba noroeste</td>
+<td>Bakery-restaurant</td>
+<td>Pan orgánico, mesa comunal, brunch</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>PedidosYa [F131]</td>
+<td>C (red de 42 puntos)</td>
+<td>F129–F131</td>
+</tr>
+<tr>
+<td>29</td>
+<td><strong>Ninina</strong></td>
+<td><strong>0 — sin presencia verificada</strong> <b style="color:#B12028">[HECHO: fuentes solo ubican locales en CABA, F132]</b></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>F132</td>
+</tr>
+</tbody>
+</table></div>
+<h4>E. Fast food con desayuno/McCafé</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Suc. Capital</th>
+<th>Zonas</th>
+<th>Propuesta desayuno</th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Delivery</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td><strong>McDonald's / McCafé</strong> (Arcos Dorados)</td>
+<td>"más de 20" <b style="color:#B12028">[HECHO F135, feb-2026]</b>; 21 en 2019 [F134]</td>
+<td>Toda la ciudad (ej. Sabattini 3250)</td>
+<td>McCafé en parte de los locales (cuántos s/d)</td>
+<td>s/d</td>
+<td>s/d (algunos 24 h)</td>
+<td>PedidosYa/Rappi/app propia <b style="color:#B12028">[INTERPRETACIÓN]</b></td>
+<td>F134, F135</td>
+</tr>
+<tr>
+<td>31</td>
+<td><strong>Mostaza</strong></td>
+<td>9 <b style="color:#B12028">[HECHO F137, fecha s/d]</b>; otra fuente directorio: 5</td>
+<td>Plaza España (H. Yrigoyen 562, NC, 350 m², "Open 24"), Patio Olmos</td>
+<td>"Desayuna por menos de $5.999": 3 medialunas + café</td>
+<td>3 medialunas + café &lt; $5.999 <b style="color:#B12028">[HECHO F138, fecha s/d]</b></td>
+<td>Hasta 24 h (NC)</td>
+<td>PedidosYa, Rappi [F136]</td>
+<td>F136–F138</td>
+</tr>
+</tbody>
+</table></div>
+<h4>F. Conveniencia y estaciones de servicio</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Suc. Capital</th>
+<th>Zonas</th>
+<th>Propuesta</th>
+<th>Precios</th>
+<th>Horario</th>
+<th>Modelo</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32</td>
+<td><strong>YPF Full</strong></td>
+<td><strong>s/d</strong> en Capital (1.114 tiendas país) [F139]</td>
+<td>Ej.: Av. Monseñor P. Cabrera 4650 (norte), Duarte Quirós 3607 [F140]</td>
+<td>Café + medialunas masivo: 29,3 M de medialunas vendidas ene–jul 2025 en el país <b style="color:#B12028">[HECHO F139]</b></td>
+<td>Combo café + 2 medialunas ~$7.700 (CABA, 2025) [F139]</td>
+<td>24 h</td>
+<td>CG (bake-off) <b style="color:#B12028">[INTERPRETACIÓN]</b></td>
+<td>F139, F140</td>
+</tr>
+<tr>
+<td>33</td>
+<td><strong>Shell Select</strong></td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Café blend propio + pastelería</td>
+<td>s/d</td>
+<td>s/d (típicamente 24 h)</td>
+<td>CG?</td>
+<td>F142</td>
+</tr>
+<tr>
+<td>34</td>
+<td><strong>Axion Spot</strong></td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Panadería propia en tienda (facturas/medialunas horneadas en el lugar) [F141, ejemplos AMBA]</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>CG/IS</td>
+<td>F141</td>
+</tr>
+</tbody>
+</table></div>
+<h4>G. Supermercados con panadería</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Suc. Capital</th>
+<th>Zonas (ejemplos)</th>
+<th>Panadería</th>
+<th>Horario</th>
+<th>Notas</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35</td>
+<td><strong>Disco</strong> (Cencosud)</td>
+<td>12 listadas [F143, B]</td>
+<td>J. L. Cabrera 493, R. Núñez 3657 (Cerro), Colón 683 (Centro), Goyechea 2851</td>
+<td>Panadería propia: s/d</td>
+<td>8:30–21/21:30</td>
+<td>—</td>
+<td>F143</td>
+</tr>
+<tr>
+<td>36</td>
+<td><strong>Vea</strong> (Cencosud)</td>
+<td>4 listadas [F144, B]</td>
+<td>R. Núñez 5557 (Argüello)</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>—</td>
+<td>F144</td>
+</tr>
+<tr>
+<td>37</td>
+<td><strong>Carrefour</strong> (Express/Market/Maxi/Hiper)</td>
+<td>19 Express en Capital [F146, B]; +60 en provincia [F145]</td>
+<td>Toda la ciudad (proximidad)</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>En traspaso a GDN (De Narváez), 2026 [F147]</td>
+<td>F145–F147</td>
+</tr>
+<tr>
+<td>38</td>
+<td><strong>Libertad → La Anónima</strong></td>
+<td>4 hipers en Córdoba (Paseo Lugones, Rivera Indarte, etc.) [F148]</td>
+<td>Norte / periferia</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Cambio de marca paulatino a La Anónima [F148]</td>
+<td>F148</td>
+</tr>
+<tr>
+<td>39</td>
+<td><strong>Cordiez</strong></td>
+<td>9 en Capital (33 en red) [F149]</td>
+<td>Colón 3265, Donato Álvarez 8400</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Supermercado cordobés desde 1970</td>
+<td>F149</td>
+</tr>
+<tr>
+<td>40</td>
+<td><strong>Super MaMi</strong> (Grupo Dinosaurio)</td>
+<td>s/d</td>
+<td>Rodríguez del Busto 4086 (norte) y otros</td>
+<td>Sección panadería; medialunas industriales (Pugliese) [F150]</td>
+<td>s/d</td>
+<td>Formato mayorista-minorista</td>
+<td>F150</td>
+</tr>
+<tr>
+<td>41</td>
+<td><strong>Changomás</strong> (GDN)</td>
+<td>6 en la provincia [F151]; Capital s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>—</td>
+<td>F151</td>
+</tr>
+</tbody>
+</table></div>
+<h4>H. Nuevos formatos (Instagram, delivery, dark kitchens)</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Actor</th>
+<th>Tipo</th>
+<th>Zona</th>
+<th>Propuesta</th>
+<th>Canal</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42</td>
+<td><strong>alimentari.ar</strong></td>
+<td>Marca "medialunas premium"</td>
+<td>s/d</td>
+<td>Medialunas premium, cafetería, menú ejecutivo, catering</td>
+<td>Instagram + PedidosYa</td>
+<td>F161</td>
+</tr>
+<tr>
+<td>43</td>
+<td><strong>Desayunos Córdoba</strong> (y similares "desayuno sorpresa")</td>
+<td>Delivery de regalo</td>
+<td>Observatorio / toda la Capital</td>
+<td>Box de desayuno/merienda para regalo</td>
+<td>Web, WhatsApp, Mercado Libre</td>
+<td>F162</td>
+</tr>
+<tr>
+<td>44</td>
+<td><strong>Cocinas compartidas (ej. Blimp, 2019)</strong></td>
+<td>Dark kitchen / cocooking</td>
+<td>Capital</td>
+<td>Infraestructura para marcas virtuales</td>
+<td>Apps de delivery</td>
+<td>F163 (estado actual s/d)</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>Actores mencionados sin datos suficientes para tabla (a relevar en campo): Panadería Lugones Trejo, La Celeste Panadería, Panadería Independencia Sucre (directorios de baja confiabilidad); La Pastelería (Ituzaingó 1046, NC, tortas personalizadas + café; fuente TikTok).</p>
+</blockquote>
+<h3>5.2 Conteo por categoría</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>N actores</th>
+<th>Con ≥3 sucursales verificadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Panaderías / cadenas cordobesas / franquicias</td>
+<td>7</td>
+<td>Lo+Rico, Del Pilar, Perdú, Independencia, La Vene</td>
+</tr>
+<tr>
+<td>Bakery cafés / café-pastelería</td>
+<td>9</td>
+<td>Culpa de los dos, Superanfibio</td>
+</tr>
+<tr>
+<td>Especialidad</td>
+<td>5</td>
+<td>Cherry Season</td>
+</tr>
+<tr>
+<td>Cadenas café nac./intl.</td>
+<td>8</td>
+<td>Havanna, Starbucks, Bonafide</td>
+</tr>
+<tr>
+<td>Fast food</td>
+<td>2</td>
+<td>McDonald's, Mostaza</td>
+</tr>
+<tr>
+<td>Estaciones de servicio</td>
+<td>3</td>
+<td>YPF Full (conteo local s/d)</td>
+</tr>
+<tr>
+<td>Supermercados</td>
+<td>7</td>
+<td>Disco, Vea, Carrefour, Libertad/La Anónima, Cordiez</td>
+</tr>
+<tr>
+<td>Nuevos formatos</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>44</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.3 Precios de referencia de mercado</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ítem</th>
+<th>Precio</th>
+<th>Fecha / lugar</th>
+<th>Etiqueta</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pan francés (kg)</td>
+<td>$3.500</td>
+<td>2026 (precio sugerido Centro de Panaderos)</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F157</td>
+</tr>
+<tr>
+<td>Pan mignón (kg)</td>
+<td>$4.000</td>
+<td>2026, idem</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F157</td>
+</tr>
+<tr>
+<td>Criollos comunes (kg)</td>
+<td>$8.000</td>
+<td>2026, idem</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F157</td>
+</tr>
+<tr>
+<td>Pan francés (kg)</td>
+<td>$2.650</td>
+<td>ene-2025</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F158</td>
+</tr>
+<tr>
+<td>Factura (unidad, sugerido)</td>
+<td>$600</td>
+<td>ene-2025</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F158</td>
+</tr>
+<tr>
+<td>Factura/medialuna (unidad)</td>
+<td>$750 NC / $600 Pueyrredón</td>
+<td>abr-2025</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F159</td>
+</tr>
+<tr>
+<td>½ doc. medialunas + criollos (Lo+Rico, app)</td>
+<td>$9.880</td>
+<td>2026 (fecha exacta s/d)</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F102</td>
+</tr>
+<tr>
+<td>3 medialunas + café (Mostaza)</td>
+<td>&lt; $5.999</td>
+<td>s/d</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F138</td>
+</tr>
+<tr>
+<td>Café + 2 medialunas (YPF Full, CABA)</td>
+<td>~$7.700</td>
+<td>2025</td>
+<td><b style="color:#B12028">[HECHO]</b></td>
+<td>F139</td>
+</tr>
+<tr>
+<td>Factura/medialuna unidad 2026 en Córdoba</td>
+<td>~$850–1.000</td>
+<td>sep-2026</td>
+<td>[ESTIMACIÓN: $600–750 de 2025 ajustado por la suba de ~32% del kg de francés ene-2025→2026 (F157/F158); validar en I015]</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Café con leche en Córdoba</td>
+<td><strong>s/d</strong></td>
+<td>—</td>
+<td>derivar a I015</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.4 Concentración por zona (preliminar)</h3>
+<p>Conteo de <strong>direcciones halladas</strong> (no de sucursales totales; sesgo hacia lo que aparece en medios).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Zona</th>
+<th>Actores con presencia verificada</th>
+<th>Lectura <b style="color:#B12028">[INTERPRETACIÓN]</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nueva Córdoba</strong></td>
+<td>Lo+Rico (Rondeau), Perdú (Rondeau 278), Independencia, La Vene (Obispo Trejo 887), Superanfibio (Bs. As. 1415), Cherry Season (×2 + 2 proyectadas), Verasens (×2), Lattertulia, La Vereda de Achával, Caffé del Popolo, Starbucks (Rappi NC / San Lorenzo 25), Mostaza Plaza España (24 h), Café Martínez (histórico), La Pastelería</td>
+<td><strong>Zona más saturada</strong>: estudiantes + especialidad + cadenas. Densidad de café de especialidad alta y en crecimiento (Cherry Season sigue abriendo).</td>
+</tr>
+<tr>
+<td><strong>Centro</strong></td>
+<td>Del Pilar (Salta 42), Starbucks (Colón 608), Havanna (Patio Olmos), La Vene (27 de Abril 586), Le Dureau, Bonafide (Peatonal, Figueroa Alcorta), Disco (Colón 683), Café Martínez (Sobremonte 80, histórico)</td>
+<td>Tránsito peatonal y oficinas; mix tradicional + cadenas. Ocasión "café al paso" y almuerzo rápido.</td>
+</tr>
+<tr>
+<td><strong>Cerro de las Rosas / Rafael Núñez</strong></td>
+<td>Superanfibio, Cherry Season, Pink Café, De a Deveras, Goulu, Disco (R. Núñez 3657), Vea (R. Núñez 5557, Argüello), Café Martínez (R. Núñez 4543, histórico)</td>
+<td>Corredor ABC1 con propuesta "merienda premium" concentrada en pocas cuadras de R. Núñez.</td>
+</tr>
+<tr>
+<td><strong>Güemes</strong></td>
+<td>Culpa de los dos (Belgrano 884), Krake, Ethiopia, Brunchería</td>
+<td>Polo "foodie" joven; especialidad + brunch.</td>
+</tr>
+<tr>
+<td><strong>General Paz</strong></td>
+<td>Perdú, La Vene (Brunch &amp; Coffee), Independencia, Culpa de los dos</td>
+<td>Barrio residencial-gastronómico; mezcla de panadería de cadena + brunch.</td>
+</tr>
+<tr>
+<td><strong>Zona norte (Villa Belgrano, Argüello, Rivera Indarte, P. Cabrera)</strong></td>
+<td>Culpa de los dos (Gauss 5500), Libertad/La Anónima, Bonafide (Rivera Indarte), YPF Full (P. Cabrera 4650), Super MaMi, Vea Argüello</td>
+<td>Dominada por supermercados/hipers y conveniencia; pocas propuestas de bakery café verificadas.</td>
+</tr>
+<tr>
+<td><strong>Alberdi / Nuevocentro</strong></td>
+<td>Starbucks, Havanna (Haireado), Perdú</td>
+<td>Shopping-céntrico.</td>
+</tr>
+<tr>
+<td><strong>Barrio Jardín / Paseo del Jockey</strong></td>
+<td>Starbucks, Bonafide</td>
+<td>Shopping.</td>
+</tr>
+<tr>
+<td><strong>Manantiales (sur-oeste, crecimiento)</strong></td>
+<td>Superanfibio</td>
+<td>Una sola marca de especialidad verificada.</td>
+</tr>
+<tr>
+<td><strong>Zona sur / este / barrios populares</strong></td>
+<td>Solo aparecen supermercados y la red de panaderías de barrio (Del Pilar, Lo+Rico) — sin datos de direcciones</td>
+<td>s/d — hueco de información, no necesariamente de mercado.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.5 Espacios en blanco tentativos <b style="color:#B12028">[INTERPRETACIÓN]</b></h3>
+<blockquote>
+<p>Todos son hipótesis para validar (I014–I017, E###). No son conclusiones.</p>
+</blockquote>
+<ol>
+<li><strong>"Tercer formato" entre la panadería de barrio de cadena y el café de especialidad.</strong> Las cadenas cordobesas (Lo+Rico, Del Pilar, Independencia, Perdú) compiten por precio/cercanía en pan y facturas; las cafeterías de especialidad (Cherry Season, Superanfibio, Güemes) compiten por café y experiencia, con poca oferta de <strong>pan para llevar a casa</strong>. No se encontró una cadena local que combine <em>pan de calidad para el hogar + café bueno + precio medio</em> de forma replicable (el caso más cercano, La Vene, es de origen mendocino y su presencia actual es s/d; Del Pilar Coffee es el otro candidato).</li>
+<li><strong>Horario temprano (6:30–9 h) fuera de shoppings.</strong> Varias propuestas premium abren tarde o solo a la tarde (Superanfibio Manantiales 9 h; Pink Café 16 h; Starbucks shoppings 10 h). El desayuno temprano "de pie" parece cubierto por panaderías de barrio, YPF Full (24 h) y fast food (Mostaza/McDonald's), no por marcas de calidad media-alta.</li>
+<li><strong>Barrios residenciales en crecimiento con baja densidad de bakery café</strong> (Manantiales, zona sur, Villa Belgrano/Argüello más allá de R. Núñez). Solo hay evidencia de Superanfibio en Manantiales y Culpa de los dos en Gauss. Hueco de información a confirmar con Google Maps en campo.</li>
+<li><strong>Almuerzo rápido con base panadería.</strong> Pocas marcas bakery comunican almuerzo (La Vene, Del Pilar Coffee con "menú mediodía", Verasens con sándwiches, Goulu). El almuerzo rápido lo dominan fast food y supermercados.</li>
+<li><strong>Señal de riesgo, no de hueco:</strong> las cadenas porteñas de café de calle <strong>no prosperaron</strong> en Córdoba o se concentran en shoppings/aeropuerto (Café Martínez cerró la mayoría y relanza; Tostado y Juan Valdez solo aeropuerto; LPQ en La Calera; Ninina ausente). Posible lectura: el cordobés prefiere marcas locales o el alquiler de calle no cierra para esos modelos. Requiere validación.</li>
+<li><strong>Precio de facturas en escalada</strong> (medialuna ~$600–750 en 2025 → estimado ~$850–1.000 en 2026) y venta de "día anterior" a mitad de precio (F159): posible espacio para <strong>propuesta de valor por precio/consistencia</strong> con producción centralizada/congelada, si la calidad percibida se sostiene (vinculado a A004/A006).</li>
+</ol>
+<hr />
+<h2>6. Conclusiones</h2>
+<ol>
+<li><b style="color:#B12028">[HECHO]</b> El mercado de panadería de Córdoba Capital tiene <strong>dos redes cordobesas grandes y franquiciadas</strong>: Del Pilar (45 locales, 8 propios + 37 franquicias, con planta de 2.000 m² y ultracongelado) y Lo+Rico (26–30 bocas, fundada en 2018). Son el <strong>benchmark directo</strong> del modelo "producción central + red de franquicias" que el proyecto evalúa.</li>
+<li><b style="color:#B12028">[HECHO]</b> La franja premium de café la lidera una <strong>cadena local de especialidad integrada verticalmente</strong> (Cherry Season: tostador + 3 locales + 2 en camino; ranking sudamericano) y una constelación de independientes en NC, Güemes y Cerro.</li>
+<li><b style="color:#B12028">[HECHO]</b> Las cadenas nacionales/internacionales de café están <strong>concentradas en shoppings, aeropuerto o fuera del ejido</strong> (Havanna, Starbucks, Tostado, Juan Valdez, LPQ); Café Martínez cerró la mayoría de sus locales y está relanzando.</li>
+<li><b style="color:#B12028">[HECHO]</b> La conveniencia (YPF Full: 29,3 M de medialunas en 7 meses a nivel país) y el fast food (Mostaza "Open 24" en Plaza España con combo de 3 medialunas + café &lt; $5.999) compiten fuerte en <strong>desayuno rápido y horario extendido</strong>.</li>
+<li><b style="color:#B12028">[INTERPRETACIÓN]</b> Nueva Córdoba está saturada; los huecos tentativos están en <strong>formato</strong> (pan para el hogar + café medio), <strong>horario</strong> (temprano fuera de shoppings) y <strong>zonas residenciales en crecimiento</strong>.</li>
+<li><b style="color:#B12028">[INTERPRETACIÓN]</b> A007 <strong>no puede validarse aún</strong>: hay candidatos de espacio, pero faltan precios comparables, reseñas y observación de campo.</li>
+</ol>
+<h2>7. Limitaciones</h2>
+<ul>
+<li><strong>Sin lectura completa de páginas</strong>: WebFetch bloqueado por el proxy → todos los datos vienen de fragmentos/resúmenes del buscador. Fechas de publicación de varias notas (InfoNegocios, Comercio y Justicia) <strong>no confirmadas</strong>; algunos conteos pueden ser de hace años (ej. Independencia 8 vs 15; Mostaza 5 vs 9; Havanna 7 en 2022).</li>
+<li><strong>Cupo de búsquedas agotado</strong> antes de cerrar: listado actual de Havanna, conteo YPF Full/Shell/Axion en Capital, ratings de Google, seguidores de Instagram, precio de café con leche en Córdoba, cartas de Starbucks/Havanna.</li>
+<li><strong>Google Maps/reseñas e Instagram no accesibles</strong> → columnas de puntaje, reseñas y seguidores quedan s/d para los 44 actores.</li>
+<li><strong>Directorios (Sucursales24, La Helvética, etc.)</strong> tienen baja confiabilidad y pueden listar locales cerrados.</li>
+<li><strong>Sesgo de visibilidad mediática</strong>: sobre-representa NC, Centro, Cerro y Güemes; las panaderías de barrio independientes (probablemente cientos) no están censadas.</li>
+<li><strong>Ambigüedad Córdoba España/México</strong> en resultados; se filtró manualmente, pero puede quedar algún error residual.</li>
+<li>Modelo operativo (in situ vs. centralizado vs. congelado) es <strong>inferido</strong> salvo en Del Pilar.</li>
+</ul>
+<h2>8. Implicancias</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Para</th>
+<th>Perspectiva 1 — Local 1</th>
+<th>Perspectiva 2 — Red / franquicia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubicación</td>
+<td>NC es la zona más densa: alto tráfico pero competencia máxima (especialidad + cadenas + Mostaza 24 h). Cerro/R. Núñez concentra la merienda premium. Evaluar barrios residenciales en crecimiento con menor densidad <b style="color:#B12028">[INTERPRETACIÓN]</b>.</td>
+<td>Del Pilar demuestra que una red de ~45 bocas es viable en Gran Córdoba con franquicias, incluyendo localidades satélite (Villa Allende, Mendiolaza, Unquillo). La red debe pensarse para barrios, no solo para NC.</td>
+</tr>
+<tr>
+<td>Concepto / propuesta</td>
+<td>El hueco más prometedor a validar es "pan de calidad para llevar + café bueno + precio medio + horario temprano". Diferenciarse de Lo+Rico (precio) y de Cherry Season (café premium).</td>
+<td>El concepto tiene que ser replicable sin panadero maestro por local → coherente con producción central/congelada; Del Pilar ya lo hace (planta + ultracongelado) y es el competidor directo del modelo.</td>
+</tr>
+<tr>
+<td>Producto</td>
+<td>Medialuna es el campo de batalla (Lo+Rico, Culpa de los dos, Superanfibio masa madre, YPF Full masivo). Criollos = producto identitario cordobés (campeonato nacional).</td>
+<td>Estandarizar 2–3 productos héroe (medialuna + criollo + uno propio) con ficha técnica; riesgo de "commodity" frente a YPF Full/Mostaza.</td>
+</tr>
+<tr>
+<td>Precio</td>
+<td>Techo de mercado de referencia: combo fast food 3 medialunas + café &lt; $5.999; piso panadería sugerida (factura ~$600–750 en 2025). Hay que ubicarse con precios reales de campo (I015).</td>
+<td>La escala permite competir con combos (como Lo+Rico en apps); pero la franquicia necesita margen para regalía → no competir solo por precio.</td>
+</tr>
+<tr>
+<td>Canal / delivery</td>
+<td>Lo+Rico, Perdú, LPQ, Starbucks, Mostaza ya están en PedidosYa/Rappi → delivery es "mínimo exigible" en NC/Centro.</td>
+<td>Integración con apps y pedidos anticipados (oficinas, empresas) como en Del Pilar (canal empresas/súper).</td>
+</tr>
+<tr>
+<td>Riesgo</td>
+<td>Saturación en NC; guerra de precios en facturas; cadenas de conveniencia 24 h.</td>
+<td>Caso Café Martínez: una cadena fuerte en AMBA fracasó en calle en Córdoba → no asumir que un formato exitoso en otro mercado se traslada.</td>
+</tr>
+<tr>
+<td>Franquiciabilidad</td>
+<td>—</td>
+<td>Competidores franquiciadores locales ya compiten por los mismos franquiciados (Del Pilar, Lo+Rico, Independencia, La Vene, Havanna, Bonafide, Café Martínez master). Relevar sus condiciones en I018.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>9. Recomendaciones <b style="color:#B12028">[RECOMENDACIÓN]</b></h2>
+<ol>
+<li>Encargar <strong>fichas profundas (I014)</strong> para 10 competidores priorizados: Del Pilar, Lo+Rico, Cherry Season, Havanna, Starbucks, Perdú, Culpa de los dos, Superanfibio, YPF Full, Mostaza (alternativas: La Vene, Panadería Independencia, Café Martínez si relanza).</li>
+<li><strong>Relevamiento de precios en campo (I015)</strong> con canasta estándar: medialuna, docena de facturas, kg pan francés, kg criollos, café con leche, combo desayuno, sándwich/almuerzo, en ≥3 zonas (NC, Cerro, un barrio residencial).</li>
+<li><strong>Relevar Google Maps manualmente (I016)</strong> para ratings/reseñas y horarios reales de los 44 actores + barrer barrios residenciales para detectar panaderías independientes.</li>
+<li><strong>Mapear en un SIG simple</strong> (Google My Maps) las direcciones de este censo antes de I029 (ubicaciones).</li>
+<li>Pedir a los socios habilitar lectura web completa (o hacerla a mano) para verificar fechas de las notas de InfoNegocios/Comercio y Justicia y actualizar conteos de sucursales.</li>
+</ol>
+<h2>10. Nuevas preguntas (→ OPEN_QUESTIONS)</h2>
+<ul>
+<li>¿Cuántas sucursales tienen <strong>hoy</strong> (2026) Del Pilar, Lo+Rico, Independencia, La Vene, Havanna y Starbucks en Córdoba Capital?</li>
+<li>¿Del Pilar y Lo+Rico hornean in situ desde masa congelada (bake-off) o reciben producto terminado? ¿Cómo lo percibe el cliente? (vincula A004/A006)</li>
+<li>¿Cuánto cuesta el café con leche con 2 medialunas en Córdoba por zona (índice propio)?</li>
+<li>¿Qué condiciones de franquicia (fee, regalía, inversión) ofrecen hoy Del Pilar y Lo+Rico?</li>
+<li>¿Se concretó el relanzamiento de Café Martínez en Córdoba Capital? ¿Cuántos locales abrió y dónde?</li>
+<li>¿Cuántas tiendas YPF Full / Shell Select / Axion Spot hay en el ejido y qué ticket de desayuno tienen?</li>
+<li>¿Las panaderías de supermercados (Disco, Carrefour, La Anónima ex Libertad, Cordiez) hornean en tienda? ¿Qué precio de medialuna manejan?</li>
+<li>¿Qué barrios residenciales en crecimiento (Manantiales, zona sur, Valle Escondido, Villa Belgrano) tienen menor densidad de bakery cafés?</li>
+<li>¿Por qué fracasaron (o no llegaron) las cadenas porteñas de café en calle en Córdoba: alquiler, precio, preferencia por lo local?</li>
+<li>¿Hay marcas cordobesas de "medialunas premium" solo digitales con volumen relevante?</li>
+</ul>
+<h2>11. Actualizaciones realizadas</h2>
+<ul>
+<li>[ ] ASSUMPTIONS · [ ] OPEN_QUESTIONS · [ ] RISKS · [ ] TASKS · [ ] STATUS · [ ] SOURCES · [ ] PROJECT_MASTER · [ ] FRANCHISE_READINESS_LOG<blockquote>
+<p>Pendiente: por instrucción de esta tarea no se modificaron otros archivos. Fuentes F100–F166 a volcar en <code>00_MASTER/SOURCES.md</code>; preguntas de §10 a <code>OPEN_QUESTIONS.md</code>; A007 queda NO VALIDADA con evidencia parcial; T012 puede pasar a "fase desk completa".</p>
+</blockquote>
+</li>
+</ul></div>
+<footer><span>Ultracongelados Canalsenses S.R.L. · Proyecto PAN-CBA</span><span>Documento fuente: panaderia_cordoba/02_COMPETENCIA/</span></footer></div></body></html>
