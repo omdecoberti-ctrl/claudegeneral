@@ -102,3 +102,7 @@
 | Q065 | ¿Modelo "fabricante-franquiciante" (ganar en el margen del producto, sin regalía o regalía sobre compras) o "marca-servicio" (regalía sobre ventas)? | G15 | P2 | I018, R024 | ABIERTA |
 | Q066 | ¿Qué tope de precio de suministro, como % del precio de venta, deja rentable al franquiciado? (referencia: Panera ≤ 27%) | G7/G15 | P2 | R024 | ABIERTA |
 | Q067 | ¿Cómo operan y cómo les va a Costumbres Argentinas, Buenos Aires Bakery y Perdu en Córdoba? (referentes directos del modelo) | G3 | P1 | I013, I014 | ABIERTA |
+| Q068 | ¿Del Pilar y Lo+Rico hornean en el local a partir de masa congelada? ¿Son clientes de UC? ¿Qué condiciones de franquicia ofrecen? | G3 | P1 | R025, R019 | ABIERTA |
+| Q069 | ¿Cuánto cuesta el "café con leche + 2 medialunas" por zona? (índice propio de precios, I015) | G3/G6 | P1 | A001 | ABIERTA |
+| Q070 | ¿Por qué las cadenas porteñas de café fracasan en la calle en Córdoba (Café Martínez cerró sus locales)? | G3 | P2 | R007 | ABIERTA |
+| Q071 | ¿Qué barrios en crecimiento (Manantiales, zona sur, Valle Escondido, Villa Belgrano) tienen menos oferta de bakery café? | G8 | P1 | A007 | ABIERTA |

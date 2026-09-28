@@ -138,3 +138,70 @@
 | F244 | UPI (17/06/2015) / SFGate / Nasdaq — cierre de La Boulange por Starbucks | https://www.upi.com/Business_News/2015/06/17/Starbucks-to-close-La-Boulange-bakery-chain/7121434536137/ | 2026-09-28 | ver I018 | MA | I018 |
 | F245 | La Capital de Mar del Plata — "La fábrica que produce 40 mil docenas de alfajores por día… | https://www.lacapitalmdp.com/la-fabrica-que-produce-40-mil-docenas-de-alfajores-por-dia-y-abastece-al-mundo/ | 2026-09-28 | ver I018 | M (sólo título) | I018 |
 | F246 | Café Martínez — página de franquicias (propuesta de valor) | https://cafemartinez.com/form-franquicia | 2026-09-28 | ver I018 | M | I018 |
+| F100 | Lo+Rico Panaderías — Facebook oficial | https://www.facebook.com/LoMasRico.Panaderias/ | 2026-09-28 | ver I013 | M | I013 |
+| F101 | Puntal — "Lo+Rico Group y su crecimiento empresarial en Córdoba" | https://www.puntal.com.ar/gastronomia/lorico-group-y-su-crecimiento-empresarial-cordoba-n209816 | 2026-09-28 | ver I013 | M | I013 |
+| F102 | PedidosYa — Lo+Rico Panaderías Rondeau | https://www.pedidosya.com.ar/restaurantes/cordoba/lo-rico-panaderias-rondeau-menu | 2026-09-28 | ver I013 | M | I013 |
+| F103 | La Helvética Online — Perdú (ficha) | https://lahelveticaonline.com.ar/panaderia/perdu-2/ | 2026-09-28 | ver I013 | B | I013 |
+| F104 | Rappi — Perdú Panaderías Nueva Córdoba | https://www.rappi.com.ar/restaurantes/216835-perdu-panaderias | 2026-09-28 | ver I013 | M | I013 |
+| F105 | InfoNegocios — "Panadería del Pilar avanza en tres frentes…" | https://infonegocios.info/bien-de-familia/panaderia-del-pilar-avanza-en-tres-frentes-locales-propios-y-franquicias-empresas-y-supermercados | 2026-09-28 | ver I013 | M (fecha publ. s/d) | I013 |
+| F106 | Panadería Del Pilar — Franquicias (oficial) | https://panaderiadelpilar.ar/franquicias/ | 2026-09-28 | ver I013 | M | I013 |
+| F107 | Circuito Gastronómico — "Los mejores lugares para comer croissant y medialunas" | https://circuitogastronomico.com/los-mejores-lugares-para-comer-croissant-y-medialunas/ | 2026-09-28 | ver I013 | M | I013 |
+| F108 | Turismo Córdoba Capital (Municipalidad) — Superanfibio | https://turismo.cordoba.gob.ar/superanfibio/ | 2026-09-28 | ver I013 | A | I013 |
+| F109 | Pluria — Superanfibio Manantiales | https://pluria.co/es/cafes/argentina/cordoba/2506--superanfibio-manantiales | 2026-09-28 | ver I013 | M | I013 |
+| F110 | Perfil Córdoba — "Del antojo al fenómeno: Culpa de los Dos…" | https://www.perfil.com/noticias/cordoba/del-antojo-al-fenomeno-culpa-de-los-dos-y-el-arte-de-emprender-sin-perder-el-sabor.phtml | 2026-09-28 | ver I013 | M | I013 |
+| F111 | InfoNegocios — "Panadería Independencia suma de a dos (ya tiene 8 locales…)" | https://infonegocios.info/y-ademas/panaderia-independencia-suma-de-a-dos-ya-tiene-8-locales-y-va-por-mas | 2026-09-28 | ver I013 | M (fecha publ. s/d, probablemente 2018) | I013 |
+| F112 | Centrofranchising — Panadería Independencia suma franquicia en NC | https://centrofranchising.com/panaderia-independencia-suma-otra-franquicia-en-nueva-cordoba/ | 2026-09-28 | ver I013 | B (fechas contradictorias) | I013 |
+| F113 | InfoNegocios — La Vene abre dos sucursales en Córdoba | https://infonegocios.info/plus/la-vene-la-marca-mendocina-de-pastas-y-panaderia-abre-dos-sucursales-en-cordoba-general-paz-y-nueva-cordoba | 2026-09-28 | ver I013 | M | I013 |
+| F114 | Comercio y Justicia — La Vene suma tres franquicias en Córdoba | https://comercioyjusticia.info/negocios/con-su-nuevo-local-en-el-centro-la-vene-suma-tres-franquicias-en-cordoba/ | 2026-09-28 | ver I013 | M | I013 |
+| F115 | Comercio y Justicia — Havanna inauguró en Nuevocentro el local más grande del interior | https://comercioyjusticia.info/negocios/havanna-inauguro-en-nuevocentro-el-local-mas-grande-del-interior-del-pais/ | 2026-09-28 | ver I013 | M (fecha publ. s/d) | I013 |
+| F116 | iProfesional — Invertir en una franquicia de Havanna 2025 | https://www.iprofesional.com/finanzas/441494-invertir-en-una-franquicia-de-havanna-cuanto-cuesta-en-2025-y-que-rentabilidad-deja | 2026-09-28 | ver I013 | M | I013 |
+| F117 | Latinoplaces — Havanna Patio Olmos | https://ar.latinoplaces.com/cordoba-province/havanna-local-patio-olmos-shopping-1290032 | 2026-09-28 | ver I013 | B | I013 |
+| F118 | Nuevocentro Shopping — Starbucks | https://nuevocentro.com.ar/starbucks/ | 2026-09-28 | ver I013 | A | I013 |
+| F119 | Yelp — Starbucks Av. Colón 608 | https://www.yelp.com/biz/starbucks-c%C3%B3rdoba-3 | 2026-09-28 | ver I013 | M | I013 |
+| F120 | Yelp — Starbucks Virgen de la Merced 2300 | https://m.yelp.com/biz/starbucks-c%C3%B3rdoba-2 | 2026-09-28 | ver I013 | B | I013 |
+| F121 | Rappi — Starbucks Nueva Córdoba | https://www.rappi.com.ar/restaurantes/226266-starbucks | 2026-09-28 | ver I013 | M | I013 |
+| F122 | Perfil Córdoba — "Café Martínez va por la revancha en Córdoba…" | https://www.perfil.com/noticias/cordoba/cafe-martinez-va-por-la-revancha-en-cordoba-con-inversor-local-se-vienen-nuevas-aperturas.phtml | 2026-09-28 | ver I013 | M | I013 |
+| F123 | Web Retail — "Café Martínez planea una expansión en Córdoba" | https://www.webretail.com.ar/cafe-martinez-planea-una-expansion-en-cordoba/ | 2026-09-28 | ver I013 | M | I013 |
+| F124 | Thebrandsoup — Café Martínez 40 nuevas sucursales 2025 | https://thebrandsoup.com/life-style/bizlife/cafe-martinez-y-40-nuevas-sucursales-para-2025/ | 2026-09-28 | ver I013 | M | I013 |
+| F125 | InfoNegocios — "GoldCafé abre su cuarto local de Bonafide en Córdoba" | https://infonegocios.info/y-ademas/goldcafe-abre-su-cuarto-local-de-bonafide-en-cordoba | 2026-09-28 | ver I013 | M (fecha s/d) | I013 |
+| F126 | Sucursales24 — Bonafide Córdoba Capital | https://www.sucursales24.com.ar/cordoba-capital/bonafide/ | 2026-09-28 | ver I013 | B | I013 |
+| F127 | Punto a Punto — Tostado Café Club apuesta por Córdoba | https://puntoapunto.com.ar/tostado-cafe-club-apuesta-fuerte-por-cordoba-y-proyecta-seguir-creciendo-en-todo-el-pais | 2026-09-28 | ver I013 | M | I013 |
+| F128 | Tostado Café Club — Locales (oficial) | https://tostadocafeclub.com/locales/ | 2026-09-28 | ver I013 | M | I013 |
+| F129 | InfoNegocios — Le Pain Quotidien ya puso un pie en Córdoba | https://infonegocios.info/plus/le-pain-quotidien-ya-puso-un-pie-en-cordoba-donde-funciona-el-primer-local-de-la-cadena-que-se-propone-como-el-pan-de-cada-dia | 2026-09-28 | ver I013 | M | I013 |
+| F130 | Forbes Argentina — Entrevista CEO LPQ Argentina | https://www.forbesargentina.com/negocios/federico-lantaron-ceo-le-pain-quotidien-argentina-somos-segundo-pais-mas-locales-nivel-mundial-detras-eeuu-n63846 | 2026-09-28 | ver I013 | M | I013 |
+| F131 | PedidosYa — Le Pain Quotidien Córdoba | https://www.pedidosya.com.ar/restaurantes/cordoba/le-pain-quotidien-cordoba-4181aaf9-75cc-413d-b77c-16a3cbeb8021-menu | 2026-09-28 | ver I013 | M | I013 |
+| F132 | The Cook Girl — Ninina Bakery | https://thecookgirl.com/ninina-bakery/ | 2026-09-28 | ver I013 | M | I013 |
+| F133 | La Derecha Diario — Juan Valdez abrió su primer local en Córdoba | https://derechadiario.com.ar/negocios-finanzas/juan-valdez-abrio-su-local-cordoba-y-proyecta-mas-inversiones-argentina | 2026-09-28 | ver I013 | M | I013 |
+| F134 | Comercio y Justicia — McDonald's abrió su 21º local en Córdoba | https://comercioyjusticia.info/negocios/mcdonalds-abrio-su-21o-local-en-la-ciudad-de-cordoba/ | 2026-09-28 | ver I013 | M | I013 |
+| F135 | El Diario del Centro del País — Arcos Dorados | https://www.eldiariocba.com.ar/locales/2026/2/17/los-arcos-dorados-cada-vez-mas-cerca-de-nuestra-ciudad-143736.html | 2026-09-28 | ver I013 | M | I013 |
+| F136 | InfoNegocios — Mostaza local 350 m² frente a Plaza España | https://infonegocios.info/plus/mostaza-copa-el-corazon-de-nueva-cordoba-con-un-local-de-350-m2-frente-a-plaza-espana-y-compite-con-mcdonald-s-con-su-open-24 | 2026-09-28 | ver I013 | M | I013 |
+| F137 | InfoNegocios — Mostaza ya tiene 9 locales en Córdoba | https://infonegocios.info/y-ademas/mostaza-tiene-planes-de-seguir-consolidando-su-presencia-en-cordoba-ya-tiene-9-locales-y-genero-mas-de-240-empleos | 2026-09-28 | ver I013 | M | I013 |
+| F138 | Mostaza — Cafetería (oficial) | https://www.mostazaweb.com.ar/categoria_comida/cafeteria/ | 2026-09-28 | ver I013 | M | I013 |
+| F139 | Ámbito — Los números de las tiendas YPF Full | https://www.ambito.com/energia/los-increibles-numeros-las-tiendas-ypf-full-venden-millones-cafe-medialunas-alfajores-y-hamburguesas-n6178561 | 2026-09-28 | ver I013 | A | I013 |
+| F140 | Yelp — Full YPF Av. Monseñor Pablo Cabrera 4650 | https://m.yelp.com/biz/full-ypf-c%C3%B3rdoba | 2026-09-28 | ver I013 | B | I013 |
+| F141 | Surtidores.com.ar — Diseño tiendas Spot de Axion | https://surtidores.com.ar/los-detalles-del-diseno-de-las-tiendas-de-conveniencia-spot-con-las-que-axion-energy-renueva-el-mercado/ | 2026-09-28 | ver I013 | M | I013 |
+| F142 | Shell Argentina — Shell Select | https://www.shell.com.ar/conductores/shellselect.html | 2026-09-28 | ver I013 | M | I013 |
+| F143 | Sucursales24 — Disco Córdoba Capital | https://www.sucursales24.com.ar/cordoba-capital/supermercado-disco/ | 2026-09-28 | ver I013 | B | I013 |
+| F144 | Sucursales24 — Vea Córdoba Capital | https://www.sucursales24.com.ar/cordoba-capital/vea/ | 2026-09-28 | ver I013 | B | I013 |
+| F145 | Revista Mercado — Carrefour supera los 60 locales en Córdoba | https://mercado.com.ar/negocios/carrefour-se-expande-en-cordoba-con-su-primera-tienda-express-en-jesus-maria-y-supera-los-60-locales-en-la-provincia/ | 2026-09-28 | ver I013 | M | I013 |
+| F146 | Sucursales24 — Carrefour Express Córdoba Capital | https://www.sucursales24.com.ar/cordoba-capital/carrefour-express/ | 2026-09-28 | ver I013 | B | I013 |
+| F147 | La Nación — De Narváez acelera para comprar Carrefour | https://www.lanacion.com.ar/economia/negocios/de-narvaez-acelera-para-comprar-carrefour-y-negocia-los-contratos-finales-nid02122025/ | 2026-09-28 | ver I013 | A | I013 |
+| F148 | Cadena 3 — La Anónima compra 12 hipermercados Libertad, incluidos los cuatro de Córdoba | https://www.cadena3.com/noticia/sociedad/la-anonima-compra-12-hipermercados-libertad-incluidos-los-cuatro-de-cordoba_530850 | 2026-09-28 | ver I013 | A | I013 |
+| F149 | Cordiez — Quiénes somos (oficial) | https://www.cordiez.com.ar/institucionales/quienes-somos | 2026-09-28 | ver I013 | M | I013 |
+| F150 | Super MaMi (Grupo Dinosaurio) — Panadería online | https://www.dinoonline.com.ar/super/promociones/supermami-almacen-panaderia-y-sandwiches-panaderia/_/N-1yoqqio | 2026-09-28 | ver I013 | M | I013 |
+| F151 | Los Andes — Oferta de De Narváez / Changomás | https://www.losandes.com.ar/economia/la-oferta-que-hizo-narvaez-comprar-carrefour-desaparece-la-marca-rival-changomas-n5970543 | 2026-09-28 | ver I013 | M | I013 |
+| F152 | Circuito Gastronómico — Mejores cafeterías de especialidad de Córdoba | https://circuitogastronomico.com/las-mejores-cafeterias-de-especialidad-de-cordoba/ | 2026-09-28 | ver I013 | M | I013 |
+| F153 | Canal C — Meriendas temáticas y café de especialidad | https://canalc.com.ar/tres-lugares-que-sirven-meriendas-tematicas-y-cafe-de-especialidad-en-cordoba/ | 2026-09-28 | ver I013 | M | I013 |
+| F154 | InfoNegocios — Cherry Season abre nueva sucursal en NC | https://infonegocios.info/plus/cherry-season-abre-una-nueva-sucursal-en-nueva-cordoba-a-metros-de-plaza-espana-y-estrena-un-cafe-inspirado-en-el-paladar-local | 2026-09-28 | ver I013 | M | I013 |
+| F155 | Circuito Gastronómico — Cherry Season puesto 63 Sudamérica | https://circuitogastronomico.com/cherry-season-quedo-en-el-puesto-63-entre-las-mejores-cafeterias-de-sudamerica/ | 2026-09-28 | ver I013 | M | I013 |
+| F156 | Circuito Gastronómico — Verasens | https://circuitogastronomico.com/verasens-la-heladeria-de-nueva-cordoba-donde-tambien-podes-comer-sandwiches/ | 2026-09-28 | ver I013 | M | I013 |
+| F157 | Cba24n — Nuevo aumento del pan en Córdoba | https://www.cba24n.com.ar/cordoba/nuevo-aumento-del-pan-en-cordoba--a-cuanto-se-vende-el-kilo_a69d3e25fe7704c4561032b09 | 2026-09-28 | ver I013 | M | I013 |
+| F158 | Perfil Córdoba — Aumento 15%, criollos $5.800 | https://www.perfil.com/noticias/cordoba/cordoba-aumento-del-15-en-el-precio-del-pan-y-el-kilo-de-criollos-ahora-cuesta-5800.phtml | 2026-09-28 | ver I013 | M | I013 |
+| F159 | ElDoce.tv — Facturas y criollos del día anterior en Córdoba | https://eldoce.tv/actualidad/2025/04/04/una-opcion-en-la-crisis-cuanto-salen-las-facturas-y-criollos-del-dia-anterior-en-cordoba/ | 2026-09-28 | ver I013 | A | I013 |
+| F160 | Vía Córdoba — Panadería de Córdoba con los mejores criollos | https://viapais.com.ar/cordoba/una-panaderia-de-cordoba-hace-los-mejores-criollos-de-argentina-segun-un-prestigioso-torneo/ | 2026-09-28 | ver I013 | M | I013 |
+| F161 | Instagram — alimentari.ar | https://www.instagram.com/alimentari.ar/ | 2026-09-28 | ver I013 | B | I013 |
+| F162 | Desayunos Córdoba (sitio) | https://desayunoscordoba.com/ | 2026-09-28 | ver I013 | B | I013 |
+| F163 | iProUP — Dark kitchens en Argentina | https://www.iproup.com/innovacion/20594-dark-kitchens-que-son-y-cuanto-cuesta-entrar-al-negocio | 2026-09-28 | ver I013 | B | I013 |
+| F164 | Wanderlog — Panadería Hermanos Fernández | https://wanderlog.com/place/details/1558654/panadería-hermanos-fernández | 2026-09-28 | ver I013 | B | I013 |
+| F165 | Punto a Punto — Havanna inauguró sucursal en Nuevocentro (US$120.000) | https://puntoapunto.com.ar/con-una-inversion-de-us-120-000-havanna-inauguro-sucursal-en-nuevocentro-shopping | 2026-09-28 | ver I013 | M | I013 |
+| F166 | TripAdvisor — Starbucks Córdoba (d13122080) | https://www.tripadvisor.com/Restaurant_Review-g312768-d13122080-Reviews-Starbucks-Cordoba_Province_of_Cordoba_Central_Argentina.html | 2026-09-28 | ver I013 | B | I013 |

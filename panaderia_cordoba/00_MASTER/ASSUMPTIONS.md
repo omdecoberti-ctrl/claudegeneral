@@ -79,6 +79,13 @@
 - **Resultado:** — **Estado:** NO VALIDADA
 
 ### A007 — Espacio de diferenciación
+- **Evidencia inicial (I013):** hay espacios tentativos, marcados [INTERPRETACIÓN] porque falta confirmarlos con precios de campo y reseñas:
+  - un formato replicable con pan de calidad para llevar, buen café y precio medio;
+  - desayuno temprano de calidad fuera de los shoppings;
+  - barrios en crecimiento como Manantiales y la zona sur;
+  - almuerzo rápido con base de panadería.
+- **Ya ocupado:** Del Pilar (45 locales, planta ultracongelada y franquicias) y Lo+Rico (26–30 locales, franquicias) ocupan el segmento masivo.
+- **Estado:** sigue NO VALIDADA.
 - **Hipótesis:** existe al menos una combinación segmento × ocasión × zona × precio mal atendida en Córdoba Capital.
 - **Confianza:** Baja. **Cómo validar:** I013–I017 + G2. **Resultado:** — **Estado:** NO VALIDADA
 
