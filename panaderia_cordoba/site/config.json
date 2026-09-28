@@ -1,0 +1,25 @@
+{
+  "proyecto": "Proyecto Panadería Córdoba",
+  "codigo": "PAN-CBA",
+  "empresa": "Ultracongelados Canalsenses S.R.L.",
+  "repo_url": "https://github.com/omdecoberti-ctrl/claudegeneral",
+  "repo_branch": "claude/stoic-hawking-6pkd67",
+  "repo_path": "panaderia_cordoba",
+  "hitos": [
+    {"fecha": "2026-10-09", "nombre": "Gate Review G0", "corte": false},
+    {"fecha": "2026-10-30", "nombre": "Gate Review G1–G3", "corte": false},
+    {"fecha": "2026-11-13", "nombre": "CORTE 1 — Concepto elegido", "corte": true},
+    {"fecha": "2026-12-04", "nombre": "GO económico (G7)", "corte": false},
+    {"fecha": "2026-12-15", "nombre": "CORTE 2 — Local firmado", "corte": true},
+    {"fecha": "2027-01-15", "nombre": "Proyecto cerrado", "corte": false},
+    {"fecha": "2027-02-14", "nombre": "CORTE 3 — Obra terminada", "corte": true},
+    {"fecha": "2027-02-22", "nombre": "Soft opening", "corte": false},
+    {"fecha": "2027-03-01", "nombre": "APERTURA", "corte": true}
+  ],
+  "socios": [
+    {"id": "oscar", "nombre": "Oscar Decoberti", "rol": "Ingeniero industrial · Gerente General de UC", "claves": ["Oscar", "hermanos", "Socios"], "email": ""},
+    {"id": "fabiola", "nombre": "Fabiola Decoberti", "rol": "Contadora", "claves": ["Fabiola", "hermanos", "Socios"], "email": ""},
+    {"id": "laura", "nombre": "Laura Decoberti", "rol": "Abogada", "claves": ["Laura", "hermanos", "Socios"], "email": ""},
+    {"id": "maria-isabel", "nombre": "María Isabel Sarmiento", "rol": "Socia (85% UC)", "claves": ["María Isabel", "Socios"], "email": ""}
+  ]
+}

@@ -48,6 +48,12 @@
 - Decisión tomada: revisión **semanal** de STATUS y decisiones. Entregables importantes en **PDF y HTML**, además del repositorio.
 - Aprobada por: socios
 
+### D007 — Sitio web del proyecto con usuario por socio
+- Fecha: 2026-09-28 · Tipo: Operativa · Gate: G0
+- Decisión tomada: todo el proyecto se compila en un sitio web privado donde **cada socio tiene su propio usuario** y un panel personal de seguimiento.
+- Pendiente: la plataforma de hosting (PD033).
+- Aprobada por: socios (pedido en el chat)
+
 ### Formato de registro
 ```
 ### D### — [Título corto]
@@ -106,3 +112,4 @@
 | PD030 | Secuencia de expansión 2027: 2ª unidad propia y lanzamiento de franquicia | G0/G13 | Estratégica | Lista para decidir (se puede postergar) | Mismo memo §6 |
 | PD031 | Presupuesto y ejecutor del trabajo de campo y los experimentos previos a la apertura | G0 | Táctica | **Lista para decidir** | Mismo memo §5 |
 | PD032 | Política de canal: cómo convive la marca retail propia con los clientes mayoristas de UC (panaderías y cafeterías) | G4 | Estratégica | Futuro | I010, R019 |
+| PD033 | Hosting del sitio: Cloudflare Pages + Access (gratis, usuario por mail) vs. Vercel Pro (USD 20/mes o más, sin saludo por socio) | G0 | Operativa | Lista para decidir (recomendación: Cloudflare) | `site/DEPLOY.md` |

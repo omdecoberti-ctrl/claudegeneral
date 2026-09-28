@@ -31,6 +31,8 @@
 | T023 | Responder Q046–Q048 (mayoría, dedicación, interlocutor) | G0 | Socios | P1 | — | PENDIENTE | PD002 completa |
 | T024 | Enviar catálogo interno UC con precios de transferencia indicativos + contactos de 3–5 clientes que hornean en su local | G0/G4 | Oscar | P1 | — | PENDIENTE | I010 fase 2 |
 | T025 | Contratar encuestadores o estudiantes para trabajo de campo (oct–nov) | G1–G3 | Socios | P1 | PD031 | BACKLOG | Equipo de campo |
+| T027 | Publicar el sitio (Cloudflare Pages) y configurar el acceso por socio (Access) siguiendo `site/DEPLOY.md` | G0 | Oscar | P2 | PD033 | PENDIENTE | Sitio privado en línea |
+| T028 | Enviar los mails de los 4 socios para el acceso y los paneles personales | G0 | Socios | P2 | — | PENDIENTE | `site/config.json` completo |
 | T026 | Gate Review G0 (fecha objetivo 09/10) | G0 | IA + Socios | P1 | T022, T023 | BACKLOG | GO a G1–G3 |
 
 \* Las investigaciones de escritorio (desk research) pueden empezar antes del cierre formal de G0 porque no comprometen inversión; se recomienda arrancarlas en paralelo si los socios lo aprueban.

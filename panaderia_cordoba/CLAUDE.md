@@ -55,7 +55,15 @@ Los códigos nunca se reutilizan ni se renumeran. Lo obsoleto se marca como tal 
 - Entregables importantes en **PDF y HTML** (D006), con la identidad visual de Canalsenses, además del repositorio.
 - **Todo entregable o análisis de competencia** se guarda en `02_COMPETENCIA/` (no en `18_INVESTIGACIONES/`) y **se envía siempre en el chat** en PDF y HTML (pedido de socios, 2026-09-28).
 
-## 7. Estilo
+## 7. Sitio web del proyecto
+- `site/build.py` genera un sitio estático a partir de todos los `.md`. Se publica solo con cada push. Ver `site/DEPLOY.md`.
+- Para que el sitio funcione bien:
+  - **mantener el formato de las tablas de registro** (primera columna = código; columnas "Estado" y "Responsable");
+  - escribir el nombre del socio en "Responsable" para que la tarea aparezca en su panel;
+  - actualizar `site/config.json` (hitos y socios) cuando cambien.
+- Antes de hacer push, correr `python site/build.py` para verificar que compila.
+
+## 8. Estilo
 - Español rioplatense. Documentos concisos, escaneables, con tablas.
 - Moneda: ARS con fecha de referencia (inflación) y, cuando sirva para comparar, USD con tipo de cambio y fecha explícitos.
 - Nombres de archivo: `MAYUSCULAS_CON_GUION_BAJO.md` para maestros; `I###_tema_corto.md` / `E###_tema_corto.md` para investigaciones y experimentos.

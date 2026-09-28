@@ -7,8 +7,8 @@
 ## Investigaciones
 | Código | Investigación | Pregunta principal | Tipo | Gate | Prioridad | Responde | Estado |
 |---|---|---|---|---|---|---|---|
-| I001 | Demografía y socioeconomía de Córdoba Capital | ¿Cuántos, dónde, con qué ingresos y hábitos viven/trabajan/estudian? | Desk | G1 | P1 | Q015, Q032 | PENDIENTE |
-| I002 | Consumo de pan y panificados | ¿Cuánto, qué y cómo se consume; evolución reciente? | Desk | G1 | P1 | Q015, Q016 | PENDIENTE |
+| I001 | Demografía y socioeconomía de Córdoba Capital | ¿Cuántos, dónde, con qué ingresos y hábitos viven/trabajan/estudian? | Desk | G1 | P1 | Q015, Q032 | FINALIZADA v1 |
+| I002 | Consumo de pan y panificados | ¿Cuánto, qué y cómo se consume; evolución reciente? | Desk | G1 | P1 | Q015, Q016 | FINALIZADA v1 |
 | I003 | Tendencias de consumo y gastronómicas | ¿Qué tendencias (salud, conveniencia, café de especialidad, masa madre, porciones, digital) son relevantes? | Desk | G1 | P2 | Q017 | PENDIENTE |
 | I004 | Benchmark internacional y nacional | ¿Qué conceptos exitosos existen (AR, LatAm, EE.UU., Europa) y qué es adaptable? | Desk | G1/G4 | P2 | Q017 | PENDIENTE |
 | I005 | Contexto macro y costos | Inflación, salario real, CCT panaderos/gastronómicos, tarifas, alquileres comerciales | Desk | G1/G7 | P2 | Q016, A018 | BACKLOG |
@@ -16,15 +16,15 @@
 | I007 | Entrevistas en profundidad a clientes | Necesidades, frustraciones, hábitos, disposición a pagar | Campo | G2 | P1 | Q019, Q020 | BACKLOG |
 | I008 | Encuesta cuantitativa | Frecuencia, ticket, horarios, canales, sensibilidad a precio | Campo | G2 | P1 | A001, A002 | BACKLOG |
 | I009 | Observación en punto de venta | Flujos, horarios pico, tickets, tiempos de espera | Campo | G2/G3 | P1 | A008 | BACKLOG |
-| I010 | Relevamiento de la empresa de congelados | Portfolio, capacidad, calidad, habilitaciones, costos, logística, flexibilidad | Interna | G0/G4 | P1 | Q040–Q045, A004 | PENDIENTE |
+| I010 | Relevamiento de la empresa de congelados | Portfolio, capacidad, calidad, habilitaciones, costos, logística, flexibilidad | Interna | G0/G4 | P1 | Q040–Q045, A004 | EN PROCESO (fase 1 finalizada) |
 | I011 | Comparación de modelos productivos | In situ vs. parcialmente centralizado vs. bake-off vs. híbrido: CAPEX, OPEX, m², personal, calidad, riesgo, escalabilidad | Modelo + Desk | G4 | P1 | Q011, Q013, A005 | BACKLOG |
 | I012 | Benchmark de cadenas bake-off / centralizadas | ¿Cómo operan cadenas con producción central (AR e internacional)? | Desk | G4 | P2 | A005, A006, A012 | BACKLOG |
-| I013 | Censo y mapa competitivo de Córdoba Capital | ¿Quiénes compiten por las mismas ocasiones y dónde están? | Desk + Campo | G3 | P1 | Q010 | PENDIENTE |
+| I013 | Censo y mapa competitivo de Córdoba Capital | ¿Quiénes compiten por las mismas ocasiones y dónde están? | Desk + Campo | G3 | P1 | Q010 | FINALIZADA v1 |
 | I014 | Fichas de competidores principales | Propuesta, surtido, precios, horarios, delivery, redes, reseñas, modelo operativo aparente | Desk + Campo | G3 | P1 | Q010 | BACKLOG |
 | I015 | Relevamiento de precios | Canasta comparable de productos y precios por formato/zona | Campo + Desk | G3/G6 | P1 | A001, Q025 | BACKLOG |
 | I016 | Análisis de reseñas (Google, redes, apps) | ¿Qué elogia y qué critica el cliente? | Desk | G3 | P1 | Q019, A006 | BACKLOG |
 | I017 | Mystery shopping | Experiencia real: espera, atención, calidad, ticket | Campo | G3 | P2 | Q019 | BACKLOG |
-| I018 | Franquicias de panadería / bakery café en Argentina | Modelos, fees, regalías, desempeño, formatos | Desk | G3/G15 | P2 | Q018, A020 | PENDIENTE |
+| I018 | Franquicias de panadería / bakery café en Argentina | Modelos, fees, regalías, desempeño, formatos | Desk | G3/G15 | P2 | Q018, A020 | FINALIZADA v1 |
 | I019 | Pre-modelo económico por concepto | Órdenes de magnitud de CAPEX/OPEX/venta por concepto | Modelo | G4 | P1 | PD009 | BACKLOG |
 | I020 | Arquitectura de menú | Categorías, tráfico vs. margen, SKU óptimos, combos | Desk + Modelo | G6 | P2 | Q028, Q029 | BACKLOG |
 | I021 | Costeo de recetas / fichas técnicas | Food cost por SKU (propio vs. centralizado) | Modelo | G6 | P1 | Q013, Q030 | BACKLOG |
@@ -41,7 +41,7 @@
 | I032 | Supply chain y logística de frío | Frecuencia, costos, capacidades, contingencias | Desk + Interna | G9 | P2 | Q013 | BACKLOG |
 | I033 | Estructura de personal y CCT | Puestos, convenios, costos, turnos | Desk | G9 | P2 | Q034, A003 | BACKLOG |
 | I034 | Stack tecnológico | POS, ERP, inventario, fidelización, BI, delivery, IA | Desk | G9 | P2 | Q035 | BACKLOG |
-| I035 | Normativa: habilitación, bromatología, seguridad, laboral, fiscal | Requisitos y plazos en Córdoba Capital | Desk + Consulta | G1–G11 | P2 | Q033 | BACKLOG |
+| I035 | Normativa: habilitación, bromatología, seguridad, laboral, fiscal | Requisitos y plazos en Córdoba Capital | Desk + Consulta | G1–G11 | **P1 (ruta crítica)** | Q033 | BACKLOG |
 | I036 | Customer journey y experiencia | Momentos críticos y estándares de servicio | Desk + Campo | G10 | P3 | — | BACKLOG |
 | I037 | Estrategia de marketing y lanzamiento | Posicionamiento, digital, Google Maps, fidelización, CRM | Desk | G10/G11 | P3 | — | BACKLOG |
 | I038 | Naming y registro de marca | Disponibilidad INPI, dominio, redes | Desk | G10 | P3 | Q037 | BACKLOG |

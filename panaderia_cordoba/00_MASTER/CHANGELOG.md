@@ -15,3 +15,4 @@
 - Entregable E-02: resumen de primeros hallazgos (HTML + PDF).
 - Análisis de competencia (I013, I018) movido a 02_COMPETENCIA con versiones HTML y PDF.
 - Entregable E-03: resumen ejecutivo para socios (HTML + PDF).
+- Sitio web del proyecto (`site/`): tablero, paneles por socio, registros filtrables, códigos enlazados, buscador, entregables. D007, PD033, T027 y T028. Backlog de investigaciones actualizado.
