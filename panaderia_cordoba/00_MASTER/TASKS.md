@@ -33,6 +33,7 @@
 | T025 | Contratar encuestadores o estudiantes para trabajo de campo (oct–nov) | G1–G3 | Socios | P1 | PD031 | BACKLOG | Equipo de campo |
 | T027 | Configurar el proyecto de Vercel (Root Directory, rama, desactivar Vercel Authentication) siguiendo `site/DEPLOY.md` | G0 | Oscar | P2 | D008 | PENDIENTE | Sitio privado en línea |
 | T028 | Repartir a cada socio su usuario y contraseña (entregados en el chat el 28/09) | G0 | Socios | P2 | T027 | PENDIENTE | Los 4 socios entran al sitio |
+| T029 | (Futuro) Sumar Supabase al sitio: ingreso de socios, aprobación de decisiones y tareas desde la web | — | IA | P3 | D008 | BACKLOG | Sitio interactivo |
 | T026 | Gate Review G0 (fecha objetivo 09/10) | G0 | IA + Socios | P1 | T022, T023 | BACKLOG | GO a G1–G3 |
 
 \* Las investigaciones de escritorio (desk research) pueden empezar antes del cierre formal de G0 porque no comprometen inversión; se recomienda arrancarlas en paralelo si los socios lo aprueban.

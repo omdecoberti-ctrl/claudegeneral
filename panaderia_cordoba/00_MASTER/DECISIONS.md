@@ -58,6 +58,8 @@
 - Fecha: 2026-09-28 · Tipo: Operativa · Gate: G0 · Origen: PD033
 - Decisión tomada: el sitio se publica en **Vercel**, en el proyecto que ya tienen los socios. El acceso es con usuario y contraseña individuales, validados en el propio sitio (`site/middleware.js`).
 - Alternativa descartada: Cloudflare Pages + Access.
+- Alcance: por ahora el sitio es **solo de lectura**, para consultar el proyecto (confirmado por los socios el 28/09).
+- Queda para más adelante sumar Supabase: ingreso de socios, aprobar decisiones y marcar tareas (T029).
 - Nota: para uso comercial corresponde el plan Pro de Vercel. Ver `site/DEPLOY.md`.
 - Aprobada por: socios (pedido en el chat)
 
