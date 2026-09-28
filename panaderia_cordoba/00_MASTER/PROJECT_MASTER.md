@@ -1,7 +1,7 @@
 # PROJECT MASTER — Proyecto Panadería Córdoba (PAN-CBA)
 
 > Mapa principal del proyecto. Debe poder leerse en 2–3 minutos. Detalle → documentos enlazados.
-> Última actualización: 2026-09-24
+> Última actualización: 2026-09-28
 
 ## 1. Objetivo
 - **Corto plazo:** diseñar, desarrollar, abrir y validar una primera panadería en Córdoba Capital, Argentina.
@@ -21,16 +21,20 @@ Mercado, competencia, cliente, concepto, producto, pricing, modelo financiero, u
 ## 5. Estado actual
 | Ítem | Valor |
 |---|---|
-| Etapa | ETAPA 1 — Infraestructura del proyecto |
-| Gate actual | **G0 — Definición del proyecto** (en curso) |
+| Etapa | Cierre de G0 + inicio de la investigación de escritorio de G1–G3 |
+| Gate actual | **G0 — Definición del proyecto** (D001–D006 aprobadas) |
 | Concepto actual | **Ninguno definido (intencional).** Surgirá de G1–G5. |
 | Ubicación | No definida |
-| Inversión disponible | Desconocida — ver `PARTNER_INPUTS.md` |
-| Fecha objetivo de apertura | No definida |
+| Estructura | Subsidiaria de Ultracongelados Canalsenses S.R.L. (D002) |
+| Inversión disponible | USD 100.000 + USD 20.000 de reserva, aportados por UC (D003) |
+| Fecha objetivo de apertura | Tope marzo 2027 (D004); plan acelerado en PD029 |
 
 ## 6. Contexto estratégico clave
-- Existe la posibilidad de vincularse con **una empresa que fabrica panificados congelados** → habilita modelos de producción centralizada / bake-off en punto de venta. **No se asume que centralizar sea lo mejor**: se evaluará económica y operativamente (I010–I012, Q011–Q014).
-- Identidad y condiciones de esa vinculación aún no documentadas (Q040).
+- **Ultracongelados Canalsenses S.R.L. (UC)** es la empresa madre. Planta en Canals, a ~320 km de Córdoba Capital. Trabaja 24 h en 3 turnos, tiene ~40% de capacidad ociosa, ~35 variedades, habilitaciones completas y BRC en proceso. Entrega producto pre-fermentado y, en panes, crudo. Tiene cadena de frío propia y hoy abastece Córdoba cada 15 días (I010).
+- **Interés de UC:** más volumen, capturar la diferencia de precio con el consumidor final y construir una marca conocida.
+- **No se asume que centralizar sea lo mejor:** se evaluará (I011).
+- **Tensiones clave:** conflicto de canal con los clientes mayoristas de UC (R019) y logística quincenal (R022).
+- **Socios:** María Isabel Sarmiento y Fabiola (contadora), Laura (abogada) y Oscar (ingeniero industrial, gerente general de UC) Decoberti. Sin experiencia previa en gastronomía o comercio al público. Tolerancia al riesgo: ambiciosa.
 
 ## 7. Principales hipótesis (todas NO VALIDADAS)
 Ver `ASSUMPTIONS.md`. Las más críticas hoy:
@@ -40,21 +44,26 @@ Ver `ASSUMPTIONS.md`. Las más críticas hoy:
 - A010 — Es posible alcanzar punto de equilibrio en ≤ 12 meses con la inversión disponible.
 
 ## 8. Principales decisiones
-Ninguna tomada todavía. Pendientes inmediatas (G0): PD001 aprobar estructura y metodología; PD002 definir socios/roles/gobernanza; PD003 rango de inversión y restricciones. Ver `DECISIONS.md`.
+D001 metodología · D002 subsidiaria de UC, decisiones por mayoría, operación con encargado contratado · D003 USD 100k + 20k · D004 apertura tope marzo 2027 · D005 inicio de investigación · D006 revisión semanal, entregables en PDF/HTML.
+Pendientes clave: PD029 plan acelerado · PD030 expansión 2027 · PD031 trabajo de campo · PD032 política de canal. Ver `DECISIONS.md`.
 
 ## 9. Principales números
 Sin datos todavía. Se completará a partir de G1 (mercado) y G7 (unit economics).
 | Métrica | Valor | Tipo | Fuente |
 |---|---|---|---|
-| — | — | — | — |
+| Inversión local 1 | USD 100.000 + 20.000 de reserva | [DECISIÓN] | D003 |
+| Capacidad ociosa UC | ~40% (3 turnos) | [HECHO — socios] | PARTNER_INPUTS |
+| Producción UC | 200–250 t/mes, ~35 variedades | [HECHO — prensa] | F256 |
+| Semanas hasta apertura | 23 (al 28/09/2026) | [ESTIMACIÓN] | E-01 |
 
 ## 10. Principales riesgos
-R001 construir sin validar demanda · R002 inflación/volatilidad de costos · R003 dependencia del proveedor de congelados · R004 elegir mal la ubicación · R005 alquiler/CAPEX excesivos. Ver `RISKS.md`.
+R021 plazo comprimido · R002 inflación · R019 conflicto de canal con clientes UC · R020 falta de experiencia en comercio al público · R001 invertir sin validar · R004 ubicación. Ver `RISKS.md`.
 
 ## 11. Próximos hitos
-1. Cierre de G0 (aprobación de estructura, metodología, info de socios, restricciones).
-2. Inicio de G1–G3 en paralelo (mercado, cliente, competencia).
-3. Relevamiento técnico-económico de la empresa de congelados (I010).
+1. 09/10 Gate Review G0 (con PD029–PD031 decididas).
+2. 30/10 Gate Review G1–G3.
+3. 13/11 concepto elegido (corte 1) · 15/12 local firmado (corte 2) · 14/02 obra terminada (corte 3).
+4. 01–08/03/2027 apertura. Detalle: `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.pdf`.
 
 ## 12. Mapa de documentos
 | Documento | Para qué |

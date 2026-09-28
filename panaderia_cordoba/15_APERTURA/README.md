@@ -23,4 +23,4 @@ Manual de apertura de sucursales
 ## Índice de documentos
 | Documento | Descripción | Estado | Fecha |
 |---|---|---|---|
-| — | _Vacío por ahora_ | | |
+| ROADMAP_APERTURA_MARZO_2027.html / .pdf | Entregable E-01: roadmap de apertura (plan acelerado, propuesto) | Borrador para aprobación | 2026-09-28 |

@@ -7,12 +7,12 @@
 ## Proyecto, socios y restricciones (G0)
 | Código | Pregunta | Gate | Prioridad | Responsable | Vinculado | Estado |
 |---|---|---|---|---|---|---|
-| Q001 | ¿Quiénes son los socios, qué aporta cada uno (capital, tiempo, know-how, contactos) y quién decide qué? | G0 | P1 | Socios | PD002 | ABIERTA |
-| Q002 | ¿Cuál es el rango de inversión disponible para el local 1 y cuánto de reserva? | G0 | P1 | Socios | PD003 | ABIERTA |
-| Q003 | ¿Qué retorno mínimo y payback máximo consideramos aceptables? | G0 | P1 | Socios | PD003, A010 | ABIERTA |
-| Q004 | ¿Cuál es la fecha objetivo (o ventana) de apertura? | G0 | P1 | Socios | PD004 | ABIERTA |
+| Q001 | ¿Quiénes son los socios, qué aporta cada uno (capital, tiempo, know-how, contactos) y quién decide qué? | G0 | P1 | Socios | PD002 | RESPONDIDA → D002 |
+| Q002 | ¿Cuál es el rango de inversión disponible para el local 1 y cuánto de reserva? | G0 | P1 | Socios | PD003 | RESPONDIDA → D003 |
+| Q003 | ¿Qué retorno mínimo y payback máximo consideramos aceptables? (Los socios aclaran que el local 1 también busca probar escalabilidad) | G7 | P1 | Socios | PD003, A010 | ABIERTA — la IA propone umbrales en G7 |
+| Q004 | ¿Cuál es la fecha objetivo (o ventana) de apertura? | G0 | P1 | Socios | PD004 | RESPONDIDA → D004 (marzo 2027) |
 | Q005 | ¿Qué dedicación horaria tendrá cada socio y quién opera el local día a día? | G0 | P1 | Socios | R010 | ABIERTA |
-| Q006 | ¿Qué NO estamos dispuestos a hacer (horarios, zonas, tipo de producto, nivel de deuda)? | G0 | P2 | Socios | — | ABIERTA |
+| Q006 | ¿Qué NO estamos dispuestos a hacer (horarios, zonas, tipo de producto, nivel de deuda)? | G0 | P2 | Socios | — | RESPONDIDA: sin restricciones (PARTNER_INPUTS §5) |
 | Q007 | ¿Qué estructura societaria y encuadre fiscal conviene? | G0–G7 | P2 | Contador | PD027 | ABIERTA |
 
 ## Mercado, cliente y competencia (G1–G3)
@@ -70,9 +70,24 @@
 ## Empresa de panificados congelados (transversal)
 | Código | Pregunta | Gate | Prioridad | Vinculado | Estado |
 |---|---|---|---|---|---|
-| Q040 | ¿Qué empresa es, qué relación societaria/comercial tendría con el proyecto (socio, proveedor, accionista)? *(Nota: en este entorno existen herramientas vinculadas a "Ultracongelados Canalsenses S.R.L."; confirmar si es la empresa en cuestión — no asumido).* | G0 | P1 | R003 | ABIERTA |
-| Q041 | ¿Qué portfolio produce hoy y qué podría desarrollar (panes, facturas, bollería, pastelería, salados)? | G0/G4 | P1 | A004 | ABIERTA |
+| Q040 | ¿Qué empresa es, qué relación societaria/comercial tendría con el proyecto (socio, proveedor, accionista)? *(Nota: en este entorno existen herramientas vinculadas a "Ultracongelados Canalsenses S.R.L."; confirmar si es la empresa en cuestión — no asumido).* | G0 | P1 | R003 | RESPONDIDA: Ultracongelados Canalsenses S.R.L.; subsidiaria (D002); ver I010 |
+| Q041 | ¿Qué portfolio produce hoy y qué podría desarrollar (panes, facturas, bollería, pastelería, salados)? | G0/G4 | P1 | A004 | EN INVESTIGACIÓN: unos 26 de ~35 SKUs identificados (I010); falta el catálogo interno |
 | Q042 | ¿Qué capacidad ociosa tiene y qué escala mínima de pedido/logística maneja? | G4 | P1 | — | ABIERTA |
 | Q043 | ¿Qué costos y precios de transferencia serían posibles? | G4/G7 | P1 | Q013 | ABIERTA |
 | Q044 | ¿Qué habilitaciones (RNE/RNPA), controles de calidad y trazabilidad tiene? | G4 | P2 | — | ABIERTA |
 | Q045 | ¿Puede desarrollar productos exclusivos (recetas propias de la marca) y con qué confidencialidad? | G4/G6 | P2 | R003 | ABIERTA |
+
+## Nuevas (2026-09-28)
+| Código | Pregunta | Gate | Prioridad | Vinculado | Estado |
+|---|---|---|---|---|---|
+| Q046 | "Mayoría": ¿se cuenta por persona (4 socios) o por capital (85% María Isabel)? | G0 | P1 | D002 | ABIERTA |
+| Q047 | ¿Cuántas horas por semana dedica cada hermano, hoy y después de abrir? | G0 | P1 | R010, R020 | ABIERTA |
+| Q048 | ¿Quién es el interlocutor principal? (propuesta: Oscar, gerente general de UC) | G0 | P1 | PD002 | ABIERTA |
+| Q049 | ¿Tope de financiamiento externo? | G7 | P3 | D003 | ABIERTA |
+| Q050 | ¿Qué dicen los clientes de UC que ya hornean en su local? (contactos de 3–5 para entrevistar) | G2/G4 | P1 | A004, A006 | ABIERTA |
+| Q051 | ¿Qué valores o principios tiene que respetar sí o sí la marca? | G5 | P2 | PD024 | ABIERTA |
+| Q052 | ¿Quién ejecuta el trabajo de campo presencial, con qué presupuesto? | G0 | P1 | PD031 | ABIERTA |
+| Q053 | "Panes crudos": ¿fermentan en el local o van del freezer al horno? ¿Qué equipamiento requiere? | G4 | P1 | A012, A017 | ABIERTA |
+| Q054 | ¿Cómo abastecer un local en Córdoba Capital (a ~320 km de Canals)? ¿Frecuencia semanal o depósito en la ciudad? ¿Costo por caja? | G4/G9 | P1 | R022 | ABIERTA |
+| Q055 | ¿Cuántos clientes tiene UC en Córdoba Capital, dónde están y hay exclusividades? ¿Cómo reaccionarían a una marca propia al público? | G4 | P1 | R019, PD032 | ABIERTA |
+| Q056 | ¿La marca al público es "Canalsenses" o una nueva? (el objetivo es una "marca conocida por la gente") | G5/G10 | P2 | PD024, PD032 | ABIERTA |

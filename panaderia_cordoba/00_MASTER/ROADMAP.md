@@ -3,6 +3,15 @@
 > Ningún Gate avanza automáticamente. Cada cierre requiere Gate Review (`PLANTILLAS/TEMPLATE_GATE_REVIEW.md`) y aprobación de socios (D###).
 > Duraciones = [ESTIMACIÓN] inicial, a recalibrar en cada Gate Review.
 
+## ⚠ Plan acelerado para abrir en marzo 2027 (propuesto, pendiente de decisión PD029)
+- **Qué cambia:** D004 fija marzo 2027 como tope. Las duraciones de abajo son las del roadmap estándar.
+- **Cómo se compatibiliza:** el plan acelerado comprime G0–G11 en 23 semanas, con tres fechas de corte:
+  - **13/11** concepto aprobado;
+  - **15/12** local firmado;
+  - **14/02** obra terminada.
+- **Si no se cumplen:** la apertura se reprograma a abril o mayo de 2027.
+- **Detalle:** `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.html` / `.pdf` y el memo `MEMOS/PD029_fast_track_marzo_2027.md`.
+
 ## Vista general
 | Fase | Gates | Pregunta central | Duración estimada |
 |---|---|---|---|

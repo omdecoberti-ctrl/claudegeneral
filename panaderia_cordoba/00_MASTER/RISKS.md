@@ -24,6 +24,10 @@
 | R016 | Marca no registrable o en conflicto | 1 | 2 | 2 | Legal | ABIERTO |
 | R017 | Sesgo de confirmación: elegir el concepto por preferencia y no por evidencia | 2 | 3 | 6 | PM + Socios | ABIERTO |
 | R018 | Interrupción de servicios (energía/gas) afecta hornos y frío | 1 | 2 | 2 | Operaciones | ABIERTO |
+| R019 | Conflicto de canal: la marca propia al público compite con panaderías y cafeterías clientes de UC | 2 | 3 | 6 | Socios | ABIERTO |
+| R020 | Equipo sin experiencia en gastronomía o comercio al público; sin maestro panadero ni barista | 3 | 2 | 6 | Socios | ABIERTO |
+| R021 | Plazo comprimido (marzo 2027) lleva a decidir con poca evidencia o a firmar un local inadecuado | 3 | 3 | 9 | PM + Socios | ABIERTO |
+| R022 | Logística desde Canals (~320 km, entregas cada 15 días) obliga a mucho stock congelado en el local o encarece el abastecimiento | 2 | 2 | 4 | Oscar | ABIERTO |
 
 ---
 
@@ -49,3 +53,11 @@
 | R016 | Búsqueda en INPI con marcas similares | Búsqueda de anterioridades antes de invertir en identidad (I038) |
 | R017 | Descartar datos contrarios; enamorarse de un concepto | Revisión crítica obligatoria; criterios de evaluación aprobados ANTES de ver conceptos (PD008); kill criteria |
 | R018 | Cortes en la zona | Evaluar redundancia/UPS para frío crítico; consultar historial de la zona |
+
+### Riesgos agregados el 2026-09-28
+| Código | Señales de alerta | Mitigación |
+|---|---|---|
+| R019 | Reclamos o pérdida de clientes mayoristas en Córdoba | Política de canal (PD032): radio de exclusión, marca o portfolio diferenciado, recetas exclusivas, convertir clientes en franquiciados |
+| R020 | Errores de operación o de producto en las pruebas; demora en contratar al encargado | Asesor gastronómico por horas; capacitación en planta UC; procedimientos escritos desde el día 1; encargado con experiencia |
+| R021 | Fechas de corte incumplidas; presión por "cerrar ya" | Fechas de corte fijas con reprogramación automática (PD029); no se saltean Gate Reviews |
+| R022 | Stock para 15–21 días que no entra en el freezer del local; quiebres de stock | Frecuencia semanal o depósito en Córdoba (Q054); dimensionar el frío en G10 |

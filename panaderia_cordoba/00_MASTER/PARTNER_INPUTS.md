@@ -1,72 +1,72 @@
-# INFORMACIÓN REQUERIDA DE LOS SOCIOS (G0)
+# INFORMACIÓN APORTADA POR LOS SOCIOS (G0)
 
-> Objetivo: conocer restricciones, recursos y preferencias ANTES de investigar, para no diseñar algo inviable para este equipo.
-> Responder directamente en este archivo (o en el chat; la IA lo transcribe). Si algo no se sabe, escribir "no sé" — también es información.
-> Las preferencias personales se registran como tales: **no son decisiones ni conclusiones**, y serán contrastadas con evidencia.
+> Respondido el 2026-09-28. Las respuestas son [HECHO — declarado por socios]. Lo que quedó sin definir se convirtió en pregunta abierta (Q###).
+> Las preferencias no son conclusiones: se contrastan con evidencia.
 
-## 1. Socios y gobernanza (→ PD002, Q001, Q005)
+## 1. Socios y gobernanza (→ D002)
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 1.1 | ¿Quiénes son los socios? (nombre, rol, % participación previsto) | |
-| 1.2 | ¿Qué aporta cada uno? (capital, tiempo, know-how gastronómico, comercial, inmobiliario, contactos) | |
-| 1.3 | ¿Dedicación horaria de cada uno al proyecto (hoy y post-apertura)? | |
-| 1.4 | ¿Quién operaría el local día a día? ¿Se contratará un encargado? | |
-| 1.5 | ¿Cómo se aprueban decisiones estratégicas? (unanimidad, mayoría, un responsable) | |
-| 1.6 | ¿Quién es el interlocutor principal con la IA / PM? | |
-| 1.7 | ¿Experiencias previas en gastronomía, retail o franquicias? | |
+| 1.1 | Socios y participación | Fabiola, Laura y Oscar Decoberti (hermanos) y María Isabel Sarmiento (madre). Son los socios de Ultracongelados Canalsenses S.R.L. (UC). **El proyecto será una subsidiaria de UC.** Participación en UC: hermanos 15% en total; María Isabel 85%. |
+| 1.2 | Aportes | Hermanos: tiempo y conocimiento. Fabiola: contadora. Laura: abogada. Oscar: ingeniero industrial. **El capital lo pone UC.** |
+| 1.3 | Dedicación horaria | No definida → Q047 |
+| 1.4 | Operación diaria | Un encargado contratado, controlado por los hermanos. |
+| 1.5 | Aprobación de decisiones estratégicas | Por mayoría. (Falta aclarar si es mayoría de personas o de capital → Q046) |
+| 1.6 | Interlocutor principal | No definido → Q048 |
+| 1.7 | Experiencia en gastronomía, comercio minorista o franquicias | Ninguno tiene. |
 
-## 2. Capital y expectativas económicas (→ PD003, Q002, Q003)
+## 2. Capital y expectativas económicas (→ D003)
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 2.1 | Rango de inversión disponible para el local 1 (ARS o USD, con fecha) | |
-| 2.2 | ¿Hay reserva adicional para capital de trabajo / pérdidas iniciales? ¿Cuánto? | |
-| 2.3 | ¿Financiamiento externo posible (bancario, inversores)? ¿Nivel de deuda aceptable? | |
-| 2.4 | Payback máximo aceptable (meses) | |
-| 2.5 | Retorno mínimo esperado / retiro esperado por los socios | |
-| 2.6 | ¿Cuánto capital se destinaría a la expansión (2ª–5ª unidad) si el piloto funciona? | |
+| 2.1 | Inversión local 1 | **USD 100.000**, aportados de acá a marzo 2027. |
+| 2.2 | Reserva capital de trabajo | **USD 20.000** adicionales. |
+| 2.3 | Financiamiento externo | Sí, si es necesario. Monto máximo no definido → Q049 |
+| 2.4 | Payback máximo | No definido. **El objetivo del local 1 va más allá de la rentabilidad: también busca escalabilidad.** → Q003 |
+| 2.5 | Retorno / retiro esperado | No definido → Q003 |
+| 2.6 | Capital para 2ª–5ª unidad | Sí, hay capital. |
 
-## 3. Plazos (→ PD004, Q004)
+## 3. Plazos (→ D004)
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 3.1 | ¿Fecha o ventana deseada de apertura? ¿Es flexible? | |
-| 3.2 | ¿Hay estacionalidad o evento que condicione la fecha? | |
-| 3.3 | ¿Horizonte deseado para 2ª unidad y para franquiciar? | |
+| 3.1 | Apertura | **Marzo 2027 como tope, si es posible.** |
+| 3.2 | Estacionalidad | Inicio de clases y comienzo de la temporada fuerte de panadería. |
+| 3.3 | 2ª unidad y franquicia | En el mismo año (2027). → PD030 (ver revisión crítica) |
 
-## 4. Empresa de panificados congelados (→ I010, Q040–Q045)
+## 4. Empresa de panificados congelados — Ultracongelados Canalsenses (→ I010)
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 4.1 | Nombre de la empresa y relación con los socios (propiedad, socio, proveedor) | |
-| 4.2 | Portfolio actual (panes, facturas, bollería, pastelería, salados, sin TACC, etc.) | |
-| 4.3 | Capacidad instalada y ociosa; turnos de producción | |
-| 4.4 | Canales actuales (mayoristas, supermercados, cafeterías, exportación) | |
-| 4.5 | Habilitaciones (RNE, RNPA), certificaciones, controles de calidad | |
-| 4.6 | Logística: ¿reparte? ¿cadena de frío propia? frecuencia, zonas, pedido mínimo | |
-| 4.7 | Costos o precios indicativos por producto | |
-| 4.8 | Capacidad de I+D: ¿puede desarrollar recetas exclusivas? | |
-| 4.9 | ¿Ya abastece a panaderías/cafeterías que hacen bake-off? ¿Qué feedback hay? | |
-| 4.10 | ¿Hay datos de producción o ventas que podamos usar (sin datos confidenciales innecesarios)? | |
-| 4.11 | ¿Qué interés estratégico tiene la empresa en este proyecto (canal propio, vidriera, volumen)? | |
+| 4.1 | Empresa | Ultracongelados Canalsenses S.R.L. |
+| 4.2 | Relación | Mismos socios; el proyecto será subsidiaria de UC. |
+| 4.3 | Portfolio | A relevar en internet → I010 |
+| 4.4 | Estado de entrega | Prefermentado; los panes, crudos. |
+| 4.5 | Capacidad | Trabaja 3 turnos, con **~40% de capacidad ociosa**. |
+| 4.6 | Canales actuales | Mayoristas, supermercados, cafeterías, panaderías y otros. |
+| 4.7 | Clientes que hornean en el local | Sí, ya los abastece. Devolución de esos clientes no documentada aún → Q050 |
+| 4.8 | Habilitaciones | Todas; en proceso de certificar BRC. |
+| 4.9 | Logística | Cadena de frío propia. Hoy abastece Córdoba Capital cada 15 días. |
+| 4.10 | Costos / precios | Los pasan más adelante → T024 |
+| 4.11 | Recetas exclusivas | Sí, según producto y complejidad. |
+| 4.12 | Interés estratégico | Más volumen; llegar al consumidor final para capturar la brecha de precio entre mayorista y consumidor final; construir una marca conocida por la gente. |
+| 4.13 | Datos de producción/ventas | Sin respuesta → T024 |
 
-## 5. Preferencias, límites y no-negociables (→ Q006)
+## 5. Preferencias, límites y no-negociables
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 5.1 | ¿Hay ideas previas de concepto, zona o estilo? (se registran como hipótesis a testear) | |
-| 5.2 | ¿Qué NO quieren hacer? (ej.: abrir 24 h, domingos, delivery, deuda, ciertas zonas) | |
-| 5.3 | ¿Qué nivel de involucramiento operativo toleran? | |
-| 5.4 | ¿Valores o principios que la marca debe respetar? | |
-| 5.5 | ¿Tolerancia al riesgo: preferimos un piloto más chico y seguro, o uno más ambicioso? | |
+| 5.1 | Ideas previas de concepto/zona/estilo | Ninguna. |
+| 5.2 | Qué NO hacer | Sin restricciones: "estamos dispuestos a trabajar y desarrollar todo con vos". |
+| 5.3 | Tolerancia al riesgo | **Ambiciosa y agresiva.** |
+| 5.4 | Valores de marca obligatorios | Sin respuesta → Q051 |
 
-## 6. Recursos y contactos disponibles
+## 6. Recursos y contactos
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 6.1 | ¿Contador, abogado, arquitecto, gestor, inmobiliaria de confianza? | |
-| 6.2 | ¿Maestro panadero / pastelero / barista de confianza? | |
-| 6.3 | ¿Locales conocidos o propios que pudieran usarse? | |
-| 6.4 | ¿Presupuesto y personas disponibles para trabajo de campo (entrevistas, conteos, mystery shopping)? | |
+| 6.1 | Contador, abogado, arquitecto, gestor, inmobiliaria | No tienen externos. Internamente hay una contadora (Fabiola) y una abogada (Laura). |
+| 6.2 | Maestro panadero, pastelero o barista | No tienen → R020 |
+| 6.3 | Locales disponibles | No tienen. |
+| 6.4 | Trabajo de campo | Piden que lo haga la IA y proponga ideas. → Q052: la IA no puede hacer trabajo presencial (ver STATUS) |
+| 6.5 | Presupuesto de investigación y experimentos | No definido → PD031 |
 
-## 7. Forma de trabajo
+## 7. Forma de trabajo (→ D006)
 | # | Pregunta | Respuesta |
 |---|---|---|
-| 7.1 | ¿Con qué frecuencia quieren revisión de STATUS y decisiones? (sugerido: semanal) | |
-| 7.2 | ¿Formato preferido de entregables para socios (repo, PDF, presentación, documento compartido)? | |
-| 7.3 | ¿Quién ejecuta tareas de campo y en qué plazos? | |
+| 7.1 | Revisión de STATUS | Semanal. |
+| 7.2 | Formato de entregables | Repositorio como fuente única de verdad; entregables importantes también en **PDF y HTML**. |
