@@ -9,9 +9,11 @@ import json
 import os
 import re
 import shutil
+import sys
 from datetime import datetime, timedelta, timezone, date
 
-import markdown
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "_vendor"))  # markdown incluido en el repo
+import markdown  # noqa: E402
 
 SITE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SITE)
@@ -275,8 +277,11 @@ document.querySelectorAll('main .tw table').forEach(tb=>{const rows=[...tb.query
  tb.parentElement.before(bar);const inp=bar.querySelector('input'),sel=bar.querySelector('select'),cnt=bar.querySelector('.count');
  const f=()=>{const v=inp.value.toLowerCase(),s=sel?.value||'';let n=0;rows.forEach(r=>{const ok=r.textContent.toLowerCase().includes(v)&&(!s||(r.cells[ei]?.textContent.trim().startsWith(s)));r.style.display=ok?'':'none';n+=ok});cnt.textContent=(v||s)?`${n} de ${rows.length}`:''};
  inp.addEventListener('input',f);sel?.addEventListener('change',f)});
-// identidad (Cloudflare Access) → saludo y acceso al panel personal
-(async()=>{try{const r=await fetch('/cdn-cgi/access/get-identity',{credentials:'include'});if(!r.ok)return;const j=await r.json();
+// identidad → saludo y acceso al panel personal (cookie del acceso de Vercel o Cloudflare Access)
+function hola(s){const w=document.getElementById('who');if(w)w.innerHTML=`${s.nombre} · <a href="/salir">salir</a>`;const h=document.getElementById('hello');
+ if(h){h.innerHTML=`Hola, ${s.nombre.split(' ')[0]} · <a href="/socios/${s.id}.html">Ver mis pendientes →</a>`;h.style.display='block'}}
+const ck=(document.cookie.match(/(?:^|; )socio=([^;]+)/)||[])[1];const sc=ck&&SOCIOS.find(x=>x.id===ck);
+if(sc){hola(sc)}else(async()=>{try{const r=await fetch('/cdn-cgi/access/get-identity',{credentials:'include'});if(!r.ok)return;const j=await r.json();
  const s=SOCIOS.find(x=>x.email&&j.email&&x.email.toLowerCase()===j.email.toLowerCase());const w=document.getElementById('who');
  if(w)w.textContent=s?s.nombre:(j.email||'');const h=document.getElementById('hello');
  if(s&&h){h.innerHTML=`Hola, ${s.nombre.split(' ')[0]} · <a href="/socios/${s.id}.html">Ver mis pendientes →</a>`;h.style.display='block'}}catch(e){}})();

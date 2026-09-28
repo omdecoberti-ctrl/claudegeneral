@@ -1,0 +1,9 @@
+{
+  "name": "pan-cba-sitio",
+  "private": true,
+  "type": "module",
+  "description": "Sitio privado del Proyecto Panadería Córdoba (PAN-CBA)",
+  "dependencies": {
+    "@vercel/functions": "^3.9.9"
+  }
+}

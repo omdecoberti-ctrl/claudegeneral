@@ -56,7 +56,8 @@ Los códigos nunca se reutilizan ni se renumeran. Lo obsoleto se marca como tal 
 - **Todo entregable o análisis de competencia** se guarda en `02_COMPETENCIA/` (no en `18_INVESTIGACIONES/`) y **se envía siempre en el chat** en PDF y HTML (pedido de socios, 2026-09-28).
 
 ## 7. Sitio web del proyecto
-- `site/build.py` genera un sitio estático a partir de todos los `.md`. Se publica solo con cada push. Ver `site/DEPLOY.md`.
+- `site/build.py` genera un sitio estático a partir de todos los `.md`. Se publica en **Vercel** con cada push (D008). El acceso es por usuario y contraseña de cada socio (`site/middleware.js`, `site/crear_usuarios.py`). Ver `site/DEPLOY.md`.
+- **Nunca** guardar contraseñas en el repositorio: solo hashes, en `auth_users.js`.
 - Para que el sitio funcione bien:
   - **mantener el formato de las tablas de registro** (primera columna = código; columnas "Estado" y "Responsable");
   - escribir el nombre del socio en "Responsable" para que la tarea aparezca en su panel;

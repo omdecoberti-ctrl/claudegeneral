@@ -54,6 +54,13 @@
 - Pendiente: la plataforma de hosting (PD033).
 - Aprobada por: socios (pedido en el chat)
 
+### D008 — Hosting del sitio: Vercel con usuario y contraseña por socio
+- Fecha: 2026-09-28 · Tipo: Operativa · Gate: G0 · Origen: PD033
+- Decisión tomada: el sitio se publica en **Vercel**, en el proyecto que ya tienen los socios. El acceso es con usuario y contraseña individuales, validados en el propio sitio (`site/middleware.js`).
+- Alternativa descartada: Cloudflare Pages + Access.
+- Nota: para uso comercial corresponde el plan Pro de Vercel. Ver `site/DEPLOY.md`.
+- Aprobada por: socios (pedido en el chat)
+
 ### Formato de registro
 ```
 ### D### — [Título corto]
@@ -112,4 +119,4 @@
 | PD030 | Secuencia de expansión 2027: 2ª unidad propia y lanzamiento de franquicia | G0/G13 | Estratégica | Lista para decidir (se puede postergar) | Mismo memo §6 |
 | PD031 | Presupuesto y ejecutor del trabajo de campo y los experimentos previos a la apertura | G0 | Táctica | **Lista para decidir** | Mismo memo §5 |
 | PD032 | Política de canal: cómo convive la marca retail propia con los clientes mayoristas de UC (panaderías y cafeterías) | G4 | Estratégica | Futuro | I010, R019 |
-| PD033 | Hosting del sitio: Cloudflare Pages + Access (gratis, usuario por mail) vs. Vercel Pro (USD 20/mes o más, sin saludo por socio) | G0 | Operativa | Lista para decidir (recomendación: Cloudflare) | `site/DEPLOY.md` |
+| PD033 | Hosting del sitio | G0 | Operativa | CERRADA → D008 (Vercel) | `site/DEPLOY.md` |
