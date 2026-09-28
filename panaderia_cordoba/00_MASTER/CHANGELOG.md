@@ -11,3 +11,5 @@
 - Entregable E-01: roadmap de apertura marzo 2027 (15_APERTURA, HTML + PDF).
 - I010 fase 1 (relevamiento público de UC) finalizada; fuentes F250–F266 registradas.
 - En curso: I001, I002, I013, I018.
+- I001, I002, I013, I018 finalizadas (v1) e integradas: fuentes F001–F246, preguntas Q057–Q071, riesgos R023–R025, hipótesis A006, A007, A018 y A020 actualizadas.
+- Entregable E-02: resumen de primeros hallazgos (HTML + PDF).

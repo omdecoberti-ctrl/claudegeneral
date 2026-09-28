@@ -21,3 +21,6 @@
   - Decisiones PD029–PD031.
   - Preguntas Q046–Q048.
   - Datos internos de UC (T024).
+- **Cierre de la sesión:** I001, I002, I013 e I018 finalizadas (v1). Entregable E-02 emitido.
+- **Advertencia:** los datos son extractos de buscador, porque la lectura directa de las páginas estuvo bloqueada. Hay que verificarlos en origen.
+- **Hallazgo estratégico:** Del Pilar (45 locales, ultracongelado + franquicias) ya ocupa el modelo en Córdoba.

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Primeros Hallazgos PAN-CBA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#808080;--bg:#fff;--soft:#FFF4E5;--line:#E6E6E6;--exp:#B12028;--crit:#F18A00;--norm:#F7C27A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500;font-size:13px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 40px}
+header{border-bottom:3px solid var(--brand);padding:18px 0 12px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px;letter-spacing:.5px;color:var(--brand)}.logo small{display:block;font-size:10px;font-weight:500;color:var(--tx2);letter-spacing:1.5px}
+.meta{text-align:right;color:var(--tx2);font-size:11px}
+h1{font-weight:800;color:var(--brand);font-size:26px;margin:22px 0 4px}
+h2{font-weight:700;color:var(--brand);font-size:17px;margin:28px 0 10px;border-left:4px solid var(--brand);padding-left:8px}
+.sub{color:var(--tx2);margin:0 0 12px}
+.badge{display:inline-block;background:var(--soft);color:var(--brand2);border:1px solid var(--brand);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0}
+.kpi{border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:6px;padding:10px 12px}.kpi b{display:block;font-size:22px;font-weight:800;color:var(--tx)}.kpi span{color:var(--tx2);font-size:11px}
+.mils{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.mil{display:flex;gap:10px;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:12px}.mil span{color:var(--tx2);font-size:11px}
+.mil .md{font-weight:800;color:var(--brand);min-width:62px}
+.mil.cut{border-color:var(--brand2);background:#FBEDEE}.mil.cut .md{color:var(--brand2)}
+.mil.open{background:var(--brand);color:#fff;border-color:var(--brand)}.mil.open .md,.mil.open span{color:#fff}
+.gw{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+.gantt{border-collapse:collapse;width:100%;min-width:1080px;font-size:10.5px}
+.gantt th{font-weight:700;color:var(--tx2);padding:3px 0;border-bottom:1px solid var(--line)}
+.gantt th.mon{color:var(--brand);text-transform:uppercase;font-size:10px;border-left:1px solid var(--line)}
+.gantt th.wk span{display:block;font-size:8.5px;font-weight:500}
+.gantt td{padding:0;border-bottom:1px solid #f3f3f3}
+.gantt td.ws,.gantt th.ws{text-align:left;padding:3px 6px;width:290px}
+.gantt td.own,.gantt th.own{text-align:left;padding:3px 6px;color:var(--tx2);width:130px;font-size:10px}
+.gantt tr.grp td{background:var(--soft);font-weight:700;color:var(--tx);padding:4px 6px;font-size:11px}
+.gantt td.c{width:28px;height:18px;border-left:1px solid #f5f5f5}
+.gantt td.on.n{background:var(--norm)}.gantt td.on.k{background:var(--crit)}.gantt td.on.x{background:var(--exp)}
+.gantt td.on.m{color:var(--brand2);text-align:center;font-size:14px;font-weight:800;background:transparent}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--tx2);margin:8px 0}.legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:middle}
+table.t{border-collapse:collapse;width:100%;font-size:12px}table.t th{background:var(--brand);color:#fff;text-align:left;padding:6px 8px;font-weight:700}table.t td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.tw{overflow-x:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+ul{margin:6px 0 6px 18px;padding:0}li{margin:3px 0}
+.note{font-size:11px;color:var(--tx2)}
+.box{border:1px solid var(--brand);background:var(--soft);border-radius:6px;padding:10px 14px}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:8px;font-size:10px;color:var(--tx2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media print{@page{size:A4 portrait;margin:10mm}.wrap{max-width:none;padding:0}.gw{overflow:visible;border:none}.gantt{min-width:0}h2{break-after:avoid}.pb{break-before:page}.gantt tr{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="wrap">
+<header><div class="logo">CANALSENSES<small>ULTRACONGELADOS CANALSENSES S.R.L. · PROYECTO PANADERÍA</small></div>
+<div class="meta">Entregable E-02 · Versión 1.0 · 28/09/2026<br>Proyecto PAN-CBA · Gate actual: G0 → G1–G3</div></header>
+<h1>Primeros hallazgos: mercado, competencia, franquicias y Canalsenses</h1>
+<p class="sub">Resumen de las investigaciones de escritorio I001, I002, I010, I013 e I018. Es una base para discutir; todavía no hay conclusiones.</p>
+<span class="badge">ADVERTENCIA DE CALIDAD: los datos salen de extractos de buscador (sin lectura completa de las páginas) y deben verificarse antes de tomar decisiones con ellos</span>
+
+<div class="kpis">
+<div class="kpi"><b>~1,5 M</b><span>habitantes en Córdoba Capital (Censo 2022) · ~200 mil universitarios</span></div>
+<div class="kpi"><b>−30/40%</b><span>caída de ventas de las panaderías cordobesas en 2025 (CIPAC)</span></div>
+<div class="kpi"><b>44</b><span>competidores relevados en 8 categorías</span></div>
+<div class="kpi"><b>~40%</b><span>capacidad ociosa de Canalsenses (declarada por los socios)</span></div>
+</div>
+
+<h2>Las 6 ideas más importantes</h2>
+<div class="tw"><table class="t"><tr><th>#</th><th>Hallazgo</th><th>Por qué importa</th></tr>
+<tr><td>1</td><td><b>La panadería tradicional está en crisis.</b> Las cámaras reportan caídas de ventas de 30–40% en Córdoba en 2025 y de hasta 50–65% en el país en 2026, con unos 2.850 cierres de panaderías desde fines de 2023. En septiembre de 2026 la harina subió 20%. La pobreza en el Gran Córdoba llega al 31% y el desempleo al 10,5%.</td><td>Competir con pan común por precio deja cada vez menos margen. El valor tiene que venir de productos con más margen, del desayuno y la merienda, del café y de la experiencia. <i>[INTERPRETACIÓN]</i></td></tr>
+<tr><td>2</td><td><b>El modelo "producción central + horneado en el local" ya existe en Córdoba.</b> Panadería Del Pilar tiene 45 locales (37 franquiciados) y planta propia de ultracongelado. Lo+Rico tiene 26–30 locales y crece por franquicia.</td><td>El modelo no es nuevo en la ciudad. La diferencia tiene que estar en el concepto, no solo en cómo se produce. Hay que averiguar si son clientes de Canalsenses (Q068).</td></tr>
+<tr><td>3</td><td><b>Las cadenas porteñas de café no prosperan en la calle.</b> Café Martínez cerró la mayoría de sus locales. Havanna, Starbucks, Tostado y Juan Valdez se concentran en shoppings y en el aeropuerto. El café de especialidad local (Cherry Season) crece.</td><td>Hay espacio para un formato local que combine buen pan y buen café a precio medio, y que se pueda replicar. <i>[INTERPRETACIÓN, a validar]</i></td></tr>
+<tr><td>4</td><td><b>Los fabricantes que franquician ganan con el producto, no con la regalía.</b> Havanna, Bonafide, Buenos Aires Bakery y Costumbres Argentinas trabajan así. Costumbres (precongelado horneado en el local) llegó a más de 80 locales con formatos desde 30 m² y USD 40.000.</td><td>Es el modelo natural para Canalsenses. La clave es el precio de lo que se le vende al franquiciado: a Tim Hortons le salió mal (costo unas 2 veces mayor para el franquiciado), mientras que Panera fija un tope del 27% del precio de venta.</td></tr>
+<tr><td>5</td><td><b>Canalsenses tiene capacidad de sobra, pero está lejos.</b> Produce 200–250 t/mes y unas 35 variedades, con producto pre-fermentado y panes crudos. La planta está en Canals, a unos 320 km, y hoy entrega en Córdoba cada 15 días.</td><td>Un local necesitaría stock para 15–21 días en freezer o pasar a entrega semanal o depósito en Córdoba (Q054). Si los panes fermentan en el local, hacen falta cámara de fermentación y más oficio (Q053).</td></tr>
+<tr><td>6</td><td><b>Hay alertas en la percepción del consumidor y en lo legal.</b> Al 72% le importa que sea "hecho a mano" y al 41% que esté "horneado en el local". El Código Civil y Comercial exigiría informar datos económicos de locales en funcionamiento antes de franquiciar.</td><td>La comunicación debe apoyarse en "horneado aquí", con degustación ciega para probarlo (E002). Franquiciar en 2027 sería prematuro; lo tiene que confirmar Laura (Q064).</td></tr>
+</table></div>
+
+<h2>Dónde podría estar la oportunidad (hipótesis a validar)</h2>
+<div class="two"><div class="box"><b>Espacios en blanco tentativos</b> <i>[INTERPRETACIÓN]</i><ul>
+<li>Un "tercer formato": pan de calidad para llevar, buen café, precio medio y operación simple que se pueda replicar.</li>
+<li>Desayuno temprano (6:30–9 h) de calidad, fuera de los shoppings.</li>
+<li>Barrios en crecimiento con poca oferta: Manantiales, zona sur, Valle Escondido.</li>
+<li>Almuerzo rápido con base de panadería (panes de lomo, milonguitas, tortilla).</li></ul></div>
+<div class="box"><b>Lo que juega en contra</b><ul>
+<li>Nueva Córdoba y el Centro están saturados.</li>
+<li>Del Pilar y Lo+Rico ya cubren el segmento masivo con el mismo modelo.</li>
+<li>Posible conflicto con clientes mayoristas de Canalsenses (R019).</li>
+<li>El consumo viene cayendo y el cliente es muy sensible al precio.</li>
+<li>A favor: los locales vacíos subieron a 4–14% según el relevamiento, lo que da margen para negociar alquileres.</li></ul></div></div>
+
+<h2>Referencias del mercado de franquicias</h2>
+<div class="tw"><table class="t"><tr><th>Marca</th><th>Locales</th><th>Inversión (USD)</th><th>Regalía</th><th>Modelo productivo</th></tr>
+<tr><td>Costumbres Argentinas</td><td>80–100+</td><td>desde 40.000 (MINI 30 m²)</td><td>0 (2% compras publicidad)</td><td>Precongelado, horneado en el local</td></tr>
+<tr><td>Buenos Aires Bakery</td><td>42</td><td>85–90 mil (50–80 m²)</td><td>0 (4% compras publicidad)</td><td>Centralizada</td></tr>
+<tr><td>Bonafide</td><td>~250</td><td>175.000</td><td>5% compras</td><td>Industria propia</td></tr>
+<tr><td>Havanna</td><td>380–500+</td><td>desde 255.000</td><td>s/d</td><td>Planta central</td></tr>
+<tr><td>Café Martínez</td><td>228</td><td>175–185 mil</td><td>4% + 1% ventas</td><td>Tostadora propia</td></tr>
+<tr><td>Del Pilar (Córdoba)</td><td>45</td><td>s/d</td><td>s/d</td><td>Planta propia de ultracongelado</td></tr>
+</table></div>
+<p class="note">Cifras declaradas por las marcas en prensa, de distintos años y sin auditar. Detalle y fuentes en I018 e I013.</p>
+
+<h2>Qué cambia en el proyecto</h2>
+<ul>
+<li><b>Hipótesis:</b> A018 (márgenes sostenibles) recibe evidencia en contra. A006 (aceptación del producto horneado en el local) recibe evidencia mixta. A007 (espacio de diferenciación) tiene candidatos pero sigue sin validar.</li>
+<li><b>Riesgos nuevos:</b> R023 (legal para franquiciar), R024 (precio del producto al franquiciado) y R025 (competidores locales con el mismo modelo ya escalado).</li>
+<li><b>26 preguntas nuevas (Q046–Q071).</b> Las críticas: Q053 (panes crudos), Q054 (logística), Q055 y Q068 (clientes de Canalsenses en Córdoba, Del Pilar, Lo+Rico) y Q064 (legal).</li>
+</ul>
+
+<h2>Lo que falta y los próximos pasos</h2>
+<div class="box"><ul>
+<li><b>Verificar en origen</b> los datos críticos: INDEC, CIPAC, relevamientos de locales vacíos, condiciones de Del Pilar y Lo+Rico.</li>
+<li><b>Trabajo de campo:</b> precios reales (índice "café con leche + 2 medialunas" por zona), reseñas, conteos de gente en la calle, entrevistas. Requiere decidir PD031.</li>
+<li><b>Datos internos de Canalsenses:</b> catálogo, precios de transferencia, clientes en Córdoba y contactos de clientes que hornean en su local (T024).</li>
+<li><b>Siguiente investigación de escritorio:</b> I035 normativa y plazos de habilitación (bloquea la apertura), I003 tendencias, I004 referentes internacionales, I011 modelos productivos, I014 fichas de los 10 competidores clave.</li>
+<li><b>Decisiones pendientes:</b> PD029 (plan acelerado), PD031 (trabajo de campo), Q046–Q048 (gobernanza).</li>
+</ul></div>
+<footer><span>Ultracongelados Canalsenses S.R.L. · Proyecto PAN-CBA · Fuentes: 18_INVESTIGACIONES/ y 00_MASTER/SOURCES.md</span><span>Etiquetas: [HECHO] [ESTIMACIÓN] [INTERPRETACIÓN]</span></footer>
+</div></body></html>

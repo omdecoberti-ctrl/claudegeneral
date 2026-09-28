@@ -14,6 +14,7 @@
 | Código | Entregable | Ubicación |
 |---|---|---|
 | E-01 | Roadmap de apertura marzo 2027 (HTML + PDF) | `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.html` / `.pdf` |
+| E-02 | Primeros hallazgos (I001, I002, I010, I013, I018) — HTML + PDF | `18_INVESTIGACIONES/E02_RESUMEN_HALLAZGOS_G1_G3.*` |
 | — | Memo de decisión PD029–PD031 | `00_MASTER/MEMOS/PD029_fast_track_marzo_2027.md` |
 
 ## Investigaciones activas
@@ -42,7 +43,7 @@
 | PD002 | Gobernanza: completar | Faltan Q046–Q048 |
 
 ## Preguntas abiertas críticas
-Q046 cómo se cuenta la mayoría · Q048 interlocutor · Q053 panes crudos: ¿fermentan en el local? · Q054 abastecimiento desde Canals (~320 km, cada 15 días) · Q055 clientes UC en Córdoba y conflicto de canal · Q050 devolución de clientes que hornean en su local.
+Q068 ¿Del Pilar / Lo+Rico son clientes de UC? · Q046 cómo se cuenta la mayoría · Q048 interlocutor · Q053 panes crudos: ¿fermentan en el local? · Q054 abastecimiento desde Canals (~320 km, cada 15 días) · Q055 clientes UC en Córdoba y conflicto de canal · Q050 devolución de clientes que hornean en su local.
 
 ## Riesgos principales
 R021 plazo comprimido (9) · R002 inflación (9) · R019 conflicto de canal con clientes UC (6) · R020 equipo sin experiencia en comercio al público (6) · R022 logística quincenal (4).
@@ -54,5 +55,5 @@ D001 metodología · D002 subsidiaria de UC, gobernanza por mayoría, encargado 
 1. **Socios:** revisar el roadmap E-01 y decidir PD029, PD031 (y PD030 si quieren).
 2. **Socios:** responder Q046–Q048 y definir responsables por frente (tabla de roles del roadmap).
 3. **Oscar:** enviar catálogo UC con precios de transferencia y contactos de clientes que hornean en su local (T024).
-4. **IA:** terminar I001, I002, I013, I018; arrancar I035 (normativa, ruta crítica) y diseñar protocolos de campo (T014–T016).
+4. **IA:** arrancar I035 (normativa, ruta crítica), I011 (modelos productivos), I014 (fichas de 10 competidores) y diseñar protocolos de campo (T014–T016). Verificar en origen los datos críticos de I001–I018.
 5. **IA + Socios:** Gate Review G0 (09/10) y lanzamiento de G1–G3.
