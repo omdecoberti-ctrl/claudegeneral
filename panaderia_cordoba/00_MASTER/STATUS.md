@@ -23,7 +23,7 @@
 | I001 | Demografía y socioeconomía de Córdoba | **FINALIZADA v1** (datos a verificar en origen) |
 | I002 | Consumo de pan y panificados | **FINALIZADA v1** (datos a verificar en origen) |
 | I013 | Censo competitivo de Córdoba | EN PROCESO |
-| I018 | Franquicias de panadería y café | EN PROCESO |
+| I018 | Franquicias de panadería y café | **FINALIZADA v1** (datos a verificar en origen) |
 
 ## Tareas activas
 | Código | Tarea | Responsable | Estado |

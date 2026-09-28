@@ -18,7 +18,7 @@
 | T010 | I003 — Tendencias de consumo y gastronómicas | G1 | IA | P2 | — | PENDIENTE | Ficha de investigación |
 | T011 | I004 — Benchmark internacional y nacional de conceptos | G1 | IA | P2 | — | PENDIENTE | Ficha de investigación |
 | T012 | I013 — Censo y mapa competitivo inicial (desk research: Google Maps, redes, apps) | G3 | IA | P1 | D005 | EN PROCESO | Base de competidores |
-| T013 | I018 — Franquicias de panadería / bakery café en Argentina | G3 | IA | P2 | D005 | EN PROCESO | Ficha de investigación |
+| T013 | I018 — Franquicias de panadería / bakery café en Argentina | G3 | IA | P2 | D005 | FINALIZADA (v1) | Ficha de investigación |
 | T014 | Diseñar guía de entrevistas a clientes (I007) | G2 | IA | P1 | — | BACKLOG | Guía lista para campo |
 | T015 | Diseñar encuesta cuantitativa (I008) | G2 | IA | P1 | T014 | BACKLOG | Cuestionario |
 | T016 | Diseñar protocolo de observación / mystery shopping (I009/I017) | G2/G3 | IA | P1 | — | BACKLOG | Protocolo + planilla |

@@ -27,6 +27,8 @@
 | R019 | Conflicto de canal: la marca propia al público compite con panaderías y cafeterías clientes de UC | 2 | 3 | 6 | Socios | ABIERTO |
 | R020 | Equipo sin experiencia en gastronomía o comercio al público; sin maestro panadero ni barista | 3 | 2 | 6 | Socios | ABIERTO |
 | R021 | Plazo comprimido (marzo 2027) lleva a decidir con poca evidencia o a firmar un local inadecuado | 3 | 3 | 9 | PM + Socios | ABIERTO |
+| R023 | Requisitos legales para franquiciar (CCyC arts. 1512–1524, p. ej. información económica de unidades similares) no se cumplen si se franquicia antes de tener historia operativa | 2 | 3 | 6 | Laura | ABIERTO |
+| R024 | Precio de suministro de UC al franquiciado demasiado alto (caso Tim Hortons: costo ~2x vs. elaborar en local) → conflicto y baja rentabilidad del franquiciado | 2 | 3 | 6 | Fabiola | ABIERTO |
 | R022 | Logística desde Canals (~320 km, entregas cada 15 días) obliga a mucho stock congelado en el local o encarece el abastecimiento | 2 | 2 | 4 | Oscar | ABIERTO |
 
 ---

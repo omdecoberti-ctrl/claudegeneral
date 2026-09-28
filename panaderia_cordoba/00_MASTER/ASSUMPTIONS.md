@@ -123,4 +123,5 @@
 - **Cómo validar:** G14. **Estado:** NO VALIDADA
 
 ### A020 — Existen franquiciados potenciales
+- **Evidencia inicial (I018):** mercado argentino de más de 2.000 marcas y ~60.000 locales; el 49% requiere hasta USD 50.000 y hay tendencia hacia formatos chicos. Existen referentes de "fabricante que franquicia" (Costumbres Argentinas, Buenos Aires Bakery, Bonafide, Havanna). Confianza: Media-baja.
 - **Cómo validar:** G15, benchmark de franquicias en Argentina (I018). **Estado:** NO VALIDADA

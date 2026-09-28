@@ -98,3 +98,7 @@
 | Q061 | ¿Cuántas panaderías hay en Córdoba Capital y cuántas abrieron o cerraron en 2023–2026? | G3 | P2 | I002, I013 | ABIERTA |
 | Q062 | ¿Qué tamaño y ticket tiene el desayuno o la merienda fuera del hogar en Córdoba? | G2 | P1 | I002, A001 | ABIERTA |
 | Q063 | ¿Cómo comunicamos el producto si el consumidor valora "hecho a mano" (72%) y "horneado en el local" (41%)? | G5 | P1 | A006, R006 | ABIERTA |
+| Q064 | ¿Qué exige exactamente el CCyC (arts. 1512–1524) antes de ofrecer una franquicia, especialmente sobre información económica de unidades en operación? → Laura | G0/G15 | P1 | R023, PD030 | ABIERTA |
+| Q065 | ¿Modelo "fabricante-franquiciante" (ganar en el margen del producto, sin regalía o regalía sobre compras) o "marca-servicio" (regalía sobre ventas)? | G15 | P2 | I018, R024 | ABIERTA |
+| Q066 | ¿Qué tope de precio de suministro, como % del precio de venta, deja rentable al franquiciado? (referencia: Panera ≤ 27%) | G7/G15 | P2 | R024 | ABIERTA |
+| Q067 | ¿Cómo operan y cómo les va a Costumbres Argentinas, Buenos Aires Bakery y Perdu en Córdoba? (referentes directos del modelo) | G3 | P1 | I013, I014 | ABIERTA |
