@@ -1,0 +1,9 @@
+{
+  "name": "claudegeneral-sitio-pan-cba",
+  "private": true,
+  "type": "module",
+  "description": "Publica en Vercel el sitio privado de panaderia_cordoba (ver panaderia_cordoba/site/DEPLOY.md)",
+  "dependencies": {
+    "@vercel/functions": "^3.9.9"
+  }
+}

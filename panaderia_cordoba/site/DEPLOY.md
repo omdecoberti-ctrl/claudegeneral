@@ -13,7 +13,7 @@ En el proyecto ya creado en Vercel:
    | Campo | Valor |
    |---|---|
    | Framework Preset | **Other** |
-   | Root Directory | **`panaderia_cordoba/site`** |
+   | Root Directory | **vacío** (raíz del repo). La raíz tiene `vercel.json` + `middleware.js`, que apuntan a esta carpeta. También funciona con `panaderia_cordoba/site`. |
    | Build / Output / Install Command | dejar en automático: los toma de `vercel.json` |
 3. **Settings → Environments → Production → Branch Tracking:** `main`, que es la rama de producción del proyecto.
 4. **Deployments → Redeploy** (o subir cualquier cambio). A los 1–2 minutos el sitio queda en `https://<proyecto>.vercel.app`.
