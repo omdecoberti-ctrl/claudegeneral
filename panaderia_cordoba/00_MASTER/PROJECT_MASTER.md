@@ -66,6 +66,8 @@ R021 plazo comprimido · R002 inflación · R019 conflicto de canal con clientes
 4. 01–08/03/2027 apertura. Detalle: `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.pdf`.
 
 ## 12. Mapa de documentos
+**Sitio web del proyecto (solo lectura):** https://panaderia-cordoba.vercel.app, con usuario por socio (D008).
+
 | Documento | Para qué |
 |---|---|
 | `STATUS.md` | Tablero ejecutivo |

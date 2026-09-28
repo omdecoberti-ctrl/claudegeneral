@@ -1,5 +1,7 @@
 # Sitio web del proyecto: publicación en Vercel y acceso por socio
 
+**En línea desde el 28/09/2026: https://panaderia-cordoba.vercel.app**
+
 El sitio se genera solo a partir de los `.md` del repositorio (`build.py`).
 Cada vez que se sube un cambio a GitHub, Vercel lo vuelve a generar y publicar. No hay que hacer nada a mano.
 

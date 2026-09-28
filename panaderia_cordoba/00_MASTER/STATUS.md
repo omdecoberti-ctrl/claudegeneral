@@ -10,6 +10,9 @@
 | **Semáforo** | 🟡 Esperando decisiones PD029–PD031 · plazo comprimido (R021) |
 | **Fecha objetivo de apertura** | 01–08/03/2027 (D004), con fechas de corte propuestas: 13/11 concepto · 15/12 local · 14/02 obra |
 
+## Sitio del proyecto
+**https://panaderia-cordoba.vercel.app**: acceso con usuario y contraseña por socio. Se actualiza solo con cada cambio.
+
 ## Entregables emitidos
 | Código | Entregable | Ubicación |
 |---|---|---|

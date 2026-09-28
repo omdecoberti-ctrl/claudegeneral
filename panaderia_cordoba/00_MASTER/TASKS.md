@@ -31,7 +31,7 @@
 | T023 | Responder Q046–Q048 (mayoría, dedicación, interlocutor) | G0 | Socios | P1 | — | PENDIENTE | PD002 completa |
 | T024 | Enviar catálogo interno UC con precios de transferencia indicativos + contactos de 3–5 clientes que hornean en su local | G0/G4 | Oscar | P1 | — | PENDIENTE | I010 fase 2 |
 | T025 | Contratar encuestadores o estudiantes para trabajo de campo (oct–nov) | G1–G3 | Socios | P1 | PD031 | BACKLOG | Equipo de campo |
-| T027 | Configurar el proyecto de Vercel (Root Directory, rama, desactivar Vercel Authentication) siguiendo `site/DEPLOY.md` | G0 | Oscar | P2 | D008 | PENDIENTE | Sitio privado en línea |
+| T027 | Configurar el proyecto de Vercel siguiendo `site/DEPLOY.md` | G0 | Oscar | P2 | D008 | FINALIZADA | En línea: https://panaderia-cordoba.vercel.app (28/09) |
 | T028 | Repartir a cada socio su usuario y contraseña (entregados en el chat el 28/09) | G0 | Socios | P2 | T027 | PENDIENTE | Los 4 socios entran al sitio |
 | T029 | (Futuro) Sumar Supabase al sitio: ingreso de socios, aprobación de decisiones y tareas desde la web | — | IA | P3 | D008 | BACKLOG | Sitio interactivo |
 | T026 | Gate Review G0 (fecha objetivo 09/10) | G0 | IA + Socios | P1 | T022, T023 | BACKLOG | GO a G1–G3 |
