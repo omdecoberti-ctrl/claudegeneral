@@ -74,6 +74,7 @@
 ### A006 — Aceptación del producto bake-off
 - **Hipótesis:** si el producto final es bueno, el cliente no penaliza que provenga de masa congelada; o no lo percibe.
 - **Motivo:** riesgo reputacional ("pan de freezer") en un mercado con cultura de panadería de barrio.
+- **Evidencia inicial (I002):** según Taste Tomorrow 2019, el 72% valora "hecho a mano" y el 41% "horneado en el local" (F068). Lo segundo favorece el horneado en el local; lo primero es un riesgo.
 - **Confianza:** Baja. **Cómo validar:** degustación ciega (E002), entrevistas sobre percepción, análisis de reseñas de cadenas bake-off (I016).
 - **Resultado:** — **Estado:** NO VALIDADA
 
@@ -116,6 +117,7 @@
 
 ### A018 — Márgenes sostenibles en contexto macro
 - **Cómo validar:** I005, sensibilidades en I025. **Estado:** NO VALIDADA
+- **Evidencia inicial en contra (I002, 2026-09-28):** caídas de ventas reportadas en panaderías de Córdoba de entre −30% y −40% (2025), harina +20% en sep-2026, francés sin ajustes entre sep-2025 y abr-2026. El pan tradicional tiene los márgenes comprimidos, así que la diferenciación y los productos de margen pesan más. Confianza: Baja.
 
 ### A019 — Trasladable a otras ciudades
 - **Cómo validar:** G14. **Estado:** NO VALIDADA

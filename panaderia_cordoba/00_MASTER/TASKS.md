@@ -14,7 +14,7 @@
 | T006 | Definir rango de inversión, umbrales de retorno y horizonte | G0 | Socios | P1 | T003 | FINALIZADA (umbrales pasan a G7) | D003, D004 |
 | T007 | Gate Review G0 | G0 | IA + Socios | P1 | T002–T006 | REEMPLAZADA por T026 | — |
 | T008 | I001 — Demografía y socioeconomía de Córdoba Capital | G1 | IA | P1 | D005 | FINALIZADA (v1) | Ficha de investigación |
-| T009 | I002 — Consumo de pan y panificados (Argentina / Córdoba) | G1 | IA | P1 | D005 | EN PROCESO | Ficha de investigación |
+| T009 | I002 — Consumo de pan y panificados (Argentina / Córdoba) | G1 | IA | P1 | D005 | FINALIZADA (v1) | Ficha de investigación |
 | T010 | I003 — Tendencias de consumo y gastronómicas | G1 | IA | P2 | — | PENDIENTE | Ficha de investigación |
 | T011 | I004 — Benchmark internacional y nacional de conceptos | G1 | IA | P2 | — | PENDIENTE | Ficha de investigación |
 | T012 | I013 — Censo y mapa competitivo inicial (desk research: Google Maps, redes, apps) | G3 | IA | P1 | D005 | EN PROCESO | Base de competidores |

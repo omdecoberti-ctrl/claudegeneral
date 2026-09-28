@@ -94,3 +94,7 @@
 | Q057 | ¿Qué relevamiento de vacancia de locales sirve para buscar local (CPI 13,8% vs. 4,3% en corredores) y cuál es el alquiler en $/m² por corredor? | G8 | P1 | I001, I029 | ABIERTA |
 | Q058 | ¿Cuántas personas trabajan (no residen) en el Centro, Nueva Córdoba y la zona norte? | G8 | P2 | I001, I027 | ABIERTA |
 | Q059 | ¿Cómo afecta al consumo la suba de pobreza (31,1%) y de desempleo (10,5%) en el Gran Córdoba en 2026? | G1 | P1 | A018, I002 | ABIERTA |
+| Q060 | ¿Cuánto de la caída de ventas de panaderías reportada por las cámaras (entre −30% y −65%) es consumo real y cuánto se desvió a súper, informales o elaboración casera? | G1 | P1 | I002, A018 | ABIERTA |
+| Q061 | ¿Cuántas panaderías hay en Córdoba Capital y cuántas abrieron o cerraron en 2023–2026? | G3 | P2 | I002, I013 | ABIERTA |
+| Q062 | ¿Qué tamaño y ticket tiene el desayuno o la merienda fuera del hogar en Córdoba? | G2 | P1 | I002, A001 | ABIERTA |
+| Q063 | ¿Cómo comunicamos el producto si el consumidor valora "hecho a mano" (72%) y "horneado en el local" (41%)? | G5 | P1 | A006, R006 | ABIERTA |
