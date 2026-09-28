@@ -19,3 +19,11 @@
 - Sitio pasado a Vercel (D008): acceso con usuario y contraseña por socio (middleware), markdown incluido en el repo, guía DEPLOY actualizada.
 - Proyecto pasado a `main` (rama de producción del sitio en Vercel).
 - Sitio publicado y verificado por los socios: https://panaderia-cordoba.vercel.app (T027 finalizada).
+- G1–G3 de escritorio (v1):
+  - Informe de competencia E-04, con mapa interactivo, planos por zonas y 7 gráficos.
+  - Informe de mercado E-05.
+  - Informe de cliente E-06 e instrumentos de campo (guía, encuesta, protocolo, E002).
+  - Base de 104 locales y 66 barrios.
+  - ~545 fuentes registradas.
+  - Nuevas Q072–Q075, R026–R027 y T030–T033.
+  - Hipótesis A001, A008, A013, A014 y A015 actualizadas.

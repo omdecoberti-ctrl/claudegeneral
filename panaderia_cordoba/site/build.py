@@ -89,7 +89,7 @@ def asset_files():
     for d, dirs, files in os.walk(ROOT):
         dirs[:] = sorted(x for x in dirs if x not in SKIP_DIRS and not x.startswith("."))
         for f in sorted(files):
-            if f.lower().endswith((".pdf", ".html", ".xlsx", ".png", ".jpg", ".docx", ".pptx", ".csv")):
+            if f.lower().endswith((".pdf", ".html", ".xlsx", ".png", ".jpg", ".docx", ".pptx", ".csv", ".svg", ".json")) and not f.startswith("plantilla_"):
                 out.append(rel(os.path.join(d, f)))
     return out
 
@@ -130,8 +130,20 @@ def inline_md(s):
 BASENAME = {}
 
 
+def embed_svgs(text):
+    """<!--SVG:ruta--> → SVG en línea (ruta relativa a panaderia_cordoba/)."""
+    def rep(m):
+        p = os.path.join(ROOT, m.group(1).strip())
+        if not os.path.exists(p):
+            return f"*(gráfico no encontrado: {m.group(1)})*"
+        svg = open(p, encoding="utf-8").read()
+        return f'\n<figure class="fig">{svg}</figure>\n'
+    return re.sub(r"<!--SVG:([^>]+?)-->", rep, text)
+
+
 def render_md(text, rel_md):
-    body = markdown.markdown(text, extensions=["tables", "sane_lists", "fenced_code"])
+    text = embed_svgs(text)
+    body = markdown.markdown(text, extensions=["tables", "sane_lists", "fenced_code", "md_in_html"])
     # ids en encabezados que empiezan con un código (### D001 — …, ## G0 — …)
     def hid(m):
         tag, inner = m.group(1), m.group(2)
@@ -167,6 +179,17 @@ def render_md(text, rel_md):
             cand = BASENAME[os.path.basename(path)]
         return f'<a href="{url_of(cand)}"><code>{path}</code></a>' if cand else m.group(0)
     body = re.sub(r"<code>([^<]+?\.md)</code>", codelink, body)
+    def hreffix(m):
+        href = m.group(1)
+        if re.match(r"^(https?:|/|#|mailto:)", href):
+            return m.group(0)
+        path = os.path.normpath(os.path.join(os.path.dirname(rel_md), href)).replace(os.sep, "/")
+        if path.endswith(".md") and os.path.exists(os.path.join(ROOT, path)):
+            return f'href="{url_of(path)}"'
+        if os.path.exists(os.path.join(ROOT, path)):
+            return f'href="/archivos/{path}" target="_blank"'
+        return m.group(0)
+    body = re.sub(r'href="([^"]+)"', hreffix, body)
     return body
 
 
@@ -251,6 +274,7 @@ a.code{font-weight:700;text-decoration:none;border-bottom:1px dotted var(--brand
 .card b{color:var(--brand);font-size:15px}.card small{display:block;color:var(--tx2)}.card .n{font-size:22px;font-weight:800;color:var(--brand2)}
 .hello{display:none;background:var(--brand);color:#fff;border-radius:10px;padding:12px 16px;margin:0 0 14px}.hello a{color:#fff;font-weight:800}
 .note{font-size:12px;color:var(--tx2)}
+.fig{margin:14px 0;overflow-x:auto}.fig svg{max-width:100%;height:auto;display:block}
 .box{border:1px solid var(--brand);background:var(--soft);border-radius:10px;padding:10px 16px;margin:12px 0}
 footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--tx2)}
 @media(max-width:860px){.top{flex-wrap:wrap}.search{order:3;flex-basis:100%}.logo small{display:none}.layout{grid-template-columns:minmax(0,1fr)}nav.side{display:none;position:fixed;top:58px;left:0;right:0;bottom:0;height:auto;z-index:30}
@@ -315,6 +339,7 @@ def nav_html(cur, pages):
             if cur.startswith("/" + d + "/"):
                 h += [link(url_of(p), pages[p]["title"][:42], "sub") for p in pages if p.startswith(d + "/") and p != readme]
     h.append("<h4>Otros</h4>")
+    h.append(link("/archivos/02_COMPETENCIA/MAPA_COMPETITIVO_CORDOBA.html", "🗺 Mapa competitivo"))
     h.append(link("/entregables.html", "Entregables (PDF / HTML)"))
     h.append(link(url_of("00_MASTER/PLANTILLAS/README.md"), "Plantillas"))
     return "\n".join(h)

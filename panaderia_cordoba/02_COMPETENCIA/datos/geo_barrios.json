@@ -1,0 +1,1095 @@
+{
+ "barrios": [
+  {
+   "barrio": "Centro",
+   "zona": "Z01",
+   "lat": -31.4167,
+   "lon": -64.1836,
+   "coord_fuente": "estimada (Plaza San Martín, BRIEF)",
+   "poblacion": 28200,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Casco histórico, Peatonales (9 de Julio, 25 de Mayo, Rivera Indarte), Av. Colón, Mercado Norte/Sur, oficinas públicas y bancos; altísimo flujo peatonal diurno",
+   "fuente": "https://mapcarta.com/N2466067899"
+  },
+  {
+   "barrio": "Nueva Córdoba",
+   "zona": "Z02",
+   "lat": -31.4255,
+   "lon": -64.1865,
+   "coord_fuente": "https://mapcarta.com/N2466082735 ; https://www.derutasydestinos.com/mapas-Barrio-Nueva-Cordoba--Cordoba.html",
+   "poblacion": 36000,
+   "poblacion_anio": "2008 (censo municipal, vía Wikipedia)",
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Barrio más denso de la ciudad; estudiantes universitarios; torres; corredor Obispo Trejo / Rondeau / Bv. Illia; bares, cafés de especialidad; Patio Olmos, Paseo del Buen Pastor",
+   "fuente": "https://es.wikipedia.org/wiki/Barrio_Nueva_C%C3%B3rdoba"
+  },
+  {
+   "barrio": "Güemes",
+   "zona": "Z03",
+   "lat": -31.4256,
+   "lon": -64.1958,
+   "coord_fuente": "https://es.wikipedia.org/wiki/Barrio_G%C3%BCemes_(C%C3%B3rdoba)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Polo gastronómico y de diseño (Belgrano, Achával Rodríguez, Paseo de las Artes); vida nocturna; densificación",
+   "fuente": "https://es.wikipedia.org/wiki/Barrio_G%C3%BCemes_(C%C3%B3rdoba)"
+  },
+  {
+   "barrio": "Observatorio",
+   "zona": "Z03",
+   "lat": -31.427,
+   "lon": -64.201,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial tradicional junto a Güemes; Observatorio Astronómico",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Paso de los Andes",
+   "zona": "Z03",
+   "lat": -31.412,
+   "lon": -64.199,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial entre Colón y Duarte Quirós; cercano a Alberdi",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Bella Vista",
+   "zona": "Z03",
+   "lat": -31.433,
+   "lon": -64.208,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial al SO de Güemes",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Alberdi",
+   "zona": "Z04",
+   "lat": -31.4085,
+   "lon": -64.205,
+   "coord_fuente": "estimada (Mapcarta sin coord. en snippet)",
+   "poblacion": 32700,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Uno de los barrios más extensos y poblados; corredores Av. Colón y Duarte Quirós; Nuevocentro Shopping; Hospital de Clínicas; estudiantes",
+   "fuente": "https://mapcarta.com/N3238146987"
+  },
+  {
+   "barrio": "Alto Alberdi",
+   "zona": "Z04",
+   "lat": -31.4058,
+   "lon": -64.2211,
+   "coord_fuente": "https://www.derutasydestinos.com/mapas-Barrio-Alto-Alberdi--Cordoba.html",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial; Av. Colón al oeste",
+   "fuente": "https://www.derutasydestinos.com/mapas-Barrio-Alto-Alberdi--Cordoba.html"
+  },
+  {
+   "barrio": "Villa Páez",
+   "zona": "Z04",
+   "lat": -31.401,
+   "lon": -64.212,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial junto al Suquía, al norte de Alberdi",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Quebrada de las Rosas",
+   "zona": "Z04",
+   "lat": -31.414,
+   "lon": -64.235,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial oeste; Av. Duarte Quirós / Av. Colón",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Villa Siburu",
+   "zona": "Z04",
+   "lat": -31.404,
+   "lon": -64.226,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial oeste",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Marechal",
+   "zona": "Z04",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d (no verificada)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "s/d",
+   "nse_fuente": "s/d",
+   "rasgos": "Barrio del BRIEF; ubicación exacta no verificada",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Las Palmas",
+   "zona": "Z04",
+   "lat": -31.404,
+   "lon": -64.262,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Oeste, cerca de Circunvalación",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "General Paz",
+   "zona": "Z05",
+   "lat": -31.4122,
+   "lon": -64.1672,
+   "coord_fuente": "https://es.wikipedia.org/wiki/Barrio_General_Paz_(C%C3%B3rdoba)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Corredor 25 de Mayo con gastronomía; densificación con edificios; Plaza Alberdi (Gral Paz)",
+   "fuente": "https://es.wikipedia.org/wiki/Barrio_General_Paz_(C%C3%B3rdoba)"
+  },
+  {
+   "barrio": "Juniors",
+   "zona": "Z05",
+   "lat": -31.413,
+   "lon": -64.159,
+   "coord_fuente": "estimada",
+   "poblacion": 6520,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial contiguo a General Paz; Club General Paz Juniors; Av. Patria/Sabattini",
+   "fuente": "https://mapcarta.com/N3009902021"
+  },
+  {
+   "barrio": "Pueyrredón",
+   "zona": "Z05",
+   "lat": -31.402,
+   "lon": -64.165,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial este; Av. Patria / Av. Pueyrredón",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "San Vicente",
+   "zona": "Z05",
+   "lat": -31.424,
+   "lon": -64.156,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Barrio tradicional; Av. Sabattini; comercio barrial",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Talleres (Este/Oeste)",
+   "zona": "Z05",
+   "lat": -31.395,
+   "lon": -64.162,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NE",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Yofre (Norte/Sur)",
+   "zona": "Z05",
+   "lat": -31.397,
+   "lon": -64.15,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NE; Av. Patria",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Maldonado",
+   "zona": "Z05",
+   "lat": -31.418,
+   "lon": -64.135,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Este, cerca de Circunvalación",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Ameghino",
+   "zona": "Z05",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d (no verificada)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "s/d",
+   "nse_fuente": "s/d",
+   "rasgos": "Barrio del BRIEF (Ameghino Norte/Sur); ubicación exacta no verificada",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Crisol (Norte/Sur)",
+   "zona": "Z05",
+   "lat": -31.427,
+   "lon": -64.168,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Entre Parque Sarmiento y San Vicente",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Altamira",
+   "zona": "Z05",
+   "lat": -31.427,
+   "lon": -64.142,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Este; Av. Sabattini",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Alta Córdoba",
+   "zona": "Z06",
+   "lat": -31.3985,
+   "lon": -64.1807,
+   "coord_fuente": "https://mapcarta.com/es/N11242782450",
+   "poblacion": 34600,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Barrio tradicional; Estación Alta Córdoba; estadio de Instituto; Av. Juan B. Justo / Rodríguez Peña; comercio barrial fuerte",
+   "fuente": "https://mapcarta.com/es/N11242782450"
+  },
+  {
+   "barrio": "Cofico",
+   "zona": "Z06",
+   "lat": -31.4028,
+   "lon": -64.1853,
+   "coord_fuente": "https://es.wikipedia.org/wiki/Barrio_Cofico",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "9 manzanas; a 400 m del centro; residencial con edificios",
+   "fuente": "https://es.wikipedia.org/wiki/Barrio_Cofico"
+  },
+  {
+   "barrio": "San Martín",
+   "zona": "Z06",
+   "lat": -31.392,
+   "lon": -64.191,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial norte; Av. Castro Barros / Monseñor Pablo Cabrera",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Providencia",
+   "zona": "Z06",
+   "lat": -31.402,
+   "lon": -64.1745,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Entre Alta Córdoba y General Paz",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Marqués de Sobremonte",
+   "zona": "Z06",
+   "lat": -31.374,
+   "lon": -64.182,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial norte",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Los Paraísos",
+   "zona": "Z06",
+   "lat": -31.364,
+   "lon": -64.188,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte, cerca de Circunvalación",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Alto Verde",
+   "zona": "Z06",
+   "lat": -31.372,
+   "lon": -64.208,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte; cercano a Dinosaurio Mall (Rodríguez del Busto)",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Villa Azalais",
+   "zona": "Z06",
+   "lat": -31.37,
+   "lon": -64.158,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte-NE",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Poeta Lugones",
+   "zona": "Z06",
+   "lat": -31.365,
+   "lon": -64.205,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte; Av. Monseñor Pablo Cabrera",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Cerro de las Rosas",
+   "zona": "Z07",
+   "lat": -31.3717,
+   "lon": -64.2336,
+   "coord_fuente": "https://es.wikipedia.org/wiki/Barrio_Cerro_de_las_Rosas_(C%C3%B3rdoba)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado (eje noroeste NSE alto según FCS-UNC, perfil.com)",
+   "rasgos": "Av. Rafael Núñez: principal corredor comercial premium; cafeterías, panaderías gourmet",
+   "fuente": "https://turismo.cordoba.gob.ar/barrio-cerro-de-las-rosas/"
+  },
+  {
+   "barrio": "Urca",
+   "zona": "Z07",
+   "lat": -31.3825,
+   "lon": -64.2369,
+   "coord_fuente": "https://www.derutasydestinos.com/plano_calles_Barrio-Urca_(Cordoba).html",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado (eje noroeste)",
+   "rasgos": "Residencial alto; Av. Laplace/Tristán Narvaja; gastronomía",
+   "fuente": "https://www.derutasydestinos.com/plano_calles_Barrio-Urca_(Cordoba).html"
+  },
+  {
+   "barrio": "Villa Cabrera",
+   "zona": "Z07",
+   "lat": -31.3876,
+   "lon": -64.2116,
+   "coord_fuente": "https://mapcarta.com/N2466286231",
+   "poblacion": 6440,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Córdoba Shopping (Goyechea); corredor Av. Rafael Núñez inicio / Fernando Fader",
+   "fuente": "https://mapcarta.com/N2466286231"
+  },
+  {
+   "barrio": "Parque Chacabuco",
+   "zona": "Z07",
+   "lat": -31.375,
+   "lon": -64.213,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NO",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Tablada Park",
+   "zona": "Z07",
+   "lat": -31.379,
+   "lon": -64.223,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NO",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Rogelio Martínez",
+   "zona": "Z07",
+   "lat": -31.387,
+   "lon": -64.223,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NO",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Alto Palermo",
+   "zona": "Z07",
+   "lat": -31.392,
+   "lon": -64.201,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial entre Villa Cabrera y Alta Córdoba",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Las Rosas",
+   "zona": "Z07",
+   "lat": -31.379,
+   "lon": -64.241,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial NO",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Chateau Carreras",
+   "zona": "Z07",
+   "lat": -31.369,
+   "lon": -64.247,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial alto, estadio Kempes cerca",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Argüello",
+   "zona": "Z08",
+   "lat": -31.3434,
+   "lon": -64.2594,
+   "coord_fuente": "https://mapcarta.com/20076630",
+   "poblacion": 8100,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Final de Av. Rafael Núñez; crecimiento de desarrollos",
+   "fuente": "https://mapcarta.com/20076630"
+  },
+  {
+   "barrio": "Villa Belgrano",
+   "zona": "Z08",
+   "lat": -31.358,
+   "lon": -64.2525,
+   "coord_fuente": "https://mapcarta.com/20011276",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado (eje noroeste)",
+   "rasgos": "Recta Martinoli y Av. Gauss: corredor gastronómico premium",
+   "fuente": "https://mapcarta.com/20011276"
+  },
+  {
+   "barrio": "Villa Rivera Indarte",
+   "zona": "Z08",
+   "lat": -31.3189,
+   "lon": -64.2944,
+   "coord_fuente": "https://www.derutasydestinos.com/mapas-Villa-Rivera-Indarte--Cordoba.html",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "NO lejano; crecimiento de loteos",
+   "fuente": "https://www.derutasydestinos.com/mapas-Villa-Rivera-Indarte--Cordoba.html"
+  },
+  {
+   "barrio": "Valle Escondido",
+   "zona": "Z08",
+   "lat": -31.371,
+   "lon": -64.29,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Barrios cerrados/countries; Av. República de China; crecimiento inmobiliario",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Granja de Funes",
+   "zona": "Z08",
+   "lat": -31.357,
+   "lon": -64.239,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial alto sobre Rafael Núñez / Recta Martinoli",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Villa Warcalde",
+   "zona": "Z08",
+   "lat": -31.35,
+   "lon": -64.28,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Residencial/countries NO",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Barrio Jardín",
+   "zona": "Z09",
+   "lat": -31.447,
+   "lon": -64.19,
+   "coord_fuente": "estimada (Mapcarta sin coord. en snippet)",
+   "poblacion": 3200,
+   "poblacion_anio": "s/d (dato OSM/Mapcarta, año no informado; prob. censo municipal 2008)",
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "65 manzanas; límites Yofre, Cruz Roja, Valparaíso, Richieri; estudiantes (lindero a UNC); Hipódromo",
+   "fuente": "https://es.wikipedia.org/wiki/Barrio_Jard%C3%ADn_(C%C3%B3rdoba)"
+  },
+  {
+   "barrio": "Jardín Espinosa",
+   "zona": "Z09",
+   "lat": -31.456,
+   "lon": -64.187,
+   "coord_fuente": "estimada",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "alto",
+   "nse_fuente": "nuestraciudad.info (\"nivel socioeconómico alto\")",
+   "rasgos": "Sur, al este del Hipódromo; Estadio Cabasés; Hospital Militar",
+   "fuente": "https://nuestraciudad.info/portal/Barrio_Jard%C3%ADn_Espinosa"
+  },
+  {
+   "barrio": "Villa Revol",
+   "zona": "Z09",
+   "lat": -31.441,
+   "lon": -64.181,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-alto",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur, junto a Parque Sarmiento / Ciudad Universitaria",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Parque Vélez Sarsfield",
+   "zona": "Z09",
+   "lat": -31.442,
+   "lon": -64.205,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur-oeste; Av. Vélez Sarsfield",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Iponá",
+   "zona": "Z09",
+   "lat": -31.465,
+   "lon": -64.197,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Villa Eucarística",
+   "zona": "Z09",
+   "lat": -31.457,
+   "lon": -64.205,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Manantiales",
+   "zona": "Z09",
+   "lat": -31.49,
+   "lon": -64.235,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Urbanización nueva SO; crecimiento inmobiliario",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Villa El Libertador",
+   "zona": "Z09",
+   "lat": -31.472,
+   "lon": -64.222,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "SO fuera de Circunvalación, Av. Armada Argentina; barrio muy poblado con comercio barrial",
+   "fuente": "https://es.wikipedia.org/wiki/Villa_El_Libertador"
+  },
+  {
+   "barrio": "Santa Isabel",
+   "zona": "Z09",
+   "lat": -31.488,
+   "lon": -64.21,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Cerro Chico",
+   "zona": "Z09",
+   "lat": -31.48,
+   "lon": -64.198,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio",
+   "nse_fuente": "estimado",
+   "rasgos": "Sur; Av. O'Higgins",
+   "fuente": "https://mapcarta.com/N3236732688"
+  },
+  {
+   "barrio": "Ciudad de mis Sueños",
+   "zona": "Z09",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d (no verificada)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "bajo",
+   "nse_fuente": "estimado (barrio-ciudad de vivienda social)",
+   "rasgos": "Barrio-ciudad de vivienda social; ubicación exacta no verificada",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Ituzaingó",
+   "zona": "Z10",
+   "lat": -31.44,
+   "lon": -64.115,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Periferia este",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Empalme",
+   "zona": "Z10",
+   "lat": -31.43,
+   "lon": -64.125,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Este; Av. Sabattini",
+   "fuente": "https://mapcarta.com/N3603029362"
+  },
+  {
+   "barrio": "Guiñazú",
+   "zona": "Z10",
+   "lat": -31.31,
+   "lon": -64.18,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Periferia norte (Ruta 9 N)",
+   "fuente": "https://mapcarta.com/N3086510330"
+  },
+  {
+   "barrio": "Los Boulevares",
+   "zona": "Z10",
+   "lat": -31.345,
+   "lon": -64.18,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Periferia norte",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Parque Liceo",
+   "zona": "Z10",
+   "lat": -31.36,
+   "lon": -64.175,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte (1a-3a sección), cerca Circunvalación",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Remedios de Escalada",
+   "zona": "Z10",
+   "lat": -31.355,
+   "lon": -64.2,
+   "coord_fuente": "estimada (baja confianza)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "medio-bajo",
+   "nse_fuente": "estimado",
+   "rasgos": "Norte",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Los Plátanos",
+   "zona": "Z10",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d (no verificada)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "s/d",
+   "nse_fuente": "s/d",
+   "rasgos": "Barrio del BRIEF; ubicación no verificada",
+   "fuente": "s/d"
+  },
+  {
+   "barrio": "Autopista",
+   "zona": "Z10",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d (no verificada)",
+   "poblacion": null,
+   "poblacion_anio": null,
+   "nse": "s/d",
+   "nse_fuente": "s/d",
+   "rasgos": "Barrio del BRIEF; ubicación no verificada",
+   "fuente": "s/d"
+  }
+ ],
+ "corredores": [
+  {
+   "nombre": "Av. Colón (Centro-Alberdi)",
+   "desde": [
+    -31.414,
+    -64.1845
+   ],
+   "hasta": [
+    -31.4065,
+    -64.22
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Obispo Trejo (Centro-Nueva Córdoba)",
+   "desde": [
+    -31.419,
+    -64.1878
+   ],
+   "hasta": [
+    -31.428,
+    -64.1882
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Rafael Núñez (Cerro-Argüello)",
+   "desde": [
+    -31.379,
+    -64.225
+   ],
+   "hasta": [
+    -31.347,
+    -64.262
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "25 de Mayo (General Paz)",
+   "desde": [
+    -31.411,
+    -64.178
+   ],
+   "hasta": [
+    -31.4118,
+    -64.1645
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Gauss (Villa Belgrano)",
+   "desde": [
+    -31.36,
+    -64.254
+   ],
+   "hasta": [
+    -31.353,
+    -64.252
+   ],
+   "coord_fuente": "estimada (baja confianza)"
+  },
+  {
+   "nombre": "Recta Martinoli",
+   "desde": [
+    -31.362,
+    -64.244
+   ],
+   "hasta": [
+    -31.338,
+    -64.288
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Vélez Sarsfield (Centro-Sur)",
+   "desde": [
+    -31.42,
+    -64.189
+   ],
+   "hasta": [
+    -31.455,
+    -64.196
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. O'Higgins",
+   "desde": [
+    -31.453,
+    -64.188
+   ],
+   "hasta": [
+    -31.5,
+    -64.2
+   ],
+   "coord_fuente": "estimada (baja confianza)"
+  },
+  {
+   "nombre": "Av. Fructuoso Rivera (Güemes-SO)",
+   "desde": [
+    -31.426,
+    -64.196
+   ],
+   "hasta": [
+    -31.44,
+    -64.215
+   ],
+   "coord_fuente": "estimada (baja confianza)"
+  },
+  {
+   "nombre": "Av. Monseñor Pablo Cabrera",
+   "desde": [
+    -31.398,
+    -64.193
+   ],
+   "hasta": [
+    -31.362,
+    -64.21
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Juan B. Justo",
+   "desde": [
+    -31.399,
+    -64.176
+   ],
+   "hasta": [
+    -31.36,
+    -64.17
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Amadeo Sabattini (Este)",
+   "desde": [
+    -31.423,
+    -64.165
+   ],
+   "hasta": [
+    -31.43,
+    -64.125
+   ],
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Av. Duarte Quirós (Centro-Oeste)",
+   "desde": [
+    -31.4175,
+    -64.19
+   ],
+   "hasta": [
+    -31.412,
+    -64.237
+   ],
+   "coord_fuente": "estimada"
+  }
+ ],
+ "hitos": [
+  {
+   "nombre": "Plaza San Martín",
+   "lat": -31.4167,
+   "lon": -64.1836,
+   "coord_fuente": "BRIEF / latitude.to (Córdoba -31.4135,-64.1811)"
+  },
+  {
+   "nombre": "Patio Olmos",
+   "lat": -31.4201,
+   "lon": -64.1882,
+   "coord_fuente": "estimada (Vélez Sarsfield y Bv. San Juan)"
+  },
+  {
+   "nombre": "Ciudad Universitaria (UNC)",
+   "lat": -31.438,
+   "lon": -64.189,
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Parque Sarmiento",
+   "lat": -31.429,
+   "lon": -64.176,
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Nuevocentro Shopping",
+   "lat": -31.411,
+   "lon": -64.206,
+   "coord_fuente": "estimada (Duarte Quirós, Alberdi)"
+  },
+  {
+   "nombre": "Paseo del Jockey",
+   "lat": -31.443,
+   "lon": -64.1895,
+   "coord_fuente": "estimada (baja confianza; zona Barrio Jardín/Jockey)"
+  },
+  {
+   "nombre": "Dinosaurio Mall (Rodríguez del Busto)",
+   "lat": -31.3675,
+   "lon": -64.212,
+   "coord_fuente": "estimada (baja confianza)"
+  },
+  {
+   "nombre": "Córdoba Shopping (Villa Cabrera)",
+   "lat": -31.37,
+   "lon": -64.221,
+   "coord_fuente": "estimada (baja confianza)"
+  },
+  {
+   "nombre": "Paseo Rivera Shopping",
+   "lat": null,
+   "lon": null,
+   "coord_fuente": "s/d: no verificado"
+  },
+  {
+   "nombre": "Aeropuerto Int. Ing. Taravella",
+   "lat": -31.3236,
+   "lon": -64.208,
+   "coord_fuente": "estimada (coordenadas de referencia del aeropuerto, alta confianza)"
+  },
+  {
+   "nombre": "Terminal de Ómnibus",
+   "lat": -31.42,
+   "lon": -64.175,
+   "coord_fuente": "estimada"
+  },
+  {
+   "nombre": "Mercado Norte",
+   "lat": -31.4105,
+   "lon": -64.186,
+   "coord_fuente": "estimada"
+  }
+ ],
+ "notas": "Tope de búsquedas web de la sesión alcanzado (200/200) durante la tarea: solo 12 barrios tienen coordenadas verificadas por fuente (campo coord_fuente con URL); el resto son 'estimada' o 'estimada (baja confianza)' por conocimiento general (error esperable 300-800 m; mayor en 'baja confianza'); 5 barrios quedaron sin coordenadas (null). Población: no se halló dato por barrio del Censo 2022 (INDEC publica solo total ciudad: 1.498.060 hab.). Las cifras son de Mapcarta/OSM (año no informado, probablemente censo municipal 2008) salvo Nueva Córdoba (~36.000, 2008, Wikipedia). NSE: el mapa FCS-UNC de 5 niveles no pudo consultarse en detalle; NSE es estimado salvo que nse_fuente diga otra cosa (el estudio confirma NSE alto en eje noroeste y countries del sur). Corredores e hitos: coordenadas estimadas (sin verificación web). Circunvalación y río Suquía omitidos (sin trazado verificado). Zona de barrios fuera de la lista del BRIEF asignada por cercanía."
+}

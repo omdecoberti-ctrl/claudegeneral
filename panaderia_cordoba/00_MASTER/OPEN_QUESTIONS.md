@@ -106,3 +106,7 @@
 | Q069 | ¿Cuánto cuesta el "café con leche + 2 medialunas" por zona? (índice propio de precios, I015) | G3/G6 | P1 | A001 | ABIERTA |
 | Q070 | ¿Por qué las cadenas porteñas de café fracasan en la calle en Córdoba (Café Martínez cerró sus locales)? | G3 | P2 | R007 | ABIERTA |
 | Q071 | ¿Qué barrios en crecimiento (Manantiales, zona sur, Valle Escondido, Villa Belgrano) tienen menos oferta de bakery café? | G8 | P1 | A007 | ABIERTA |
+| Q072 | ¿Cuántas panaderías hay realmente por zona y por barrio? (exportación de OpenStreetMap desde el mapa, T030) | G3/G8 | P1 | I013, T030 | ABIERTA |
+| Q073 | ¿La Celeste produce de forma centralizada? ¿Cómo abastece a 16 locales, 10 de ellos 24 h? | G3 | P2 | I014 | ABIERTA |
+| Q074 | ¿Por qué La Vene y Café Martínez no escalaron en Córdoba? (lecciones de expansión) | G3/G14 | P2 | I014b | ABIERTA |
+| Q075 | ¿Cuál sería el producto emblema cordobés de PAN-CBA (criollo, chipá, medialuna de autor), fabricable en la planta de UC? | G6 | P2 | EB7 | ABIERTA |

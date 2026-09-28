@@ -14,7 +14,7 @@
 | A005 | Centralizar reduce materialmente CAPEX, m² y personal especializado | Crítica | Media | G4 | NO VALIDADA |
 | A006 | El consumidor no penaliza (o no percibe) producto bake-off si el resultado es bueno | Alta | Baja | G5 | NO VALIDADA |
 | A007 | Existe un espacio de diferenciación no cubierto en Córdoba Capital | Crítica | Baja | G3 | NO VALIDADA |
-| A008 | La demanda se concentra en franjas horarias predecibles | Alta | Media | G2 | NO VALIDADA |
+| A008 | La demanda se concentra en franjas horarias predecibles | Alta | Media | G2 | EN VALIDACIÓN |
 | A009 | Existen locales disponibles con alquiler compatible con el modelo | Alta | Baja | G8 | NO VALIDADA |
 | A010 | Break-even ≤ 12 meses con la inversión disponible | Crítica | Baja | G7 | NO VALIDADA |
 | A011 | Un menú acotado (SKU reducidos) no reduce ventas vs. surtido amplio | Alta | Baja | G6 | NO VALIDADA |
@@ -33,6 +33,7 @@
 ## Detalle
 
 ### A001 — Ticket promedio alcanzable
+- **Evidencia (28/09, I015 e I006):** combo café + 2 medialunas entre $3.600 (Mostaza) y $9.700 (Starbucks). Ticket por segmento estimado entre $1.500 y $8.000. Hueco tentativo en $4.500–5.500. Estado: NO VALIDADA; el rango se estrecha.
 - **Hipótesis:** el concepto elegido alcanzará un ticket promedio de $X (a definir en G2) suficiente para cubrir costos con N tickets/día.
 - **Motivo / importancia:** junto con tickets/día define la venta; es la variable más sensible del P&L. Crítica.
 - **Información disponible:** ninguna aún.
@@ -90,6 +91,7 @@
 - **Confianza:** Baja. **Cómo validar:** I013–I017 + G2. **Resultado:** — **Estado:** NO VALIDADA
 
 ### A008 — Demanda concentrada en franjas horarias predecibles
+- **Evidencia (28/09, I006):** picos estimados a las 8–10 h y 16–18 h, más el domingo (delivery a las 17 h). La franja de 6 a 8 h tiene poca oferta de calidad. Estado: EN VALIDACIÓN.
 - **Hipótesis:** la venta se concentra en picos (mañana / merienda) que permiten planificar cocción y turnos.
 - **Confianza:** Media [INTERPRETACIÓN: patrón típico del rubro]. **Cómo validar:** observación (I009), Google "horarios concurridos" de competidores, datos piloto.
 - **Resultado:** — **Estado:** NO VALIDADA
@@ -108,12 +110,15 @@
 - **Cómo validar:** pruebas de SOP con personal sin experiencia (E-futuro), benchmark de cadenas bake-off. **Estado:** NO VALIDADA
 
 ### A013 — Café/bebidas justifican su complejidad
+- **Evidencia (28/09, I003 e I013):** el café de especialidad es el fenómeno gastronómico del país; las cadenas de panadería casi no tienen salón ni café bueno (La Celeste). A favor del café estandarizado. Estado: NO VALIDADA.
 - **Motivo:** el café suele tener alto margen pero exige equipo, barista y espacio [INTERPRETACIÓN]. **Cómo validar:** I011/I019 comparando conceptos con y sin cafetería. **Estado:** NO VALIDADA
 
 ### A014 — Delivery rentable
+- **Evidencia en contra (28/09, I005 e I006):** comisiones de 20–35% más IVA; en Rappi el ticket real baja ~6%. Córdoba es la 2.ª ciudad en medialunas por delivery (+18%). Solo sería viable con precio diferenciado o pedidos propios.
 - **Cómo validar:** comisiones de apps (PedidosYa, Rappi, etc.), costos de packaging, ticket delivery. **Estado:** NO VALIDADA
 
 ### A015 — Demanda B2B
+- **Evidencia (28/09):** solo Del Pilar comunica un canal para empresas en Córdoba. No hay dato de tamaño → entrevistas a empresas (guía lista).
 - **Cómo validar:** entrevistas a oficinas/empresas, cafeterías sin producción propia. **Estado:** NO VALIDADA
 
 ### A016 — Desperdicio controlable

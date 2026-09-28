@@ -21,7 +21,7 @@ Mercado, competencia, cliente, concepto, producto, pricing, modelo financiero, u
 ## 5. Estado actual
 | Ítem | Valor |
 |---|---|
-| Etapa | Cierre de G0 + inicio de la investigación de escritorio de G1–G3 |
+| Etapa | G0 casi cerrado · G1–G3 con escritorio v1 completo (mercado, cliente, competencia); falta trabajo de campo |
 | Gate actual | **G0 — Definición del proyecto** (D001–D006 aprobadas) |
 | Concepto actual | **Ninguno definido (intencional).** Surgirá de G1–G5. |
 | Ubicación | No definida |
@@ -55,6 +55,11 @@ Sin datos todavía. Se completará a partir de G1 (mercado) y G7 (unit economics
 | Capacidad ociosa UC | ~40% (3 turnos) | [HECHO — socios] | PARTNER_INPUTS |
 | Producción UC | 200–250 t/mes, ~35 variedades | [HECHO — prensa] | F256 |
 | Semanas hasta apertura | 23 (al 28/09/2026) | [ESTIMACIÓN] | E-01 |
+| Población Córdoba Capital | ~1,5 M; ~200 mil universitarios | [HECHO] | I001 |
+| TAM / SAM / SOM de 1 local | USD ~333 M / ~25 M / ~0,38 M por año | [ESTIMACIÓN] | E-05 |
+| Competidor clave | La Celeste: 16 locales, 10 de ellos 24 h, 94 mil seguidores en IG | [HECHO] | E-04 |
+| Espejo del modelo | Del Pilar: 45 locales, planta de ultracongelado, franquicias | [HECHO] | E-04 |
+| Hueco de posicionamiento | Precio medio + experiencia media-alta + desayuno temprano | [INTERPRETACIÓN] | E-04 |
 
 ## 10. Principales riesgos
 R021 plazo comprimido · R002 inflación · R019 conflicto de canal con clientes UC · R020 falta de experiencia en comercio al público · R001 invertir sin validar · R004 ubicación. Ver `RISKS.md`.

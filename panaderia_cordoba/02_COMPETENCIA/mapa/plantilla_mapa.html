@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mapa Competitivo Córdoba</title>
+<style>/*LEAFLET_CSS*/</style>
+<style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#7a7a7a;--line:#e6e6e6;--soft:#FFF4E5}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;color:var(--tx);font-size:13px;background:#fff}
+.top{height:54px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:3px solid var(--brand)}
+.logo{font-weight:800;color:var(--brand);font-size:16px;line-height:1.1}.logo small{display:block;font-size:9px;color:var(--tx2);letter-spacing:1.2px;font-weight:600}
+.top h1{font-size:15px;margin:0 0 0 8px;color:var(--tx);font-weight:700}
+.top .sp{flex:1}.top a{color:var(--brand2);font-weight:700;text-decoration:none;font-size:12px}
+.tog{display:none;border:1px solid var(--line);background:#fff;border-radius:6px;padding:6px 10px;font-size:15px}
+.wrap{display:grid;grid-template-columns:340px minmax(0,1fr);height:calc(100% - 54px)}
+aside{border-right:1px solid var(--line);overflow:auto;padding:12px 14px 30px;background:#FCFCFC}
+aside h3{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx2);margin:16px 0 6px}
+#map{height:100%;background:#eef2f3}
+.row{display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer}.row input{margin:0}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none;border:1px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.cnt{margin-left:auto;color:var(--tx2);font-size:12px;font-variant-numeric:tabular-nums}
+select,input[type=search]{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:6px}.kpi{border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:6px;padding:6px 8px;background:#fff}
+.kpi b{font-size:19px;display:block}.kpi span{font-size:11px;color:var(--tx2)}
+table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:var(--brand);color:#fff;text-align:left;padding:4px 6px}td{border-bottom:1px solid var(--line);padding:4px 6px}
+tr.zr{cursor:pointer}tr.zr:hover td{background:var(--soft)}
+.list{max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.list div{padding:5px 8px;border-bottom:1px solid var(--line);cursor:pointer}.list div:hover{background:var(--soft)}.list small{color:var(--tx2);display:block}
+.note{font-size:11px;color:var(--tx2);line-height:1.45}
+.leaflet-popup-content{font-family:inherit;font-size:12.5px;line-height:1.45;min-width:220px}
+.pop b{color:var(--brand2);font-size:14px}.pop .t{display:inline-block;font-size:10.5px;font-weight:700;color:#fff;border-radius:4px;padding:1px 6px;margin:3px 0}
+.pop a.btn{display:inline-block;margin-top:6px;padding:4px 9px;border-radius:5px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
+.zlabel{background:none;border:none;box-shadow:none;font-weight:800;font-size:12px;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
+.legend{background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.2);font-size:11.5px;line-height:1.7}
+.warn{background:var(--soft);border:1px solid var(--brand);border-radius:6px;padding:7px 9px;font-size:11px;margin-top:10px}
+@media(max-width:820px){.wrap{grid-template-columns:1fr}aside{position:fixed;top:54px;bottom:0;left:0;width:88%;z-index:1000;display:none;box-shadow:4px 0 16px rgba(0,0,0,.2)}aside.open{display:block}.tog{display:block}.top h1{display:none}}
+</style></head><body>
+<div class="top"><button class="tog" onclick="document.querySelector('aside').classList.toggle('open')">☰ Filtros</button>
+<div class="logo">CANALSENSES<small>PROYECTO PANADERÍA · PAN-CBA</small></div><h1>Mapa competitivo de Córdoba Capital</h1><span class="sp"></span>
+<a href="/index.html">← Volver al sitio</a></div>
+<div class="wrap"><aside>
+<div class="kpis"><div class="kpi"><b id="kTot">–</b><span>locales visibles</span></div><div class="kpi"><b id="kPan">–</b><span>panaderías visibles</span></div></div>
+<h3>Buscar</h3><input type="search" id="q" placeholder="Marca, calle o barrio…">
+<h3>Tipo de competidor</h3><div id="tipos"></div>
+<h3>Zona</h3><select id="zsel"><option value="">Toda la ciudad</option></select>
+<h3>Capas</h3>
+<label class="row"><input type="checkbox" id="cZon" checked> Zonas (plano segmentado)</label>
+<label class="row"><input type="checkbox" id="cCho"> Colorear zonas por cantidad de panaderías</label>
+<label class="row"><input type="checkbox" id="cCor" checked> Corredores comerciales</label>
+<label class="row"><input type="checkbox" id="cHit" checked> Hitos (shoppings, universidad…)</label>
+<label class="row"><input type="checkbox" id="c24"> Solo locales 24 h</label>
+<h3>Datos en vivo (OpenStreetMap)</h3>
+<label class="row"><input type="checkbox" id="oB" checked><span class="dot" style="background:#fff;border:2px solid #A0522D"></span> Panaderías y pastelerías OSM<span class="cnt" id="oBn">…</span></label>
+<label class="row"><input type="checkbox" id="oC"><span class="dot" style="background:#fff;border:2px solid #2A9D8F"></span> Cafés OSM<span class="cnt" id="oCn">…</span></label>
+<div class="note" id="oSt">Consultando OpenStreetMap…</div>
+<button id="oX" style="margin-top:6px;padding:6px 10px;border:1px solid var(--brand);background:#fff;color:var(--brand2);border-radius:6px;font-weight:700;cursor:pointer">⬇ Exportar datos OSM (CSV / Excel)</button>
+<h3>Resumen por zona</h3><div id="ztab"></div>
+<h3>Locales en la vista</h3><div class="list" id="list"></div>
+<div class="warn"><b>Cómo leer el mapa.</b> La mayoría de los locales se ubica en el <b>centro de su barrio</b>, con un pequeño desplazamiento para que no se superpongan: la posición es aproximada. La dirección exacta está en cada ficha, con el botón <b>"Ver en Google Maps"</b>. Las zonas son una segmentación de trabajo (Z01–Z10). Relevamiento de escritorio al 28/09/2026: no es un censo completo; las panaderías de barrio están subrepresentadas.</div>
+</aside><div id="map"></div></div>
+<script>/*LEAFLET_JS*/</script>
+<script>
+const D=/*DATA*/;
+const map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([-31.415,-64.19],12);
+const osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
+const carto=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'© OpenStreetMap © CARTO'});
+carto.addTo(map);L.control.layers({'Plano claro (CARTO)':carto,'Plano OpenStreetMap':osm},{}, {position:'topright'}).addTo(map);
+L.control.scale({imperial:false}).addTo(map);
+// Zonas
+const panByZ={};D.locales.forEach(l=>{if(['cadena_panaderia','panaderia_barrio','bakery_cafe'].includes(l.t))panByZ[l.z]=(panByZ[l.z]||0)+1});
+const maxP=Math.max(1,...Object.values(panByZ));
+function zStyle(f){const cho=document.getElementById('cCho').checked;const n=panByZ[f.properties.z]||0;
+ return cho?{color:'#B12028',weight:1.5,fillColor:'#B12028',fillOpacity:0.08+0.55*n/maxP}:{color:f.properties.color,weight:2,fillColor:f.properties.color,fillOpacity:0.10}}
+const zLayer=L.geoJSON(D.zonas,{style:zStyle,onEachFeature:(f,l)=>{const p=f.properties;
+ l.bindTooltip(`<b>${p.z} · ${p.nombre}</b><br>${p.total||0} locales · ${panByZ[p.z]||0} panaderías`,{sticky:true});
+ l.on('click',()=>{zsel.value=p.z;render(true)})}}).addTo(map);
+const zLabels=L.layerGroup(D.zonas.features.map(f=>{const c=L.geoJSON(f).getBounds().getCenter();
+ return L.marker(c,{icon:L.divIcon({className:'zlabel',html:`<span style="color:${f.properties.color}">${f.properties.z}</span>`,iconSize:[40,16]}),interactive:false})})).addTo(map);
+// Corredores e hitos
+const corr=L.layerGroup(D.corredores.filter(c=>c.desde&&c.hasta).map(c=>L.polyline([c.desde,c.hasta],{color:'#444',weight:4,opacity:.35,dashArray:'6 6'}).bindTooltip(c.nombre))).addTo(map);
+const hit=L.layerGroup(D.hitos.filter(h=>h.lat).map(h=>L.circleMarker([h.lat,h.lon],{radius:5,color:'#111',fillColor:'#fff',fillOpacity:1,weight:2}).bindTooltip('★ '+h.nombre))).addTo(map);
+// Filtros de tipo
+const tipos=document.getElementById('tipos');const cnt={};D.locales.forEach(l=>cnt[l.t]=(cnt[l.t]||0)+1);
+Object.entries(D.tipos).forEach(([k,[lab,col]])=>{if(!cnt[k])return;tipos.insertAdjacentHTML('beforeend',`<label class="row"><input type="checkbox" class="ft" value="${k}" checked><span class="dot" style="background:${col}"></span>${lab}<span class="cnt" id="c_${k}">${cnt[k]}</span></label>`)});
+const zsel=document.getElementById('zsel');Object.entries(D.zonasNombres).forEach(([z,n])=>zsel.insertAdjacentHTML('beforeend',`<option value="${z}">${z} · ${n}</option>`));
+// Marcadores
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mk=D.locales.map(l=>{const col=(D.tipos[l.t]||D.tipos.otro)[1];const big=l.t==='cadena_panaderia';
+ const m=L.circleMarker([l.la,l.lo],{radius:big?7:5,color:'#fff',weight:1.2,fillColor:col,fillOpacity:.9});
+ m.bindPopup(`<div class="pop"><b>${esc(l.m)}</b><br><span class="t" style="background:${col}">${esc((D.tipos[l.t]||D.tipos.otro)[0])}</span><br>
+ ${l.d?esc(l.d)+'<br>':''}${esc(l.b)}${l.z?' · '+l.z+' '+esc(D.zonasNombres[l.z]||''):''}<br>
+ ${l.h?'🕒 '+esc(l.h)+'<br>':''}${l.h24?'<b>Abre 24 h</b><br>':''}${l.dl?'🛵 '+esc(l.dl)+'<br>':''}
+ ${l.gr?'⭐ '+l.gr+(l.gn?' ('+l.gn+' reseñas)':'')+'<br>':''}${l.n?'<i>'+esc(l.n)+'</i><br>':''}
+ <span style="color:#999;font-size:11px">Ubicación ${l.p==='exacta'?'exacta':'aproximada ('+l.p+')'}</span><br>
+ <a class="btn" href="${l.g}" target="_blank" rel="noopener">Ver en Google Maps</a> ${l.f&&/^https?:/.test(l.f)?`<a href="${esc(l.f)}" target="_blank" rel="noopener" style="font-size:11px">fuente</a>`:''}</div>`);
+ m._d=l;return m});
+const mLayer=L.layerGroup().addTo(map);
+function render(fit){const on=new Set([...document.querySelectorAll('.ft:checked')].map(x=>x.value));const z=zsel.value;
+ const q=document.getElementById('q').value.toLowerCase().trim();const only24=document.getElementById('c24').checked;
+ mLayer.clearLayers();let vis=[];mk.forEach(m=>{const l=m._d;const ok=on.has(l.t)&&(!z||l.z===z)&&(!only24||l.h24)&&(!q||(l.m+' '+l.d+' '+l.b).toLowerCase().includes(q));if(ok){mLayer.addLayer(m);vis.push(m)}});
+ document.getElementById('kTot').textContent=vis.length;document.getElementById('kPan').textContent=vis.filter(m=>['cadena_panaderia','panaderia_barrio','bakery_cafe'].includes(m._d.t)).length;
+ document.getElementById('list').innerHTML=vis.slice().sort((a,b)=>a._d.m.localeCompare(b._d.m)).map((m,i)=>`<div data-i="${mk.indexOf(m)}">${esc(m._d.m)}<small>${esc(m._d.d||m._d.b)} · ${m._d.z}</small></div>`).join('')||'<div>Sin resultados</div>';
+ if(fit&&vis.length){map.fitBounds(L.featureGroup(vis).getBounds().pad(.15),{maxZoom:15})}}
+document.getElementById('list').addEventListener('click',e=>{const d=e.target.closest('[data-i]');if(!d)return;const m=mk[+d.dataset.i];map.setView(m.getLatLng(),16);m.openPopup()});
+document.querySelectorAll('.ft').forEach(x=>x.addEventListener('change',()=>render(false)));
+zsel.addEventListener('change',()=>render(true));document.getElementById('q').addEventListener('input',()=>render(false));
+document.getElementById('c24').addEventListener('change',()=>render(false));
+document.getElementById('cZon').addEventListener('change',e=>{e.target.checked?(zLayer.addTo(map),zLabels.addTo(map)):(map.removeLayer(zLayer),map.removeLayer(zLabels))});
+document.getElementById('cCho').addEventListener('change',()=>zLayer.setStyle(zStyle));
+document.getElementById('cCor').addEventListener('change',e=>e.target.checked?corr.addTo(map):map.removeLayer(corr));
+document.getElementById('cHit').addEventListener('change',e=>e.target.checked?hit.addTo(map):map.removeLayer(hit));
+// Tabla por zona
+const zt=Object.entries(D.zonasNombres).map(([z,n])=>{const f=D.zonas.features.find(x=>x.properties.z===z);const p=f?f.properties:{};
+ return `<tr class="zr" data-z="${z}"><td><span class="dot" style="background:${p.color||'#999'}"></span> ${z} ${n}</td><td>${p.total||0}</td><td>${panByZ[z]||0}</td><td id="osm_${z}">…</td></tr>`}).join('');
+document.getElementById('ztab').innerHTML=`<table><tr><th>Zona</th><th>Relev.</th><th>Panad.</th><th title="Panaderías y pastelerías en OpenStreetMap">OSM</th></tr>${zt}</table>`;
+document.querySelectorAll('tr.zr').forEach(r=>r.addEventListener('click',()=>{zsel.value=r.dataset.z;render(true)}));
+// Leyenda
+const lg=L.control({position:'bottomright'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML=Object.entries(D.tipos).filter(([k])=>cnt[k]).map(([k,[lab,col]])=>`<span class="dot" style="background:${col}"></span> ${lab}`).join('<br>');return d};lg.addTo(map);
+render(false);
+// ───── Capa en vivo: OpenStreetMap vía Overpass (corre en el navegador del usuario) ─────
+function inPoly(pt,ring){let x=pt[0],y=pt[1],ins=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const xi=ring[i][0],yi=ring[i][1],xj=ring[j][0],yj=ring[j][1];if(((yi>y)!=(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))ins=!ins}return ins}
+function zoneOf(lon,lat){for(const f of D.zonas.features){const g=f.geometry;const polys=g.type==='Polygon'?[g.coordinates]:g.coordinates;for(const p of polys){if(inPoly([lon,lat],p[0]))return f.properties.z}}return ''}
+const oB=L.layerGroup(),oC=L.layerGroup();let OSM=[];
+const CHAIN=/celeste|pilar|lo ?\+? ?rico|independencia|perd[uú]|la vene|havanna|starbucks|mart[ií]nez|bonafide|mostaza|mc ?donald|ypf|full|shell|axion/i;
+function drawOSM(items){OSM=items;oB.clearLayers();oC.clearLayers();const zc={};let nb=0,nc=0;
+ items.forEach(o=>{const bak=o.k!=='cafe';const col=bak?'#A0522D':'#2A9D8F';const ch=CHAIN.test(o.n||'');
+  const m=L.circleMarker([o.la,o.lo],{radius:ch?6:4,color:col,weight:2,fillColor:ch?col:'#fff',fillOpacity:ch?.8:.9});
+  m.bindPopup(`<div class="pop"><b>${esc(o.n||'(sin nombre)')}</b><br><span class="t" style="background:${col}">OSM · ${esc(o.k)}</span><br>${esc(o.a||'')}<br>${o.h?'🕒 '+esc(o.h)+'<br>':''}${o.w?'<a href="'+esc(o.w)+'" target="_blank" rel="noopener">web / redes</a><br>':''}${o.z?o.z+' '+esc(D.zonasNombres[o.z]||''):''}<br><span style="color:#999;font-size:11px">Ubicación exacta (OpenStreetMap)</span><br><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${o.la},${o.lo}">Ver en Google Maps</a></div>`);
+  if(bak){oB.addLayer(m);nb++;zc[o.z]=(zc[o.z]||0)+1}else{oC.addLayer(m);nc++}});
+ document.getElementById('oBn').textContent=nb;document.getElementById('oCn').textContent=nc;
+ Object.keys(D.zonasNombres).forEach(z=>{const el=document.getElementById('osm_'+z);if(el)el.textContent=zc[z]||0});
+ Object.assign(panByZ,{});window.OSMZ=zc;
+ if(document.getElementById('oB').checked)oB.addTo(map);if(document.getElementById('oC').checked)oC.addTo(map)}
+async function loadOSM(){const st=document.getElementById('oSt');
+ try{const c=JSON.parse(localStorage.getItem('osm_cba')||'null');if(c&&Date.now()-c.t<7*864e5){drawOSM(c.d);st.textContent=`Datos OSM guardados del ${new Date(c.t).toLocaleDateString('es-AR')} (se actualizan cada 7 días).`;return}}catch(e){}
+ const bb='-31.524,-64.316,-31.307,-64.061';
+ const q=`[out:json][timeout:90];(nwr["shop"~"^(bakery|pastry|confectionery)$"](${bb});nwr["craft"="bakery"](${bb});nwr["amenity"="cafe"](${bb}););out center tags;`;
+ for(const ep of ['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass.private.coffee/api/interpreter']){
+  try{const r=await fetch(ep,{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'}});if(!r.ok)continue;const j=await r.json();
+   const items=j.elements.map(e=>{const t=e.tags||{};const la=e.lat??e.center?.lat,lo=e.lon??e.center?.lon;const k=t.shop||t.craft&&'bakery'||t.amenity;
+    return {id:e.type+'/'+e.id,n:t.name||t.brand||'',k:k,la,lo,a:[t['addr:street'],t['addr:housenumber']].filter(Boolean).join(' '),h:t.opening_hours||'',w:t.website||t['contact:instagram']||t['contact:facebook']||'',z:zoneOf(lo,la)}}).filter(o=>o.la);
+   drawOSM(items);st.textContent=`OpenStreetMap: ${items.length} lugares descargados ahora (${new Date().toLocaleString('es-AR')}).`;
+   try{localStorage.setItem('osm_cba',JSON.stringify({t:Date.now(),d:items}))}catch(e){}return}catch(e){}}
+ st.textContent='No se pudo consultar OpenStreetMap (sin conexión o servicio saturado). Reintentá más tarde.'}
+document.getElementById('oB').addEventListener('change',e=>e.target.checked?oB.addTo(map):map.removeLayer(oB));
+document.getElementById('oC').addEventListener('change',e=>e.target.checked?oC.addTo(map):map.removeLayer(oC));
+document.getElementById('oX').addEventListener('click',()=>{if(!OSM.length){alert('Todavía no hay datos de OpenStreetMap cargados.');return}
+ const rows=[['id_osm','nombre','tipo','direccion','zona','zona_nombre','lat','lon','horario','web_redes']].concat(OSM.map(o=>[o.id,o.n,o.k,o.a,o.z,D.zonasNombres[o.z]||'',o.la,o.lo,o.h,o.w]));
+ const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\n');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='panaderias_cafes_cordoba_osm.csv';a.click()});
+loadOSM();
+</script></body></html>

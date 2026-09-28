@@ -30,6 +30,8 @@
 | R023 | Requisitos legales para franquiciar (CCyC arts. 1512–1524, p. ej. información económica de unidades similares) no se cumplen si se franquicia antes de tener historia operativa | 2 | 3 | 6 | Laura | ABIERTO |
 | R024 | Precio de suministro de UC al franquiciado demasiado alto (caso Tim Hortons: costo ~2x vs. elaborar en local) → conflicto y baja rentabilidad del franquiciado | 2 | 3 | 6 | Fabiola | ABIERTO |
 | R025 | Competidores locales con el mismo modelo ya escalado (Del Pilar: 45 locales, planta ultracongelada propia, franquicias; Lo+Rico: 26–30 locales) | 3 | 2 | 6 | Estrategia | ABIERTO |
+| R026 | Reacción de La Celeste (plan de expansión a zonas donde no está; apertura cerca del local 1) o de Del Pilar y Lo+Rico (precio, franquicias) | 2 | 2 | 4 | Estrategia | ABIERTO |
+| R027 | Decidir con datos de escritorio no verificados (fragmentos de buscador, cupo de búsqueda agotado) | 3 | 2 | 6 | PM | MITIGANDO |
 | R022 | Logística desde Canals (~320 km, entregas cada 15 días) obliga a mucho stock congelado en el local o encarece el abastecimiento | 2 | 2 | 4 | Oscar | ABIERTO |
 
 ---
@@ -64,3 +66,5 @@
 | R020 | Errores de operación o de producto en las pruebas; demora en contratar al encargado | Asesor gastronómico por horas; capacitación en planta UC; procedimientos escritos desde el día 1; encargado con experiencia |
 | R021 | Fechas de corte incumplidas; presión por "cerrar ya" | Fechas de corte fijas con reprogramación automática (PD029); no se saltean Gate Reviews |
 | R022 | Stock para 15–21 días que no entra en el freezer del local; quiebres de stock | Frecuencia semanal o depósito en Córdoba (Q054); dimensionar el frío en G10 |
+| R026 | Apertura de La Celeste cerca del local 1; guerra de precios de las cadenas | Diferenciar por experiencia y café (no por 24 h ni por precio); fidelización propia desde el día 1 |
+| R027 | Contradicciones entre fuentes; fechas sin confirmar | Etiquetas de evidencia; verificación en origen (T032); trabajo de campo (T017); capa OSM en vivo (T030) |

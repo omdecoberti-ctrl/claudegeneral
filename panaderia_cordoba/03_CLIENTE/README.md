@@ -25,4 +25,6 @@ Manual de marca (cliente objetivo) y de expansión
 ## Índice de documentos
 | Documento | Descripción | Estado | Fecha |
 |---|---|---|---|
-| — | _Vacío por ahora_ | | |
+| INFORME_CLIENTE (.md/.html/.pdf) | E-06: segmentos, ocasiones, jobs-to-be-done, perfiles | v1 | 2026-09-28 |
+| I006_segmentos_ocasiones.md | Datos secundarios de cliente | v1 | 2026-09-28 |
+| GUIA_ENTREVISTAS.md · ENCUESTA_CUANTITATIVA.md · PROTOCOLO_OBSERVACION_CLIENTE_INCOGNITO.md | Instrumentos de campo | Listos | 2026-09-28 |

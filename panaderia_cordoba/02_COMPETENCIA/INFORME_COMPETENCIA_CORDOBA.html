@@ -1,0 +1,658 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Informe de competencia — Córdoba Capital (G3)</title><style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#7a7a7a;--line:#E6E6E6;--soft:#FFF4E5}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--tx);font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-size:12.5px;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px 30px}
+header{border-bottom:3px solid var(--brand);padding:14px 0 10px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;color:var(--brand);font-size:19px}.logo small{display:block;font-size:9.5px;color:var(--tx2);font-weight:600;letter-spacing:1.4px}
+.meta{font-size:10.5px;color:var(--tx2);text-align:right}
+h1{color:var(--brand);font-size:24px;margin:18px 0 8px}h2{color:var(--brand);font-size:17px;border-left:4px solid var(--brand);padding-left:8px;margin:24px 0 8px;break-after:avoid}
+h3{color:var(--brand2);font-size:14px;margin:16px 0 6px;break-after:avoid}
+.tw{overflow-x:auto;margin:8px 0 12px}table{border-collapse:collapse;width:100%;font-size:11px}
+th{background:var(--brand);color:#fff;text-align:left;padding:5px 7px}td{border-bottom:1px solid var(--line);padding:4px 7px;vertical-align:top}
+tr:nth-child(even) td{background:#FFFBF5}tr{break-inside:avoid}
+blockquote{margin:8px 0;padding:6px 12px;border-left:4px solid var(--brand);background:var(--soft)}
+code{background:#f3f3f3;padding:0 3px;border-radius:3px;font-size:10.5px}
+.st{display:inline-block;font-size:10px;font-weight:700;border-radius:4px;padding:0 6px}.st.ok{background:#E8F5E9;color:#2E7D32}.st.pend{background:#FFF1DC;color:#A85800}.st.crit{background:#FBEDEE;color:#B12028}.st.mute{background:#F0F0F0;color:#666}
+.fig{margin:10px 0;break-inside:avoid}.fig svg{max-width:100%;height:auto;display:block}
+a{color:var(--brand2)}footer{margin-top:24px;border-top:1px solid var(--line);padding-top:6px;font-size:9.5px;color:var(--tx2);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+@media print{@page{size:A4;margin:11mm}.wrap{max-width:none;padding:0}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="wrap">
+<header><div class="logo">CANALSENSES<small>ULTRACONGELADOS CANALSENSES S.R.L. · PROYECTO PANADERÍA PAN-CBA</small></div>
+<div class="meta">E-04 · Consolida I013, I014 (a, b, c), I015, I016<br>Generado el 28/09/2026 · Confidencial</div></header>
+<h1>Informe de competencia — Córdoba Capital (G3)</h1>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Código</td>
+<td>E-04 · Consolida I013, I014 (a, b, c), I015, I016</td>
+</tr>
+<tr>
+<td>Fecha</td>
+<td>28/09/2026</td>
+</tr>
+<tr>
+<td>Gate</td>
+<td>G3 — Competencia</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td><strong>v1 — relevamiento de escritorio.</strong> Falta trabajo de campo (precios en góndola, cliente incógnito) y completar el censo de barrio con la capa en vivo de OpenStreetMap</td>
+</tr>
+<tr>
+<td>Mapa interactivo</td>
+<td><a href="/archivos/02_COMPETENCIA/MAPA_COMPETITIVO_CORDOBA.html" target="_blank"><code>MAPA_COMPETITIVO_CORDOBA.html</code></a>: plano real de la ciudad, capas, filtros, Google Maps y panaderías de OpenStreetMap en vivo</td>
+</tr>
+<tr>
+<td>Datos</td>
+<td><code>datos/locales_competencia.csv</code> (104 registros, 92 ubicados en el mapa) · <code>datos/posicionamiento_marcas.json</code> · <code>datos/geo_barrios.json</code></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Cómo leer este informe.</strong>
+- Todo dato lleva etiqueta: [HECHO] con fuente, [ESTIMACIÓN], [INTERPRETACIÓN] o [RECOMENDACIÓN].
+- Las fuentes están en los anexos (códigos F100–F699) y en <a href="/00_MASTER/SOURCES.html"><code>00_MASTER/SOURCES.md</code></a>.
+- El relevamiento se hizo desde el buscador web: el entorno no permite abrir páginas completas ni Google Maps, y el cupo de búsquedas de la sesión se agotó.
+- Por eso <strong>no es un censo completo</strong>. Las cadenas grandes y el segmento moderno están bien cubiertos; las panaderías de barrio de la periferia, subrepresentadas. Para completarlo, el mapa trae una <strong>capa en vivo de OpenStreetMap</strong> que corre en el navegador de quien lo abre (ver §11).</p>
+</blockquote>
+<hr />
+<h2>1. Resumen ejecutivo: 12 hallazgos</h2>
+<ol>
+<li><strong>La Celeste es el jugador a vencer en conveniencia.</strong> [HECHO]
+   - 16 locales propios, fundada en 1952, 10 de ellos abiertos las 24 h todo el año.
+   - Muy concentrada en Nueva Córdoba (10 de 16 locales).
+   - Producto ícono: el sándwich de miga. Está en Rappi, PedidosYa y en un canal propio (pedix).
+   - Tiene 94 mil seguidores en Instagram.</li>
+<li><strong>Su debilidad es la experiencia desigual entre locales.</strong> [HECHO]
+   - En Restaurantguru, Belgrano 439 tiene 4,4 con 2.376 reseñas; Obispo Trejo, 2,9, y Buenos Aires 1064, 2,6.
+   - Quejas repetidas: calidad irregular, demoras, mala atención y precio.
+   - Casi no tiene lugar para sentarse.
+   - No tiene locales en el oeste, el este, el norte cercano, el noroeste ni la periferia.</li>
+<li><strong>Del Pilar ya opera en Córdoba el modelo que evaluamos.</strong> [HECHO]
+   - 45 locales (8 propios y 37 franquicias).
+   - Planta de ultracongelado propia (−40 °C) que abastece locales, empresas y supermercados.
+   - Es el competidor más parecido a una "panadería de un fabricante de congelados".</li>
+<li><strong>Hay cadenas que crecen por franquicia en el segmento masivo:</strong>
+   - Lo+Rico: ~30 locales (22 de panadería y 8 de empanadas).
+   - Panadería Independencia: 12–15 locales, franquicia sin regalías.
+   - Armando Medialunas: de 8 a una meta de 13 locales.
+   - [INTERPRETACIÓN] Con precio medio o bajo, el masivo es un océano rojo.</li>
+<li><strong>El segmento moderno tiene audiencia de culto pero poca escala:</strong>
+   - Culpa de los Dos: 155 mil seguidores con unos 6 locales.
+   - Cherry Season: 94 mil seguidores con 2–3 locales.
+   - Superanfibio: 27 mil seguidores.
+   - [INTERPRETACIÓN] La audiencia digital crece con el producto emblema y la experiencia, no con la cantidad de locales.</li>
+<li><strong>Las cadenas de café porteñas no prosperan en la calle en Córdoba.</strong> Café Martínez cerró la mayoría de sus locales y relanza con un inversor local. Havanna y Starbucks viven en shoppings, con apertura a las 10. [HECHO]</li>
+<li><strong>La franja de 6:30 a 8 h está casi libre en el segmento de calidad.</strong> Los cafés de especialidad abren a las 8 o más tarde y las cadenas de shopping, a las 10. Solo La Celeste (24 h) y las panaderías clásicas atienden esa franja. [HECHO + INTERPRETACIÓN]</li>
+<li><strong>Escalera de precios del combo café + 2 medialunas:</strong> Mostaza ~$3.600 → Café Martínez $6.900 → Havanna ~$7.000 → Starbucks $9.700. [HECHO, fechas dispares] Entre $4.500 y $5.500 hay un hueco sin una propuesta de calidad clara. [INTERPRETACIÓN]</li>
+<li><strong>Hay un hueco de posicionamiento:</strong> ninguna cadena local ocupa el cuadrante de precio medio (5–6) con experiencia media-alta (6–7). Las cadenas de panadería están en precio medio con experiencia baja; la experiencia alta es cara y no escala. [INTERPRETACIÓN]</li>
+<li><strong>Geografía:</strong><ul>
+<li>Nueva Córdoba, el Centro y Güemes concentran la oferta moderna y las cadenas; están saturados.</li>
+<li>El oeste (Alberdi, Alto Alberdi: un directorio cuenta 21 panaderías solo en Alto Alberdi) y la periferia son territorio de panadería clásica de barrio.</li>
+<li>Argüello, Recta Martinoli y Valle Escondido (Z08) combinan poder adquisitivo con oferta clásica y pocas propuestas modernas.</li>
+<li>[HECHO + INTERPRETACIÓN]</li>
+</ul>
+</li>
+<li><strong>"Del día anterior a mitad de precio" es práctica generalizada</strong> en Córdoba. Nadie tiene un programa de fidelización propio visible; la fidelización la ponen terceros (bancos, ServiClub de YPF, apps). [HECHO + INTERPRETACIÓN]</li>
+<li><strong>Sin TACC, saludable y catering para empresas están poco comunicados.</strong> Solo Del Pilar comunica canal para empresas y galletas sin TACC; Lüben (General Paz) es una panadería 100% sin gluten. Es un espacio afín a lo que ya hace Canalsenses. [HECHO + INTERPRETACIÓN]</li>
+</ol>
+<hr />
+<h2>2. Mapa de la competencia</h2>
+<p><strong>Mapa interactivo:</strong> abrir <a href="/archivos/02_COMPETENCIA/MAPA_COMPETITIVO_CORDOBA.html" target="_blank"><code>MAPA_COMPETITIVO_CORDOBA.html</code></a>. En el sitio está en <em>Otros → Mapa competitivo</em>.
+- Plano real de Córdoba (CARTO u OpenStreetMap).
+- 10 zonas coloreadas, corredores comerciales e hitos.
+- Filtros por tipo, zona y horario 24 h, y búsqueda.
+- Cada local tiene un botón <strong>"Ver en Google Maps"</strong>.
+- <strong>Capa en vivo de OpenStreetMap:</strong> todas las panaderías, pastelerías y cafés registrados, con ubicación exacta, asignados a su zona y exportables a Excel.</p>
+<p><strong>Plano esquemático por zonas</strong> (posiciones aproximadas por barrio):</p>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1057" font-family="Montserrat,Segoe UI,Arial" role="img" aria-label="Plano esquemático de Córdoba Capital por zonas"><rect x="0" y="0" width="1000" height="997" fill="#FBFBFB" stroke="#999" stroke-dasharray="6 4"/><path d="M489.3,514.9 L485.1,508.2 L493.7,475.3 L535.7,469.3 L547.7,478.0 L556.5,515.8 L544.9,536.4 L489.3,514.9 Z " fill="#F18A00" fill-opacity="0.13" stroke="#F18A00" stroke-width="1.5"/><path d="M490.0,591.8 L489.3,514.9 L544.9,536.4 L542.6,570.1 L490.3,591.9 L490.0,591.8 Z " fill="#E4572E" fill-opacity="0.13" stroke="#E4572E" stroke-width="1.5"/><path d="M373.7,530.1 L395.5,517.8 L403.4,518.9 L428.0,512.7 L466.6,435.1 L470.4,434.7 L493.7,475.3 L485.1,508.2 L489.3,514.9 L490.0,591.8 L474.7,596.7 L471.9,594.8 L455.1,589.6 L327.2,639.6 L311.8,633.1 L373.7,530.1 Z " fill="#B12028" fill-opacity="0.13" stroke="#B12028" stroke-width="1.5"/><path d="M190.7,670.5 L0.0,740.7 L0.0,525.8 L188.2,338.7 L217.5,353.4 L260.6,395.9 L279.6,421.7 L290.1,421.0 L325.7,399.8 L375.0,410.0 L375.2,410.0 L385.7,400.3 L422.7,401.6 L441.0,427.9 L466.6,435.1 L428.0,512.7 L403.4,518.9 L395.5,517.8 L373.7,530.1 L311.8,633.1 L203.8,661.5 L190.7,670.5 Z " fill="#8E6C8A" fill-opacity="0.13" stroke="#8E6C8A" stroke-width="1.5"/><path d="M644.5,709.6 L632.1,669.1 L629.6,664.8 L542.6,570.1 L544.9,536.4 L556.5,515.8 L547.7,478.0 L573.5,456.3 L573.5,408.1 L563.1,386.3 L559.2,362.2 L578.5,340.7 L635.6,351.4 L937.5,246.6 L1000.0,211.5 L1000.0,273.4 L717.0,549.8 L698.9,669.9 L666.3,749.2 L644.5,709.6 Z " fill="#3B7EA1" fill-opacity="0.13" stroke="#3B7EA1" stroke-width="1.5"/><path d="M547.7,478.0 L535.7,469.3 L493.7,475.3 L470.4,434.7 L470.6,434.4 L470.6,330.9 L443.9,341.9 L430.5,338.3 L392.5,264.0 L371.8,244.6 L370.5,238.6 L377.5,203.9 L468.3,257.1 L499.0,209.1 L518.5,218.7 L532.4,271.7 L572.0,294.9 L632.7,174.1 L710.2,94.2 L929.4,0.0 L1000.0,0.0 L1000.0,211.5 L937.5,246.6 L635.6,351.4 L578.5,340.7 L559.2,362.2 L563.1,386.3 L573.5,408.1 L573.5,456.3 L547.7,478.0 Z " fill="#2E8B57" fill-opacity="0.13" stroke="#2E8B57" stroke-width="1.5"/><path d="M466.6,435.1 L441.0,427.9 L422.7,401.6 L385.7,400.3 L375.2,410.0 L375.0,410.0 L325.7,399.8 L290.1,421.0 L279.6,421.7 L260.6,395.9 L217.5,353.4 L188.2,338.7 L186.8,302.4 L276.6,249.8 L300.7,268.6 L370.5,238.6 L371.8,244.6 L392.5,264.0 L430.5,338.3 L443.9,341.9 L470.6,330.9 L470.6,434.4 L470.4,434.7 L466.6,435.1 Z " fill="#C7A33A" fill-opacity="0.13" stroke="#C7A33A" stroke-width="1.5"/><path d="M0.0,0.0 L219.6,0.0 L345.1,0.0 L356.7,32.1 L370.9,53.0 L377.5,203.9 L370.5,238.6 L300.7,268.6 L276.6,249.8 L186.8,302.4 L188.2,338.7 L0.0,525.8 L0.0,183.6 L0.0,0.0 Z " fill="#6A994E" fill-opacity="0.13" stroke="#6A994E" stroke-width="1.5"/><path d="M684.9,847.5 L746.4,997.1 L543.8,997.1 L377.6,997.1 L0.0,997.1 L0.0,740.7 L190.7,670.5 L203.8,661.5 L311.8,633.1 L327.2,639.6 L455.1,589.6 L471.9,594.8 L474.7,596.7 L490.0,591.8 L490.3,591.9 L542.6,570.1 L629.6,664.8 L632.1,669.1 L644.5,709.6 L666.3,749.2 L684.9,847.5 Z " fill="#D1495B" fill-opacity="0.13" stroke="#D1495B" stroke-width="1.5"/><path d="M717.0,549.8 L1000.0,273.4 L1000.0,317.0 L1000.0,997.1 L746.4,997.1 L684.9,847.5 L666.3,749.2 L698.9,669.9 L717.0,549.8 Z M518.5,218.7 L499.0,209.1 L468.3,257.1 L377.5,203.9 L370.9,53.0 L356.7,32.1 L345.1,0.0 L929.4,0.0 L710.2,94.2 L632.7,174.1 L572.0,294.9 L532.4,271.7 L518.5,218.7 Z " fill="#8D99AE" fill-opacity="0.13" stroke="#8D99AE" stroke-width="1.5"/><line x1="515.7" y1="491.7" x2="376.5" y2="457.2" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="502.7" y1="514.6" x2="501.2" y2="556.0" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="356.9" y1="330.8" x2="211.8" y2="183.8" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="541.2" y1="477.9" x2="594.1" y2="481.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="243.1" y1="243.5" x2="251.0" y2="211.4" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="282.4" y1="252.7" x2="109.8" y2="142.4" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="498.0" y1="519.2" x2="470.6" y2="680.0" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="502.0" y1="670.9" x2="454.9" y2="886.8" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="470.6" y1="546.8" x2="396.1" y2="611.1" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="482.4" y1="418.1" x2="415.7" y2="252.7" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="549.0" y1="422.7" x2="572.5" y2="243.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="592.2" y1="533.0" x2="749.0" y2="565.2" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="494.1" y1="507.7" x2="309.8" y2="482.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><circle cx="579.0" cy="479.2" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="441.0" cy="458.9" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="375.7" cy="454.0" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="367.6" cy="449.8" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="424.8" cy="468.2" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="377.9" cy="446.5" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="323.8" cy="305.3" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="328.9" cy="289.8" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="312.6" cy="299.2" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="526.0" cy="416.3" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="622.9" cy="533.4" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="225.5" cy="167.3" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="222.7" cy="175.2" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="227.7" cy="159.8" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="211.4" cy="169.1" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="791.8" cy="611.1" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="783.7" cy="606.9" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="531.0" cy="541.4" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="529.1" cy="307.9" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="536.9" cy="174.6" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="520.9" cy="303.7" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="503.8" cy="513.0" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="511.4" cy="544.5" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="522.8" cy="504.1" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="503.3" cy="540.3" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="514.7" cy="499.9" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="508.5" cy="552.5" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="513.6" cy="537.0" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="497.3" cy="546.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="517.8" cy="550.9" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="504.5" cy="532.1" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="501.5" cy="556.8" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="521.7" cy="539.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="252.6" cy="234.3" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="105.5" cy="294.1" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="446.7" cy="720.5" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="438.6" cy="716.3" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="443.8" cy="728.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="493.5" cy="538.6" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="514.8" cy="559.3" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="534.2" cy="420.4" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="474.9" cy="545.0" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="244.5" cy="230.2" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="326.7" cy="297.3" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="587.1" cy="483.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="513.0" cy="528.1" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="519.9" cy="512.0" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="466.8" cy="540.8" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="514.0" cy="345.8" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="492.4" cy="553.5" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="438.9" cy="466.4" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="526.0" cy="548.5" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="496.8" cy="528.7" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="318.6" cy="293.1" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="472.1" cy="552.9" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="477.1" cy="537.5" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="505.3" cy="564.2" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="523.5" cy="531.3" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="486.7" cy="543.6" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="525.0" cy="496.6" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="427.1" cy="298.7" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="430.7" cy="462.2" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="508.7" cy="505.9" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="413.0" cy="370.3" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="529.2" cy="510.4" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="523.2" cy="559.8" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="515.9" cy="491.6" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="436.0" cy="474.3" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="404.9" cy="366.2" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="419.0" cy="294.5" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="506.8" cy="522.2" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="512.8" cy="516.3" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="533.0" cy="499.0" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="504.8" cy="498.1" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="526.1" cy="518.9" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="524.3" cy="487.7" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="605.5" cy="304.8" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="597.4" cy="300.6" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="602.7" cy="312.8" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="493.2" cy="562.1" r="3.6" fill="#8D6E63" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="372.9" cy="461.9" r="3.6" fill="#999999" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="333.1" cy="303.7" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="531.3" cy="428.4" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="631.0" cy="537.6" r="3.6" fill="#999999" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="358.2" cy="336.9" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="460.8" cy="546.8" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="217.4" cy="163.1" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="497.7" cy="643.3" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="488.2" cy="530.8" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="513.2" cy="568.4" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="481.4" cy="551.3" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="584.2" cy="491.3" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><text x="171" y="582" text-anchor="middle" font-size="15" font-weight="800" fill="#8E6C8A" stroke="#fff" stroke-width="4" paint-order="stroke">Z04 · Oeste</text><text x="171" y="599" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">9 locales relevados</text><text x="662" y="497" text-anchor="middle" font-size="15" font-weight="800" fill="#3B7EA1" stroke="#fff" stroke-width="4" paint-order="stroke">Z05 · Este</text><text x="662" y="514" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">5 locales relevados</text><text x="773" y="242" text-anchor="middle" font-size="15" font-weight="800" fill="#2E8B57" stroke="#fff" stroke-width="4" paint-order="stroke">Z06 · Norte cercano</text><text x="773" y="259" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">8 locales relevados</text><text x="308" y="335" text-anchor="middle" font-size="15" font-weight="800" fill="#C7A33A" stroke="#fff" stroke-width="4" paint-order="stroke">Z07 · Noroeste</text><text x="308" y="352" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">9 locales relevados</text><text x="130" y="259" text-anchor="middle" font-size="15" font-weight="800" fill="#6A994E" stroke="#fff" stroke-width="4" paint-order="stroke">Z08 · Norte premium / Noroeste lejano</text><text x="130" y="276" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">8 locales relevados</text><text x="338" y="798" text-anchor="middle" font-size="15" font-weight="800" fill="#D1495B" stroke="#fff" stroke-width="4" paint-order="stroke">Z09 · Sur</text><text x="338" y="815" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">4 locales relevados</text><text x="523" y="134" text-anchor="middle" font-size="15" font-weight="800" fill="#8D99AE" stroke="#fff" stroke-width="4" paint-order="stroke">Z10 · Periferia</text><text x="523" y="151" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">6 locales relevados</text><rect x="515.7" y="500.6" width="7" height="7" fill="#222"/><text x="525" y="508" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Plaza San Martín</text><rect x="497.7" y="516.2" width="7" height="7" fill="#222"/><text x="507" y="524" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Patio Olmos</text><rect x="494.5" y="598.4" width="7" height="7" fill="#222"/><text x="504" y="606" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Ciudad Universitaria (UNC)</text><rect x="545.5" y="557.1" width="7" height="7" fill="#222"/><text x="555" y="565" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Parque Sarmiento</text><rect x="427.9" y="474.4" width="7" height="7" fill="#222"/><text x="437" y="482" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Nuevocentro Shopping</text><rect x="492.6" y="621.4" width="7" height="7" fill="#222"/><text x="502" y="629" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Paseo del Jockey</text><rect x="404.3" y="274.5" width="7" height="7" fill="#222"/><text x="414" y="282" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Dinosaurio Mall (Rodríguez del Busto)</text><rect x="369.0" y="286.0" width="7" height="7" fill="#222"/><text x="379" y="293" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Córdoba Shopping (Villa Cabrera)</text><rect x="420.0" y="72.8" width="7" height="7" fill="#222"/><text x="430" y="80" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Aeropuerto Int. Ing. Taravella</text><rect x="549.4" y="515.7" width="7" height="7" fill="#222"/><text x="559" y="523" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Terminal de Ómnibus</text><rect x="506.3" y="472.1" width="7" height="7" fill="#222"/><text x="516" y="480" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Mercado Norte</text><circle cx="15" cy="1015.0948149690394" r="5" fill="#B12028"/><text x="24" y="1019.0948149690394" font-size="11.5" fill="#404040">Cadena de panaderías</text><circle cx="191.0" cy="1015.0948149690394" r="5" fill="#F18A00"/><text x="200.0" y="1019.0948149690394" font-size="11.5" fill="#404040">Panadería de barrio</text><circle cx="359.8" cy="1015.0948149690394" r="5" fill="#7B2CBF"/><text x="368.8" y="1019.0948149690394" font-size="11.5" fill="#404040">Bakery café / masa madre</text><circle cx="564.6" cy="1015.0948149690394" r="5" fill="#E76F51"/><text x="573.6" y="1019.0948149690394" font-size="11.5" fill="#404040">Medialunería / pastelería</text><circle cx="776.6" cy="1015.0948149690394" r="5" fill="#2A9D8F"/><text x="785.6" y="1019.0948149690394" font-size="11.5" fill="#404040">Café de especialidad</text><circle cx="15" cy="1035.0948149690394" r="5" fill="#264653"/><text x="24" y="1039.0948149690394" font-size="11.5" fill="#404040">Cadena de café</text><circle cx="147.8" cy="1035.0948149690394" r="5" fill="#3A86FF"/><text x="156.8" y="1039.0948149690394" font-size="11.5" fill="#404040">Tienda de conveniencia (estación)</text><circle cx="417.40000000000003" cy="1035.0948149690394" r="5" fill="#6C757D"/><text x="426.40000000000003" y="1039.0948149690394" font-size="11.5" fill="#404040">Supermercado</text><circle cx="535.8000000000001" cy="1035.0948149690394" r="5" fill="#8D6E63"/><text x="544.8000000000001" y="1039.0948149690394" font-size="11.5" fill="#404040">Comida rápida (desayuno)</text><text x="992" y="989" text-anchor="end" font-size="10.5" fill="#808080">Esquema no a escala exacta · posiciones aproximadas por barrio · límite = ejido (≈24×24 km)</text></svg></figure>
+
+<p><strong>Zoom al centro</strong> (Centro, Nueva Córdoba, Güemes):</p>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1019" font-family="Montserrat,Segoe UI,Arial" role="img" aria-label="Plano esquemático de Córdoba Capital por zonas"><rect x="0" y="0" width="1000" height="959" fill="#FBFBFB" stroke="#999" stroke-dasharray="6 4"/><path d="M432.4,406.2 L412.9,374.9 L452.6,222.5 L647.2,194.6 L702.9,234.9 L743.9,410.1 L690.1,505.7 L432.4,406.2 Z " fill="#F18A00" fill-opacity="0.13" stroke="#F18A00" stroke-width="1.5"/><path d="M435.6,762.6 L432.4,406.2 L690.1,505.7 L679.2,662.2 L437.1,762.9 L435.6,762.6 Z " fill="#E4572E" fill-opacity="0.13" stroke="#E4572E" stroke-width="1.5"/><path d="M34.1,424.8 L148.0,395.9 L327.0,36.2 L344.7,34.2 L452.6,222.5 L412.9,374.9 L432.4,406.2 L435.6,762.6 L364.5,785.2 L351.5,776.6 L273.7,752.3 L0.0,859.2 L0.0,419.9 L34.1,424.8 Z " fill="#B12028" fill-opacity="0.13" stroke="#B12028" stroke-width="1.5"/><path d="M208.4,2.5 L327.0,36.2 L148.0,395.9 L34.1,424.8 L0.0,419.9 L0.0,0.0 L206.6,0.0 L208.4,2.5 Z " fill="#8E6C8A" fill-opacity="0.13" stroke="#8E6C8A" stroke-width="1.5"/><path d="M679.2,662.2 L690.1,505.7 L743.9,410.1 L702.9,234.9 L822.7,134.5 L822.7,0.0 L1000.0,0.0 L1000.0,958.7 L951.7,958.7 L679.2,662.2 Z " fill="#3B7EA1" fill-opacity="0.13" stroke="#3B7EA1" stroke-width="1.5"/><path d="M702.9,234.9 L647.2,194.6 L452.6,222.5 L344.7,34.2 L345.5,32.9 L345.5,0.0 L822.7,0.0 L822.7,134.5 L702.9,234.9 Z " fill="#2E8B57" fill-opacity="0.13" stroke="#2E8B57" stroke-width="1.5"/><path d="M327.0,36.2 L208.4,2.5 L206.6,0.0 L345.5,0.0 L345.5,32.9 L344.7,34.2 L327.0,36.2 Z " fill="#C7A33A" fill-opacity="0.13" stroke="#C7A33A" stroke-width="1.5"/><path d="M273.7,752.3 L351.5,776.6 L364.5,785.2 L435.6,762.6 L437.1,762.9 L679.2,662.2 L951.7,958.7 L0.0,958.7 L0.0,859.2 L273.7,752.3 Z " fill="#D1495B" fill-opacity="0.13" stroke="#D1495B" stroke-width="1.5"/><line x1="554.5" y1="298.3" x2="-90.9" y2="138.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="494.5" y1="404.8" x2="487.3" y2="596.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="-181.8" y1="-447.4" x2="-854.5" y2="-1129.1" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="672.7" y1="234.3" x2="918.2" y2="251.4" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="-709.1" y1="-852.1" x2="-672.7" y2="-1001.3" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="-527.3" y1="-809.5" x2="-1327.3" y2="-1320.8" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="472.7" y1="426.1" x2="345.5" y2="1171.7" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="490.9" y1="1129.1" x2="272.7" y2="2130.4" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="345.5" y1="553.9" x2="0.0" y2="852.1" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="400.0" y1="-42.6" x2="90.9" y2="-809.5" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="709.1" y1="-21.3" x2="818.2" y2="-852.1" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="909.1" y1="490.0" x2="1636.4" y2="639.1" stroke="#555" stroke-width="2" stroke-opacity=".45"/><line x1="454.5" y1="372.8" x2="-400.0" y2="255.6" stroke="#555" stroke-width="2" stroke-opacity=".45"/><circle cx="848.0" cy="240.5" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="208.5" cy="146.3" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="132.9" cy="189.7" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="625.7" cy="528.8" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="499.3" cy="397.3" r="3.6" fill="#F18A00" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="534.7" cy="543.2" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="587.5" cy="355.8" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="497.1" cy="523.9" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="549.8" cy="336.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="521.4" cy="580.2" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="544.8" cy="508.5" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="469.3" cy="551.9" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="564.5" cy="572.7" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="502.7" cy="485.6" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="488.6" cy="600.2" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="582.3" cy="519.8" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="451.5" cy="515.7" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="550.3" cy="612.0" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="365.6" cy="545.4" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="885.6" cy="259.9" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="541.9" cy="467.4" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="574.1" cy="392.7" r="5.5" fill="#B12028" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="328.0" cy="526.0" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="446.6" cy="584.8" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="198.4" cy="181.1" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="602.1" cy="561.7" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="466.9" cy="470.2" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="352.3" cy="582.3" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="375.7" cy="510.6" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="506.3" cy="634.7" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="590.9" cy="481.9" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="420.4" cy="539.2" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="597.5" cy="321.0" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="160.7" cy="161.7" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="522.0" cy="364.4" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="617.2" cy="385.3" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="589.5" cy="614.4" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="555.4" cy="298.1" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="185.1" cy="218.0" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="513.4" cy="439.9" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="541.4" cy="412.7" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="635.0" cy="332.3" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="504.2" cy="328.2" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="603.0" cy="424.5" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="594.7" cy="280.0" r="3.6" fill="#264653" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="450.3" cy="624.7" r="3.6" fill="#8D6E63" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="626.9" cy="5.0" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="300.2" cy="554.0" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="427.1" cy="479.8" r="3.6" fill="#2A9D8F" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="543.1" cy="654.1" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="395.4" cy="574.9" r="3.6" fill="#E76F51" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><circle cx="872.3" cy="296.8" r="3.6" fill="#7B2CBF" fill-opacity=".85" stroke="#fff" stroke-width=".8"/><text x="575" y="305" text-anchor="middle" font-size="15" font-weight="800" fill="#F18A00" stroke="#fff" stroke-width="4" paint-order="stroke">Z01 · Centro</text><text x="575" y="322" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">11 locales relevados</text><text x="559" y="584" text-anchor="middle" font-size="15" font-weight="800" fill="#E4572E" stroke="#fff" stroke-width="4" paint-order="stroke">Z02 · Nueva Córdoba</text><text x="559" y="601" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">25 locales relevados</text><text x="217" y="589" text-anchor="middle" font-size="15" font-weight="800" fill="#B12028" stroke="#fff" stroke-width="4" paint-order="stroke">Z03 · Güemes / Observatorio</text><text x="217" y="606" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">7 locales relevados</text><text x="119" y="216" text-anchor="middle" font-size="15" font-weight="800" fill="#8E6C8A" stroke="#fff" stroke-width="4" paint-order="stroke">Z04 · Oeste</text><text x="119" y="233" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">9 locales relevados</text><text x="859" y="458" text-anchor="middle" font-size="15" font-weight="800" fill="#3B7EA1" stroke="#fff" stroke-width="4" paint-order="stroke">Z05 · Este</text><text x="859" y="475" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">5 locales relevados</text><text x="598" y="84" text-anchor="middle" font-size="15" font-weight="800" fill="#2E8B57" stroke="#fff" stroke-width="4" paint-order="stroke">Z06 · Norte cercano</text><text x="598" y="101" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">8 locales relevados</text><text x="304" y="18" text-anchor="middle" font-size="15" font-weight="800" fill="#C7A33A" stroke="#fff" stroke-width="4" paint-order="stroke">Z07 · Noroeste</text><text x="304" y="35" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">9 locales relevados</text><text x="461" y="822" text-anchor="middle" font-size="15" font-weight="800" fill="#D1495B" stroke="#fff" stroke-width="4" paint-order="stroke">Z09 · Sur</text><text x="461" y="839" text-anchor="middle" font-size="12.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">4 locales relevados</text><rect x="567.4" y="352.3" width="7" height="7" fill="#222"/><text x="577" y="360" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Plaza San Martín</text><rect x="483.8" y="424.7" width="7" height="7" fill="#222"/><text x="493" y="432" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Patio Olmos</text><rect x="469.2" y="806.0" width="7" height="7" fill="#222"/><text x="479" y="814" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Ciudad Universitaria (UNC)</text><rect x="705.6" y="614.3" width="7" height="7" fill="#222"/><text x="715" y="622" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Parque Sarmiento</text><rect x="160.1" y="230.8" width="7" height="7" fill="#222"/><text x="170" y="238" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Nuevocentro Shopping</text><rect x="460.1" y="912.6" width="7" height="7" fill="#222"/><text x="470" y="920" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Paseo del Jockey</text><rect x="723.8" y="422.6" width="7" height="7" fill="#222"/><text x="733" y="430" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Terminal de Ómnibus</text><rect x="523.8" y="220.2" width="7" height="7" fill="#222"/><text x="533" y="228" font-size="10.5" fill="#222" stroke="#fff" stroke-width="2.5" paint-order="stroke">Mercado Norte</text><circle cx="15" cy="976.6646838515638" r="5" fill="#B12028"/><text x="24" y="980.6646838515638" font-size="11.5" fill="#404040">Cadena de panaderías</text><circle cx="191.0" cy="976.6646838515638" r="5" fill="#F18A00"/><text x="200.0" y="980.6646838515638" font-size="11.5" fill="#404040">Panadería de barrio</text><circle cx="359.8" cy="976.6646838515638" r="5" fill="#7B2CBF"/><text x="368.8" y="980.6646838515638" font-size="11.5" fill="#404040">Bakery café / masa madre</text><circle cx="564.6" cy="976.6646838515638" r="5" fill="#E76F51"/><text x="573.6" y="980.6646838515638" font-size="11.5" fill="#404040">Medialunería / pastelería</text><circle cx="776.6" cy="976.6646838515638" r="5" fill="#2A9D8F"/><text x="785.6" y="980.6646838515638" font-size="11.5" fill="#404040">Café de especialidad</text><circle cx="15" cy="996.6646838515638" r="5" fill="#264653"/><text x="24" y="1000.6646838515638" font-size="11.5" fill="#404040">Cadena de café</text><circle cx="147.8" cy="996.6646838515638" r="5" fill="#3A86FF"/><text x="156.8" y="1000.6646838515638" font-size="11.5" fill="#404040">Tienda de conveniencia (estación)</text><circle cx="417.40000000000003" cy="996.6646838515638" r="5" fill="#6C757D"/><text x="426.40000000000003" y="1000.6646838515638" font-size="11.5" fill="#404040">Supermercado</text><circle cx="535.8000000000001" cy="996.6646838515638" r="5" fill="#8D6E63"/><text x="544.8000000000001" y="1000.6646838515638" font-size="11.5" fill="#404040">Comida rápida (desayuno)</text><text x="992" y="951" text-anchor="end" font-size="10.5" fill="#808080">Esquema no a escala exacta · posiciones aproximadas por barrio</text></svg></figure>
+
+<p><strong>Cómo se armaron las zonas:</strong> las zonas Z01–Z10 son la segmentación de trabajo del proyecto. El plano las construye a partir del centro aproximado de 61 barrios (teselación de Voronoi recortada al ejido municipal, que es casi un cuadrado de ~24 km). Es un <strong>esquema</strong>, no un límite catastral: sirve para comparar zonas, no para medir distancias.</p>
+<hr />
+<h2>3. Segmentación del mercado competitivo</h2>
+<p>No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Qué es</th>
+<th>Ocasiones que captura</th>
+<th>Ejemplos en Córdoba</th>
+<th>Relevados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cadena de panaderías</strong></td>
+<td>3 o más locales, marca de panadería</td>
+<td>Compra para el hogar, desayuno para llevar, sándwiches, noche (24 h)</td>
+<td>La Celeste, Del Pilar, Lo+Rico, Independencia, (La Vene)</td>
+<td>20 locales con dirección · ~100 en total si se suman Del Pilar y Lo+Rico</td>
+</tr>
+<tr>
+<td><strong>Panadería de barrio</strong></td>
+<td>Independiente, 1–2 locales</td>
+<td>Compra diaria de pan y facturas, cercanía, domingo</td>
+<td>Don Mignon, Delizzie, El Roble, Vicente, Panes y Costumbres, El Trigal</td>
+<td>28 (subrepresentadas)</td>
+</tr>
+<tr>
+<td><strong>Bakery café / masa madre</strong></td>
+<td>Panadería con café y salón, estética moderna</td>
+<td>Desayuno y merienda con salón, brunch, pan premium</td>
+<td>Superanfibio, Fernández, Lapana, La Capke, Brunchería, De a Deveras, Mocafe</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Medialunería / pastelería</strong></td>
+<td>Foco en medialunas, facturas de autor y tortas</td>
+<td>Merienda, "darse un gusto", regalo, delivery</td>
+<td>Culpa de los Dos, Armando, Medialunas 707, Frocca, Sharon, Essenza, Cake Shop</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Café de especialidad</strong></td>
+<td>Café de calidad más pastelería</td>
+<td>Café de calidad, trabajo o estudio, cita</td>
+<td>Cherry Season, Kråke, Ethiopia, Caffè del Popolo, Lattertulia, La Vereda de Achával, Le Dureau</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Cadena de café</strong></td>
+<td>Marca nacional o internacional</td>
+<td>Café de marca, shopping, aeropuerto</td>
+<td>Havanna, Starbucks, Café Martínez, Bonafide, Tostado, Juan Valdez</td>
+<td>22</td>
+</tr>
+<tr>
+<td><strong>Comida rápida</strong></td>
+<td>Desayuno económico</td>
+<td>Desayuno barato, 24 h</td>
+<td>Mostaza ("Open 24" en Plaza España), McCafé (+20 locales)</td>
+<td>1 cargado</td>
+</tr>
+<tr>
+<td><strong>Conveniencia (estaciones)</strong></td>
+<td>YPF Full, Shell Select, Axion Spot</td>
+<td>Café al paso, ruta, noche</td>
+<td>YPF Full (29,3 M medialunas en el país, ene–jul 2025)</td>
+<td>sin relevar (§11)</td>
+</tr>
+<tr>
+<td><strong>Supermercados</strong></td>
+<td>Panadería propia y horneado en tienda</td>
+<td>Compra de reposición, precio</td>
+<td>Disco, Carrefour, La Anónima (ex Libertad), Cordiez, Vea</td>
+<td>sin relevar (§11)</td>
+</tr>
+</tbody>
+</table></div>
+<p>[INTERPRETACIÓN] Para PAN-CBA, los competidores <strong>directos</strong> son las cadenas de panadería y las bakery-café. Los <strong>indirectos por ocasión</strong> son la especialidad, las cadenas de café, la comida rápida y la conveniencia en el desayuno para llevar. Los <strong>sustitutos</strong> son el supermercado y el desayuno en casa: el 86% desayuna en su casa (I006).</p>
+<hr />
+<h2>4. Análisis por zona</h2>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 398" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="Locales relevados por zona y tipo"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">Locales relevados por zona y tipo</text><rect x="0" y="30" width="12" height="12" rx="3" fill="#B12028"/><text x="17" y="40" font-size="11.5" fill="#404040">Panaderías</text><rect x="100" y="30" width="12" height="12" rx="3" fill="#F18A00"/><text x="117" y="40" font-size="11.5" fill="#404040">Café, medialunas y pastelería</text><rect x="333" y="30" width="12" height="12" rx="3" fill="#1F6FD0"/><text x="350" y="40" font-size="11.5" fill="#404040">Otros formatos</text><text x="240" y="73" text-anchor="end" font-size="12" fill="#404040">Z01 · Centro</text><g><title>Z01 Centro — Panaderías: 3</title><rect x="250.0" y="62" width="45.0" height="16" rx="3" fill="#B12028"/></g><g><title>Z01 Centro — Café, medialunas y pastelería: 8</title><rect x="297.0" y="62" width="123.2" height="16" rx="3" fill="#F18A00"/></g><text x="428.2" y="74" font-size="12" font-weight="700" fill="#404040">11</text><text x="240" y="103" text-anchor="end" font-size="12" fill="#404040">Z02 · Nueva Córdoba</text><g><title>Z02 Nueva Córdoba — Panaderías: 12</title><rect x="250.0" y="92" width="185.8" height="16" rx="3" fill="#B12028"/></g><g><title>Z02 Nueva Córdoba — Café, medialunas y pastelería: 12</title><rect x="437.8" y="92" width="185.8" height="16" rx="3" fill="#F18A00"/></g><g><title>Z02 Nueva Córdoba — Otros formatos: 1</title><rect x="625.7" y="92" width="13.7" height="16" rx="3" fill="#1F6FD0"/></g><text x="647.3" y="104" font-size="12" font-weight="700" fill="#404040">25</text><text x="240" y="133" text-anchor="end" font-size="12" fill="#404040">Z03 · Güemes / Observatorio</text><g><title>Z03 Güemes / Observatorio — Panaderías: 3</title><rect x="250.0" y="122" width="45.0" height="16" rx="3" fill="#B12028"/></g><g><title>Z03 Güemes / Observatorio — Café, medialunas y pastelería: 4</title><rect x="297.0" y="122" width="60.6" height="16" rx="3" fill="#F18A00"/></g><text x="365.6" y="134" font-size="12" font-weight="700" fill="#404040">7</text><text x="240" y="163" text-anchor="end" font-size="12" fill="#404040">Z04 · Oeste</text><g><title>Z04 Oeste — Panaderías: 6</title><rect x="250.0" y="152" width="91.9" height="16" rx="3" fill="#B12028"/></g><g><title>Z04 Oeste — Café, medialunas y pastelería: 2</title><rect x="343.9" y="152" width="29.3" height="16" rx="3" fill="#F18A00"/></g><g><title>Z04 Oeste — Otros formatos: 1</title><rect x="375.2" y="152" width="13.7" height="16" rx="3" fill="#1F6FD0"/></g><text x="396.9" y="164" font-size="12" font-weight="700" fill="#404040">9</text><text x="240" y="193" text-anchor="end" font-size="12" fill="#404040">Z05 · Este</text><g><title>Z05 Este — Panaderías: 4</title><rect x="250.0" y="182" width="60.6" height="16" rx="3" fill="#B12028"/></g><g><title>Z05 Este — Otros formatos: 1</title><rect x="312.6" y="182" width="13.7" height="16" rx="3" fill="#1F6FD0"/></g><text x="334.3" y="194" font-size="12" font-weight="700" fill="#404040">5</text><text x="240" y="223" text-anchor="end" font-size="12" fill="#404040">Z06 · Norte cercano</text><g><title>Z06 Norte cercano — Panaderías: 3</title><rect x="250.0" y="212" width="45.0" height="16" rx="3" fill="#B12028"/></g><g><title>Z06 Norte cercano — Café, medialunas y pastelería: 5</title><rect x="297.0" y="212" width="76.3" height="16" rx="3" fill="#F18A00"/></g><text x="381.2" y="224" font-size="12" font-weight="700" fill="#404040">8</text><text x="240" y="253" text-anchor="end" font-size="12" fill="#404040">Z07 · Noroeste</text><g><title>Z07 Noroeste — Panaderías: 5</title><rect x="250.0" y="242" width="76.3" height="16" rx="3" fill="#B12028"/></g><g><title>Z07 Noroeste — Café, medialunas y pastelería: 4</title><rect x="328.3" y="242" width="60.6" height="16" rx="3" fill="#F18A00"/></g><text x="396.9" y="254" font-size="12" font-weight="700" fill="#404040">9</text><text x="240" y="283" text-anchor="end" font-size="12" fill="#404040">Z08 · Norte premium / Noroeste lejano</text><g><title>Z08 Norte premium / Noroeste lejano — Panaderías: 6</title><rect x="250.0" y="272" width="91.9" height="16" rx="3" fill="#B12028"/></g><g><title>Z08 Norte premium / Noroeste lejano — Café, medialunas y pastelería: 2</title><rect x="343.9" y="272" width="29.3" height="16" rx="3" fill="#F18A00"/></g><text x="381.2" y="284" font-size="12" font-weight="700" fill="#404040">8</text><text x="240" y="313" text-anchor="end" font-size="12" fill="#404040">Z09 · Sur</text><g><title>Z09 Sur — Panaderías: 4</title><rect x="250.0" y="302" width="60.6" height="16" rx="3" fill="#B12028"/></g><text x="318.6" y="314" font-size="12" font-weight="700" fill="#404040">4</text><text x="240" y="343" text-anchor="end" font-size="12" fill="#404040">Z10 · Periferia</text><g><title>Z10 Periferia — Panaderías: 3</title><rect x="250.0" y="332" width="45.0" height="16" rx="3" fill="#B12028"/></g><g><title>Z10 Periferia — Café, medialunas y pastelería: 3</title><rect x="297.0" y="332" width="45.0" height="16" rx="3" fill="#F18A00"/></g><text x="349.9" y="344" font-size="12" font-weight="700" fill="#404040">6</text><text x="0" y="390" font-size="10.5" fill="#7a7a7a">Relevamiento de escritorio (28/09/2026), no censo: las panaderías de barrio y la periferia están subrepresentadas. Ver mapa en vivo (OSM).</text></svg></figure>
+
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Zona</th>
+<th>Perfil competitivo</th>
+<th>Jugadores principales relevados</th>
+<th>Lectura para PAN-CBA [INTERPRETACIÓN]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Z01 Centro</strong></td>
+<td>Cadenas de café y La Celeste; muchas oficinas y flujo peatonal diurno</td>
+<td>La Celeste, Havanna, Starbucks, Café Martínez, Bonafide, Le Dureau</td>
+<td>Alto flujo y alta competencia. Oportunidad en desayuno temprano y almuerzo rápido para oficinistas. Alquiler alto; muchas galerías vacías (40–50%).</td>
+</tr>
+<tr>
+<td><strong>Z02 Nueva Córdoba</strong></td>
+<td><strong>La zona más saturada</strong>: 10 La Celeste, especialidad, medialunerías, cadenas</td>
+<td>La Celeste (10), Cherry Season, Caffè del Popolo, Lattertulia, Perdú, Medialunas 707, Mostaza 24 h, Starbucks</td>
+<td>Mercado estudiantil enorme (UNC), pero La Celeste domina la conveniencia 24 h. Entrar solo con un diferencial claro.</td>
+</tr>
+<tr>
+<td><strong>Z03 Güemes / Observatorio</strong></td>
+<td>Polo de merienda "instagrameable" (Belgrano y Achával Rodríguez)</td>
+<td>Culpa de los Dos, Kråke, Ethiopia, Brunchería, La Capke, Armando</td>
+<td>Público joven, dispuesto a pagar por experiencia. Hay pastelería de autor; falta panadería de calidad para llevar.</td>
+</tr>
+<tr>
+<td><strong>Z04 Oeste (Alberdi, Alto Alberdi)</strong></td>
+<td>Panadería clásica de barrio muy densa (21 en Alto Alberdi)</td>
+<td>Don Mignon, Delizzie, Emilia, Delicias Artesanales; De a Deveras; Havanna y Starbucks (Nuevocentro)</td>
+<td>Mucha competencia de precio bajo. Poco atractivo para un formato premium; posible para uno eficiente de precio medio.</td>
+</tr>
+<tr>
+<td><strong>Z05 Este (General Paz, San Vicente)</strong></td>
+<td>Polo gastronómico moderno más nichos</td>
+<td>Lapana, Lüben (sin TACC), Questo Pane, Panz</td>
+<td>Barrio con identidad foodie y <strong>sin La Celeste</strong>. Candidata a evaluar.</td>
+</tr>
+<tr>
+<td><strong>Z06 Norte cercano (Alta Córdoba, Cofico, Lugones)</strong></td>
+<td>Clásicas, pastelería de autor y shoppings</td>
+<td>Panadero, Frocca, Artesanos del Sabor, Perdú, Medialunas 707; Havanna y Starbucks (Dinosaurio y Córdoba Shopping)</td>
+<td>Gran población residencial (Alta Córdoba ~34.600 hab.) y <strong>sin La Celeste</strong>. Candidata a evaluar.</td>
+</tr>
+<tr>
+<td><strong>Z07 Noroeste (Cerro, Urca, Villa Cabrera)</strong></td>
+<td>Pastelería de alto ticket sobre Rafael Núñez</td>
+<td>Cherry Season, Sharon, Europea, Gloria del Cerro, Superanfibio, Fernández</td>
+<td>NSE alto y competencia premium. Hueco posible en panadería de calidad a precio medio y en conveniencia.</td>
+</tr>
+<tr>
+<td><strong>Z08 Norte premium (Argüello, Villa Belgrano, Valle Escondido)</strong></td>
+<td>Clásicas de buen nivel más La Celeste (Gauss y Valle Escondido 24 h)</td>
+<td>El Roble, Vicente, Delizie D'Italia, Panes y Costumbres, Essenza, Culpa de los Dos</td>
+<td>Zona en crecimiento con poder adquisitivo. Pocos formatos modernos de panadería con café. <strong>Candidata fuerte.</strong></td>
+</tr>
+<tr>
+<td><strong>Z09 Sur (Jardín, Manantiales, O'Higgins)</strong></td>
+<td>Poco relevado; La Celeste (O'Higgins y Corro) e Independencia</td>
+<td>Mocafe, La Celeste, Independencia</td>
+<td>Manantiales crece fuerte (más de 25 mil habitantes, con proyección de 120 mil). Hay que relevar con OSM y en campo.</td>
+</tr>
+<tr>
+<td><strong>Z10 Periferia</strong></td>
+<td>Clásicas de precio bajo; cafés del aeropuerto</td>
+<td>El Trigal, Los Boulevares, Vucetich; Juan Valdez y Tostado (aeropuerto)</td>
+<td>Sensibilidad al precio alta. Baja prioridad para el local 1.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Nota:</strong> los conteos reflejan cuánto se pudo relevar en cada zona, no la densidad real. La capa en vivo de OpenStreetMap del mapa agrega, por zona, la cantidad de panaderías registradas con ubicación exacta.</p>
+<hr />
+<h2>5. Cadenas de panadería (competidores directos)</h2>
+<h3>5.1 La Celeste: el gran jugador</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th>Dato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historia</td>
+<td>Fundada en 1952, más de 70 años. Locales propios; no franquicia. [HECHO]</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>16 sucursales: Z02 Nueva Córdoba 10 · Z01 1 · Z03 1 · Z08 2 (Gauss y Valle Escondido) · Z09 2 (O'Higgins y Corro). [HECHO]</td>
+</tr>
+<tr>
+<td>Horario</td>
+<td><strong>10 locales 24 h los 365 días</strong>: Belgrano 439, Chacabuco 317, Colón 375, Gauss 5877, Obispo Oro 384, O'Higgins 5671, Rondeau 28, Obispo Salguero 512, Obispo Trejo 1029 y Gandhi 831. El resto abre de 6:10 a 22:20. [HECHO]</td>
+</tr>
+<tr>
+<td>Oferta estrella</td>
+<td>Sándwiches de miga (lo más elogiado), torta mil hojas, chipá, facturas de crema, medialunas, focaccia; helado desde 2024. [HECHO]</td>
+</tr>
+<tr>
+<td>Canales</td>
+<td>Mostrador para llevar (casi sin salón); Rappi (4,5–4,6), PedidosYa, pedix.app; estacionamiento en O'Higgins. [HECHO]</td>
+</tr>
+<tr>
+<td>Comunicación</td>
+<td>Instagram con 94 mil seguidores. Foco en tradición ("Panadería 1952"), 24 h, sorteos con influencers gastronómicos. [HECHO]</td>
+</tr>
+<tr>
+<td>Modelo operativo aparente</td>
+<td>Procesos de producción estandarizados; red densa. Probable producción centralizada (no verificado). [INTERPRETACIÓN]</td>
+</tr>
+<tr>
+<td>Expansión</td>
+<td>Planea abrir en zonas donde no está. La última apertura fue Valle Escondido 24 h. [HECHO]</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 302" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="La Celeste: puntaje por sucursal (Restaurantguru, 1–5)"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">La Celeste: puntaje por sucursal (Restaurantguru, 1–5)</text><line x1="230.0" y1="40" x2="230.0" y2="256" stroke="#E6E6E6"/><line x1="345.0" y1="40" x2="345.0" y2="256" stroke="#E6E6E6"/><line x1="460.0" y1="40" x2="460.0" y2="256" stroke="#E6E6E6"/><line x1="575.0" y1="40" x2="575.0" y2="256" stroke="#E6E6E6"/><line x1="690.0" y1="40" x2="690.0" y2="256" stroke="#E6E6E6"/><text x="220" y="59" text-anchor="end" font-size="12.5" fill="#404040">Belgrano 439</text><text x="220" y="71" text-anchor="end" font-size="10" fill="#7a7a7a">2.376 reseñas</text><g><title>Belgrano 439: 4,4</title><rect x="230.0" y="50" width="410.7" height="16" rx="4" fill="#B12028"/></g><text x="646.7" y="62" font-size="12" font-weight="700" fill="#404040">4,4</text><text x="220" y="89" text-anchor="end" font-size="12.5" fill="#404040">Ituzaingó</text><text x="220" y="101" text-anchor="end" font-size="10" fill="#7a7a7a">536</text><g><title>Ituzaingó: 4,3</title><rect x="230.0" y="80" width="401.4" height="16" rx="4" fill="#B12028"/></g><text x="637.4" y="92" font-size="12" font-weight="700" fill="#404040">4,3</text><text x="220" y="119" text-anchor="end" font-size="12.5" fill="#404040">M. T. de Alvear 227</text><text x="220" y="131" text-anchor="end" font-size="10" fill="#7a7a7a">514</text><g><title>M. T. de Alvear 227: 4,3</title><rect x="230.0" y="110" width="401.4" height="16" rx="4" fill="#B12028"/></g><text x="637.4" y="122" font-size="12" font-weight="700" fill="#404040">4,3</text><text x="220" y="149" text-anchor="end" font-size="12.5" fill="#404040">Obispo Oro 384</text><text x="220" y="161" text-anchor="end" font-size="10" fill="#7a7a7a">652</text><g><title>Obispo Oro 384: 4,2</title><rect x="230.0" y="140" width="392.0" height="16" rx="4" fill="#B12028"/></g><text x="628.0" y="152" font-size="12" font-weight="700" fill="#404040">4,2</text><text x="220" y="179" text-anchor="end" font-size="12.5" fill="#404040">Av. Colón 375</text><text x="220" y="191" text-anchor="end" font-size="10" fill="#7a7a7a">446</text><g><title>Av. Colón 375: 3,6</title><rect x="230.0" y="170" width="336.0" height="16" rx="4" fill="#B12028"/></g><text x="572.0" y="182" font-size="12" font-weight="700" fill="#404040">3,6</text><text x="220" y="209" text-anchor="end" font-size="12.5" fill="#404040">Obispo Trejo 1029</text><text x="220" y="221" text-anchor="end" font-size="10" fill="#7a7a7a">1.292</text><g><title>Obispo Trejo 1029: 2,9</title><rect x="230.0" y="200" width="270.7" height="16" rx="4" fill="#B12028"/></g><text x="506.7" y="212" font-size="12" font-weight="700" fill="#404040">2,9</text><text x="220" y="239" text-anchor="end" font-size="12.5" fill="#404040">Buenos Aires 1064</text><text x="220" y="251" text-anchor="end" font-size="10" fill="#7a7a7a">486</text><g><title>Buenos Aires 1064: 2,6</title><rect x="230.0" y="230" width="242.7" height="16" rx="4" fill="#B12028"/></g><text x="478.7" y="242" font-size="12" font-weight="700" fill="#404040">2,6</text><text x="0" y="292" font-size="10.5" fill="#7a7a7a">Misma marca, experiencia muy distinta según el local: el principal punto débil de la red.</text></svg></figure>
+
+<p><strong>Fortalezas:</strong>
+- Marca histórica.
+- La red 24 h es única en la ciudad.
+- Domina Nueva Córdoba.
+- Tiene un producto ícono (el sándwich de miga).
+- Presencia en todas las apps.</p>
+<p><strong>Debilidades:</strong>
+- La calidad de la experiencia varía mucho entre locales (de 2,6 a 4,4).
+- Casi no tiene salón ni café para tomar en el lugar.
+- Recibe críticas por precio y atención.
+- No está en cinco zonas enteras.</p>
+<p><strong>[INTERPRETACIÓN] Qué implica para PAN-CBA:</strong>
+- No conviene competirle de frente en Nueva Córdoba ni en 24 h.
+- Sus flancos son la <strong>experiencia consistente</strong>, el <strong>café y salón</strong>, y las <strong>zonas donde no está</strong> (Z05, Z06, Z07, Z08 fuera de Gauss).
+- Si PAN-CBA abre en una zona sin La Celeste, hay que esperar que La Celeste reaccione abriendo cerca: su plan es expandirse.</p>
+<h3>5.2 Del Pilar: el espejo de nuestro modelo</h3>
+<ul>
+<li><strong>Red:</strong> 45 locales (8 propios y 37 franquicias) en Córdoba y alrededores: Río Ceballos, Unquillo, Mendiolaza, Villa Allende y próximamente La Calera. [HECHO]</li>
+<li><strong>Planta propia de ultracongelado:</strong> congela a −40 °C, conserva a −20 °C y transporta a −18 °C. [HECHO]</li>
+<li><strong>Tres frentes:</strong> locales, empresas (catering para fábricas) y supermercados. [HECHO]</li>
+<li><strong>Formatos y comunicación:</strong> módulo "Del Pilar Coffee". Comunica tradición: "más de 150 años". Instagram con 20 mil seguidores. [HECHO]</li>
+<li><strong>[INTERPRETACIÓN]</strong> Demuestra que el modelo "planta de ultracongelado + franquicia + B2B" funciona en Córdoba a escala. Su punto débil es la experiencia, que depende de cada franquiciado, y la percepción de "pan industrial". PAN-CBA no puede ser "otro Del Pilar": necesita una propuesta más clara de experiencia y marca.</li>
+<li><strong>Pendiente:</strong> direcciones de los 45 locales, precios y condiciones de franquicia (Q068).</li>
+</ul>
+<h3>5.3 Lo+Rico, Independencia, Armando y otras</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Locales</th>
+<th>Modelo</th>
+<th>Foco</th>
+<th>Lectura [INTERPRETACIÓN]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lo+Rico</strong></td>
+<td>~30 (22 de panadería y 8 de empanadas), desde 2018</td>
+<td>Franquicia; expansión al interior</td>
+<td>Medialunas, capilaridad, delivery; TikTok; 37 mil seguidores</td>
+<td>Precio bajo o medio y volumen. Se diversifica hacia empanadas.</td>
+</tr>
+<tr>
+<td><strong>Panadería Independencia</strong></td>
+<td>12–15</td>
+<td>Franquicia <strong>sin regalías</strong>, contratos de 3 años, exclusividad territorial</td>
+<td>"La más antigua de Córdoba" (1863); 5,9 mil seguidores</td>
+<td>La franquicia más barata para el franquiciado; poca presencia digital.</td>
+</tr>
+<tr>
+<td><strong>Armando Medialunas</strong></td>
+<td>de 8 a una meta de 13</td>
+<td>Expansión rápida</td>
+<td>Especialista en medialunas</td>
+<td>Formato chico y replicable. Referencia de formato.</td>
+</tr>
+<tr>
+<td><strong>Perdú</strong></td>
+<td>5 o más (General Paz, Alta Córdoba, Alberdi, Nueva Córdoba)</td>
+<td>s/d</td>
+<td>"Calidad desde 1997"; 35 mil seguidores; rolls de canela, masa madre</td>
+<td>Cadena local de rango medio.</td>
+</tr>
+<tr>
+<td><strong>La Vene</strong> (Mendoza)</td>
+<td>3 abiertos en 2018–19; meta de 20</td>
+<td>Franquicia con formatos "Pick &amp; Go" y "Brunch &amp; Coffee"</td>
+<td>s/d</td>
+<td>Sin evidencia de que siga abierta. Caso de aprendizaje: expansión que no se sostuvo.</td>
+</tr>
+<tr>
+<td>Posibles cadenas a verificar</td>
+<td>Panicafé, El Vergel, Catriel, Andrea Franceschini, Pan de Oro</td>
+<td>s/d</td>
+<td>s/d</td>
+<td>Relevar en la próxima tanda.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>6. Segmento moderno: bakery, medialunería y especialidad</h2>
+<ul>
+<li><strong>Culpa de los Dos:</strong> pasó de marca de Instagram a unos 6 locales (incluye Villa General Belgrano). Tiene 155 mil seguidores, la audiencia más grande de Córdoba en el rubro. Producto de culto (alfajores, medialunas, mafaldas) y filas en la puerta. [HECHO]</li>
+<li><strong>Cherry Season</strong> (ex ES Tostadores): tueste propio, puesto 63 entre las mejores cafeterías de Sudamérica, 94 mil seguidores. Tiene 3 locales y aperturas anunciadas (Nueva Córdoba y Estrada/Buenos Aires). Reels con presentadora propia. [HECHO]</li>
+<li><strong>Superanfibio:</strong> café de especialidad y medialuna de masa madre. Tiene 3 locales (incluido Manantiales) y 27 mil seguidores; abre de 9 a 19. [HECHO]</li>
+<li><strong>Polo de Güemes:</strong> Culpa de los Dos, Kråke, Ethiopia y Brunchería están en ~100 m (Belgrano y Achával Rodríguez). [HECHO]</li>
+<li><strong>[INTERPRETACIÓN]</strong> Este segmento crea tendencia y comunidad, pero depende del fundador y del producto artesanal: le cuesta escalar. PAN-CBA puede tomar su <strong>lenguaje</strong> (producto emblema, estética, contenido) y sumarle lo que les falta: escala, horario temprano, consistencia y precio medio.</li>
+</ul>
+<hr />
+<h2>7. Cadenas de café, comida rápida y conveniencia</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Locales en Córdoba</th>
+<th>Dato clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starbucks</td>
+<td>6 (Colón 608 en la calle; el resto en shoppings)</td>
+<td>Combo más caro: $9.700 (may-2025)</td>
+</tr>
+<tr>
+<td>Havanna</td>
+<td>5–6, más el local "Haireado" de 230 m² en Nuevocentro (inversión USD 120 mil)</td>
+<td>Abre a las 10 en los shoppings</td>
+</tr>
+<tr>
+<td>Café Martínez</td>
+<td>3; relanzamiento con inversor local (plan de 5 + 2)</td>
+<td>Cerró la mayoría de sus locales en su primera etapa</td>
+</tr>
+<tr>
+<td>Bonafide</td>
+<td>5–10</td>
+<td>El formato más parecido a un "café al paso" en el Centro</td>
+</tr>
+<tr>
+<td>Tostado, Juan Valdez</td>
+<td>Aeropuerto; Juan Valdez estudia un local en la ciudad</td>
+<td>Llegada de marcas de afuera</td>
+</tr>
+<tr>
+<td>Mostaza</td>
+<td>9 locales; "Open 24" en Plaza España (350 m²)</td>
+<td>Techo bajo de precio: 2 medialunas + café ~$3.600</td>
+</tr>
+<tr>
+<td>McDonald's / McCafé</td>
+<td>Más de 20 locales</td>
+<td>Café + medialuna ~$4.000</td>
+</tr>
+<tr>
+<td>YPF Full</td>
+<td>s/d en Capital</td>
+<td>29,3 M de medialunas vendidas en el país (ene–jul 2025); 24 h; ServiClub</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>8. Panaderías de barrio</h2>
+<ul>
+<li><strong>Oeste (Alberdi / Alto Alberdi):</strong> es la zona de panadería clásica más densa. Un directorio cuenta 21 panaderías solo en Alto Alberdi. Abren de 7 a 21 o 22 todos los días. [HECHO]</li>
+<li><strong>Argüello y Recta Martinoli (Z08):</strong> clásicas de buen nivel que abren desde las 6 (El Roble, Vicente, Delizie D'Italia, Panes y Costumbres). [HECHO]</li>
+<li><strong>Nichos emergentes:</strong> panadería 100% sin gluten (Lüben), fábricas de pan que venden al público (Panz) y masa madre. [HECHO]</li>
+<li><strong>Premios:</strong> en el 1.er Campeonato Nacional del Criollito (FITHEP 2025) el podio fue cordobés; el 3.er puesto fue Artesanos del Sabor. [HECHO]</li>
+<li><strong>Contexto:</strong> CIPAC reporta caídas de ventas de 30–40% en 2025 y unos 20 cierres en la ciudad. [HECHO]</li>
+<li><strong>Cantidad total:</strong> no hay un dato oficial público de cuántas panaderías hay habilitadas en la ciudad.</li>
+<li><strong>[INTERPRETACIÓN]</strong> La panadería de barrio compite por <strong>cercanía y precio</strong>. Está debilitada por la crisis y rara vez tiene marca, delivery o experiencia. Un formato estandarizado puede ganarle en consistencia, surtido, horario y comunicación, pero no en precio. Varias podrían ser <strong>franquiciadas o clientes</strong> de PAN-CBA en el futuro.</li>
+</ul>
+<hr />
+<h2>9. Redes sociales y comunicación</h2>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 332" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="Seguidores en Instagram por marca"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">Seguidores en Instagram por marca</text><line x1="230.0" y1="40" x2="230.0" y2="286" stroke="#E6E6E6"/><line x1="345.0" y1="40" x2="345.0" y2="286" stroke="#E6E6E6"/><line x1="460.0" y1="40" x2="460.0" y2="286" stroke="#E6E6E6"/><line x1="575.0" y1="40" x2="575.0" y2="286" stroke="#E6E6E6"/><line x1="690.0" y1="40" x2="690.0" y2="286" stroke="#E6E6E6"/><text x="220" y="59" text-anchor="end" font-size="12.5" fill="#404040">Culpa de los Dos</text><text x="220" y="71" text-anchor="end" font-size="10" fill="#7a7a7a">~6 locales</text><g><title>Culpa de los Dos: 155 mil</title><rect x="230.0" y="50" width="410.7" height="16" rx="4" fill="#F18A00"/></g><text x="646.7" y="62" font-size="12" font-weight="700" fill="#404040">155 mil</text><text x="220" y="89" text-anchor="end" font-size="12.5" fill="#404040">La Celeste</text><text x="220" y="101" text-anchor="end" font-size="10" fill="#7a7a7a">16 locales</text><g><title>La Celeste: 94 mil</title><rect x="230.0" y="80" width="249.1" height="16" rx="4" fill="#F18A00"/></g><text x="485.1" y="92" font-size="12" font-weight="700" fill="#404040">94 mil</text><text x="220" y="119" text-anchor="end" font-size="12.5" fill="#404040">Cherry Season</text><text x="220" y="131" text-anchor="end" font-size="10" fill="#7a7a7a">2–3 locales</text><g><title>Cherry Season: 94 mil</title><rect x="230.0" y="110" width="249.1" height="16" rx="4" fill="#F18A00"/></g><text x="485.1" y="122" font-size="12" font-weight="700" fill="#404040">94 mil</text><text x="220" y="149" text-anchor="end" font-size="12.5" fill="#404040">Lo+Rico</text><text x="220" y="161" text-anchor="end" font-size="10" fill="#7a7a7a">~30 locales</text><g><title>Lo+Rico: 37 mil</title><rect x="230.0" y="140" width="98.0" height="16" rx="4" fill="#F18A00"/></g><text x="334.0" y="152" font-size="12" font-weight="700" fill="#404040">37 mil</text><text x="220" y="179" text-anchor="end" font-size="12.5" fill="#404040">Perdú</text><text x="220" y="191" text-anchor="end" font-size="10" fill="#7a7a7a">5+ locales</text><g><title>Perdú: 35 mil</title><rect x="230.0" y="170" width="92.7" height="16" rx="4" fill="#F18A00"/></g><text x="328.7" y="182" font-size="12" font-weight="700" fill="#404040">35 mil</text><text x="220" y="209" text-anchor="end" font-size="12.5" fill="#404040">Superanfibio</text><text x="220" y="221" text-anchor="end" font-size="10" fill="#7a7a7a">1–3 locales</text><g><title>Superanfibio: 27 mil</title><rect x="230.0" y="200" width="71.5" height="16" rx="4" fill="#F18A00"/></g><text x="307.5" y="212" font-size="12" font-weight="700" fill="#404040">27 mil</text><text x="220" y="239" text-anchor="end" font-size="12.5" fill="#404040">Del Pilar</text><text x="220" y="251" text-anchor="end" font-size="10" fill="#7a7a7a">45 locales</text><g><title>Del Pilar: 20 mil</title><rect x="230.0" y="230" width="53.0" height="16" rx="4" fill="#F18A00"/></g><text x="289.0" y="242" font-size="12" font-weight="700" fill="#404040">20 mil</text><text x="220" y="269" text-anchor="end" font-size="12.5" fill="#404040">Independencia</text><text x="220" y="281" text-anchor="end" font-size="10" fill="#7a7a7a">12–15 locales</text><g><title>Independencia: 5.866</title><rect x="230.0" y="260" width="15.5" height="16" rx="4" fill="#F18A00"/></g><text x="251.5" y="272" font-size="12" font-weight="700" fill="#404040">5.866</text><text x="0" y="322" font-size="10.5" fill="#7a7a7a">Fragmentos de buscador, sep-2026. La audiencia no crece con la cantidad de locales: crece con el producto de culto y la experiencia.</text></svg></figure>
+
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Foco de comunicación</th>
+<th>Formato que funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La Celeste</td>
+<td>Tradición 1952, 24 h, sándwiches de miga</td>
+<td>Sorteos con influencers</td>
+</tr>
+<tr>
+<td>Del Pilar</td>
+<td>Tradición "150 años", franquicias, empresas y supermercados</td>
+<td>Institucional</td>
+</tr>
+<tr>
+<td>Lo+Rico</td>
+<td>Medialunas, capilaridad, delivery</td>
+<td>TikTok y submarca de empanadas (19 mil)</td>
+</tr>
+<tr>
+<td>Independencia</td>
+<td>"La más antigua" (1863)</td>
+<td>Institucional, baja actividad</td>
+</tr>
+<tr>
+<td>Culpa de los Dos</td>
+<td>Producto de culto, escasez y filas</td>
+<td>Contenido de producto, comunidad</td>
+</tr>
+<tr>
+<td>Cherry Season</td>
+<td>Tueste propio, brunch, cara humana</td>
+<td>Reels con presentadora</td>
+</tr>
+<tr>
+<td>Superanfibio</td>
+<td>Especialidad, minimalismo, merienda</td>
+<td>Estética</td>
+</tr>
+<tr>
+<td>Havanna / Café Martínez / Starbucks</td>
+<td>Combos, promociones bancarias, app</td>
+<td>Promociones</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>[INTERPRETACIÓN]</strong>
+- Las cadenas de panadería comunican <strong>tradición</strong>; las modernas comunican <strong>producto y experiencia</strong>.
+- Nadie comunica bien <strong>calidad consistente, rapidez y precio justo</strong>, ni <strong>frescura verificable</strong> ("horneado acá, cada hora").
+- No se vio ningún club de fidelización propio.</p>
+<hr />
+<h2>10. Precios y posicionamiento</h2>
+<p><strong>Referencia del Centro de Panaderos (abril 2026):</strong> pan francés $3.500/kg, mignon $4.000/kg, criollos $8.000/kg, facturas desde $1.000 por unidad. La medialuna en carta de cafetería cuesta $1.400–1.600 (agosto 2026). [HECHO]</p>
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 212" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="Escalera de precios: café + 2 medialunas (ARS)"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">Escalera de precios: café + 2 medialunas (ARS)</text><line x1="230.0" y1="40" x2="230.0" y2="166" stroke="#E6E6E6"/><line x1="345.0" y1="40" x2="345.0" y2="166" stroke="#E6E6E6"/><line x1="460.0" y1="40" x2="460.0" y2="166" stroke="#E6E6E6"/><line x1="575.0" y1="40" x2="575.0" y2="166" stroke="#E6E6E6"/><line x1="690.0" y1="40" x2="690.0" y2="166" stroke="#E6E6E6"/><rect x="420.5" y="38" width="42.3" height="128" fill="#1F6FD0" fill-opacity=".10" stroke="#1F6FD0" stroke-dasharray="4 3"/><text x="441.7" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#1F6FD0">Hueco de precio tentativo</text><text x="220" y="59" text-anchor="end" font-size="12.5" fill="#404040">Mostaza</text><text x="220" y="71" text-anchor="end" font-size="10" fill="#7a7a7a">fecha s/d</text><g><title>Mostaza: $3.600</title><rect x="230.0" y="50" width="152.4" height="16" rx="4" fill="#B12028"/></g><text x="388.4" y="62" font-size="12" font-weight="700" fill="#404040">$3.600</text><text x="220" y="89" text-anchor="end" font-size="12.5" fill="#404040">Café Martínez</text><text x="220" y="101" text-anchor="end" font-size="10" fill="#7a7a7a">sep-2026 (nacional)</text><g><title>Café Martínez: $6.900</title><rect x="230.0" y="80" width="292.2" height="16" rx="4" fill="#B12028"/></g><text x="528.2" y="92" font-size="12" font-weight="700" fill="#404040">$6.900</text><text x="220" y="119" text-anchor="end" font-size="12.5" fill="#404040">Havanna</text><text x="220" y="131" text-anchor="end" font-size="10" fill="#7a7a7a">~2025, no confirmado</text><g><title>Havanna: $7.000</title><rect x="230.0" y="110" width="296.4" height="16" rx="4" fill="#B12028"/></g><text x="532.4" y="122" font-size="12" font-weight="700" fill="#404040">$7.000</text><text x="220" y="149" text-anchor="end" font-size="12.5" fill="#404040">Starbucks</text><text x="220" y="161" text-anchor="end" font-size="10" fill="#7a7a7a">may-2025</text><g><title>Starbucks: $9.700</title><rect x="230.0" y="140" width="410.7" height="16" rx="4" fill="#B12028"/></g><text x="646.7" y="152" font-size="12" font-weight="700" fill="#404040">$9.700</text><text x="0" y="202" font-size="10.5" fill="#7a7a7a">Precios de fuentes y fechas distintas; comparar como orden de magnitud. Fuente: I015 (c4).</text></svg></figure>
+
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="Mapa de posicionamiento: precio × experiencia"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">Mapa de posicionamiento: precio × experiencia</text><line x1="95" y1="498" x2="95" y2="40" stroke="#E6E6E6"/><line x1="62" y1="475" x2="730" y2="475" stroke="#E6E6E6"/><text x="95" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">1</text><text x="54" y="479" text-anchor="end" font-size="10.5" fill="#7a7a7a">1</text><line x1="162" y1="498" x2="162" y2="40" stroke="#E6E6E6"/><line x1="62" y1="429" x2="730" y2="429" stroke="#E6E6E6"/><text x="162" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">2</text><text x="54" y="433" text-anchor="end" font-size="10.5" fill="#7a7a7a">2</text><line x1="229" y1="498" x2="229" y2="40" stroke="#E6E6E6"/><line x1="62" y1="384" x2="730" y2="384" stroke="#E6E6E6"/><text x="229" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">3</text><text x="54" y="388" text-anchor="end" font-size="10.5" fill="#7a7a7a">3</text><line x1="296" y1="498" x2="296" y2="40" stroke="#E6E6E6"/><line x1="62" y1="338" x2="730" y2="338" stroke="#E6E6E6"/><text x="296" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">4</text><text x="54" y="342" text-anchor="end" font-size="10.5" fill="#7a7a7a">4</text><line x1="363" y1="498" x2="363" y2="40" stroke="#E6E6E6"/><line x1="62" y1="292" x2="730" y2="292" stroke="#E6E6E6"/><text x="363" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">5</text><text x="54" y="296" text-anchor="end" font-size="10.5" fill="#7a7a7a">5</text><line x1="429" y1="498" x2="429" y2="40" stroke="#E6E6E6"/><line x1="62" y1="246" x2="730" y2="246" stroke="#E6E6E6"/><text x="429" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">6</text><text x="54" y="250" text-anchor="end" font-size="10.5" fill="#7a7a7a">6</text><line x1="496" y1="498" x2="496" y2="40" stroke="#E6E6E6"/><line x1="62" y1="200" x2="730" y2="200" stroke="#E6E6E6"/><text x="496" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">7</text><text x="54" y="204" text-anchor="end" font-size="10.5" fill="#7a7a7a">7</text><line x1="563" y1="498" x2="563" y2="40" stroke="#E6E6E6"/><line x1="62" y1="154" x2="730" y2="154" stroke="#E6E6E6"/><text x="563" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">8</text><text x="54" y="158" text-anchor="end" font-size="10.5" fill="#7a7a7a">8</text><line x1="630" y1="498" x2="630" y2="40" stroke="#E6E6E6"/><line x1="62" y1="109" x2="730" y2="109" stroke="#E6E6E6"/><text x="630" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">9</text><text x="54" y="113" text-anchor="end" font-size="10.5" fill="#7a7a7a">9</text><line x1="697" y1="498" x2="697" y2="40" stroke="#E6E6E6"/><line x1="62" y1="63" x2="730" y2="63" stroke="#E6E6E6"/><text x="697" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">10</text><text x="54" y="67" text-anchor="end" font-size="10.5" fill="#7a7a7a">10</text><text x="396" y="546" text-anchor="middle" font-size="12" fill="#404040">Precio percibido (1 = barato · 10 = caro)</text><text transform="translate(16,269) rotate(-90)" text-anchor="middle" font-size="12" fill="#404040">Experiencia (1–10)</text><rect x="363" y="177" width="100" height="69" fill="#1F6FD0" fill-opacity=".10" stroke="#1F6FD0" stroke-dasharray="5 4"/><text x="367" y="171" font-size="11" font-weight="700" fill="#1F6FD0">Hueco: precio medio + experiencia media-alta</text><g><title>La Celeste (foco: 24 h + tradición (1952) + promos oportunistas); Panadería Del Pilar (foco: tradición +150 años, franquicias, B2B empresas/supermercados); Panadería Independencia (foco: &#x27;la panadería más antigua de Córdoba&#x27; (1863)); Perdú (foco: calidad desde 1997); Bonafide (foco: cafetería de marca tradicional; combo café con leche + alfajor) — precio 5, Experiencia (1–10) 4</title><circle cx="363" cy="338" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="374" y="316" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">La Celeste</text><text x="374" y="329" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Del Pilar</text><text x="374" y="342" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Independencia</text><text x="374" y="355" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Perdú</text><text x="374" y="368" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Bonafide</text><g><title>Lo+Rico (foco: medialunas, capilaridad (26 sucursales), delivery/TikTok); Armando Medialunas (foco: especialista medialunas, expansión (8→13 locales)) — precio 4, Experiencia (1–10) 3</title><circle cx="296" cy="384" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="307" y="381" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Lo+Rico</text><text x="307" y="394" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Armando</text><g><title>Culpa de los Dos (foco: producto de culto artesanal (alfajores, medialunas, mafaldas), escasez/filas); Café Martínez Córdoba (foco: combo desayuno precio cerrado + promos bancarias) — precio 7, Experiencia (1–10) 6</title><circle cx="496" cy="246" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="485" y="244" text-anchor="end" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Culpa de los Dos</text><text x="485" y="257" text-anchor="end" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Café Martínez</text><g><title>Superanfibio (foco: café de especialidad, minimalismo, merienda) — precio 7, Experiencia (1–10) 8</title><circle cx="496" cy="154" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="507" y="158" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Superanfibio</text><g><title>Cherry Season (foco: tueste propio, brunch, reels con cara humana) — precio 8, Experiencia (1–10) 9</title><circle cx="563" cy="109" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="574" y="113" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Cherry Season</text><g><title>Havanna Córdoba (foco: alfajor ícono + combos cafetería + app propia) — precio 8, Experiencia (1–10) 6</title><circle cx="563" cy="246" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="574" y="250" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Havanna</text><g><title>Starbucks (foco: experiencia global + combos 15-50% off) — precio 9, Experiencia (1–10) 7</title><circle cx="630" cy="200" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="641" y="204" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Starbucks</text><g><title>Mostaza (foco: precio (combo desayuno fast food)) — precio 3, Experiencia (1–10) 2</title><circle cx="229" cy="429" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="240" y="433" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Mostaza</text><g><title>YPF Full (foco: conveniencia 24 h + ServiClub + app YPF) — precio 6, Experiencia (1–10) 3</title><circle cx="429" cy="384" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="440" y="388" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">YPF Full</text><text x="754" y="530" text-anchor="end" font-size="10" fill="#7a7a7a">Puntajes 1–10 = [INTERPRETACIÓN] del analista a partir de precios, reseñas y comunicación (I015–I016).</text></svg></figure>
+
+<figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Montserrat,Segoe UI,Arial,sans-serif" role="img" aria-label="Mapa de posicionamiento: precio × conveniencia"><text x="0" y="18" font-size="15" font-weight="800" fill="#404040">Mapa de posicionamiento: precio × conveniencia</text><line x1="95" y1="498" x2="95" y2="40" stroke="#E6E6E6"/><line x1="62" y1="475" x2="730" y2="475" stroke="#E6E6E6"/><text x="95" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">1</text><text x="54" y="479" text-anchor="end" font-size="10.5" fill="#7a7a7a">1</text><line x1="162" y1="498" x2="162" y2="40" stroke="#E6E6E6"/><line x1="62" y1="429" x2="730" y2="429" stroke="#E6E6E6"/><text x="162" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">2</text><text x="54" y="433" text-anchor="end" font-size="10.5" fill="#7a7a7a">2</text><line x1="229" y1="498" x2="229" y2="40" stroke="#E6E6E6"/><line x1="62" y1="384" x2="730" y2="384" stroke="#E6E6E6"/><text x="229" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">3</text><text x="54" y="388" text-anchor="end" font-size="10.5" fill="#7a7a7a">3</text><line x1="296" y1="498" x2="296" y2="40" stroke="#E6E6E6"/><line x1="62" y1="338" x2="730" y2="338" stroke="#E6E6E6"/><text x="296" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">4</text><text x="54" y="342" text-anchor="end" font-size="10.5" fill="#7a7a7a">4</text><line x1="363" y1="498" x2="363" y2="40" stroke="#E6E6E6"/><line x1="62" y1="292" x2="730" y2="292" stroke="#E6E6E6"/><text x="363" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">5</text><text x="54" y="296" text-anchor="end" font-size="10.5" fill="#7a7a7a">5</text><line x1="429" y1="498" x2="429" y2="40" stroke="#E6E6E6"/><line x1="62" y1="246" x2="730" y2="246" stroke="#E6E6E6"/><text x="429" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">6</text><text x="54" y="250" text-anchor="end" font-size="10.5" fill="#7a7a7a">6</text><line x1="496" y1="498" x2="496" y2="40" stroke="#E6E6E6"/><line x1="62" y1="200" x2="730" y2="200" stroke="#E6E6E6"/><text x="496" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">7</text><text x="54" y="204" text-anchor="end" font-size="10.5" fill="#7a7a7a">7</text><line x1="563" y1="498" x2="563" y2="40" stroke="#E6E6E6"/><line x1="62" y1="154" x2="730" y2="154" stroke="#E6E6E6"/><text x="563" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">8</text><text x="54" y="158" text-anchor="end" font-size="10.5" fill="#7a7a7a">8</text><line x1="630" y1="498" x2="630" y2="40" stroke="#E6E6E6"/><line x1="62" y1="109" x2="730" y2="109" stroke="#E6E6E6"/><text x="630" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">9</text><text x="54" y="113" text-anchor="end" font-size="10.5" fill="#7a7a7a">9</text><line x1="697" y1="498" x2="697" y2="40" stroke="#E6E6E6"/><line x1="62" y1="63" x2="730" y2="63" stroke="#E6E6E6"/><text x="697" y="514" text-anchor="middle" font-size="10.5" fill="#7a7a7a">10</text><text x="54" y="67" text-anchor="end" font-size="10.5" fill="#7a7a7a">10</text><text x="396" y="546" text-anchor="middle" font-size="12" fill="#404040">Precio percibido (1 = barato · 10 = caro)</text><text transform="translate(16,269) rotate(-90)" text-anchor="middle" font-size="12" fill="#404040">Conveniencia (horario, cobertura, apps)</text><g><title>La Celeste (foco: 24 h + tradición (1952) + promos oportunistas) — precio 5, Conveniencia (horario, cobertura, apps) 9</title><circle cx="363" cy="109" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="374" y="113" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">La Celeste</text><g><title>Panadería Del Pilar (foco: tradición +150 años, franquicias, B2B empresas/supermercados) — precio 5, Conveniencia (horario, cobertura, apps) 8</title><circle cx="363" cy="154" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="374" y="158" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Del Pilar</text><g><title>Lo+Rico (foco: medialunas, capilaridad (26 sucursales), delivery/TikTok) — precio 4, Conveniencia (horario, cobertura, apps) 8</title><circle cx="296" cy="154" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="285" y="158" text-anchor="end" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Lo+Rico</text><g><title>Panadería Independencia (foco: &#x27;la panadería más antigua de Córdoba&#x27; (1863)) — precio 5, Conveniencia (horario, cobertura, apps) 4</title><circle cx="363" cy="338" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="374" y="342" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Independencia</text><g><title>Perdú (foco: calidad desde 1997); Bonafide (foco: cafetería de marca tradicional; combo café con leche + alfajor) — precio 5, Conveniencia (horario, cobertura, apps) 6</title><circle cx="363" cy="246" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="374" y="244" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Perdú</text><text x="374" y="257" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Bonafide</text><g><title>Culpa de los Dos (foco: producto de culto artesanal (alfajores, medialunas, mafaldas), escasez/filas); Superanfibio (foco: café de especialidad, minimalismo, merienda) — precio 7, Conveniencia (horario, cobertura, apps) 4</title><circle cx="496" cy="338" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="507" y="335" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Culpa de los Dos</text><text x="507" y="348" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Superanfibio</text><g><title>Cherry Season (foco: tueste propio, brunch, reels con cara humana) — precio 8, Conveniencia (horario, cobertura, apps) 3</title><circle cx="563" cy="384" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="574" y="388" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Cherry Season</text><g><title>Havanna Córdoba (foco: alfajor ícono + combos cafetería + app propia) — precio 8, Conveniencia (horario, cobertura, apps) 6</title><circle cx="563" cy="246" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="574" y="250" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Havanna</text><g><title>Starbucks (foco: experiencia global + combos 15-50% off) — precio 9, Conveniencia (horario, cobertura, apps) 5</title><circle cx="630" cy="292" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="641" y="296" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Starbucks</text><g><title>Café Martínez Córdoba (foco: combo desayuno precio cerrado + promos bancarias) — precio 7, Conveniencia (horario, cobertura, apps) 6</title><circle cx="496" cy="246" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="485" y="250" text-anchor="end" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Café Martínez</text><g><title>Mostaza (foco: precio (combo desayuno fast food)) — precio 3, Conveniencia (horario, cobertura, apps) 8</title><circle cx="229" cy="154" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="218" y="158" text-anchor="end" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Mostaza</text><g><title>YPF Full (foco: conveniencia 24 h + ServiClub + app YPF) — precio 6, Conveniencia (horario, cobertura, apps) 10</title><circle cx="429" cy="63" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="440" y="67" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">YPF Full</text><g><title>Armando Medialunas (foco: especialista medialunas, expansión (8→13 locales)) — precio 4, Conveniencia (horario, cobertura, apps) 7</title><circle cx="296" cy="200" r="7" fill="#B12028" stroke="#fff" stroke-width="2"/></g><text x="307" y="204" text-anchor="start" font-size="11.5" fill="#404040" stroke="#fff" stroke-width="3" paint-order="stroke">Armando</text><text x="754" y="530" text-anchor="end" font-size="10" fill="#7a7a7a">Puntajes 1–10 = [INTERPRETACIÓN] del analista a partir de precios, reseñas y comunicación (I015–I016).</text></svg></figure>
+
+<p><strong>Lectura [INTERPRETACIÓN]:</strong>
+- <strong>Conveniencia saturada</strong> en precio medio y bajo: YPF Full, La Celeste, Del Pilar, Lo+Rico, Mostaza.
+- <strong>Experiencia alta, pero cara y de baja escala:</strong> Cherry Season, Superanfibio, Starbucks.
+- <strong>Hueco:</strong> precio medio (5–6) con experiencia media-alta (6–7) y conveniencia alta (horario temprano, rapidez, apps). En Córdoba no hay una cadena que combine las tres.</p>
+<hr />
+<h2>11. Espacios en blanco (hipótesis a validar)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Espacio</th>
+<th>Evidencia</th>
+<th>Perspectiva 1: local 1</th>
+<th>Perspectiva 2: red / franquicia</th>
+<th>Cómo validarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EB1</td>
+<td><strong>"Tercer formato":</strong> pan y facturas de calidad para llevar, más buen café, precio medio y experiencia consistente</td>
+<td>Hueco en el mapa de posicionamiento; La Celeste es desigual; lo moderno es caro y no escala</td>
+<td>Diferencia sin guerra de precios</td>
+<td>Muy estandarizable si el producto viene de la planta de UC</td>
+<td>E001 test de concepto, E003 pop-up</td>
+</tr>
+<tr>
+<td>EB2</td>
+<td><strong>Desayuno temprano de calidad (6:30–9 h)</strong> fuera de los shoppings</td>
+<td>Especialidad y cadenas abren a las 8–10</td>
+<td>Captura oficinistas, estudiantes y tráfico al trabajo</td>
+<td>Replicable en corredores</td>
+<td>Conteos de gente en la calle 6:30–9 h (I028)</td>
+</tr>
+<tr>
+<td>EB3</td>
+<td><strong>Zonas sin La Celeste con buen poder adquisitivo:</strong> Z05 General Paz, Z06 Alta Córdoba, Z07 Cerro / Villa Cabrera, Z08 Argüello y Villa Belgrano, Z09 Manantiales</td>
+<td>Mapa de cobertura (§4, §5.1)</td>
+<td>Menos competencia directa 24 h</td>
+<td>Plan de expansión por zonas</td>
+<td>Puntaje de ubicaciones (G8) + OSM + campo</td>
+</tr>
+<tr>
+<td>EB4</td>
+<td><strong>Frescura verificable y relato honesto del congelado</strong> ("fermentación lenta en planta, horneado acá cada hora")</td>
+<td>41% valora "horneado en el local" (I002); A006</td>
+<td>Resuelve el riesgo de percepción</td>
+<td>Estándar de marca</td>
+<td>E002 degustación ciega</td>
+</tr>
+<tr>
+<td>EB5</td>
+<td><strong>Fidelización propia simple</strong> (QR o billetera, suscripción de café)</td>
+<td>Nadie tiene club propio visible</td>
+<td>Frecuencia</td>
+<td>Base de datos de clientes para la red</td>
+<td>Piloto</td>
+</tr>
+<tr>
+<td>EB6</td>
+<td><strong>Empresas y catering de desayuno para oficinas</strong>, más sin TACC envasado</td>
+<td>Solo Del Pilar lo comunica</td>
+<td>Ingreso extra en horas valle</td>
+<td>Aprovecha la planta de UC</td>
+<td>Entrevistas a empresas (A015)</td>
+</tr>
+<tr>
+<td>EB7</td>
+<td><strong>Producto emblema cordobés</strong> (criollo, chipá o medialuna de autor) viral y estandarizado en planta</td>
+<td>Culpa de los Dos y Armando muestran el poder del producto de culto</td>
+<td>Tráfico y contenido</td>
+<td>Replicable (receta de planta)</td>
+<td>Degustación + redes</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>12. Reacciones esperables de la competencia</h2>
+<ul>
+<li><strong>La Celeste:</strong> podría abrir cerca (planea expandirse), sumar café o salón, o mejorar su servicio.</li>
+<li><strong>Del Pilar y Lo+Rico:</strong> podrían bajar precios, ofrecer promociones, o acelerar franquicias en la misma zona.</li>
+<li><strong>Panaderías de barrio:</strong> podrían dar descuentos de "día anterior" o competir por fidelidad del vecino.</li>
+<li><strong>Canalsenses:</strong> la marca propia podría molestar a clientes mayoristas en Córdoba (R019), en particular si Del Pilar, Lo+Rico o La Celeste compran a UC (Q068).</li>
+</ul>
+<hr />
+<h2>13. Implicancias, preguntas y próximos pasos</h2>
+<p><strong>Implicancias [RECOMENDACIÓN]:</strong>
+1. Llevar a la etapa de conceptos (G4) el "tercer formato" (EB1) como concepto candidato principal, <strong>junto con al menos 3 alternativas</strong>, para no sesgar la decisión.
+2. Excluir Nueva Córdoba como primera opción de ubicación, salvo que aparezca un diferencial muy fuerte. Priorizar Z08, Z05, Z06 y Z07 en la metodología de ubicación (G8).
+3. Tomar a Del Pilar como caso de estudio del modelo: franquicias, planta y operación de sus locales.
+4. Diseñar la comunicación desde el día 1 sobre producto emblema, frescura visible y consistencia.</p>
+<p><strong>Próximos pasos:</strong>
+- <strong>Completar el censo de barrio con la capa OpenStreetMap del mapa.</strong> Un socio abre el mapa, hace clic en "Exportar datos OSM", baja el CSV y me lo pasa (o lo sube al repositorio). Con eso actualizo densidades por zona y por barrio.
+- Relevar en otra sesión, cuando haya cupo de búsquedas:
+  - las direcciones de Del Pilar, Lo+Rico e Independencia;
+  - precios en Rappi y PedidosYa;
+  - estaciones de servicio y supermercados;
+  - las cadenas por verificar.
+- <strong>Trabajo de campo (PD031):</strong>
+  - índice de precios "café con leche + 2 medialunas" y docena de facturas en 20 locales;
+  - cliente incógnito en La Celeste, Del Pilar, Lo+Rico, Culpa de los Dos y Cherry Season;
+  - conteos de gente de 6:30 a 9 h en 3 corredores candidatos.
+- <strong>Oscar:</strong> ¿cuáles de estos competidores son clientes de UC? (Q068)</p>
+<h2>Anexos (detalle y fuentes)</h2>
+<ul>
+<li><a href="/02_COMPETENCIA/I014_cadenas_panaderia_cordoba.html"><code>I014_cadenas_panaderia_cordoba.md</code></a>: perfiles de La Celeste, Del Pilar, Lo+Rico e Independencia (F300–F344).</li>
+<li><a href="/02_COMPETENCIA/I014b_cafeterias_bakery_especialidad.html"><code>I014b_cafeterias_bakery_especialidad.md</code></a>: bakery, especialidad y cadenas de café (F401–F449).</li>
+<li><a href="/02_COMPETENCIA/I014c_panaderias_de_barrio.html"><code>I014c_panaderias_de_barrio.md</code></a>: censo de barrio por zona (F500–F511).</li>
+<li><a href="/02_COMPETENCIA/I015_I016_redes_precios_posicionamiento.html"><code>I015_I016_redes_precios_posicionamiento.md</code></a>: redes, precios y posicionamiento (F600–F668).</li>
+<li><a href="/02_COMPETENCIA/I013_censo_competitivo_cordoba.html"><code>I013_censo_competitivo_cordoba.md</code></a> e <a href="/02_COMPETENCIA/I018_franquicias_panaderia_cafe.html"><code>I018_franquicias_panaderia_cafe.md</code></a>: primera pasada y franquicias.</li>
+</ul>
+<footer><span>Ultracongelados Canalsenses S.R.L. · Proyecto PAN-CBA · Fuente: panaderia_cordoba/02_COMPETENCIA/INFORME_COMPETENCIA_CORDOBA.md</span><span>Etiquetas: [HECHO] [ESTIMACIÓN] [INTERPRETACIÓN] [RECOMENDACIÓN]</span></footer>
+</div></body></html>
