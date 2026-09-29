@@ -694,6 +694,8 @@ tr.zr{cursor:pointer}tr.zr:hover td{background:var(--soft)}
 .pop a.btn{display:inline-block;margin-top:6px;padding:4px 9px;border-radius:5px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
 .zlabel{background:none;border:none;box-shadow:none;font-weight:800;font-size:12px;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
 .legend{background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.2);font-size:11.5px;line-height:1.7}
+.leaflet-tooltip.tip{padding:7px 9px;border-radius:8px;border:1px solid #e0e0e0;box-shadow:0 4px 14px rgba(0,0,0,.18);font-family:inherit;font-size:12px;line-height:1.4;width:max-content;max-width:290px;white-space:normal}
+.tip b{color:var(--brand2);font-size:13px}.tip .t{display:inline-block;font-size:10px;font-weight:700;color:#fff;border-radius:4px;padding:0 5px;margin:2px 0}.tip .g{color:#888;font-size:10.5px}
 .warn{background:var(--soft);border:1px solid var(--brand);border-radius:6px;padding:7px 9px;font-size:11px;margin-top:10px}
 @media(max-width:820px){.wrap{grid-template-columns:1fr}aside{position:fixed;top:54px;bottom:0;left:0;width:88%;z-index:1000;display:none;box-shadow:4px 0 16px rgba(0,0,0,.2)}aside.open{display:block}.tog{display:block}.top h1{display:none}}
 </style></head><body>
@@ -762,6 +764,7 @@ const mk=D.locales.map(l=>{const col=(D.tipos[l.t]||D.tipos.otro)[1];const big=l
  ${l.gr?'⭐ '+l.gr+(l.gn?' ('+l.gn+' reseñas)':'')+'<br>':''}${l.n?'<i>'+esc(l.n)+'</i><br>':''}
  <span style="color:#999;font-size:11px">Ubicación ${l.p==='exacta'?'exacta':'aproximada ('+l.p+')'}</span><br>
  <a class="btn" href="${l.g}" target="_blank" rel="noopener">Ver en Google Maps</a> ${l.f&&/^https?:/.test(l.f)?`<a href="${esc(l.f)}" target="_blank" rel="noopener" style="font-size:11px">fuente</a>`:''}</div>`);
+ m.bindTooltip(`<b>${esc(l.m)}</b><br><span class="t" style="background:${col}">${esc((D.tipos[l.t]||D.tipos.otro)[0])}</span><br>${l.d?esc(l.d)+'<br>':''}${[esc(l.b),l.z?l.z+' '+esc(D.zonasNombres[l.z]||''):''].filter(Boolean).join(' · ')}${l.h?'<br>🕒 '+esc(l.h):''}${l.h24?'<br><b>Abre 24 h</b>':''}${l.dl?'<br>🛵 '+esc(l.dl):''}${l.gr?'<br>⭐ '+l.gr+(l.gn?' ('+l.gn+')':''):''}<br><span class="g">Clic para ver la ficha completa y Google Maps</span>`,{direction:'top',offset:[0,-6],opacity:.97,className:'tip'});
  m._d=l;return m});
 const mLayer=L.layerGroup().addTo(map);
 function render(fit){const on=new Set([...document.querySelectorAll('.ft:checked')].map(x=>x.value));const z=zsel.value;
@@ -795,6 +798,7 @@ function drawOSM(items){OSM=items;oB.clearLayers();oC.clearLayers();const zc={};
  items.forEach(o=>{const bak=o.k!=='cafe';const col=bak?'#A0522D':'#2A9D8F';const ch=CHAIN.test(o.n||'');
   const m=L.circleMarker([o.la,o.lo],{radius:ch?6:4,color:col,weight:2,fillColor:ch?col:'#fff',fillOpacity:ch?.8:.9});
   m.bindPopup(`<div class="pop"><b>${esc(o.n||'(sin nombre)')}</b><br><span class="t" style="background:${col}">OSM · ${esc(o.k)}</span><br>${esc(o.a||'')}<br>${o.h?'🕒 '+esc(o.h)+'<br>':''}${o.w?'<a href="'+esc(o.w)+'" target="_blank" rel="noopener">web / redes</a><br>':''}${o.z?o.z+' '+esc(D.zonasNombres[o.z]||''):''}<br><span style="color:#999;font-size:11px">Ubicación exacta (OpenStreetMap)</span><br><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${o.la},${o.lo}">Ver en Google Maps</a></div>`);
+  m.bindTooltip(`<b>${esc(o.n||'(sin nombre)')}</b><br><span class="t" style="background:${col}">OpenStreetMap · ${esc(o.k)}</span>${o.a?'<br>'+esc(o.a):''}${o.z?'<br>'+o.z+' '+esc(D.zonasNombres[o.z]||''):''}${o.h?'<br>🕒 '+esc(o.h):''}<br><span class="g">Clic para ver más</span>`,{direction:'top',offset:[0,-6],opacity:.97,className:'tip'});
   if(bak){oB.addLayer(m);nb++;zc[o.z]=(zc[o.z]||0)+1}else{oC.addLayer(m);nc++}});
  document.getElementById('oBn').textContent=nb;document.getElementById('oCn').textContent=CAF.length?nc:'';
  Object.keys(D.zonasNombres).forEach(z=>{const el=document.getElementById('osm_'+z);if(el)el.textContent=zc[z]||0});
