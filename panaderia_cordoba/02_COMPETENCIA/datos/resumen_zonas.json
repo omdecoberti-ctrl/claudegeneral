@@ -27,14 +27,15 @@
   },
   "Z03": {
     "zona": "Güemes / Observatorio",
-    "total": 7,
+    "total": 16,
     "por_tipo": {
       "cadena_panaderia": 1,
       "medialuneria_dulces": 2,
-      "bakery_cafe": 2,
-      "especialidad": 2
+      "bakery_cafe": 3,
+      "especialidad": 2,
+      "panaderia_barrio": 8
     },
-    "panaderias": 3,
+    "panaderias": 12,
     "poblacion_barrios_relevados": null
   },
   "Z04": {
@@ -63,13 +64,13 @@
   },
   "Z06": {
     "zona": "Norte cercano",
-    "total": 8,
+    "total": 7,
     "por_tipo": {
       "medialuneria_dulces": 3,
-      "cafeteria_cadena": 2,
-      "panaderia_barrio": 3
+      "cafeteria_cadena": 3,
+      "panaderia_barrio": 1
     },
-    "panaderias": 3,
+    "panaderias": 1,
     "poblacion_barrios_relevados": 34600
   },
   "Z07": {
@@ -87,10 +88,11 @@
   },
   "Z08": {
     "zona": "Norte premium / Noroeste lejano",
-    "total": 8,
+    "total": 9,
     "por_tipo": {
       "cadena_panaderia": 2,
       "medialuneria_dulces": 2,
+      "cafeteria_cadena": 1,
       "panaderia_barrio": 4
     },
     "panaderias": 6,

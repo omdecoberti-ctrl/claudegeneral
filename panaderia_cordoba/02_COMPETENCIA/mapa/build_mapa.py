@@ -62,6 +62,25 @@ def norm(s):
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
+STOP = {"panaderia", "confiteria", "y", "la", "el", "los", "las", "de", "del", "pasteleria", "panificadora", "cafe", "sucursal"}
+
+
+def brand_key(s):
+    return " ".join(w for w in norm(s).split() if w not in STOP) or norm(s)
+
+
+def addr_key(s):
+    """calle principal + número (ej. 'obispo trejo 1029' → 'trejo 1029')."""
+    t = norm(s)
+    m = re.search(r"([a-z]+)\s+(\d{2,5})", t)
+    return f"{m.group(1)} {m.group(2)}" if m else t[:18]
+
+
+def clean_barrio(b):
+    b = re.sub(r"\(.*?\)", "", str(b or "")).split("/")[0].strip(" '\"")
+    return b
+
+
 def load():
     geo = json.load(open(os.path.join(DATOS, "geo_barrios.json"), encoding="utf-8"))
     locs = json.load(open(os.path.join(DATOS, "locales_competencia.json"), encoding="utf-8"))
@@ -111,10 +130,10 @@ def place(locs, bidx, geo):
     for r in locs:
         lat, lon, prec = r.get("lat"), r.get("lon"), "exacta"
         if lat is None or lon is None:
-            b = bidx.get(norm(r.get("barrio")))
+            b = bidx.get(norm(clean_barrio(r.get("barrio"))))
             if not b:
                 # coincidencia parcial de nombre de barrio
-                nb = norm(r.get("barrio"))
+                nb = norm(clean_barrio(r.get("barrio")))
                 b = next((v for k, v in bidx.items() if nb and (nb in k or k in nb)), None)
             if b:
                 lat, lon, prec, key = b["lat"], b["lon"], "barrio", norm(b["barrio"])
@@ -261,12 +280,17 @@ def main():
     geo, locs = load()
     bidx = barrio_index(geo)
     # deduplicar por marca + dirección
-    seen, uniq = set(), []
+    seen, uniq = {}, []
+    filled = lambda r: sum(1 for v in r.values() if v not in (None, "", "s/d", []))
     for r in locs:
-        k = (norm(r.get("marca")), norm(r.get("direccion")) or norm(r.get("barrio")))
-        if k in seen and k[1]:
+        a = addr_key(r.get("direccion"))
+        k = (brand_key(r.get("marca")), a if r.get("direccion") and a else "B:" + norm(clean_barrio(r.get("barrio"))) + ":" + str(len(uniq)))
+        if k in seen:
+            i = seen[k]
+            if filled(r) > filled(uniq[i]):
+                uniq[i] = {**uniq[i], **{kk: vv for kk, vv in r.items() if vv not in (None, "", "s/d", [])}}
             continue
-        seen.add(k)
+        seen[k] = len(uniq)
         uniq.append(r)
     placed = place(uniq, bidx, geo)
     zpolys = zone_polygons(geo)
