@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Mapa Competitivo Córdoba</title>
 <style>/*LEAFLET_CSS*/</style>
 <style>
@@ -63,9 +64,10 @@ tr.zr{cursor:pointer}tr.zr:hover td{background:var(--soft)}
 <script>
 const D=/*DATA*/;
 const map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([-31.415,-64.19],12);
-const osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
+const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap',referrerPolicy:'strict-origin-when-cross-origin'});
+const calle=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles © Esri — fuentes: Esri, HERE, Garmin, OpenStreetMap'});
 const gris=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Tiles © Esri'});
-osm.addTo(map);L.control.layers({'Plano OpenStreetMap':osm,'Plano gris claro (Esri)':gris},{}, {position:'topright'}).addTo(map);
+calle.addTo(map);L.control.layers({'Callejero (Esri)':calle,'Gris claro (Esri)':gris,'OpenStreetMap':osm},{}, {position:'topright'}).addTo(map);
 L.control.scale({imperial:false}).addTo(map);
 // Zonas
 const panByZ={};D.locales.forEach(l=>{if(['cadena_panaderia','panaderia_barrio','bakery_cafe'].includes(l.t))panByZ[l.z]=(panByZ[l.z]||0)+1});

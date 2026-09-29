@@ -545,7 +545,7 @@ def main():
     open(os.path.join(DIST, "style.css"), "w").write(CSS)
     json.dump(index, open(os.path.join(DIST, "search.json"), "w", encoding="utf-8"), ensure_ascii=False)
     open(os.path.join(DIST, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n")
-    open(os.path.join(DIST, "_headers"), "w").write("/*\n  X-Robots-Tag: noindex, nofollow\n  X-Frame-Options: DENY\n  Referrer-Policy: same-origin\n")
+    open(os.path.join(DIST, "_headers"), "w").write("/*\n  X-Robots-Tag: noindex, nofollow\n  X-Frame-Options: DENY\n  Referrer-Policy: strict-origin-when-cross-origin\n")
     print(f"OK: {len(pages)} páginas, {len(assets)} archivos, {len(CFG['socios'])} paneles → {DIST}")
 
 
