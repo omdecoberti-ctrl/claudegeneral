@@ -30,3 +30,8 @@
 - **Hecho:** 8 investigaciones en paralelo; mapa interactivo con capa OpenStreetMap en vivo; informes E-04, E-05 y E-06 (HTML + PDF); instrumentos de campo; sitio actualizado.
 - **Limitaciones:** el entorno bloquea Google Maps, OSM, Instagram y las páginas completas, y el cupo de 200 búsquedas de la sesión se agotó. Los datos son de fragmentos de buscador y el censo de barrio es parcial. Mitigación: capa OSM en vivo (T030), T031 y trabajo de campo.
 - **Pendiente:** PD029, PD031, T030, Q068.
+
+## S004 — 2026-09-29 — Competencia v2 y resumen general
+- **Pedido:** faltaban competidores; mejorar el análisis y resumir todo lo hecho y lo pendiente.
+- **Hecho:** 6 equipos con presupuesto de búsquedas controlado; censo de 381 locales; mapa y E-04 actualizados; E-07 con qué hicimos, aprendizajes, decisiones, tareas por persona y qué repasar.
+- **Aprendizaje (L):** con un cupo fijo de búsquedas, conviene asignar un presupuesto por equipo y priorizar directorios con dirección en el fragmento (lahelveticaonline, empresasdecordoba, waze).

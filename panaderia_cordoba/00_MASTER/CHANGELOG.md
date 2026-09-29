@@ -27,3 +27,13 @@
   - ~545 fuentes registradas.
   - Nuevas Q072–Q075, R026–R027 y T030–T033.
   - Hipótesis A001, A008, A013, A014 y A015 actualizadas.
+
+## 2026-09-29
+- Competencia v2:
+  - 6 relevamientos en paralelo; censo de 104 a 381 locales únicos (197 marcas).
+  - 16 cadenas locales con sucursales (El Vergel, Panicafé, Lapana, Medialunas 707, Franceschini, Pugliese, Catriel, La Platense, Santa Claus, más las conocidas).
+  - 120 panaderías de barrio y 62 competidores indirectos.
+  - Precios, redes y puntajes.
+  - 4 registros excluidos (fuera de Capital o cerrados).
+  - Mapa con plano Esri/OSM.
+  - E-04 v2 y E-07 (resumen y próximos pasos).

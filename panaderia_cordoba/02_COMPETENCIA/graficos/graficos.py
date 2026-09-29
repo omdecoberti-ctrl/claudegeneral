@@ -125,19 +125,27 @@ def main():
     posicionamiento("conveniencia_1a10", "Conveniencia (horario, cobertura, apps)", "posicionamiento_precio_conveniencia.svg",
                     "Mapa de posicionamiento: precio × conveniencia", None)
     bar_h([("Mostaza", 3600, "fecha s/d"), ("Café Martínez", 6900, "sep-2026 (nacional)"), ("Havanna", 7000, "~2025, no confirmado"),
+           ("YPF Full (CABA)", 7700, "ago-2026, no verificado"), ("Especialidad Córdoba", 8200, "estimado: espresso + 2 medialunas, oct-2025"),
            ("Starbucks", 9700, "may-2025")], "escalera_combo_desayuno.svg",
           "Escalera de precios: café + 2 medialunas (ARS)", fmt=lambda v: f"${v:,.0f}".replace(",", "."), color=C_PAN,
           band=(4500, 5500, "Hueco de precio tentativo"),
           note="Precios de fuentes y fechas distintas; comparar como orden de magnitud. Fuente: I015 (c4).")
-    bar_h([("Culpa de los Dos", 155000, "~6 locales"), ("La Celeste", 94000, "16 locales"), ("Cherry Season", 94000, "2–3 locales"),
-           ("Lo+Rico", 37000, "~30 locales"), ("Perdú", 35000, "5+ locales"), ("Superanfibio", 27000, "1–3 locales"),
-           ("Del Pilar", 20000, "45 locales"), ("Independencia", 5866, "12–15 locales")], "instagram_seguidores.svg",
+    bar_h([("Café Martínez (nacional)", 178000, "cuenta oficial del país"), ("Culpa de los Dos", 155000, "3–6 locales"), ("La Celeste", 94000, "16 locales"),
+           ("Cherry Season", 94000, "3 locales"), ("Lo+Rico", 37000, "~30 locales"), ("Perdú", 35000, "7 locales"), ("Superanfibio", 27000, "1–3 locales"),
+           ("Ethiopia Café", 23000, "1 local"), ("La Capke Go!", 21000, "1–2 locales"), ("Del Pilar", 20000, "35–45 locales"), ("Kråke Café", 11000, "1 local"),
+           ("Independencia", 5866, "12 locales"), ("Medialunas 707 (NC)", 4023, "7 locales")], "instagram_seguidores.svg",
           "Seguidores en Instagram por marca", fmt=lambda v: f"{v / 1000:.0f} mil" if v >= 10000 else f"{v:,}".replace(",", "."), color=C_CAFE,
           note="Fragmentos de buscador, sep-2026. La audiencia no crece con la cantidad de locales: crece con el producto de culto y la experiencia.")
     bar_h([("Belgrano 439", 4.4, "2.376 reseñas"), ("Ituzaingó", 4.3, "536"), ("M. T. de Alvear 227", 4.3, "514"), ("Obispo Oro 384", 4.2, "652"),
            ("Av. Colón 375", 3.6, "446"), ("Obispo Trejo 1029", 2.9, "1.292"), ("Buenos Aires 1064", 2.6, "486")], "la_celeste_resenas.svg",
           "La Celeste: puntaje por sucursal (Restaurantguru, 1–5)", fmt=lambda v: f"{v:.1f}".replace(".", ","), color=C_PAN,
           note="Misma marca, experiencia muy distinta según el local: el principal punto débil de la red.")
+    bar_h([("La Celeste", 15, "declarado 16"), ("Del Pilar", 13, "declarado 35–45 (incluye alrededores)"), ("El Vergel", 11, "s/d"),
+           ("Medialunas 707", 11, "s/d"), ("Andrea Franceschini", 11, "7 oficiales + dudosos"), ("Independencia", 9, "declarado 12–15"),
+           ("Armando", 9, "declarado 8 → meta 13"), ("Lo+Rico", 9, "declarado 22 panaderías"), ("Panicafé", 9, "s/d"), ("Lapana", 8, "s/d"),
+           ("Perdú", 7, "s/d"), ("Catriel", 4, "declarado 4"), ("Pugliese", 4, "s/d"), ("Culpa de los Dos", 3, "declarado 5–6")],
+          "cadenas_locales.svg", "Cadenas locales: sucursales relevadas con dirección en Córdoba Capital",
+          color=C_PAN, note="Relevamiento de escritorio al 29/09/2026 (I014 v2). 'Declarado' = lo que informa la marca o la prensa.")
     print("OK gráficos")
 
 

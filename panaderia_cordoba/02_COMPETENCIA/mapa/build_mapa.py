@@ -66,6 +66,8 @@ STOP = {"panaderia", "confiteria", "y", "la", "el", "los", "las", "de", "del", "
 
 
 def brand_key(s):
+    s = re.sub(r"[\(\[].*?[\)\]]", "", str(s or ""))
+    s = re.split(r"\s[–-]\s|®", s)[0]
     return " ".join(w for w in norm(s).split() if w not in STOP) or norm(s)
 
 

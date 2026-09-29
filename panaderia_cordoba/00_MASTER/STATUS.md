@@ -1,6 +1,6 @@
 # STATUS — Tablero ejecutivo
 
-> Última actualización: 2026-09-28 · Actualizado por: IA (PM) · Próxima revisión semanal: ≈ 2026-10-05
+> Última actualización: 2026-09-29 · Actualizado por: IA (PM) · Próxima revisión semanal: ≈ 2026-10-05
 
 | Ítem | Estado |
 |---|---|
@@ -19,10 +19,11 @@
 | E-01 | Roadmap de apertura marzo 2027 (HTML + PDF) | `15_APERTURA/ROADMAP_APERTURA_MARZO_2027.html` / `.pdf` |
 | E-02 | Primeros hallazgos (I001, I002, I010, I013, I018) — HTML + PDF | `18_INVESTIGACIONES/E02_RESUMEN_HALLAZGOS_G1_G3.*` |
 | E-03 | Resumen ejecutivo del proyecto para socios, con códigos — HTML + PDF | `00_MASTER/E03_RESUMEN_PROYECTO_SOCIOS.*` |
-| E-04 | **Informe de competencia de Córdoba** (mapas, zonas, La Celeste, redes, precios, posicionamiento, espacios en blanco) | `02_COMPETENCIA/INFORME_COMPETENCIA_CORDOBA.*` |
+| E-04 v2 | **Informe de competencia de Córdoba**: 381 locales, 197 marcas, 16 cadenas locales, mapas, zonas, redes, precios, posicionamiento | `02_COMPETENCIA/INFORME_COMPETENCIA_CORDOBA.*` |
 | — | **Mapa competitivo interactivo** (plano real, filtros, Google Maps, OpenStreetMap en vivo, exportación) | `02_COMPETENCIA/MAPA_COMPETITIVO_CORDOBA.html` |
 | E-05 | Informe de mercado (tamaño, demografía, consumo, tendencias, referentes, macro y costos) | `01_MERCADO/INFORME_MERCADO.*` |
 | E-06 | Informe de cliente (segmentos, ocasiones, jobs-to-be-done, perfiles) + instrumentos de campo | `03_CLIENTE/INFORME_CLIENTE.*` |
+| E-07 | **Resumen del proyecto: qué hicimos, qué aprendimos y qué sigue** | `00_MASTER/E07_RESUMEN_Y_PROXIMOS_PASOS.*` |
 | — | Memo de decisión PD029–PD031 | `00_MASTER/MEMOS/PD029_fast_track_marzo_2027.md` |
 
 ## Investigaciones

@@ -550,3 +550,162 @@
 | F722 | Censo 2022, Córdoba —  (ciudad: 1.498.060 hab.; sin desagregado por barrio en los resultad | https://censo.gob.ar/index.php/datos_definitivos_cordoba/ | 2026-09-28 | ver I027a | B/C (fragmento de buscador) | I027a |
 | F723 | latitude.to, Córdoba —  (-31.4135, -64.1811) | https://latitude.to/map/ar/argentina/cities/cordoba | 2026-09-28 | ver I027a | B/C (fragmento de buscador) | I027a |
 | F724 | Turismo Córdoba, Cerro de las Rosas | https://turismo.cordoba.gob.ar/barrio-cerro-de-las-rosas/ | 2026-09-28 | ver I027a | B/C (fragmento de buscador) | I027a |
+| F1100 | https://www.argentino.com.ar/panaderia-del-pilar-F170EC20519 | https://www.argentino.com.ar/panaderia-del-pilar-F170EC20519D1 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1101 | https://www.paginasamarillas.com.ar/fichas/panaderia-del-pil | https://www.paginasamarillas.com.ar/fichas/panaderia-del-pilar_16233826 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1102 | https://www.yelp.com.ar/biz/panaderia-del-pilar-c%C3%B3rdoba | https://www.yelp.com.ar/biz/panaderia-del-pilar-c%C3%B3rdoba-6 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1103 | https://ar.near-place.com/panaderia-del-pilar-9-de-julio-268 | https://ar.near-place.com/panaderia-del-pilar-9-de-julio-2682-cordoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1104 | https://ar.near-place.com/panaderia-del-pilar-x5000iif-boule | https://ar.near-place.com/panaderia-del-pilar-x5000iif-boulevard-chacabuco-529-cordoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1105 | https://ar.near-place.com/panaderia-del-pilar-avenida-san-ma | https://ar.near-place.com/panaderia-del-pilar-avenida-san-martin-4246-cordoba/en | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1106 | https://www.rappi.com.ar/restaurantes/127391-panaderia-del-p | https://www.rappi.com.ar/restaurantes/127391-panaderia-del-pilar | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1107 | https://restaurantguru.com/Panaderia-del-Pilar-Suc-Fragueiro | https://restaurantguru.com/Panaderia-del-Pilar-Suc-Fragueiro-y-Av-Colon-Cordoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1108 | https://restaurantguru.com/Del-Pilar-Cordoba-25 | https://restaurantguru.com/Del-Pilar-Cordoba-25 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1109 | https://es.restaurantguru.com/Del-Pilar-Unquillo | https://es.restaurantguru.com/Del-Pilar-Unquillo | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1110 | (35 locales) | https://infonegocios.info/tarjetero/empresa/del-pilar | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1111 | (sede y planta) | https://panaderiadelpilar.ar/contacto/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1112 | https://ar.latinoplaces.com/cordoba-province/lorico-panaderi | https://ar.latinoplaces.com/cordoba-province/lorico-panaderias-484819 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1113 | https://www.rappi.com.ar/restaurantes/131746-lo-mas-rico | https://www.rappi.com.ar/restaurantes/131746-lo-mas-rico | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1114 | https://www.rappi.com.ar/restaurantes/132631-lo-mas-rico | https://www.rappi.com.ar/restaurantes/132631-lo-mas-rico | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1115 | https://www.rappi.com.ar/restaurantes/249612-lo-mas-rico | https://www.rappi.com.ar/restaurantes/249612-lo-mas-rico | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1116 | https://www.rappi.com.ar/restaurantes/209138-lo-mas-rico-emp | https://www.rappi.com.ar/restaurantes/209138-lo-mas-rico-empanadas | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1117 | https://www.cylex.com.ar/cordoba/lo-rico-%E2%80%93-panader%C | https://www.cylex.com.ar/cordoba/lo-rico-%E2%80%93-panader%C3%ADas-11440294.html | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1118 | https://panaderiasanfrancisco.com.ar/panaderia/lo-rico-panad | https://panaderiasanfrancisco.com.ar/panaderia/lo-rico-panaderias-2/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1119 | https://lahelveticaonline.com.ar/panaderia/lorico-panaderias | https://lahelveticaonline.com.ar/panaderia/lorico-panaderias-9/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1120 | https://www.nuevaeranet.com.ar/panaderia/cordoba/lo-rico-%E2 | https://www.nuevaeranet.com.ar/panaderia/cordoba/lo-rico-%E2%80%93-panaderias-cordoba_194862.php | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1121 | (22+8) | https://www.puntal.com.ar/gastronomia/lorico-group-y-su-crecimiento-empresarial-cordoba-n209816 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1122 | https://www.yelp.com.ar/biz/panader%C3%ADa-independencia-c%C | https://www.yelp.com.ar/biz/panader%C3%ADa-independencia-c%C3%B3rdoba-3 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1123 | https://2pos.xyz/1222/17502 | https://2pos.xyz/1222/17502 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1124 | https://2pos.xyz/1222/4258 | https://2pos.xyz/1222/4258 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1125 | https://centrofranchising.com/panaderia-independencia-suma-o | https://centrofranchising.com/panaderia-independencia-suma-otra-franquicia-en-nueva-cordoba/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1126 | https://infonegocios.info/y-ademas/dame-una-docena-panaderia | https://infonegocios.info/y-ademas/dame-una-docena-panaderia-independencia-en-av-o-higgins-y-ya-son-12 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1127 | https://www.rappi.com.ar/restaurantes/188662-independencia-v | https://www.rappi.com.ar/restaurantes/188662-independencia-villa-belgrano | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1128 | https://lahelveticaonline.com.ar/panaderia/independencia-car | https://lahelveticaonline.com.ar/panaderia/independencia-carlos-f-gauss/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1129 | https://www.rappi.com.ar/restaurantes/230093-armando-medialu | https://www.rappi.com.ar/restaurantes/230093-armando-medialunas | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1130 | https://www.rappi.com.ar/restaurantes/220952-armando-medialu | https://www.rappi.com.ar/restaurantes/220952-armando-medialunas | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1131 | https://www.rappi.com.ar/restaurantes/220951-armando-medialu | https://www.rappi.com.ar/restaurantes/220951-armando-medialunas | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1132 | https://www.rappi.com.ar/restaurantes/220101-armando-medialu | https://www.rappi.com.ar/restaurantes/220101-armando-medialunas | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1133 | https://empresasdecordoba.com/pagina/Armando-Medialunas/ | https://empresasdecordoba.com/pagina/Armando-Medialunas/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1134 | https://www.paginasamarillas.com.ar/fichas/armando-medialuna | https://www.paginasamarillas.com.ar/fichas/armando-medialunas_16865834 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1135 | https://infofranquicias.ar/aperturas/ocho-y-contando-armando | https://infofranquicias.ar/aperturas/ocho-y-contando-armando-medialunas-sin-frenos-se-expande-endulzando-a-cordoba-y-apuntan-a-llegar-a-13-2 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1136 | (Perdú: 4 direcciones) | https://www.tiktok.com/@tegustoparis/video/7236873641726643462 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1137 | https://www.rappi.com.ar/restaurantes/216897-perdu-panaderia | https://www.rappi.com.ar/restaurantes/216897-perdu-panaderias | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1138 | https://www.rappi.com.ar/restaurantes/244639-perdu-panaderia | https://www.rappi.com.ar/restaurantes/244639-perdu-panaderias | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1139 | https://www.rappi.com.ar/restaurantes/251823-perdu-panaderia | https://www.rappi.com.ar/restaurantes/251823-perdu-panaderias | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1140 | https://lahelveticaonline.com.ar/panaderia/perdu-2/ | https://lahelveticaonline.com.ar/panaderia/perdu-2/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1141 | https://www.facebook.com/perdupanaderiasymas/posts/reapertur | https://www.facebook.com/perdupanaderiasymas/posts/reapertura-de-la-sucursal-de-duarte-quir%C3%B3s-luego-de-unos-d%C3%ADas-de-mucho-trabajo-y/612393231535652/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1142 | http://panicafe.com.ar/index.php | http://panicafe.com.ar/index.php | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1143 | https://www.findglocal.com/AR/C%C3%B3rdoba/530264397181562/P | https://www.findglocal.com/AR/C%C3%B3rdoba/530264397181562/Panicaf%C3%A9 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1144 | https://comercioyjusticia.info/negocios/panicafe-avanza-con- | https://comercioyjusticia.info/negocios/panicafe-avanza-con-su-plan-de-expansion-e-inaugura-tres-franquicias-en-cordoba/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1145 | https://www.rappi.com.ar/restaurantes/208787-el-vergel | https://www.rappi.com.ar/restaurantes/208787-el-vergel | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1146 | https://www.rappi.com.ar/restaurantes/225738-el-vergel | https://www.rappi.com.ar/restaurantes/225738-el-vergel | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1147 | https://www.argentino.com.ar/panaderia-y-cafeteria-el-vergel | https://www.argentino.com.ar/panaderia-y-cafeteria-el-vergel-F120AC80E12D144 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1148 | https://panaderiasanfrancisco.com.ar/panaderia/el-vergel-n-r | https://panaderiasanfrancisco.com.ar/panaderia/el-vergel-n-ri-r-n-l-boulevard/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1149 | https://ar.todosnegocios.com/bakery-el-vergel-0351-476-3097 | https://ar.todosnegocios.com/bakery-el-vergel-0351-476-3097 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1150 | https://catrielpanificacion.com.ar/Sucursales | https://catrielpanificacion.com.ar/Sucursales | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1151 | https://www.yelp.com/biz/panader%C3%ADa-catriel-c%C3%B3rdoba | https://www.yelp.com/biz/panader%C3%ADa-catriel-c%C3%B3rdoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1152 | https://www.cylex.com.ar/cordoba/catriel-pizzeria-panaderia- | https://www.cylex.com.ar/cordoba/catriel-pizzeria-panaderia-11467578.html | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1153 | https://circuitogastronomico.com/no-te-confundas-estos-son-l | https://circuitogastronomico.com/no-te-confundas-estos-son-los-locales-oficiales-de-andrea-franceschini/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1154 | https://unilocal.net/argentina/cordoba/andrea-franceschini-6 | https://unilocal.net/argentina/cordoba/andrea-franceschini-63999 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1155 | https://buscasucursales.com.ar/andrea-franceschini-cordoba-c | https://buscasucursales.com.ar/andrea-franceschini-cordoba-capital/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1156 | https://circuitogastronomico.com/culpa-de-los-dos-el-fenomen | https://circuitogastronomico.com/culpa-de-los-dos-el-fenomeno-dulce-que-no-para-de-crecer/ | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1157 | https://www.perfil.com/noticias/cordoba/del-antojo-al-fenome | https://www.perfil.com/noticias/cordoba/del-antojo-al-fenomeno-culpa-de-los-dos-y-el-arte-de-emprender-sin-perder-el-sabor.phtml | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1158 | https://www.cadena3.com/noticia/la-argentina-posible/de-prep | https://www.cadena3.com/noticia/la-argentina-posible/de-preparar-alfajores-en-la-cocina-de-un-departamento-a-cinco-locales-en-cordoba_429657 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1159 | https://www.rappi.com.ar/restaurantes/190676-medialunas-707- | https://www.rappi.com.ar/restaurantes/190676-medialunas-707-cordoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1160 | https://www.rappi.com.ar/restaurantes/236102-707-medialunas- | https://www.rappi.com.ar/restaurantes/236102-707-medialunas-plaza-espana | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1161 | https://www.yelp.com.ar/biz/medialunas-707-c%C3%B3rdoba-3 | https://www.yelp.com.ar/biz/medialunas-707-c%C3%B3rdoba-3 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1162 | https://restaurantguru.com/Nuevo-707-Cordoba | https://restaurantguru.com/Nuevo-707-Cordoba | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1163 | https://unilocal.es/argentina/cordoba/medialunas-707 | https://unilocal.es/argentina/cordoba/medialunas-707 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1164 | https://www.yelp.com/biz/medialunas-707-c%C3%B3rdoba-4 | https://www.yelp.com/biz/medialunas-707-c%C3%B3rdoba-4 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1165 | https://www.tripadvisor.es/Restaurant_Review-g312768-d100412 | https://www.tripadvisor.es/Restaurant_Review-g312768-d10041299-Reviews-or45-Lapana-Cordoba_Province_of_Cordoba_Central_Argentina.html | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1166 | https://www.argentino.com.ar/la-pana-F120DC60E1FD543 | https://www.argentino.com.ar/la-pana-F120DC60E1FD543 | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1167 | https://infonegocios.info/plus/la-reina-empanadas-abrio-su-l | https://infonegocios.info/plus/la-reina-empanadas-abrio-su-local-11-en-docta-y-acelera-su-plan-de-expansion-lo-que-viene-para-el-ano | 2026-09-29 | ver I014d | B/C (fragmento de buscador) | I014d |
+| F1200 | F1202, F1232: panaderiasanfrancisco.com.ar (fichas con barrio y rating propio en escala /1 | s/d | 2026-09-29 | ver I014e | B/C (fragmento de buscador) | I014e |
+| F1203 | , F1231, F1245: argentino.com.ar | s/d | 2026-09-29 | ver I014e | B/C (fragmento de buscador) | I014e |
+| F1204 | , F1212, F1225: restaurantguru.com (los ratings son de RG, no de Google, salvo Bakeria, do | s/d | 2026-09-29 | ver I014e | B/C (fragmento de buscador) | I014e |
+| F1205 | F1246 (resto): ar.near-place.com. Es la fuente principal: el título incluye nombre, direcc | s/d | 2026-09-29 | ver I014e | B/C (fragmento de buscador) | I014e |
+| F1233 | panaderiasintacc.aarg.ar | s/d | 2026-09-29 | ver I014e | B/C (fragmento de buscador) | I014e |
+| F1400 | https://www.sucursales24.com.ar/cordoba-capital/mostaza/ | https://www.sucursales24.com.ar/cordoba-capital/mostaza/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1401 | https://www.sucursales24.com.ar/cordoba-capital/mostaza/9-de | https://www.sucursales24.com.ar/cordoba-capital/mostaza/9-de-julio-28-4/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1402 | https://www.sucursales24.com.ar/cordoba-capital/mostaza/rinc | https://www.sucursales24.com.ar/cordoba-capital/mostaza/rincn-1100-1/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1403 | https://infonegocios.info/plus/mostaza-copa-el-corazon-de-nu | https://infonegocios.info/plus/mostaza-copa-el-corazon-de-nueva-cordoba-con-un-local-de-350-m2-frente-a-plaza-espana-y-compite-con-mcdonald-s-con-su-open-24 | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1404 | https://infonegocios.info/y-ademas/con-2-nuevos-locales-en-c | https://infonegocios.info/y-ademas/con-2-nuevos-locales-en-cordoba-van-11-en-la-provincia-mostaza-ya-supera-las-216-sucursales-en-argentina | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1405 | https://www.sucursales24.com.ar/cordoba-capital/mcdonalds/ | https://www.sucursales24.com.ar/cordoba-capital/mcdonalds/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1406 | https://www.mcdonalds.com.ar/restaurantes/cordoba | https://www.mcdonalds.com.ar/restaurantes/cordoba | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1407 | https://m.yelp.com/biz/mcdonalds-c%C3%B3rdoba-3 | https://m.yelp.com/biz/mcdonalds-c%C3%B3rdoba-3 | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1408 | https://m.yelp.com/biz/mcdonalds-c%C3%B3rdoba-9 | https://m.yelp.com/biz/mcdonalds-c%C3%B3rdoba-9 | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1409 | https://mapdoor.com/ar/cb/c%C3%B3rdoba/mcdonalds/av-nu%C3%B1 | https://mapdoor.com/ar/cb/c%C3%B3rdoba/mcdonalds/av-nu%C3%B1ez-cerro | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1410 | https://www.mcdonalds.com.ar/restaurantes/cordoba/plaza-espa | https://www.mcdonalds.com.ar/restaurantes/cordoba/plaza-espana-cordoba-pec | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1411 | https://www.mcdonalds.com.ar/restaurantes/cordoba/25-de-mayo | https://www.mcdonalds.com.ar/restaurantes/cordoba/25-de-mayo-52-cordoba-p9c | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1412 | https://www.mcdonalds.com.ar/restaurantes/cordoba/ruta-20-rv | https://www.mcdonalds.com.ar/restaurantes/cordoba/ruta-20-rvc | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1413 | https://www.mcdonalds.com.ar/restaurantes/cordoba/av-sabatti | https://www.mcdonalds.com.ar/restaurantes/cordoba/av-sabattini-cordoba-lsc | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1414 | https://www.mcdonalds.com.ar/restaurantes/cordoba/general-pa | https://www.mcdonalds.com.ar/restaurantes/cordoba/general-paz-cordoba-gpc | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1415 | https://www.sucursales24.com.ar/cordoba-capital/mcdonalds/nu | https://www.sucursales24.com.ar/cordoba-capital/mcdonalds/nuevo-centro-shopping-10/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1416 | https://jpcoil.com.ar/ | https://jpcoil.com.ar/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1417 | https://ypfelcruce.com.ar/ypf/ypf-326/ | https://ypfelcruce.com.ar/ypf/ypf-326/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1418 | https://ypfelcruce.com/ypf/ypf-estacion-de-servicio-3/ | https://ypfelcruce.com/ypf/ypf-estacion-de-servicio-3/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1419 | https://www.argentino.com.ar/cordoba-capital/estaciones+de+s | https://www.argentino.com.ar/cordoba-capital/estaciones+de+servicio+shell | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1420 | https://find.shell.com/ar/fuel/locations/cordoba/en_US | https://find.shell.com/ar/fuel/locations/cordoba/en_US | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1421 | https://www.waze.com/es-419/live-map/directions/axion-energy | https://www.waze.com/es-419/live-map/directions/axion-energy-av.-bulnes-1108-cordoba?to=place.w.193856974.1938766348.273266 | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1422 | https://www.waze.com/live-map/directions/ar/cordoba/cordoba/ | https://www.waze.com/live-map/directions/ar/cordoba/cordoba/axion-energy?to=place.ChIJ1aJ7WEyiMpQRoSe06fxaXNc | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1423 | https://www.elestacionero.com/general/nueva-tienda-super-7-e | https://www.elestacionero.com/general/nueva-tienda-super-7-en-la-estacion-de-servicio-puma-energy-servisud-s-a-en-cordoba-capital/2023/08/01/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1424 | https://www.sucursales24.com.ar/cordoba-capital/supermercado | https://www.sucursales24.com.ar/cordoba-capital/supermercados/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1425 | https://www.sucursales24.com.ar/cordoba-capital/carrefour-ex | https://www.sucursales24.com.ar/cordoba-capital/carrefour-express/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1426 | https://www.sucursales24.com.ar/cordoba-capital/supermercado | https://www.sucursales24.com.ar/cordoba-capital/supermercado-disco/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1427 | https://www.sucursales24.com.ar/cordoba-capital/hiper-libert | https://www.sucursales24.com.ar/cordoba-capital/hiper-libertad/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1428 | https://viapais.com.ar/cordoba/hiper-libertad-cordoba-letra- | https://viapais.com.ar/cordoba/hiper-libertad-cordoba-letra-chica-acuerdo-anonima-pondria-vilo-100-trabajadores_0_NwfoG9bUPv.html | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1429 | https://www.sucursales24.com.ar/cordoba-capital/cordiez/ | https://www.sucursales24.com.ar/cordoba-capital/cordiez/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1430 | https://www.tiendeo.com.ar/Tiendas/cordoba/super-mami | https://www.tiendeo.com.ar/Tiendas/cordoba/super-mami | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1431 | https://www.sucursales24.com.ar/cordoba-capital/vea/ | https://www.sucursales24.com.ar/cordoba-capital/vea/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1432 | https://www.sucursales24.com.ar/cordoba-capital/walmart/ | https://www.sucursales24.com.ar/cordoba-capital/walmart/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1433 | https://www.tiendeo.com.ar/Tiendas/cordoba/changomas | https://www.tiendeo.com.ar/Tiendas/cordoba/changomas | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1434 | https://www.sucursales24.com.ar/cordoba-capital/makro/ | https://www.sucursales24.com.ar/cordoba-capital/makro/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1435 | https://directoriomayorista.com/cordoba/maxiconsumo-cordoba- | https://directoriomayorista.com/cordoba/maxiconsumo-cordoba-mayorista/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1436 | https://www.facebook.com/bellavistaypf/videos/combos-para-co | https://www.facebook.com/bellavistaypf/videos/combos-para-compartir-bella-vista-ypf-sl-ar/483557712909359/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1437 | https://www.iprofesional.com/finanzas/461449-las-acciones-de | https://www.iprofesional.com/finanzas/461449-las-acciones-de-ypf-ahora-son-mas-baratas-y-se-podran-comprar-al-precio-de-un-cafe | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1438 | https://surtidoreslatam.com/cuanto-cuesta-cafe-estacion-serv | https://surtidoreslatam.com/cuanto-cuesta-cafe-estacion-servicio-surtidores-latam-comparativa/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1439 | https://surtidores.com.ar/grandes-cambios-en-las-ypf-full-un | https://surtidores.com.ar/grandes-cambios-en-las-ypf-full-una-nueva-marca-llega-a-partir-de-2026/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1440 | https://www.sucursales24.com.ar/cordoba-capital/vea/av-24-de | https://www.sucursales24.com.ar/cordoba-capital/vea/av-24-de-septiembre-1330-3/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1441 | https://www.sucursales24.com.ar/cordoba-capital/walmart/av-f | https://www.sucursales24.com.ar/cordoba-capital/walmart/av-fuerza-aerea-argentina-4372-2/ | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1442 | https://infonegocios.info/y-ademas/mostaza-tiene-planes-de-s | https://infonegocios.info/y-ademas/mostaza-tiene-planes-de-seguir-consolidando-su-presencia-en-cordoba-ya-tiene-9-locales-y-genero-mas-de-240-empleos | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1443 | https://www.pumaenergyarg.com.ar/encontra_tu_estacion | https://www.pumaenergyarg.com.ar/encontra_tu_estacion | 2026-09-29 | ver I014f | B/C (fragmento de buscador) | I014f |
+| F1500 | lahelveticaonline.com.ar (fichas /panaderia/… "Panadería en Capital, Córdoba") | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1501 | argentino.com.ar (fichas "teléfono - Dirección, Córdoba Capital" y listados /cordoba-capit | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1502 | restaurantguru.com (fichas por local) | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1503 | waze.com/live-map (direcciones de sucursales) | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1504 | mapcarta.com | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1505 | empresasdecordoba.com (/pagina/…) | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1506 | yelp / wanderlog (listas "best bakeries") | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1507 | paginasamarillas.com.ar | s/d | 2026-09-29 | ver I014g | B/C (fragmento de buscador) | I014g |
+| F1600 | Rappi, Panadería Del Pilar Centro:  (consulta 2026-09-29) | https://www.rappi.com.ar/restaurantes/127391-panaderia-del-pilar | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1601 | PriceListo, Panadería Del Pilar:  (consulta 2026-09-29; fecha pub. s/d) | https://ar.pricelisto.com/menu-prices/panaderia-del-pilar-ar | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1602 | PedidosYa, Lo + Rico Obispo Trejo:  ; Rappi, Lo más Rico Centro:  (consulta 2026-09-29) | https://www.pedidosya.com.ar/restaurantes/cordoba/lo-rico-panaderias-obispo-trejo-menu | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1603 | Panaderías San Francisco, ficha de Lo+Rico:  (consulta 2026-09-29) | https://panaderiasanfrancisco.com.ar/panaderia/lo-rico-panaderias-10/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1604 | TikTok @cordobagourmet, Perdú:  (fecha derivada del ID del video: 2023-05-07) | https://www.tiktok.com/@cordobagourmet/video/7230577080365321477 | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1605 | Restaurant Guru, Panadería Perdu:  ;  (consulta 2026-09-29) | https://restaurantguru.com/Panaderia-Perdu-Cordoba | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1606 | Vía País, alfajores Culpa de los Dos, San Valentín 2025:  (feb-2025) | https://viapais.com.ar/cordoba/cordoba-cuanto-cuesta-la-caja-de-alfajores-de-culpa-de-los-dos-para-san-valentin-2025/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1607 | Circuito Gastronómico, Culpa de los Dos:  (fecha s/d) | https://circuitogastronomico.com/culpa-de-los-dos-el-fenomeno-dulce-que-no-para-de-crecer/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1608 | PedidosYa, Armando Medialunas:  (consulta 2026-09-29) | https://www.pedidosya.com.ar/restaurantes/cordoba/armando-medialunas-menu | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1609 | PriceListo, Bonafide:  (consulta 2026-09-29) | https://ar.pricelisto.com/menu-prices/bonafide-ar | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1610 | Bonafide Córdoba, carta:  (consulta 2026-09-29) | https://bonafidecordoba.com/carta.php | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1611 | PriceListo, Mostaza:  (consulta 2026-09-29) | https://ar.pricelisto.com/menu-prices/mostaza-ar | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1612 | Búsqueda "YPF Full combo café con 2 medialunas precio 2026". El buscador cita ~$7.700 en C | https://www.rappi.com.ar/restaurantes/128583-ypf-full | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1613 | Vía País, "Una de las mejores cafeterías del mundo está en Córdoba: cuánto sale una merien | https://viapais.com.ar/cordoba/una-de-las-mejores-cafeterias-del-mundo-esta-en-cordoba-cuanto-sale-una-merienda/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1614 | El Doce, facturas del día anterior en Córdoba:  (2025-04-04) | https://eldoce.tv/actualidad/2025/04/04/una-opcion-en-la-crisis-cuanto-salen-las-facturas-y-criollos-del-dia-anterior-en-cordoba/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1615 | Findglocal, La Celeste Belgrano 439:  ; Yelp | https://www.findglocal.com/AR/C%C3%B3rdoba/147314922022143/La-Celeste-Panaderia | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1616 | Rappi, La Celeste (varias sucursales):  ; | https://www.rappi.com.ar/restaurantes/112706-la-celeste | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1617 | Rappi, Independencia Centro | https://www.rappi.com.ar/restaurantes/240592-independencia | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1618 | Rappi, Cherry Season:  ; Queresto | https://www.rappi.com.ar/restaurantes/242651-cherry-season | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1619 | Turismo Córdoba, Superanfibio:  ; Cadena 3 | https://turismo.cordoba.gob.ar/superanfibio/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1620 | Havanna app, Villa María | https://app.havanna.com.ar/order/9588/cordoba-villa-maria/multiple-orders | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1621 | Instagram, Café Martínez oficial | https://www.instagram.com/cafemartinezoficial/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1622 | Instagram, Havanna Villa María:  ; Havanna Europa | https://www.instagram.com/havannavillamaria/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1623 | Instagram, Armando Medialunas:  ; | https://www.instagram.com/armandomedialunas.cba/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1624 | Instagram, Medialunas 707:  ;  ; | https://www.instagram.com/medialunas707nuevacba/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1625 | Instagram, Lapana | https://www.instagram.com/accounts/login/?next=/lapana_oficial/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1626 | Instagram, ROCCA (no es Frocca) | https://www.instagram.com/roccapanaderia/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1627 | Instagram, Kråke:  ; Restaurant Guru | https://www.instagram.com/krakecafe/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1628 | Instagram, Ethiopia:  ; La Capke Go! | https://www.instagram.com/ethiopiacafe/?hl=es | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1629 | Restaurant Guru, Independencia Urca:  ; Vélez Sársfield | https://restaurantguru.com/Panaderia-Independencia-Cordoba-5 | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1630 | Restaurant Guru, Del Pilar Av. Colón | https://restaurantguru.com/Panaderia-del-Pilar-Suc-Fragueiro-y-Av-Colon-Cordoba | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1631 | Tripadvisor, Cherry Season Nueva Córdoba | https://www.tripadvisor.com/Restaurant_Review-g312768-d33068378-Reviews-Cherry_Season_Nueva_Cordoba-Cordoba_Province_of_Cordoba_Central_Argentina.html | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1632 | Aire de Santa Fe, La Ideal, junio 2025 | https://www.airedesantafe.com.ar/economia/cuanto-cuesta-un-cafe-leche-2-medialunas-la-ideal-junio-2025-n619296 | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |
+| F1633 | Instagram, post "café con leche + 2 medialunas por $7.000" | https://www.instagram.com/p/DQy6hNwDe60/ | 2026-09-29 | ver I015b | B/C (fragmento de buscador) | I015b |

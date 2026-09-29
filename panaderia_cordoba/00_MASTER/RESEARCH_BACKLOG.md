@@ -20,7 +20,7 @@
 | I011 | Comparación de modelos productivos | In situ vs. parcialmente centralizado vs. bake-off vs. híbrido: CAPEX, OPEX, m², personal, calidad, riesgo, escalabilidad | Modelo + Desk | G4 | P1 | Q011, Q013, A005 | BACKLOG |
 | I012 | Benchmark de cadenas bake-off / centralizadas | ¿Cómo operan cadenas con producción central (AR e internacional)? | Desk | G4 | P2 | A005, A006, A012 | BACKLOG |
 | I013 | Censo y mapa competitivo de Córdoba Capital | ¿Quiénes compiten por las mismas ocasiones y dónde están? | Desk + Campo | G3 | P1 | Q010 | FINALIZADA v2 (+ mapa) |
-| I014 | Fichas de competidores principales | Propuesta, surtido, precios, horarios, delivery, redes, reseñas, modelo operativo aparente | Desk + Campo | G3 | P1 | Q010 | PARCIAL v1 (La Celeste completa; faltan direcciones de Del Pilar, Lo+Rico, Independencia) |
+| I014 | Fichas de competidores principales | Propuesta, surtido, precios, horarios, delivery, redes, reseñas, modelo operativo aparente | Desk + Campo | G3 | P1 | Q010 | v2 (sucursales de 16 cadenas; falta verificar vigencia) |
 | I015 | Relevamiento de precios | Canasta comparable de productos y precios por formato/zona | Campo + Desk | G3/G6 | P1 | A001, Q025 | PARCIAL v1 (escalera de combos; falta relevar góndola) |
 | I016 | Análisis de reseñas (Google, redes, apps) | ¿Qué elogia y qué critica el cliente? | Desk | G3 | P1 | Q019, A006 | PARCIAL v1 (Restaurantguru de La Celeste) |
 | I017 | Mystery shopping | Experiencia real: espera, atención, calidad, ticket | Campo | G3 | P2 | Q019 | PENDIENTE — protocolo listo |

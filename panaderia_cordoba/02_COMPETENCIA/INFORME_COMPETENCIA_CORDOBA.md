@@ -2,18 +2,26 @@
 
 | Campo | Valor |
 |---|---|
-| Código | E-04 · Consolida I013, I014 (a, b, c), I015, I016 |
-| Fecha | 28/09/2026 |
+| Código | E-04 v2 · Consolida I013, I014 (a–g), I015 (a, b), I016 |
+| Fecha | 28/09/2026 · **v2: 29/09/2026** |
 | Gate | G3 — Competencia |
-| Estado | **v1 — relevamiento de escritorio.** Falta trabajo de campo (precios en góndola, cliente incógnito) y completar el censo de barrio con la capa en vivo de OpenStreetMap |
+| Estado | **v2: relevamiento de escritorio ampliado** (381 locales). Falta trabajo de campo (precios en góndola, cliente incógnito) y cruzarlo con la capa en vivo de OpenStreetMap |
 | Mapa interactivo | [`MAPA_COMPETITIVO_CORDOBA.html`](MAPA_COMPETITIVO_CORDOBA.html): plano real de la ciudad, capas, filtros, Google Maps y panaderías de OpenStreetMap en vivo |
-| Datos | `datos/locales_competencia.csv` (104 registros, 92 ubicados en el mapa) · `datos/posicionamiento_marcas.json` · `datos/geo_barrios.json` |
+| Datos | `datos/locales_competencia.json` (**381 locales únicos, 197 marcas**) · `datos/locales_competencia.csv` (328 ubicados en el mapa) · `datos/precios_relevados.json` · `datos/locales_excluidos.json` |
 
 > **Cómo leer este informe.**
 > - Todo dato lleva etiqueta: [HECHO] con fuente, [ESTIMACIÓN], [INTERPRETACIÓN] o [RECOMENDACIÓN].
 > - Las fuentes están en los anexos (códigos F100–F699) y en `00_MASTER/SOURCES.md`.
 > - El relevamiento se hizo desde el buscador web: el entorno no permite abrir páginas completas ni Google Maps, y el cupo de búsquedas de la sesión se agotó.
 > - Por eso **no es un censo completo**. Las cadenas grandes y el segmento moderno están bien cubiertos; las panaderías de barrio de la periferia, subrepresentadas. Para completarlo, el mapa trae una **capa en vivo de OpenStreetMap** que corre en el navegador de quien lo abre (ver §11).
+
+> **Qué cambió en la v2 (29/09):** el censo pasó de **104 a 381 locales únicos** (4 excluidos por estar fuera de Córdoba Capital o cerrados; 26 duplicados fusionados):
+> - **Cadenas:** sucursales de Del Pilar, Lo+Rico, Independencia, Armando y Perdú, y **9 cadenas nuevas identificadas**: El Vergel, Panicafé, Lapana, Medialunas 707, Andrea Franceschini, Catriel, Pugliese, La Platense y Santa Claus.
+> - **Panaderías de barrio:** de 28 a 120.
+> - **Indirectos:** 34 supermercados, 19 locales de comida rápida y 9 estaciones de servicio con tienda.
+> - **Nuevos datos:** precios, redes y puntajes.
+
+<!--SVG:02_COMPETENCIA/graficos/cadenas_locales.svg-->
 
 ---
 
@@ -30,10 +38,11 @@
    - Casi no tiene lugar para sentarse.
    - No tiene locales en el oeste, el este, el norte cercano, el noroeste ni la periferia.
 3. **Del Pilar ya opera en Córdoba el modelo que evaluamos.** [HECHO]
-   - 45 locales (8 propios y 37 franquicias).
+   - 35 a 45 locales según la fuente (8 propios, el resto franquicias; incluye alrededores). Relevamos **13 con dirección en Córdoba Capital**.
+   - Precios de piso masivo: medialuna de manteca $290 y 12 medialunas + criollo $5.600 (Rappi, sin fecha).
    - Planta de ultracongelado propia (−40 °C) que abastece locales, empresas y supermercados.
    - Es el competidor más parecido a una "panadería de un fabricante de congelados".
-4. **Hay cadenas que crecen por franquicia en el segmento masivo:**
+4. **El mapa de cadenas es más denso de lo que parecía.** Hay **16 cadenas locales** de panadería o medialunería con 3 o más locales: El Vergel (11), Medialunas 707 (11), Andrea Franceschini (11), Panicafé (9), Lapana (8), Pugliese (4), Catriel (4), La Platense (3), Santa Claus (3), más las ya conocidas. Además:
    - Lo+Rico: ~30 locales (22 de panadería y 8 de empanadas).
    - Panadería Independencia: 12–15 locales, franquicia sin regalías.
    - Armando Medialunas: de 8 a una meta de 13 locales.
@@ -84,15 +93,15 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 
 | Tipo | Qué es | Ocasiones que captura | Ejemplos en Córdoba | Relevados |
 |---|---|---|---|---|
-| **Cadena de panaderías** | 3 o más locales, marca de panadería | Compra para el hogar, desayuno para llevar, sándwiches, noche (24 h) | La Celeste, Del Pilar, Lo+Rico, Independencia, (La Vene) | 20 locales con dirección · ~100 en total si se suman Del Pilar y Lo+Rico |
-| **Panadería de barrio** | Independiente, 1–2 locales | Compra diaria de pan y facturas, cercanía, domingo | Don Mignon, Delizzie, El Roble, Vicente, Panes y Costumbres, El Trigal | 28 (subrepresentadas) |
-| **Bakery café / masa madre** | Panadería con café y salón, estética moderna | Desayuno y merienda con salón, brunch, pan premium | Superanfibio, Fernández, Lapana, La Capke, Brunchería, De a Deveras, Mocafe | 10 |
-| **Medialunería / pastelería** | Foco en medialunas, facturas de autor y tortas | Merienda, "darse un gusto", regalo, delivery | Culpa de los Dos, Armando, Medialunas 707, Frocca, Sharon, Essenza, Cake Shop | 12 |
+| **Cadena de panaderías** | 3 o más locales, marca de panadería | Compra para el hogar, desayuno para llevar, sándwiches, noche (24 h) | La Celeste, Del Pilar, El Vergel, Panicafé, Independencia, Lo+Rico, Perdú, Pugliese, Catriel, La Platense, Santa Claus | **92** |
+| **Panadería de barrio** | Independiente, 1–2 locales | Compra diaria de pan y facturas, cercanía, domingo | Don Mignon, Delizzie, El Roble, Vicente, Panes y Costumbres, El Trigal, Futura, Perikos, La Blanca, Marcel… | **120** |
+| **Bakery café / masa madre** | Panadería con café y salón, estética moderna | Desayuno y merienda con salón, brunch, pan premium | Lapana (8), Superanfibio, Fernández, La Capke, Brunchería, De a Deveras, Mocafe, Urban Bakery | **25** |
+| **Medialunería / pastelería** | Foco en medialunas, facturas de autor y tortas | Merienda, "darse un gusto", regalo, delivery | Medialunas 707 (11), Andrea Franceschini (11), Armando (9), Culpa de los Dos, Frocca, Sharon, Essenza | **45** |
 | **Café de especialidad** | Café de calidad más pastelería | Café de calidad, trabajo o estudio, cita | Cherry Season, Kråke, Ethiopia, Caffè del Popolo, Lattertulia, La Vereda de Achával, Le Dureau | 10 |
 | **Cadena de café** | Marca nacional o internacional | Café de marca, shopping, aeropuerto | Havanna, Starbucks, Café Martínez, Bonafide, Tostado, Juan Valdez | 22 |
-| **Comida rápida** | Desayuno económico | Desayuno barato, 24 h | Mostaza ("Open 24" en Plaza España), McCafé (+20 locales) | 1 cargado |
-| **Conveniencia (estaciones)** | YPF Full, Shell Select, Axion Spot | Café al paso, ruta, noche | YPF Full (29,3 M medialunas en el país, ene–jul 2025) | sin relevar (§11) |
-| **Supermercados** | Panadería propia y horneado en tienda | Compra de reposición, precio | Disco, Carrefour, La Anónima (ex Libertad), Cordiez, Vea | sin relevar (§11) |
+| **Comida rápida** | Desayuno económico | Desayuno barato, 24 h | Mostaza (8; Nueva Córdoba abre a las 6), McDonald's/McCafé (11 de 19) | **19** |
+| **Conveniencia (estaciones)** | YPF Full, Shell Select, Axion Spot, Puma | Café al paso, ruta, noche | YPF Full 24 h (La Voz del Interior 6350, Las Malvinas 2595, Duarte Quirós 3607) | **9** (universo parcial) |
+| **Supermercados** | Panadería propia y horneado en tienda | Compra de reposición, precio | Carrefour, Disco, Super MaMi, Libertad/La Anónima, Cordiez, Vea, Changomás, Makro | **34** (panadería propia verificada en Libertad, MaMi y Disco) |
 
 [INTERPRETACIÓN] Para PAN-CBA, los competidores **directos** son las cadenas de panadería y las bakery-café. Los **indirectos por ocasión** son la especialidad, las cadenas de café, la comida rápida y la conveniencia en el desayuno para llevar. Los **sustitutos** son el supermercado y el desayuno en casa: el 86% desayuna en su casa (I006).
 
@@ -104,6 +113,13 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 
 | Zona | Perfil competitivo | Jugadores principales relevados | Lectura para PAN-CBA [INTERPRETACIÓN] |
 |---|---|---|---|
+> **Conteo v2 por zona** (locales relevados / panaderías): Z01 49/30 · Z02 48/27 · Z03 18/13 · Z04 31/19 · Z05 37/24 · Z06 33/18 · Z07 30/15 · Z08 26/12 · Z09 42/27 · Z10 14/4. Otros 53 registros no tienen barrio ni zona y no se pueden ubicar en el mapa.
+>
+> **Ajuste de lectura v2 [INTERPRETACIÓN]:** las zonas "sin La Celeste" no están vacías.
+> - En Z05 (General Paz) y Z07 (Cerro) ya hay formatos panadería + café: **Panicafé** y **Lapana**.
+> - En Z06 y Z04 está **El Vergel**, con muy buenas reseñas.
+> - La oportunidad en esas zonas depende de ganarles en experiencia, café y consistencia, no de la falta de oferta.
+
 | **Z01 Centro** | Cadenas de café y La Celeste; muchas oficinas y flujo peatonal diurno | La Celeste, Havanna, Starbucks, Café Martínez, Bonafide, Le Dureau | Alto flujo y alta competencia. Oportunidad en desayuno temprano y almuerzo rápido para oficinistas. Alquiler alto; muchas galerías vacías (40–50%). |
 | **Z02 Nueva Córdoba** | **La zona más saturada**: 10 La Celeste, especialidad, medialunerías, cadenas | La Celeste (10), Cherry Season, Caffè del Popolo, Lattertulia, Perdú, Medialunas 707, Mostaza 24 h, Starbucks | Mercado estudiantil enorme (UNC), pero La Celeste domina la conveniencia 24 h. Entrar solo con un diferencial claro. |
 | **Z03 Güemes / Observatorio** | Polo de merienda "instagrameable" (Belgrano y Achával Rodríguez) | Culpa de los Dos, Kråke, Ethiopia, Brunchería, La Capke, Armando | Público joven, dispuesto a pagar por experiencia. Hay pastelería de autor; falta panadería de calidad para llevar. |
@@ -172,7 +188,13 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 | **Armando Medialunas** | de 8 a una meta de 13 | Expansión rápida | Especialista en medialunas | Formato chico y replicable. Referencia de formato. |
 | **Perdú** | 5 o más (General Paz, Alta Córdoba, Alberdi, Nueva Córdoba) | s/d | "Calidad desde 1997"; 35 mil seguidores; rolls de canela, masa madre | Cadena local de rango medio. |
 | **La Vene** (Mendoza) | 3 abiertos en 2018–19; meta de 20 | Franquicia con formatos "Pick & Go" y "Brunch & Coffee" | s/d | Sin evidencia de que siga abierta. Caso de aprendizaje: expansión que no se sostuvo. |
-| Posibles cadenas a verificar | Panicafé, El Vergel, Catriel, Andrea Franceschini, Pan de Oro | s/d | s/d | Relevar en la próxima tanda. |
+| **El Vergel** | 11 relevados | s/d | Panadería-confitería. Pablo Cabrera 2885 tiene 4,9 con 2.014 reseñas (Restaurant Guru) | Cadena local fuerte en el norte y oeste; referencia de calidad percibida |
+| **Panicafé** | 9 (+1 en Villa Allende) | s/d | Panadería con café (General Paz, Cerro, Jardín) | Formato panadería + café ya presente en barrios: competidor directo del "tercer formato" |
+| **Lapana** | 8 | s/d | Bakery moderna (General Paz y otros) | Referencia de formato moderno replicado |
+| **Medialunas 707** | 11 | s/d | Medialunería; 4 mil seguidores por cuenta de sucursal | Formato chico especializado |
+| **Andrea Franceschini** | 7 oficiales + 4 dudosos | s/d | Pastelería y tortas | Ocasión regalo y evento |
+| **Pugliese, Catriel, La Platense, Santa Claus** | 3–4 cada una | s/d | Panaderías tradicionales con sucursales | Cadenas de barrio medianas |
+| Descartadas | Pan de Oro (no está en Córdoba Capital) · La Reina Empanadas (11) y Panino (23) no son panaderías | — | — | — |
 
 ---
 
@@ -197,7 +219,8 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 | Tostado, Juan Valdez | Aeropuerto; Juan Valdez estudia un local en la ciudad | Llegada de marcas de afuera |
 | Mostaza | 9 locales; "Open 24" en Plaza España (350 m²) | Techo bajo de precio: 2 medialunas + café ~$3.600 |
 | McDonald's / McCafé | Más de 20 locales | Café + medialuna ~$4.000 |
-| YPF Full | s/d en Capital | 29,3 M de medialunas vendidas en el país (ene–jul 2025); 24 h; ServiClub |
+| YPF Full | 3 relevadas con tienda 24 h | 29,3 M de medialunas vendidas en el país (ene–jul 2025); combo ~$7.700 en CABA; ServiClub |
+| Supermercados | 34 relevados | Carrefour tiene 4 hiper y 19 Express en Capital; panadería propia verificada en Libertad/La Anónima, Super MaMi y Disco |
 
 ---
 
@@ -208,6 +231,8 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 - **Nichos emergentes:** panadería 100% sin gluten (Lüben), fábricas de pan que venden al público (Panz) y masa madre. [HECHO]
 - **Premios:** en el 1.er Campeonato Nacional del Criollito (FITHEP 2025) el podio fue cordobés; el 3.er puesto fue Artesanos del Sabor. [HECHO]
 - **Contexto:** CIPAC reporta caídas de ventas de 30–40% en 2025 y unos 20 cierres en la ciudad. [HECHO]
+- **v2:** 120 panaderías de barrio relevadas. Donde más hay es en el Sur (Z09: Jardín, Santa Isabel, Las Flores, Villa El Libertador), el Este (Z05: General Paz, Juniors, Talleres, Yofre), el Norte cercano (Z06: Alta Córdoba, General Bustos) y el Oeste (Z04). [HECHO]
+- **Calidad del dato:** muchas fichas de directorios son de 2016–2018, así que algunos locales pueden haber cerrado. Además se detectó un listado que mezclaba panaderías de Santa Fe. [HECHO]
 - **Cantidad total:** no hay un dato oficial público de cuántas panaderías hay habilitadas en la ciudad.
 - **[INTERPRETACIÓN]** La panadería de barrio compite por **cercanía y precio**. Está debilitada por la crisis y rara vez tiene marca, delivery o experiencia. Un formato estandarizado puede ganarle en consistencia, surtido, horario y comunicación, pero no en precio. Varias podrían ser **franquiciadas o clientes** de PAN-CBA en el futuro.
 
@@ -228,6 +253,8 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 | Superanfibio | Especialidad, minimalismo, merienda | Estética |
 | Havanna / Café Martínez / Starbucks | Combos, promociones bancarias, app | Promociones |
 
+**Puntajes (Restaurant Guru, v2):** Cherry Season 4,8 en Tripadvisor (#5 de 655) · El Vergel Pablo Cabrera 4,9 (2.014 reseñas) · Independencia Urca 4,1 · Perdú 3,4 (544 reseñas) · Lo+Rico 6,2/10 · La Celeste de 2,6 a 4,4 según el local.
+
 **[INTERPRETACIÓN]**
 - Las cadenas de panadería comunican **tradición**; las modernas comunican **producto y experiencia**.
 - Nadie comunica bien **calidad consistente, rapidez y precio justo**, ni **frescura verificable** ("horneado acá, cada hora").
@@ -236,6 +263,16 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 ---
 
 ## 10. Precios y posicionamiento
+
+**Precios relevados en v2** (Rappi/PedidosYa y prensa, fechas dispares; confirmar en el local):
+- **Del Pilar:** medialuna de manteca $290; 12 medialunas + criollo $5.600. Es el piso masivo, ~$470 por unidad.
+- **Lo+Rico:** combo de medialunas con criollo $9.880.
+- **Armando:** docena premium rellena $23.328 (~$1.944 por unidad).
+- **Bonafide Córdoba:** café 12 oz + 1 medialuna $3.308; café con leche + alfajor $2.400.
+- **Especialidad en Córdoba:** espresso $3.200 y medialuna $2.500 (oct-2025).
+- **Facturas en Alta Gracia:** docena del día $7.200; 10 del día anterior $3.600 (abril 2025).
+
+**Índice propuesto "café con leche + 2 medialunas"** (a relevar el primer lunes de cada mes): panadería masiva ~$2.600–3.100 · comida rápida $3.600 · cadena de cafetería ~$4.100–4.300 · YPF Full ~$7.700 · especialidad $8.200 o más.
 
 **Referencia del Centro de Panaderos (abril 2026):** pan francés $3.500/kg, mignon $4.000/kg, criollos $8.000/kg, facturas desde $1.000 por unidad. La medialuna en carta de cafetería cuesta $1.400–1.600 (agosto 2026). [HECHO]
 
@@ -256,7 +293,7 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 
 | # | Espacio | Evidencia | Perspectiva 1: local 1 | Perspectiva 2: red / franquicia | Cómo validarlo |
 |---|---|---|---|---|---|
-| EB1 | **"Tercer formato":** pan y facturas de calidad para llevar, más buen café, precio medio y experiencia consistente | Hueco en el mapa de posicionamiento; La Celeste es desigual; lo moderno es caro y no escala | Diferencia sin guerra de precios | Muy estandarizable si el producto viene de la planta de UC | E001 test de concepto, E003 pop-up |
+| EB1 | **"Tercer formato":** pan y facturas de calidad para llevar, más buen café, precio medio y experiencia consistente | Hueco en el mapa de posicionamiento; La Celeste es desigual; lo moderno es caro y no escala. **v2:** Panicafé (9) y Lapana (8) ya lo intentan en barrios; hay que visitarlos antes de decidir | Diferencia sin guerra de precios | Muy estandarizable si el producto viene de la planta de UC | E001 test de concepto, E003 pop-up |
 | EB2 | **Desayuno temprano de calidad (6:30–9 h)** fuera de los shoppings | Especialidad y cadenas abren a las 8–10 | Captura oficinistas, estudiantes y tráfico al trabajo | Replicable en corredores | Conteos de gente en la calle 6:30–9 h (I028) |
 | EB3 | **Zonas sin La Celeste con buen poder adquisitivo:** Z05 General Paz, Z06 Alta Córdoba, Z07 Cerro / Villa Cabrera, Z08 Argüello y Villa Belgrano, Z09 Manantiales | Mapa de cobertura (§4, §5.1) | Menos competencia directa 24 h | Plan de expansión por zonas | Puntaje de ubicaciones (G8) + OSM + campo |
 | EB4 | **Frescura verificable y relato honesto del congelado** ("fermentación lenta en planta, horneado acá cada hora") | 41% valora "horneado en el local" (I002); A006 | Resuelve el riesgo de percepción | Estándar de marca | E002 degustación ciega |
@@ -284,7 +321,7 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 4. Diseñar la comunicación desde el día 1 sobre producto emblema, frescura visible y consistencia.
 
 **Próximos pasos:**
-- **Completar el censo de barrio con la capa OpenStreetMap del mapa.** Un socio abre el mapa, hace clic en "Exportar datos OSM", baja el CSV y me lo pasa (o lo sube al repositorio). Con eso actualizo densidades por zona y por barrio.
+- **Cruzar el censo v2 (381) con la capa OpenStreetMap del mapa**, que trae ubicaciones exactas y locales que el buscador no ve. Un socio abre el mapa, hace clic en "Exportar datos OSM", baja el CSV y me lo pasa (o lo sube al repositorio). Con eso actualizo densidades por zona y por barrio.
 - Relevar en otra sesión, cuando haya cupo de búsquedas:
   - las direcciones de Del Pilar, Lo+Rico e Independencia;
   - precios en Rappi y PedidosYa;
@@ -301,4 +338,6 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 - `I014b_cafeterias_bakery_especialidad.md`: bakery, especialidad y cadenas de café (F401–F449).
 - `I014c_panaderias_de_barrio.md`: censo de barrio por zona (F500–F511).
 - `I015_I016_redes_precios_posicionamiento.md`: redes, precios y posicionamiento (F600–F668).
+- `I014d_cadenas_sucursales_v2.md` (F1100–F1167) · `I014e_panaderias_de_barrio_v2.md` (F1200–F1320) · `I014f_competidores_indirectos.md` (F1400–F1443) · `I014g_directorios_panaderias.md` (F1500–F1507) · `I015b_precios_redes_v2.md` (F1600–F1633): ampliación v2.
+- `datos/locales_excluidos.json`: registros descartados y motivo.
 - `I013_censo_competitivo_cordoba.md` e `I018_franquicias_panaderia_cafe.md`: primera pasada y franquicias.

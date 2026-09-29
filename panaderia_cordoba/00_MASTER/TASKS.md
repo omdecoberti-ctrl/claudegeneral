@@ -35,7 +35,7 @@
 | T028 | Repartir a cada socio su usuario y contraseña (entregados en el chat el 28/09) | G0 | Socios | P2 | T027 | PENDIENTE | Los 4 socios entran al sitio |
 | T029 | (Futuro) Sumar Supabase al sitio: ingreso de socios, aprobación de decisiones y tareas desde la web | — | IA | P3 | D008 | BACKLOG | Sitio interactivo |
 | T030 | Abrir el mapa competitivo, hacer clic en "Exportar datos OSM" y pasar el CSV a la IA (censo completo de panaderías por zona) | G3 | Socios | P1 | — | PENDIENTE | Densidad real por zona y barrio |
-| T031 | Completar el relevamiento web pendiente (direcciones de Del Pilar, Lo+Rico e Independencia, estaciones de servicio, supermercados, precios en apps, Granier/Costumbres) con una sesión con cupo de búsqueda | G3 | IA | P1 | Cupo de búsqueda | BLOQUEADA (límite de búsquedas de la sesión) | Competencia completa |
+| T031 | Completar el relevamiento web pendiente (direcciones de Del Pilar, Lo+Rico e Independencia, estaciones de servicio, supermercados, precios en apps, Granier/Costumbres) con una sesión con cupo de búsqueda | G3 | IA | P1 | Cupo de búsqueda | EN PROCESO: v2 hecha el 29/09 (381 locales); falta verificar vigencia y relevar precios en el local | Competencia completa |
 | T032 | Verificar en origen los datos críticos (INDEC, CIPAC, CCT, vacancia de locales) | G1 | IA | P2 | T031 | PENDIENTE | Datos confiables |
 | T033 | Ejecutar E002 degustación a ciegas (antes del 13/11) | G4/G5 | Hermanos + IA | P1 | PD031 | PENDIENTE | A004 / A006 validadas o refutadas |
 | T026 | Gate Review G0 (fecha objetivo 09/10) | G0 | IA + Socios | P1 | T022, T023 | BACKLOG | GO a G1–G3 |

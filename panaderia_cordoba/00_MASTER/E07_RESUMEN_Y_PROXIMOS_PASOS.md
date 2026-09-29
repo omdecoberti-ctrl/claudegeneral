@@ -13,7 +13,7 @@
 En 5 días pasamos de cero a:
 - un proyecto organizado, con 8 decisiones aprobadas y un plan a marzo;
 - un sitio con panel por socio;
-- los primeros informes de mercado, cliente y competencia, con mapa y __NLOC__ competidores relevados.
+- los primeros informes de mercado, cliente y competencia, con mapa y 381 competidores relevados.
 
 **Lo que falta para elegir el concepto el 13/11:** escuchar al cliente (trabajo de campo), probar el producto (degustación a ciegas) y tomar tres decisiones pendientes.
 
@@ -29,7 +29,7 @@ En 5 días pasamos de cero a:
 | **Sitio web** | Tablero general, panel por socio, registros con filtros, códigos enlazados, buscador, entregables, mapa | panaderia-cordoba.vercel.app |
 | **Mercado (G1)** | Tamaño (TAM ~USD 333 M), demografía, consumo, crisis del rubro, 10 tendencias, referentes, macro y costos | E-05 · `01_MERCADO/` |
 | **Cliente (G2)** | 10 segmentos con puntaje, ocasiones por franja horaria, necesidades del cliente (jobs-to-be-done), perfiles tipo; guía de entrevistas, encuesta, protocolo de cliente incógnito, degustación E002 | E-06 · `03_CLIENTE/` |
-| **Competencia (G3)** | __NLOC__ locales en __NMARCAS__ marcas · mapa interactivo con zonas, Google Maps y datos de OpenStreetMap en vivo · La Celeste sucursal por sucursal · redes, precios, posicionamiento · 7 espacios en blanco | E-04 · `02_COMPETENCIA/` |
+| **Competencia (G3)** | 381 locales en 197 marcas · mapa interactivo con zonas, Google Maps y datos de OpenStreetMap en vivo · La Celeste sucursal por sucursal · redes, precios, posicionamiento · 7 espacios en blanco | E-04 · `02_COMPETENCIA/` |
 | **Franquicias** | Modelos en Argentina (el fabricante gana con el producto, no con la regalía), marco legal, referentes | I018 |
 | **Canalsenses** | Relevamiento público: planta en Canals, 200–250 t/mes, ~35 variedades, 40% de capacidad ociosa | I010 |
 
@@ -39,7 +39,8 @@ En 5 días pasamos de cero a:
 
 1. **El pan tradicional está en crisis** (ventas −30/40% en Córdoba en 2025). Competir con pan común por precio es mal negocio. El valor está en los productos de margen, en el desayuno y la merienda, en el café y en la conveniencia.
 2. **La Celeste es el rival en conveniencia:** 16 locales, 10 abiertos 24 h, 94 mil seguidores. Su experiencia es desigual (reseñas de 2,6 a 4,4) y no tiene locales en 5 zonas.
-3. **Del Pilar ya aplica nuestro modelo:** 45 locales, planta de ultracongelado, franquicias. No alcanza con producir en planta: hace falta un concepto distinto.
+3. **Del Pilar ya aplica nuestro modelo:** entre 35 y 45 locales, planta de ultracongelado, franquicias. No alcanza con producir en planta: hace falta un concepto distinto.
+   - **Hay más cadenas de las que parecía:** 16 cadenas locales con 3 o más locales (El Vergel, Medialunas 707, Franceschini, Panicafé, Lapana, Pugliese, Catriel, etc.). Panicafé y Lapana ya ofrecen panadería + café en barrios: hay que visitarlos antes de definir el concepto.
 4. **Hueco de posicionamiento:** precio medio + experiencia media-alta + desayuno temprano (6:30–9 h). En la escalera de precios del combo, el espacio libre está entre $4.500 y $5.500.
 5. **Zonas candidatas:** Z08 Argüello/Villa Belgrano, Z05 General Paz, Z06 Alta Córdoba y Z07 Cerro/Villa Cabrera. Nueva Córdoba está saturada.
 6. **El cliente:** desayuna en casa (86%), recortó salidas (76%), compra de a unidad y "del día anterior", valora la frescura (71%) y paga con QR (84%).

@@ -1,0 +1,146 @@
+[
+ {
+  "marca": "Del Pilar",
+  "producto": "Medialuna de manteca (unidad)",
+  "precio_ars": 290,
+  "fecha": "s/d (consulta 2026-09-29)",
+  "canal": "PriceListo/Rappi",
+  "fuente": "F1600/F1601 https://ar.pricelisto.com/menu-prices/panaderia-del-pilar-ar"
+ },
+ {
+  "marca": "Del Pilar",
+  "producto": "12 medialunas + crollo",
+  "precio_ars": 5600,
+  "fecha": "s/d (consulta 2026-09-29)",
+  "canal": "PriceListo/Rappi",
+  "fuente": "F1600/F1601 https://ar.pricelisto.com/menu-prices/panaderia-del-pilar-ar"
+ },
+ {
+  "marca": "Lo+Rico",
+  "producto": "Combo medialunas con criollo",
+  "precio_ars": 9880,
+  "fecha": "s/d (consulta 2026-09-29)",
+  "canal": "Rappi/PedidosYa",
+  "fuente": "F1602 https://www.pedidosya.com.ar/restaurantes/cordoba/lo-rico-panaderias-obispo-trejo-menu"
+ },
+ {
+  "marca": "Perdú",
+  "producto": "Medialuna/factura (unidad) - HISTORICO",
+  "precio_ars": 150,
+  "fecha": "2023-05-07",
+  "canal": "TikTok",
+  "fuente": "F1604 https://www.tiktok.com/@cordobagourmet/video/7230577080365321477"
+ },
+ {
+  "marca": "Perdú",
+  "producto": "Criollo común 1/4 kg - HISTORICO",
+  "precio_ars": 330,
+  "fecha": "2023-05-07",
+  "canal": "TikTok",
+  "fuente": "F1604 https://www.tiktok.com/@cordobagourmet/video/7230577080365321477"
+ },
+ {
+  "marca": "Culpa de los Dos",
+  "producto": "Caja 7 alfajorcitos San Valentín",
+  "precio_ars": 10500,
+  "fecha": "2025-02",
+  "canal": "Prensa (Vía País)",
+  "fuente": "F1606 https://viapais.com.ar/cordoba/cordoba-cuanto-cuesta-la-caja-de-alfajores-de-culpa-de-los-dos-para-san-valentin-2025/"
+ },
+ {
+  "marca": "Culpa de los Dos",
+  "producto": "Caja 24 u. San Valentín",
+  "precio_ars": 24000,
+  "fecha": "2025-02",
+  "canal": "Prensa (Vía País)",
+  "fuente": "F1606 https://viapais.com.ar/cordoba/cordoba-cuanto-cuesta-la-caja-de-alfajores-de-culpa-de-los-dos-para-san-valentin-2025/"
+ },
+ {
+  "marca": "Armando Medialunas",
+  "producto": "Docena premium medialunas rellenas",
+  "precio_ars": 23328,
+  "fecha": "s/d (consulta 2026-09-29)",
+  "canal": "PedidosYa",
+  "fuente": "F1608 https://www.pedidosya.com.ar/restaurantes/cordoba/armando-medialunas-menu"
+ },
+ {
+  "marca": "Bonafide",
+  "producto": "Café 12oz + 1 medialuna",
+  "precio_ars": 3308,
+  "fecha": "s/d (2026 según agregador)",
+  "canal": "PriceListo/carta",
+  "fuente": "F1609 https://ar.pricelisto.com/menu-prices/bonafide-ar"
+ },
+ {
+  "marca": "Bonafide",
+  "producto": "Café con leche + alfajor",
+  "precio_ars": 2400,
+  "fecha": "s/d",
+  "canal": "PriceListo/carta",
+  "fuente": "F1609 https://ar.pricelisto.com/menu-prices/bonafide-ar"
+ },
+ {
+  "marca": "Mostaza",
+  "producto": "2 medialunas + café",
+  "precio_ars": 3600,
+  "fecha": "s/d (2026 según agregador)",
+  "canal": "PriceListo",
+  "fuente": "F1611 https://ar.pricelisto.com/menu-prices/mostaza-ar"
+ },
+ {
+  "marca": "YPF Full (CABA)",
+  "producto": "Café + 2 medialunas [NO VERIFICADO]",
+  "precio_ars": 7700,
+  "fecha": "2026-08",
+  "canal": "tienda (fuente no identificada)",
+  "fuente": "F1612 sin URL identificable"
+ },
+ {
+  "marca": "Cafetería especialidad Córdoba (nota Vía País)",
+  "producto": "Espresso",
+  "precio_ars": 3200,
+  "fecha": "~2025-10",
+  "canal": "Prensa",
+  "fuente": "F1613 https://viapais.com.ar/cordoba/una-de-las-mejores-cafeterias-del-mundo-esta-en-cordoba-cuanto-sale-una-merienda/"
+ },
+ {
+  "marca": "Cafetería especialidad Córdoba (nota Vía País)",
+  "producto": "Medialuna de manteca",
+  "precio_ars": 2500,
+  "fecha": "~2025-10",
+  "canal": "Prensa",
+  "fuente": "F1613 https://viapais.com.ar/cordoba/una-de-las-mejores-cafeterias-del-mundo-esta-en-cordoba-cuanto-sale-una-merienda/"
+ },
+ {
+  "marca": "Panadería Alta Gracia",
+  "producto": "Docena facturas del día",
+  "precio_ars": 7200,
+  "fecha": "2025-04-04",
+  "canal": "Prensa (El Doce)",
+  "fuente": "F1614 https://eldoce.tv/actualidad/2025/04/04/una-opcion-en-la-crisis-cuanto-salen-las-facturas-y-criollos-del-dia-anterior-en-cordoba/"
+ },
+ {
+  "marca": "Panadería Alta Gracia",
+  "producto": "10 facturas del día anterior",
+  "precio_ars": 3600,
+  "fecha": "2025-04-04",
+  "canal": "Prensa (El Doce)",
+  "fuente": "F1614 https://eldoce.tv/actualidad/2025/04/04/una-opcion-en-la-crisis-cuanto-salen-las-facturas-y-criollos-del-dia-anterior-en-cordoba/"
+ },
+ {
+  "marca": "La Celeste",
+  "producto": "Docena bocaditos jamón y queso (reseña cliente)",
+  "precio_ars": 31200,
+  "fecha": "2025-06",
+  "canal": "Reseña",
+  "fuente": "F1615 https://www.findglocal.com/AR/C%C3%B3rdoba/147314922022143/La-Celeste-Panaderia"
+ },
+ {
+  "marca": "La Ideal (Santa Fe, benchmark)",
+  "producto": "Café con leche + 2 medialunas",
+  "precio_ars": 9500,
+  "fecha": "2025-06",
+  "canal": "Prensa",
+  "fuente": "F1632 https://www.airedesantafe.com.ar/economia/cuanto-cuesta-un-cafe-leche-2-medialunas-la-ideal-junio-2025-n619296"
+ }
+]
