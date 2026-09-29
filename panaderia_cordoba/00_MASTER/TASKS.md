@@ -2,6 +2,7 @@
 
 > Estados: **BACKLOG · PENDIENTE · EN PROCESO · BLOQUEADA · FINALIZADA**. Prioridad: P1 / P2 / P3.
 > Responsable: `IA` (PM/consultor), `Socios`, o nombre concreto cuando se asigne.
+> **Cada tarea abierta tiene su ficha detallada** (para qué sirve, pasos, materiales, cuándo está terminada) en `00_MASTER/TAREAS/`. En el sitio: clic en el código T###.
 
 ## Activas y próximas
 | Código | Tarea | Gate | Responsable | Prioridad | Depende de | Estado | Resultado esperado |

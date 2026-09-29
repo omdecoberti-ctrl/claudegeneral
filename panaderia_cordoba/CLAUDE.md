@@ -55,6 +55,10 @@ Los códigos nunca se reutilizan ni se renumeran. Lo obsoleto se marca como tal 
 - Entregables importantes en **PDF y HTML** (D006), con la identidad visual de Canalsenses, además del repositorio.
 - **Todo entregable o análisis de competencia** se guarda en `02_COMPETENCIA/` (no en `18_INVESTIGACIONES/`) y **se envía siempre en el chat** en PDF y HTML (pedido de socios, 2026-09-28).
 
+## 6b. Fichas de tareas
+- **Toda tarea nueva o activa lleva su ficha** en `00_MASTER/TAREAS/T###.md`: para qué sirve, qué hay que hacer paso a paso, responsable, plazo, materiales, cuándo está terminada y con qué se relaciona.
+- La ficha se actualiza cuando cambia el estado. En el sitio, cada código T### abre su ficha.
+
 ## 7. Sitio web del proyecto
 - `site/build.py` genera un sitio estático a partir de todos los `.md`. Se publica en **Vercel** con cada push (D008). El acceso es por usuario y contraseña de cada socio (`site/middleware.js`, `site/crear_usuarios.py`). Ver `site/DEPLOY.md`.
 - **Rama de producción: `main`** (la que publica Vercel). Cada trabajo se sube a la rama de trabajo y también a `main`.

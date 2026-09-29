@@ -35,7 +35,7 @@ CODE_RE = re.compile(r"\b(PD\d{3}|[DAQRTIEFL]\d{3}|G\d{1,2})\b")
 NAV = [
     ("Tablero", ["00_MASTER/STATUS.md", "00_MASTER/PROJECT_MASTER.md", "00_MASTER/ROADMAP.md"]),
     ("Registros", ["00_MASTER/DECISIONS.md", "00_MASTER/ASSUMPTIONS.md", "00_MASTER/OPEN_QUESTIONS.md",
-                   "00_MASTER/RISKS.md", "00_MASTER/TASKS.md", "00_MASTER/RESEARCH_BACKLOG.md",
+                   "00_MASTER/RISKS.md", "00_MASTER/TASKS.md", "00_MASTER/TAREAS/README.md", "00_MASTER/RESEARCH_BACKLOG.md",
                    "00_MASTER/SOURCES.md", "00_MASTER/LEARNINGS.md"]),
     ("Gestión", ["00_MASTER/METHODOLOGY.md", "00_MASTER/PARTNER_INPUTS.md", "@MEMOS", "@GATE_REVIEWS",
                  "@MINUTAS", "00_MASTER/CHANGELOG.md", "00_MASTER/SESSION_LOG.md", "00_MASTER/GLOSSARY.md",
@@ -45,7 +45,7 @@ NAV_LABEL = {
     "00_MASTER/STATUS.md": "Estado (STATUS)", "00_MASTER/PROJECT_MASTER.md": "Mapa del proyecto",
     "00_MASTER/ROADMAP.md": "Roadmap por Gates", "00_MASTER/DECISIONS.md": "Decisiones (D / PD)",
     "00_MASTER/ASSUMPTIONS.md": "Hipótesis (A)", "00_MASTER/OPEN_QUESTIONS.md": "Preguntas (Q)",
-    "00_MASTER/RISKS.md": "Riesgos (R)", "00_MASTER/TASKS.md": "Tareas (T)",
+    "00_MASTER/RISKS.md": "Riesgos (R)", "00_MASTER/TASKS.md": "Tareas (T)", "00_MASTER/TAREAS/README.md": "Fichas de tareas",
     "00_MASTER/RESEARCH_BACKLOG.md": "Investigaciones (I / E)", "00_MASTER/SOURCES.md": "Fuentes (F)",
     "00_MASTER/LEARNINGS.md": "Aprendizajes (L)", "00_MASTER/METHODOLOGY.md": "Metodología",
     "00_MASTER/PARTNER_INPUTS.md": "Información de socios", "00_MASTER/CHANGELOG.md": "Historial de cambios",
@@ -208,6 +208,9 @@ def autolink(body, ids, self_url):
             def rep(m):
                 code = m.group(1)
                 pref = "PD" if code.startswith("PD") else code[0]
+                if pref == "T" and os.path.exists(os.path.join(ROOT, "00_MASTER", "TAREAS", code + ".md")):
+                    page = f"/00_MASTER/TAREAS/{code}.html"
+                    return code if page == self_url else f'<a class="code" href="{page}" title="Ver ficha de la tarea">{code}</a>'
                 page = url_of(REG[pref])
                 if code not in ids.get(page, set()):
                     return code
