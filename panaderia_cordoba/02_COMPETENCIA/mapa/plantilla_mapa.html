@@ -51,8 +51,9 @@ tr.zr{cursor:pointer}tr.zr:hover td{background:var(--soft)}
 <label class="row"><input type="checkbox" id="c24"> Solo locales 24 h</label>
 <h3>Datos en vivo (OpenStreetMap)</h3>
 <label class="row"><input type="checkbox" id="oB" checked><span class="dot" style="background:#fff;border:2px solid #A0522D"></span> Panaderías y pastelerías OSM<span class="cnt" id="oBn">…</span></label>
-<label class="row"><input type="checkbox" id="oC"><span class="dot" style="background:#fff;border:2px solid #2A9D8F"></span> Cafés OSM<span class="cnt" id="oCn">…</span></label>
+<label class="row"><input type="checkbox" id="oC"><span class="dot" style="background:#fff;border:2px solid #2A9D8F"></span> Cafés OSM<span class="cnt" id="oCn"></span></label>
 <div class="note" id="oSt">Consultando OpenStreetMap…</div>
+<button id="oR" style="display:none;margin-top:6px;padding:5px 9px;border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer">↻ Reintentar</button>
 <button id="oX" style="margin-top:6px;padding:6px 10px;border:1px solid var(--brand);background:#fff;color:var(--brand2);border-radius:6px;font-weight:700;cursor:pointer">⬇ Exportar datos OSM (CSV / Excel)</button>
 <h3>Resumen por zona</h3><div id="ztab"></div>
 <h3>Locales en la vista</h3><div class="list" id="list"></div>
@@ -63,8 +64,8 @@ tr.zr{cursor:pointer}tr.zr:hover td{background:var(--soft)}
 const D=/*DATA*/;
 const map=L.map('map',{zoomControl:true,preferCanvas:true}).setView([-31.415,-64.19],12);
 const osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
-const carto=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'© OpenStreetMap © CARTO'});
-carto.addTo(map);L.control.layers({'Plano claro (CARTO)':carto,'Plano OpenStreetMap':osm},{}, {position:'topright'}).addTo(map);
+const gris=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Tiles © Esri'});
+osm.addTo(map);L.control.layers({'Plano OpenStreetMap':osm,'Plano gris claro (Esri)':gris},{}, {position:'topright'}).addTo(map);
 L.control.scale({imperial:false}).addTo(map);
 // Zonas
 const panByZ={};D.locales.forEach(l=>{if(['cadena_panaderia','panaderia_barrio','bakery_cafe'].includes(l.t))panByZ[l.z]=(panByZ[l.z]||0)+1});
@@ -127,23 +128,34 @@ function drawOSM(items){OSM=items;oB.clearLayers();oC.clearLayers();const zc={};
   const m=L.circleMarker([o.la,o.lo],{radius:ch?6:4,color:col,weight:2,fillColor:ch?col:'#fff',fillOpacity:ch?.8:.9});
   m.bindPopup(`<div class="pop"><b>${esc(o.n||'(sin nombre)')}</b><br><span class="t" style="background:${col}">OSM · ${esc(o.k)}</span><br>${esc(o.a||'')}<br>${o.h?'🕒 '+esc(o.h)+'<br>':''}${o.w?'<a href="'+esc(o.w)+'" target="_blank" rel="noopener">web / redes</a><br>':''}${o.z?o.z+' '+esc(D.zonasNombres[o.z]||''):''}<br><span style="color:#999;font-size:11px">Ubicación exacta (OpenStreetMap)</span><br><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${o.la},${o.lo}">Ver en Google Maps</a></div>`);
   if(bak){oB.addLayer(m);nb++;zc[o.z]=(zc[o.z]||0)+1}else{oC.addLayer(m);nc++}});
- document.getElementById('oBn').textContent=nb;document.getElementById('oCn').textContent=nc;
+ document.getElementById('oBn').textContent=nb;document.getElementById('oCn').textContent=CAF.length?nc:'';
  Object.keys(D.zonasNombres).forEach(z=>{const el=document.getElementById('osm_'+z);if(el)el.textContent=zc[z]||0});
  Object.assign(panByZ,{});window.OSMZ=zc;
  if(document.getElementById('oB').checked)oB.addTo(map);if(document.getElementById('oC').checked)oC.addTo(map)}
-async function loadOSM(){const st=document.getElementById('oSt');
- try{const c=JSON.parse(localStorage.getItem('osm_cba')||'null');if(c&&Date.now()-c.t<7*864e5){drawOSM(c.d);st.textContent=`Datos OSM guardados del ${new Date(c.t).toLocaleDateString('es-AR')} (se actualizan cada 7 días).`;return}}catch(e){}
- const bb='-31.524,-64.316,-31.307,-64.061';
- const q=`[out:json][timeout:90];(nwr["shop"~"^(bakery|pastry|confectionery)$"](${bb});nwr["craft"="bakery"](${bb});nwr["amenity"="cafe"](${bb}););out center tags;`;
- for(const ep of ['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass.private.coffee/api/interpreter']){
-  try{const r=await fetch(ep,{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'}});if(!r.ok)continue;const j=await r.json();
-   const items=j.elements.map(e=>{const t=e.tags||{};const la=e.lat??e.center?.lat,lo=e.lon??e.center?.lon;const k=t.shop||t.craft&&'bakery'||t.amenity;
-    return {id:e.type+'/'+e.id,n:t.name||t.brand||'',k:k,la,lo,a:[t['addr:street'],t['addr:housenumber']].filter(Boolean).join(' '),h:t.opening_hours||'',w:t.website||t['contact:instagram']||t['contact:facebook']||'',z:zoneOf(lo,la)}}).filter(o=>o.la);
-   drawOSM(items);st.textContent=`OpenStreetMap: ${items.length} lugares descargados ahora (${new Date().toLocaleString('es-AR')}).`;
-   try{localStorage.setItem('osm_cba',JSON.stringify({t:Date.now(),d:items}))}catch(e){}return}catch(e){}}
- st.textContent='No se pudo consultar OpenStreetMap (sin conexión o servicio saturado). Reintentá más tarde.'}
+const EPS=['https://overpass-api.de/api/interpreter','https://overpass.private.coffee/api/interpreter','https://maps.mail.ru/osm/tools/overpass/api/interpreter','https://overpass.kumi.systems/api/interpreter'];
+const BB='-31.524,-64.316,-31.307,-64.061';
+const QB=`[out:json][timeout:60];(nwr["shop"~"^(bakery|pastry|confectionery)$"](${BB});nwr["craft"="bakery"](${BB}););out center tags;`;
+const QC=`[out:json][timeout:60];nwr["amenity"="cafe"](${BB});out center tags;`;
+let BAK=[],CAF=[];
+function parse(j){return j.elements.map(e=>{const t=e.tags||{};const la=e.lat??e.center?.lat,lo=e.lon??e.center?.lon;const k=t.shop||(t.craft?'bakery':t.amenity);
+ return {id:e.type+'/'+e.id,n:t.name||t.brand||'',k:k,la,lo,a:[t['addr:street'],t['addr:housenumber']].filter(Boolean).join(' '),h:t.opening_hours||'',w:t.website||t['contact:instagram']||t['contact:facebook']||'',z:zoneOf(lo,la)}}).filter(o=>o.la)}
+async function overpass(q,st,label){for(const ep of EPS){const host=new URL(ep).host;st.textContent=`Consultando ${label} en ${host}…`;
+  const ctl=new AbortController();const tm=setTimeout(()=>ctl.abort(),35000);
+  try{const r=await fetch(ep,{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'},signal:ctl.signal});clearTimeout(tm);if(!r.ok)continue;return parse(await r.json())}catch(e){clearTimeout(tm)}}
+ return null}
+function cacheGet(k){try{const c=JSON.parse(localStorage.getItem(k)||'null');if(c&&Date.now()-c.t<7*864e5)return c}catch(e){}return null}
+function cacheSet(k,d){try{localStorage.setItem(k,JSON.stringify({t:Date.now(),d}))}catch(e){}}
+async function loadOSM(){const st=document.getElementById('oSt');document.getElementById('oR').style.display='none';
+ const c=cacheGet('osm_cba_b');if(c){BAK=c.d;drawOSM(BAK.concat(CAF));st.textContent=`Panaderías OSM guardadas del ${new Date(c.t).toLocaleDateString('es-AR')} (se actualizan cada 7 días).`;return}
+ const d=await overpass(QB,st,'panaderías');
+ if(d){BAK=d;cacheSet('osm_cba_b',d);drawOSM(BAK.concat(CAF));st.textContent=`OpenStreetMap: ${d.length} panaderías y pastelerías (${new Date().toLocaleString('es-AR')}).`}
+ else{st.textContent='OpenStreetMap no respondió (servicio saturado o sin conexión). Probá de nuevo en unos minutos.';document.getElementById('oR').style.display='inline-block'}}
+async function loadCafes(){const st=document.getElementById('oSt');if(CAF.length)return;const c=cacheGet('osm_cba_c');
+ if(c){CAF=c.d}else{const d=await overpass(QC,st,'cafés');if(!d){st.textContent='No se pudieron cargar los cafés de OSM. Reintentá más tarde.';return}CAF=d;cacheSet('osm_cba_c',d)}
+ drawOSM(BAK.concat(CAF));st.textContent=`OpenStreetMap: ${BAK.length} panaderías · ${CAF.length} cafés.`}
+document.getElementById('oR').addEventListener('click',loadOSM);
 document.getElementById('oB').addEventListener('change',e=>e.target.checked?oB.addTo(map):map.removeLayer(oB));
-document.getElementById('oC').addEventListener('change',e=>e.target.checked?oC.addTo(map):map.removeLayer(oC));
+document.getElementById('oC').addEventListener('change',async e=>{if(e.target.checked){await loadCafes();oC.addTo(map)}else map.removeLayer(oC)});
 document.getElementById('oX').addEventListener('click',()=>{if(!OSM.length){alert('Todavía no hay datos de OpenStreetMap cargados.');return}
  const rows=[['id_osm','nombre','tipo','direccion','zona','zona_nombre','lat','lon','horario','web_redes']].concat(OSM.map(o=>[o.id,o.n,o.k,o.a,o.z,D.zonasNombres[o.z]||'',o.la,o.lo,o.h,o.w]));
  const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\n');
