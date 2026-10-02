@@ -187,6 +187,16 @@ def main():
               fmt=lambda v: f"{v:.0f}" if v == int(v) else f"{v:.1f}".replace(".", ","), color=C_CAFE,
               band=(25, 35, "Tope compatible para 100–120 m² (10–12% de ventas)"),
               note="Sin expensas ni IVA; TC $1.545. Avisos de portales vistos por buscador (I029, F1800–F1844). Verificar en el aviso antes de negociar.")
+    bar_h([("El Vergel (Pablo Cabrera 2885)", 4.9, "2.014 reseñas · RG"), ("Armando Medialunas (Duarte Quirós)", 4.6, "451 · RG"),
+           ("Panicafé Gral. Paz", 4.5, "4.058 · agregador 9/10"), ("Medialunas 707", 4.4, "1.010 · agregador 8,8/10"),
+           ("La Celeste (mejor local)", 4.4, "Belgrano 439 · 2.376"), ("Pugliese (Río Bamba)", 4.2, "1.050 · RG"),
+           ("Panicafé Cerro", 4.2, "+16.000 · agregador 8,4/10"), ("Del Pilar", 3.9, "414 · agregador 7,8/10"),
+           ("Independencia", 3.8, "110 · RG"), ("Moreno", 3.7, "873 · RG"), ("Medialunas Calentitas (promedio)", 3.6, "6 locales: 3,1–4,0"),
+           ("Perdú", 3.4, "544 · RG"), ("Lapana (Tripadvisor)", 3.4, "65"), ("La Platense", 3.4, "282 · RG"),
+           ("Lo+Rico", 3.1, "agregador 6,2/10"), ("La Celeste (peor local)", 2.6, "Buenos Aires 1064 · 486")],
+          "resenas_cadenas.svg", "Puntaje de reseñas: panaderías de medialunas, facturas y café (escala 1–5)",
+          fmt=lambda v: f"{v:.1f}".replace(".", ","), color=C_PAN,
+          note="RG = Restaurant Guru (agrega Google y otros). Escalas /10 divididas por 2. Fragmentos de buscador, oct-2026 (I016b, I016c, I014h).")
     print("OK gráficos")
 
 

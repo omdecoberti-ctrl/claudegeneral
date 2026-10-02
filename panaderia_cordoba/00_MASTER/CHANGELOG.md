@@ -66,3 +66,10 @@
   - aprendizajes L003–L005;
   - log de franquiciabilidad;
   - PD011, PD029 y PD030 actualizadas.
+- Pedidos nuevos de socios:
+  - **E-08** 10 arquetipos de cliente (`03_CLIENTE/ARQUETIPOS_CLIENTES.md`);
+  - **E-09** corner / shop in shop (`04_CONCEPTO/ANALISIS_CORNER_SHOP_IN_SHOP.md`);
+  - **E-10** delivery PedidosYa y dark kitchen (`04_CONCEPTO/ANALISIS_DELIVERY_PEDIDOSYA_DARK_KITCHEN.md`);
+  - **E-04 §9b** reseñas de panaderías de medialunas, facturas y café, con gráfico (I016c).
+- Evidencia nueva: I041 (corner, delivery, dark kitchen) e I016c (reseñas). Fuentes F2400–F2474.
+- Nueva sección "Análisis especiales" en el sitio. Tareas T038–T039.

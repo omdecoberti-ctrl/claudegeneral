@@ -85,6 +85,8 @@
 
 ## 5. Perfiles tipo [INTERPRETACIÓN, a validar en entrevistas]
 
+> **Nuevo (02/10):** los 10 arquetipos de cliente detallados (quién es, qué lo motiva, su día, qué valora, dónde encontrarlo, qué le gusta y cómo se relaciona con los panificados) están en `ARQUETIPOS_CLIENTES.md` (E-08). Los tres perfiles de abajo quedan como resumen.
+
 - **Sofía, 21, estudiante en Nueva Córdoba:** $2.500 por desayuno. Quiere café con 1–2 medialunas antes de clase y un lugar con enchufe. Sigue a Culpa de los Dos y a Cherry Season, pero va a La Celeste por el precio y el horario.
 - **Martín, 38, analista en el Centro:** pasa de 7:45 a 8:15. Quiere un café para llevar y algo salado sin fila. Pagaría $5.000 si es rápido y rico. Hoy usa Bonafide o la panadería de la esquina.
 - **Graciela, 62, Alta Córdoba:** compra pan todos los días a pie. Fiel a su panadería, compra "lo del día anterior" y compara precios. No usa apps, pero paga con QR.

@@ -37,6 +37,9 @@ NAV = [
     ("Registros", ["00_MASTER/DECISIONS.md", "00_MASTER/ASSUMPTIONS.md", "00_MASTER/OPEN_QUESTIONS.md",
                    "00_MASTER/RISKS.md", "00_MASTER/TASKS.md", "00_MASTER/TAREAS/README.md", "00_MASTER/RESEARCH_BACKLOG.md",
                    "00_MASTER/SOURCES.md", "00_MASTER/LEARNINGS.md"]),
+    ("Análisis especiales", ["03_CLIENTE/ARQUETIPOS_CLIENTES.md", "04_CONCEPTO/ANALISIS_CORNER_SHOP_IN_SHOP.md",
+                             "04_CONCEPTO/ANALISIS_DELIVERY_PEDIDOSYA_DARK_KITCHEN.md", "09_OPERACIONES/I011_modelos_productivos.md",
+                             "02_COMPETENCIA/I016c_resenas_cadenas_medialunas_cafe.md"]),
     ("Gestión", ["00_MASTER/METHODOLOGY.md", "00_MASTER/PARTNER_INPUTS.md", "@MEMOS", "@GATE_REVIEWS",
                  "@MINUTAS", "00_MASTER/CHANGELOG.md", "00_MASTER/SESSION_LOG.md", "00_MASTER/GLOSSARY.md",
                  "CLAUDE.md"]),
@@ -51,6 +54,9 @@ NAV_LABEL = {
     "00_MASTER/PARTNER_INPUTS.md": "Información de socios", "00_MASTER/CHANGELOG.md": "Historial de cambios",
     "00_MASTER/SESSION_LOG.md": "Bitácora de sesiones", "00_MASTER/GLOSSARY.md": "Glosario",
     "CLAUDE.md": "Protocolo de la IA",
+    "03_CLIENTE/ARQUETIPOS_CLIENTES.md": "10 arquetipos de cliente", "04_CONCEPTO/ANALISIS_CORNER_SHOP_IN_SHOP.md": "Corner / shop in shop",
+    "04_CONCEPTO/ANALISIS_DELIVERY_PEDIDOSYA_DARK_KITCHEN.md": "PedidosYa y dark kitchen", "09_OPERACIONES/I011_modelos_productivos.md": "Modelos productivos (I011)",
+    "02_COMPETENCIA/I016c_resenas_cadenas_medialunas_cafe.md": "Reseñas de panaderías",
 }
 STATE_CLASS = [
     (r"^(FINALIZADA|VALIDADA|CERRADA|RESPONDIDA|CERRADO)", "ok"),

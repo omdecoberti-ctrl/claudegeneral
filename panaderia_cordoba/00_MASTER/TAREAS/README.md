@@ -21,4 +21,6 @@ Cada tarea abierta tiene su ficha con: para qué sirve, qué hay que hacer paso 
 - [T035 — Identificar un Director Técnico bromatológico](T035.md) · Laura · 31/10
 - [T036 — Buscar local en las zonas candidatas](T036.md) · Socios + IA · Octubre–noviembre
 - [T037 — Cotizar el equipamiento del modelo híbrido](T037.md) · Oscar · 06/11
+- [T038 — Verificar corners y consultar condiciones de shop in shop](T038.md) · Socios + IA · 13/11
+- [T039 — Relevar reseñas de Google Maps a mano](T039.md) · Socios / campo · 12/10 → 06/11
 - [T033 — Degustación a ciegas E002 (producto UC vs. competencia)](T033.md) · Hermanos + IA · Antes del 13/11 (idealmente entre el 26/10 y el 06/11)

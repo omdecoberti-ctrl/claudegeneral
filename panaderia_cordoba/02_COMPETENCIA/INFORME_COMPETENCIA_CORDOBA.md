@@ -304,6 +304,40 @@ Esto **reemplaza** la "candidata fuerte Z08" de la v2: en 2025–2026 llegaron t
 
 ---
 
+### 9b. Reseñas de clientes: panaderías de medialunas, facturas y café (v3)
+
+<!--SVG:02_COMPETENCIA/graficos/resenas_cadenas.svg-->
+
+**Alcance y límites:**
+- **Por qué no son reseñas de Google Maps:** el entorno no puede abrir Google Maps. Los puntajes salen de Restaurant Guru (que agrega Google y otros sitios), Tripadvisor, Yelp y directorios, vistos en fragmentos de buscador.
+- **Qué muestran:** sirven para **ordenar y encontrar temas**, no como promedio estadístico.
+- **Cómo completarlo:** el análisis completo de Google Maps (20 locales × 20 reseñas recientes, codificadas) queda como tarea de campo (T039).
+
+| Marca | Puntaje (1–5) y volumen | Qué elogian | Qué critican | Lectura [INTERPRETACIÓN] |
+|---|---|---|---|---|
+| **El Vergel** | 4,9 (2.014) en Pablo Cabrera; 4,2–4,3 en otras | Medialunas de manteca, criollos, masa madre | s/d | El mejor puntuado del formato panadería + café de barrio |
+| **Armando Medialunas** | 4,6 (451) | Medialunas, take away, precio bajo, personal enérgico | — | **Referente del formato especialista al paso:** producto estrella + rapidez |
+| **Panicafé** | ≈ 4,2–4,5 (+20 mil entre locales) | Masa madre, variedad, comida todo el día | Salón saturado en hora pico, baños | Escala con experiencia, pero se le satura la operación |
+| **Medialunas 707** | ≈ 4,3–4,4 (1.010) | Facturas ("las mejores de la ciudad"), atención, higiene | **Faltantes** (medialunas saladas agotadas), cierres sin aviso | Producto muy bueno; falla la disponibilidad |
+| **La Celeste** | 2,6 a 4,4 según el local | Horario 24 h, sándwich de miga, ubicación | Calidad irregular, demoras, mala atención, precio | **La mayor dispersión entre locales:** el problema es la operación |
+| **Del Pilar** | ≈ 3,9 (414) | Medialunas frescas, desayunos abundantes | Atención "apática y lenta" según el turno | Buen producto de planta; servicio inconsistente |
+| **Independencia** | 3,8 (110); Urca 4,1 | Tradición | "Medialunas viejas" | Frescura |
+| **Medialunas Calentitas** | 3,1–4,0 en 6 locales | Medialunas | **Servicio muy lento**, limpieza (Jardín) | Formato café con mesa: la espera arruina la experiencia |
+| **Perdú** | 3,4 (544) | Medialunas con gusto a manteca, criollitos, precio | Atención ("se negaron a vender"), delivery: 21% "no fue lo que pedí" | Producto bueno, operación floja |
+| **Lapana** | 3,4 Tripadvisor (65) | Ubicación, precio, desayunos | Atención muy irregular | — |
+| **Lo+Rico** | ≈ 3,1 (54 opiniones) | Facturas, chipá | "Medialunas mini", pastelitos sin relleno, productos secos | **Producto achicado:** lo que el cliente castiga |
+
+**Lo que dicen las reseñas, en 5 puntos [INTERPRETACIÓN]:**
+1. **Los mejor puntuados son especialistas y simples** (El Vergel, Armando, 707): producto estrella, take away, atención ágil.
+2. **Las cadenas grandes con salón varían mucho entre locales** (La Celeste de 2,6 a 4,4; Calentitas de 3,1 a 4,0). La diferencia no está en la receta, sino en la **operación**: personal, ritmo y limpieza.
+3. **Lo que más se castiga:** producto viejo o seco, producto achicado (tamaño o relleno), esperas, atención desganada y faltantes.
+4. **Lo que más se premia:** medialuna caliente, sabor a manteca, "casero", atención amable y precio razonable.
+5. **Para PAN-CBA:** el modelo de planta asegura **tamaño y relleno estables**, y el horneado continuo, **medialuna siempre caliente y sin faltantes**. Lo que hay que construir es el **estándar de atención** y una operación que no se sature (mostrador rápido, sin servicio de mesa largo). Hay que medir la nota de Google desde el día 1 (KPI).
+
+Detalle y fuentes: `I016c_resenas_cadenas_medialunas_cafe.md` (F2450–F2474) y `../03_CLIENTE/I016b_quejas_y_elogios_clientes.md` (F2320–F2339).
+
+---
+
 ## 10. Precios y posicionamiento
 
 **Precios relevados en v2** (Rappi/PedidosYa y prensa, fechas dispares; confirmar en el local):
@@ -379,6 +413,7 @@ Esto **reemplaza** la "candidata fuerte Z08" de la v2: en 2025–2026 llegaron t
 - `I014b_cafeterias_bakery_especialidad.md`: bakery, especialidad y cadenas de café (F401–F449).
 - `I014c_panaderias_de_barrio.md`: censo de barrio por zona (F500–F511).
 - `I015_I016_redes_precios_posicionamiento.md`: redes, precios y posicionamiento (F600–F668).
+- `I016c_resenas_cadenas_medialunas_cafe.md`: reseñas de cadenas de medialunas, facturas y café (F2450–F2474).
 - `I014h_zonas_candidatas_y_competidores_directos.md`: zonas Z05–Z08, Panicafé, Lapana, El Vergel, vigencia y precios en apps (F2200–F2238).
 - `../03_CLIENTE/I016b_quejas_y_elogios_clientes.md`: qué critica y qué elogia el cliente (F2320–F2339).
 - `../08_UBICACIONES/I029_alquileres_comerciales_por_zona.md`: alquileres por zona (F1800–F1844).
