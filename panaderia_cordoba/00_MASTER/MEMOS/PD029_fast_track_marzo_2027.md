@@ -72,6 +72,8 @@
 - **Alternativa:**
   - En 2027: dejar listos los manuales, el paquete legal y el modelo económico de franquicia (G14).
   - A comienzos de 2028: lanzar las primeras 1–3 franquicias piloto, con franquiciados cercanos, por ejemplo clientes actuales de UC.
+- **Ajuste 02/10 (I040):** el art. 1514 del Código Civil y Comercial obliga a entregar al franquiciado, antes de firmar, información económica de **2 años de unidades similares**. Con apertura en marzo de 2027, las primeras franquicias quedan para **≈ marzo de 2029** (antes, solo licencias o acuerdos que no sean franquicia, con asesoramiento de Laura). La 2ª unidad propia en 2027–2028 suma datos y acelera ese plazo.
+- **Ajuste 02/10 (I035):** el cronograma de este memo se revisa en `PD029b_ajuste_cronograma_habilitacion.md`.
 - **Esto puede decidirse más adelante**, pero conviene que la aspiración quede explícita.
 
 ## 7. Recomendación de la IA [RECOMENDACIÓN]

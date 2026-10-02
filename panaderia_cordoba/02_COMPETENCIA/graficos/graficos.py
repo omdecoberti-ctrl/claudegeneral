@@ -52,6 +52,37 @@ def bar_h(rows, fname, title, unit="", fmt=lambda v: f"{v}", color=C_PAN, w=760,
     save(fname, "".join(o))
 
 
+def bar_range(rows, fname, title, unit="", fmt=lambda v: f"{v}", color=C_PAN, w=760, band=None, note=""):
+    """rows: [(label, lo, hi, sublabel)] barras de rango (mín–máx)."""
+    lw, top, rh = 250, 50, 30
+    h = top + rh * len(rows) + 46
+    vmax = max(r[2] for r in rows) * 1.15
+    if band:
+        vmax = max(vmax, band[1] * 1.1)
+    X = lambda v: lw + (w - lw - 80) * v / vmax
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" {FONT} role="img" aria-label="{esc(title)}">',
+         f'<text x="0" y="18" font-size="15" font-weight="800" fill="{INK}">{esc(title)}</text>']
+    step = 10 if vmax > 30 else 5
+    for v in range(0, int(vmax) + 1, step):
+        o.append(f'<line x1="{X(v):.1f}" y1="{top - 6}" x2="{X(v):.1f}" y2="{top + rh * len(rows)}" stroke="{GRID}"/>'
+                 f'<text x="{X(v):.1f}" y="{top + rh * len(rows) + 14}" text-anchor="middle" font-size="10" fill="{INK2}">{esc(fmt(v))}</text>')
+    if band:
+        o.append(f'<rect x="{X(band[0]):.1f}" y="{top - 8}" width="{X(band[1]) - X(band[0]):.1f}" height="{rh * len(rows) + 8}" fill="#1F6FD0" fill-opacity=".10" stroke="#1F6FD0" stroke-dasharray="4 3"/>'
+                 f'<text x="{(X(band[0]) + X(band[1])) / 2:.1f}" y="{top - 14}" text-anchor="middle" font-size="11" font-weight="700" fill="#1F6FD0">{esc(band[2])}</text>')
+    for i, (lab, lo, hi, sub) in enumerate(rows):
+        y = top + i * rh
+        o.append(f'<text x="{lw - 10}" y="{y + 13}" text-anchor="end" font-size="12.5" fill="{INK}">{esc(lab)}</text>')
+        if sub:
+            o.append(f'<text x="{lw - 10}" y="{y + 25}" text-anchor="end" font-size="10" fill="{INK2}">{esc(sub)}</text>')
+        x0, x1 = X(lo), X(hi)
+        o.append(f'<g><title>{esc(lab)}: {esc(fmt(lo))}–{esc(fmt(hi))}{esc(unit)}</title><rect x="{x0:.1f}" y="{y + 4}" width="{max(3, x1 - x0):.1f}" height="16" rx="4" fill="{color}"/></g>'
+                 f'<text x="{x1 + 6:.1f}" y="{y + 16}" font-size="12" font-weight="700" fill="{INK}">{esc(fmt(lo))}–{esc(fmt(hi))}{esc(unit)}</text>')
+    if note:
+        o.append(f'<text x="0" y="{h - 8}" font-size="10.5" fill="{INK2}">{esc(note)}</text>')
+    o.append("</svg>")
+    save(fname, "".join(o))
+
+
 def zonas():
     res = json.load(open(os.path.join(DATOS, "resumen_zonas.json"), encoding="utf-8"))
     grupos = {"Panaderías": (["cadena_panaderia", "panaderia_barrio", "bakery_cafe"], C_PAN),
@@ -126,10 +157,11 @@ def main():
                     "Mapa de posicionamiento: precio × conveniencia", None)
     bar_h([("Mostaza", 3600, "fecha s/d"), ("Café Martínez", 6900, "sep-2026 (nacional)"), ("Havanna", 7000, "~2025, no confirmado"),
            ("YPF Full (CABA)", 7700, "ago-2026, no verificado"), ("Especialidad Córdoba", 8200, "estimado: espresso + 2 medialunas, oct-2025"),
+           ("Panicafé (Rappi)", 6850, "café con leche + 2, oct-2026"), ("Lapana (PedidosYa)", 7700, "café con leche + 2 mafaldas, oct-2026"),
            ("Starbucks", 9700, "may-2025")], "escalera_combo_desayuno.svg",
           "Escalera de precios: café + 2 medialunas (ARS)", fmt=lambda v: f"${v:,.0f}".replace(",", "."), color=C_PAN,
           band=(4500, 5500, "Hueco de precio tentativo"),
-          note="Precios de fuentes y fechas distintas; comparar como orden de magnitud. Fuente: I015 (c4).")
+          note="Precios de fuentes y fechas distintas; comparar como orden de magnitud. Fuente: I015 (c4) e I014h (apps, oct-2026).")
     bar_h([("Café Martínez (nacional)", 178000, "cuenta oficial del país"), ("Culpa de los Dos", 155000, "3–6 locales"), ("La Celeste", 94000, "16 locales"),
            ("Cherry Season", 94000, "3 locales"), ("Lo+Rico", 37000, "~30 locales"), ("Perdú", 35000, "7 locales"), ("Superanfibio", 27000, "1–3 locales"),
            ("Ethiopia Café", 23000, "1 local"), ("La Capke Go!", 21000, "1–2 locales"), ("Del Pilar", 20000, "35–45 locales"), ("Kråke Café", 11000, "1 local"),
@@ -140,12 +172,21 @@ def main():
            ("Av. Colón 375", 3.6, "446"), ("Obispo Trejo 1029", 2.9, "1.292"), ("Buenos Aires 1064", 2.6, "486")], "la_celeste_resenas.svg",
           "La Celeste: puntaje por sucursal (Restaurantguru, 1–5)", fmt=lambda v: f"{v:.1f}".replace(".", ","), color=C_PAN,
           note="Misma marca, experiencia muy distinta según el local: el principal punto débil de la red.")
-    bar_h([("La Celeste", 15, "declarado 16"), ("Del Pilar", 13, "declarado 35–45 (incluye alrededores)"), ("El Vergel", 11, "s/d"),
+    bar_h([("La Celeste", 15, "declarado 16"), ("Del Pilar", 19, "declarado 35–45 (incluye alrededores)"), ("El Vergel", 14, "s/d"),
            ("Medialunas 707", 11, "s/d"), ("Andrea Franceschini", 11, "7 oficiales + dudosos"), ("Independencia", 9, "declarado 12–15"),
-           ("Armando", 9, "declarado 8 → meta 13"), ("Lo+Rico", 9, "declarado 22 panaderías"), ("Panicafé", 9, "s/d"), ("Lapana", 8, "s/d"),
+           ("Armando", 9, "declarado 8 → meta 13"), ("Lo+Rico", 10, "declarado 20–26 panaderías"), ("Panicafé", 8, "s/d"), ("Lapana", 8, "s/d"),
            ("Perdú", 7, "s/d"), ("Catriel", 4, "declarado 4"), ("Pugliese", 4, "s/d"), ("Culpa de los Dos", 3, "declarado 5–6")],
           "cadenas_locales.svg", "Cadenas locales: sucursales relevadas con dirección en Córdoba Capital",
-          color=C_PAN, note="Relevamiento de escritorio al 29/09/2026 (I014 v2). 'Declarado' = lo que informa la marca o la prensa.")
+          color=C_PAN, note="Relevamiento de escritorio al 02/10/2026 (I014 v2 + I014h). 'Declarado' = lo que informa la marca o la prensa.")
+    bar_range([("Centro peatonal", 35, 42, "1 aviso"), ("Valle Escondido (Z08)", 18, 22, "3 avisos"), ("Nueva Córdoba (Z02)", 15, 24, "8 avisos"),
+               ("Centro fuera de peatonal", 11, 21, "4 avisos"), ("Argüello / V. Belgrano (Z08)", 8.5, 19, "3 avisos"), ("Güemes (Z03)", 9, 20, "1 aviso: poco confiable"),
+               ("Manantiales (Z09)", 8, 18, "4 avisos"), ("Alberdi / Colón (Z04)", 6, 16, "4 avisos"), ("Villa Cabrera / Urca (Z07)", 5, 13, "8 avisos"),
+               ("Cerro / Rafael Núñez (Z07)", 9, 12, "4 avisos"), ("Alta Córdoba (Z06)", 7, 11, "1 aviso: poco confiable"), ("Jardín / O'Higgins (Z09)", 7, 11, "4 avisos"),
+               ("General Paz (Z05)", 5.5, 10, "2 avisos: poco confiable")],
+              "zonas_candidatas_alquiler.svg", "Alquiler de locales a la calle por zona (USD/m² por mes, oct-2026)",
+              fmt=lambda v: f"{v:.0f}" if v == int(v) else f"{v:.1f}".replace(".", ","), color=C_CAFE,
+              band=(25, 35, "Tope compatible para 100–120 m² (10–12% de ventas)"),
+              note="Sin expensas ni IVA; TC $1.545. Avisos de portales vistos por buscador (I029, F1800–F1844). Verificar en el aviso antes de negociar.")
     print("OK gráficos")
 
 

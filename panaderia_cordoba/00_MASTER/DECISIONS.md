@@ -99,7 +99,7 @@
 | PD008 | Criterios y ponderaciones para evaluar conceptos | G4 | Estratégica | Futuro | — |
 | PD009 | Short-list de 2–3 conceptos | G4 | Estratégica | Futuro | Fichas de concepto |
 | PD010 | Concepto a desarrollar | G5 | Estratégica | Futuro | E001–E003 |
-| PD011 | Modelo productivo base (in situ / centralizado / híbrido) | G5 | Estratégica | Futuro | I010–I012 |
+| PD011 | Modelo productivo base (in situ / centralizado / híbrido) | G5 | Estratégica | Futuro: **análisis listo** (recomendación: híbrido liviano) | `09_OPERACIONES/I011_modelos_productivos.md` |
 | PD012 | Menú V1 y cantidad de SKU | G6 | Estratégica | Futuro | I020–I021 |
 | PD013 | Política y arquitectura de precios | G6 | Estratégica | Futuro | I022 |
 | PD014 | GO / NO GO económico | G7 | Estratégica | Futuro | I024–I025 |
@@ -117,8 +117,8 @@
 | PD026 | Plan de lanzamiento | G11 | Táctica | Futuro | — |
 | PD027 | Forma jurídica de la subsidiaria, encuadre fiscal y precios de transferencia con UC | G0–G7 | Estratégica | Parcial (subsidiaria de UC, D002) | Fabiola (contadora), Laura (abogada) |
 | PD028 | Canales de venta (salón / take-away / delivery / B2B) | G5 | Estratégica | Futuro | G2–G4 |
-| PD029 | **Plan acelerado (fast-track) para abrir en marzo 2027**: cómo comprimir el roadmap y fijar fechas de corte | G0 | Estratégica | **Lista para decidir** | `MEMOS/PD029_fast_track_marzo_2027.md` |
-| PD030 | Secuencia de expansión 2027: 2ª unidad propia y lanzamiento de franquicia | G0/G13 | Estratégica | Lista para decidir (se puede postergar) | Mismo memo §6 |
+| PD029 | **Plan acelerado (fast-track) para abrir en marzo 2027**: cómo comprimir el roadmap y fijar fechas de corte. **Ajuste 02/10:** variantes A', B' (recomendada: marzo como panadería con horneado + café para llevar; salón en abril–mayo) y C' por plazos de habilitación | G0 | Estratégica | **Lista para decidir** | `MEMOS/PD029_fast_track_marzo_2027.md` + `MEMOS/PD029b_ajuste_cronograma_habilitacion.md` |
+| PD030 | Secuencia de expansión 2027: 2ª unidad propia y lanzamiento de franquicia. **Ajuste 02/10:** el CCyC (art. 1514) exige 2 años de datos de unidades similares → primeras franquicias ≈ 2029 | G0/G13 | Estratégica | Lista para decidir (se puede postergar) | Mismo memo §6 + I040 |
 | PD031 | Presupuesto y ejecutor del trabajo de campo y los experimentos previos a la apertura | G0 | Táctica | **Lista para decidir** | Mismo memo §5 |
 | PD032 | Política de canal: cómo convive la marca retail propia con los clientes mayoristas de UC (panaderías y cafeterías) | G4 | Estratégica | Futuro | I010, R019 |
 | PD033 | Hosting del sitio | G0 | Operativa | CERRADA → D008 (Vercel) | `site/DEPLOY.md` |

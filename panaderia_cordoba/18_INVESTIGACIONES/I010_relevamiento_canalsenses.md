@@ -272,3 +272,13 @@
 - [ ] SOURCES (alta F250–F266)
 - [ ] PROJECT_MASTER
 - [ ] FRANCHISE_READINESS_LOG (portfolio estandarizado, BRC, política de canal)
+
+## 11. Complemento (02/10/2026)
+Ver `I010b_canalsenses_complemento.md`:
+- **Portfolio:** 34 productos en 4 categorías (facturas, medialunas, panificación y packs familiares).
+- **Certificación:** BRC sigue "en proceso".
+- **Planta:** 810 m² (contra 900 m² de este documento: confirmar).
+- **Fecha de origen:** "desde 2005" (actividad) y S.R.L. de 2011.
+- **Clientes:** no aparecen clientes en Córdoba Capital en la web.
+
+Lo que queda abierto pasa a T024 (Q079, Q080).

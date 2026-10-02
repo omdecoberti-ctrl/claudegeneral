@@ -2,12 +2,12 @@
 
 | Campo | Valor |
 |---|---|
-| Código | E-04 v2 · Consolida I013, I014 (a–g), I015 (a, b), I016 |
-| Fecha | 28/09/2026 · **v2: 29/09/2026** |
+| Código | E-04 v3 · Consolida I013, I014 (a–h), I015 (a, b), I016 (a, b) |
+| Fecha | 28/09/2026 · v2: 29/09/2026 · **v3: 02/10/2026** |
 | Gate | G3 — Competencia |
-| Estado | **v2: relevamiento de escritorio ampliado** (381 locales). Falta trabajo de campo (precios en góndola, cliente incógnito) y cruzarlo con la capa en vivo de OpenStreetMap |
+| Estado | **v3: relevamiento de escritorio ampliado + zonas candidatas** (397 locales). Falta trabajo de campo (precios en góndola, cliente incógnito) y cruzarlo con la capa en vivo de OpenStreetMap |
 | Mapa interactivo | [`MAPA_COMPETITIVO_CORDOBA.html`](MAPA_COMPETITIVO_CORDOBA.html): plano real de la ciudad, capas, filtros, Google Maps y panaderías de OpenStreetMap en vivo |
-| Datos | `datos/locales_competencia.json` (**381 locales únicos, 197 marcas**) · `datos/locales_competencia.csv` (328 ubicados en el mapa) · `datos/precios_relevados.json` · `datos/locales_excluidos.json` |
+| Datos | `datos/locales_competencia.json` (**397 locales únicos, 194 marcas**) · `datos/locales_competencia.csv` (345 ubicados en el mapa) · `datos/precios_relevados.json` · `datos/locales_excluidos.json` |
 
 > **Cómo leer este informe.**
 > - Todo dato lleva etiqueta: [HECHO] con fuente, [ESTIMACIÓN], [INTERPRETACIÓN] o [RECOMENDACIÓN].
@@ -20,6 +20,12 @@
 > - **Panaderías de barrio:** de 28 a 120.
 > - **Indirectos:** 34 supermercados, 19 locales de comida rápida y 9 estaciones de servicio con tienda.
 > - **Nuevos datos:** precios, redes y puntajes.
+
+> **Qué cambió en la v3 (02/10):** foco en las **zonas candidatas Z05–Z08** y en los **competidores directos del formato** (detalle en `I014h_zonas_candidatas_y_competidores_directos.md`).
+> - **+16 locales** (397 en total): Panicafé Villa Belgrano (Martinolli 6191), 3 El Vergel (Poeta Lugones, Panamericano, Spilimbergo), 6 Del Pilar (Urca, Castro Barros, Carrefour Martinolli, Gral. Paz 185, 9 de Julio 915, Vélez Sarsfield 3429), Lo+Rico Martinolli 7191, Tregua, Con Manteca, Qala Caffè, Fernández Villa Cabrera y La Milkería. Del Pilar del Cerro figura **cerrado** (excluido).
+> - **Vigencia:** Panicafé, El Vergel, Fernández y La Celeste Valle Escondido (abrió ~may-2026) están activos; Cherry Season reabrió en el Cerro con casa matriz de 350 m² y tostadero.
+> - **Nuevos:** fichas de Panicafé, Lapana y El Vergel, precios en apps de los 4 competidores directos y una lectura por zona candidata (§4b).
+> - **Lo que dicen los clientes** (I016b, en el informe de cliente E-06): la queja n.º 1 de la categoría es la **frescura**.
 
 <!--SVG:02_COMPETENCIA/graficos/cadenas_locales.svg-->
 
@@ -111,15 +117,15 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 
 <!--SVG:02_COMPETENCIA/graficos/zonas_por_tipo.svg-->
 
-| Zona | Perfil competitivo | Jugadores principales relevados | Lectura para PAN-CBA [INTERPRETACIÓN] |
-|---|---|---|---|
-> **Conteo v2 por zona** (locales relevados / panaderías): Z01 49/30 · Z02 48/27 · Z03 18/13 · Z04 31/19 · Z05 37/24 · Z06 33/18 · Z07 30/15 · Z08 26/12 · Z09 42/27 · Z10 14/4. Otros 53 registros no tienen barrio ni zona y no se pueden ubicar en el mapa.
+> **Conteo v3 por zona** (locales relevados / panaderías): Z01 51/32 · Z02 48/27 · Z03 18/13 · Z04 31/19 · Z05 38/25 · Z06 37/21 · Z07 35/19 · Z08 30/15 · Z09 43/28 · Z10 14/4. Otros 52 registros no tienen barrio ni zona y no se pueden ubicar en el mapa.
 >
 > **Ajuste de lectura v2 [INTERPRETACIÓN]:** las zonas "sin La Celeste" no están vacías.
 > - En Z05 (General Paz) y Z07 (Cerro) ya hay formatos panadería + café: **Panicafé** y **Lapana**.
 > - En Z06 y Z04 está **El Vergel**, con muy buenas reseñas.
 > - La oportunidad en esas zonas depende de ganarles en experiencia, café y consistencia, no de la falta de oferta.
 
+| Zona | Perfil competitivo | Jugadores principales relevados | Lectura para PAN-CBA [INTERPRETACIÓN] |
+|---|---|---|---|
 | **Z01 Centro** | Cadenas de café y La Celeste; muchas oficinas y flujo peatonal diurno | La Celeste, Havanna, Starbucks, Café Martínez, Bonafide, Le Dureau | Alto flujo y alta competencia. Oportunidad en desayuno temprano y almuerzo rápido para oficinistas. Alquiler alto; muchas galerías vacías (40–50%). |
 | **Z02 Nueva Córdoba** | **La zona más saturada**: 10 La Celeste, especialidad, medialunerías, cadenas | La Celeste (10), Cherry Season, Caffè del Popolo, Lattertulia, Perdú, Medialunas 707, Mostaza 24 h, Starbucks | Mercado estudiantil enorme (UNC), pero La Celeste domina la conveniencia 24 h. Entrar solo con un diferencial claro. |
 | **Z03 Güemes / Observatorio** | Polo de merienda "instagrameable" (Belgrano y Achával Rodríguez) | Culpa de los Dos, Kråke, Ethiopia, Brunchería, La Capke, Armando | Público joven, dispuesto a pagar por experiencia. Hay pastelería de autor; falta panadería de calidad para llevar. |
@@ -132,6 +138,42 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 | **Z10 Periferia** | Clásicas de precio bajo; cafés del aeropuerto | El Trigal, Los Boulevares, Vucetich; Juan Valdez y Tostado (aeropuerto) | Sensibilidad al precio alta. Baja prioridad para el local 1. |
 
 **Nota:** los conteos reflejan cuánto se pudo relevar en cada zona, no la densidad real. La capa en vivo de OpenStreetMap del mapa agrega, por zona, la cantidad de panaderías registradas con ubicación exacta.
+
+---
+
+## 4b. Zonas candidatas Z05–Z08: competencia directa y alquiler (v3)
+
+**Competidores directos del formato "panadería + café a precio medio"** (fichas completas en I014h):
+
+| | Panicafé | Lapana | El Vergel |
+|---|---|---|---|
+| Locales en Capital | 8 relevados (Z01, Z02, Z05, Z07, Z08, Z09), con expansión por franquicias | 8 | 14 relevados, sin cuenta central de redes |
+| Propuesta | Masa madre, heladería, comida todo el día | Combos de desayuno, locales de paso | Medialunas de manteca y criollos, con café |
+| Reseñas | 8,4/10 con más de 16.000 reseñas (Cerro) · 9/10 con 4.058 (Gral. Paz), índices de agregadores | 3,4/5 en Tripadvisor (65 opiniones) | 4,2–4,9/5 en Restaurantguru |
+| Qué critican | Salón saturado en hora pico, baños | Atención muy irregular | s/d |
+| Café + medialunas (apps, oct-2026) | Café con leche + 2: **$6.850** | Café con leche + 2 mafaldas: **$7.700** | Café + 1: **$5.000–5.750** |
+| Docena de medialunas (apps) | **$25.400** | s/d (suelta $1.600) | ≈ $17.200–20.000 (½ docena $8.600–10.000) |
+
+Como referencia, La Celeste vende la docena a $10.620–15.600 en apps. **Panicafé cobra entre 1,6 y 2,4 veces más que La Celeste y aun así llena el salón**: hay disposición a pagar por la experiencia. [HECHO + INTERPRETACIÓN]
+
+<!--SVG:02_COMPETENCIA/graficos/zonas_candidatas_alquiler.svg-->
+
+| Zona | Competencia directa del formato | Alquiler a la calle, USD/m² (I029) | Lectura [INTERPRETACIÓN] |
+|---|---|---|---|
+| **Z05 General Paz / Juniors / San Vicente** | **Alta en el núcleo Esquiú / 25 de Mayo**: Panicafé, Lapana, Perdú, Bäckerhaus, Tregua, El Vergel, Armando. Juniors y San Vicente casi sin cadenas bakery-café (falta de datos, no prueba de vacío) | 5,5–10 (poco confiable: 2 avisos) | Evitar el núcleo de Gral. Paz. **Juniors / San Vicente**: opción a validar en campo |
+| **Z06 Alta Córdoba / Cofico / Gral. Bustos** | **Media-baja.** El Vergel domina; no hay Panicafé ni Lapana; Con Manteca muestra demanda de especialidad en Cofico | 7–11 (1 aviso) | **La menos disputada.** Población residencial grande; alquiler holgado (3–6% de las ventas) |
+| **Z07 Cerro / Villa Cabrera / Urca** | **Alta sobre Rafael Núñez** (Panicafé casa madre, Cherry Season, Superanfibio, Qala, Fernández). Villa Cabrera, intermedia | Cerro 9–12 · Villa Cabrera / Urca 5–13 | Rafael Núñez es un frente premium saturado. **Villa Cabrera (Caraffa)**: segunda opción |
+| **Z08 Argüello / V. Belgrano / Valle Escondido** | **Creciente:** Panicafé (Martinolli 6191), La Celeste Valle Escondido (may-2026), La Milkería, Lo+Rico ×2, Del Pilar en Carrefour | Argüello 8,5–19 · Valle Escondido 18–22 | La demanda está validada, pero **la ventana se achica**. Solo con un local puntual muy bueno |
+
+**Orden preliminar para la metodología de ubicación (G8) [RECOMENDACIÓN, a validar en campo]:**
+1. Z06 Cofico / Alta Córdoba / Gral. Bustos.
+2. Z07 Villa Cabrera (Caraffa).
+3. Z05 Juniors / San Vicente.
+4. Z08, solo con una oportunidad puntual.
+
+Esto **reemplaza** la "candidata fuerte Z08" de la v2: en 2025–2026 llegaron tres competidores directos a esa zona.
+
+**Doble perspectiva:** para el local 1 conviene la zona con menos competencia directa y un alquiler holgado. Para la red, Z06 y Z07 tienen corredores replicables (Fragueiro, Pablo Cabrera, Caraffa), y Z08 sigue siendo un destino natural de la 2.ª o 3.ª unidad.
 
 ---
 
@@ -272,6 +314,8 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 - **Especialidad en Córdoba:** espresso $3.200 y medialuna $2.500 (oct-2025).
 - **Facturas en Alta Gracia:** docena del día $7.200; 10 del día anterior $3.600 (abril 2025).
 
+- **v3 (apps, oct-2026):** Panicafé café con leche + 2 medialunas $6.850 y docena $25.400 · Lapana café con leche + 2 mafaldas $7.700 · El Vergel café + 1 medialuna $5.000–5.750 · La Celeste docena $10.620–15.600 y medialuna $1.300 · Havanna espresso $3.800 (sep-2026).
+
 **Índice propuesto "café con leche + 2 medialunas"** (a relevar el primer lunes de cada mes): panadería masiva ~$2.600–3.100 · comida rápida $3.600 · cadena de cafetería ~$4.100–4.300 · YPF Full ~$7.700 · especialidad $8.200 o más.
 
 **Referencia del Centro de Panaderos (abril 2026):** pan francés $3.500/kg, mignon $4.000/kg, criollos $8.000/kg, facturas desde $1.000 por unidad. La medialuna en carta de cafetería cuesta $1.400–1.600 (agosto 2026). [HECHO]
@@ -316,17 +360,14 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 
 **Implicancias [RECOMENDACIÓN]:**
 1. Llevar a la etapa de conceptos (G4) el "tercer formato" (EB1) como concepto candidato principal, **junto con al menos 3 alternativas**, para no sesgar la decisión.
-2. Excluir Nueva Córdoba como primera opción de ubicación, salvo que aparezca un diferencial muy fuerte. Priorizar Z08, Z05, Z06 y Z07 en la metodología de ubicación (G8).
+2. Excluir Nueva Córdoba como primera opción de ubicación, salvo que aparezca un diferencial muy fuerte. **v3:** priorizar Z06, Z07 (Villa Cabrera) y Z05 (Juniors / San Vicente); Z08 solo con una oportunidad puntual (§4b).
 3. Tomar a Del Pilar como caso de estudio del modelo: franquicias, planta y operación de sus locales.
 4. Diseñar la comunicación desde el día 1 sobre producto emblema, frescura visible y consistencia.
 
 **Próximos pasos:**
-- **Cruzar el censo v2 (381) con la capa OpenStreetMap del mapa**, que trae ubicaciones exactas y locales que el buscador no ve. Un socio abre el mapa, hace clic en "Exportar datos OSM", baja el CSV y me lo pasa (o lo sube al repositorio). Con eso actualizo densidades por zona y por barrio.
-- Relevar en otra sesión, cuando haya cupo de búsquedas:
-  - las direcciones de Del Pilar, Lo+Rico e Independencia;
-  - precios en Rappi y PedidosYa;
-  - estaciones de servicio y supermercados;
-  - las cadenas por verificar.
+- **Cruzar el censo v3 (397) con la capa OpenStreetMap del mapa**, que trae ubicaciones exactas y locales que el buscador no ve. Un socio abre el mapa, hace clic en "Exportar datos OSM", baja el CSV y me lo pasa (o lo sube al repositorio). Con eso actualizo densidades por zona y por barrio.
+- **Hecho en v3:** sucursales de Del Pilar y Lo+Rico en zonas candidatas, vigencia de locales clave, fichas de Panicafé, Lapana y El Vergel, y precios en apps.
+- **Sigue pendiente (solo se resuelve en campo o con la página oficial):** listado completo de Del Pilar (declara 35–45), vigencia de Delizie, El Roble y Vicente, y precios en mostrador.
 - **Trabajo de campo (PD031):**
   - índice de precios "café con leche + 2 medialunas" y docena de facturas en 20 locales;
   - cliente incógnito en La Celeste, Del Pilar, Lo+Rico, Culpa de los Dos y Cherry Season;
@@ -338,6 +379,9 @@ No todos compiten igual. Cada tipo de jugador se pelea por ocasiones distintas:
 - `I014b_cafeterias_bakery_especialidad.md`: bakery, especialidad y cadenas de café (F401–F449).
 - `I014c_panaderias_de_barrio.md`: censo de barrio por zona (F500–F511).
 - `I015_I016_redes_precios_posicionamiento.md`: redes, precios y posicionamiento (F600–F668).
+- `I014h_zonas_candidatas_y_competidores_directos.md`: zonas Z05–Z08, Panicafé, Lapana, El Vergel, vigencia y precios en apps (F2200–F2238).
+- `../03_CLIENTE/I016b_quejas_y_elogios_clientes.md`: qué critica y qué elogia el cliente (F2320–F2339).
+- `../08_UBICACIONES/I029_alquileres_comerciales_por_zona.md`: alquileres por zona (F1800–F1844).
 - `I014d_cadenas_sucursales_v2.md` (F1100–F1167) · `I014e_panaderias_de_barrio_v2.md` (F1200–F1320) · `I014f_competidores_indirectos.md` (F1400–F1443) · `I014g_directorios_panaderias.md` (F1500–F1507) · `I015b_precios_redes_v2.md` (F1600–F1633): ampliación v2.
 - `datos/locales_excluidos.json`: registros descartados y motivo.
 - `I013_censo_competitivo_cordoba.md` e `I018_franquicias_panaderia_cafe.md`: primera pasada y franquicias.

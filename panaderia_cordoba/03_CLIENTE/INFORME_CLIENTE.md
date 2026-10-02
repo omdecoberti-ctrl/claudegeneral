@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| Código | E-06 · Consolida I006 (segmentos y ocasiones) + datos de I001, I002 e I003 |
-| Fecha | 28/09/2026 |
+| Código | E-06 v2 · Consolida I006, I016b (quejas y elogios), I005b §C (ocupados, ticket, delivery) + datos de I001, I002 e I003 |
+| Fecha | 28/09/2026 · **v2: 02/10/2026** |
 | Gate | G2 — Cliente |
 | Estado | **v1 con datos secundarios.** G2 no se puede cerrar sin la voz del cliente cordobés: entrevistas (I007), encuesta (I008) y observación (I009). Los instrumentos ya están listos (§8) |
-| Anexo | `I006_segmentos_ocasiones.md` (fuentes F1000–F1051) |
+| Anexos | `I006_segmentos_ocasiones.md` (F1000–F1051) · `I016b_quejas_y_elogios_clientes.md` (F2320–F2339) · `../01_MERCADO/I005b_costos_y_cliente_v2.md` §C (F1900–F1941) |
 
 ---
 
@@ -24,6 +24,11 @@
 | 8 | **Los segmentos más grandes (familias, estudiantes, adultos mayores) son los más sensibles al precio.** Los de más valor (oficinistas, empresas, turistas) son más chicos o están menos medidos. | INTERPRETACIÓN |
 | 9 | **Las franjas pico son de 8 a 10 h y de 16 a 18 h**, más el domingo. La franja de 6 a 8 h tiene demanda (oficinistas, trabajadores por turnos, estudiantes) y poca oferta de calidad (ver competencia). | ESTIMACIÓN |
 | 10 | **Qué duele hoy:** calidad irregular, esperas, atención, precio y falta de lugar para sentarse. Surge de las reseñas de La Celeste y de otros competidores; falta la voz directa del cliente. | HECHO parcial |
+| 11 | **v2: la queja n.º 1 de la categoría es la frescura** ("no son de hoy", "secas y duras"): aparece en ~6 de ~16 locales relevados. Le siguen la atención irregular, las esperas en cafeterías con mesa y el precio alto con producto malo (§6b). | HECHO (muestra chica) |
+| 12 | **v2: los elogios** se repiten en 4 ejes: producto casero y con gusto a manteca, atención amable, frescura y precio "democrático". Los mejor puntuados (4,5–4,8) son **multi-ocasión** o "caseros". | HECHO |
+| 13 | **v2: Gran Córdoba tiene 736 mil ocupados** (−11 mil en un año), 72% asalariados. Por rama: comercio ≈ 143 mil, servicios a empresas ≈ 81 mil, educación ≈ 60 mil, administración pública ≈ 51 mil, hoteles y restaurantes ≈ 42 mil. | HECHO + ESTIMACIÓN |
+| 14 | **v2: ticket.** En cafeterías de Córdoba, el espresso cuesta $3.200–3.800, el café con leche $5.400–6.200 y el combo infusión + 2 medialunas $7.500. Ticket por persona propuesto para PAN-CBA: **$9.000–10.000** (antes $7.000). | HECHO + ESTIMACIÓN |
+| 15 | **v2: el fin de semana pesa 3–5 veces un día hábil en facturas** (testimonios del sector). El café por delivery creció 33% interanual en PedidosYa. | HECHO |
 
 ---
 
@@ -100,13 +105,52 @@
 
 ---
 
+## 6b. Qué critica y qué elogia el cliente cordobés (I016b)
+
+| # | Queja | Frecuencia (locales o fuentes, de ~16 + 4 notas) | Implicancia para PAN-CBA [RECOMENDACIÓN] |
+|---|---|---|---|
+| Q1 | **Frescura:** producto viejo, seco, "no es de hoy" | **Alta (~6)** | Tandas chicas y frecuentes, con el **horario de la última horneada a la vista**. Lo que sobra va a descuento explícito o a Cheaf, nunca como fresco |
+| Q2 | **Atención:** desgano, empleados que no venden | Media-alta (~4–5) | Selección y entrenamiento en trato; regla de "nunca negarse a vender lo exhibido"; cliente incógnito mensual |
+| Q3 | **Esperas** en cafeterías con mesa (hasta 50 min) | Media (~3) | Mostrador o autoservicio, sin servicio de mesa largo; tiempo objetivo de entrega |
+| Q4 | **Precio alto con calidad baja** | Media (~4) | El precio se justifica con frescura visible; combo café + medialuna como ancla |
+| Q5 | **Errores y faltantes en delivery** (Perdu: 21% "no fue lo que pedí") | Baja-media (~2) | Checklist de armado, pocos SKUs en apps y stock integrado |
+| — | Higiene y horarios | Sin hallazgos | No prueba que no existan |
+
+| Elogio | Frecuencia | Lectura |
+|---|---|---|
+| Producto **casero**, sabroso, "gusto a manteca" | Alta (~6) | **El producto de planta tiene que saber a casero:** testearlo a ciegas (E002) contra Perdu, De Mi Viejo y El Roble |
+| Atención amable y cordial | Alta (~5) | La atención compensa: es palanca, no solo riesgo |
+| Frescura | Media (~2–3) | Confirma que es el atributo central |
+| Precio accesible / "democrático" | Media (~2) | Precio medio, no premium |
+| Variedad, incluido sin TACC | Media (~3) | Línea mínima sin TACC de terceros certificados |
+
+**Lectura [INTERPRETACIÓN]:** el formato bake-off ataca justo la queja n.º 1 (frescura). El riesgo está en copiar los problemas de las cadenas de medialunas: **esperas y atención inconsistente**. Muestra chica y no estadística: se valida con 20 locales × 20 reseñas de Google codificadas y con el trabajo de campo (T017).
+
+### 6c. Ocupados, ticket y delivery (I005b §C)
+
+| Dato | Valor | Etiqueta |
+|---|---|---|
+| Ocupados en Gran Córdoba (EPH II-T 2026) | 736 mil · desocupación 10,5% (87 mil) · 71,8% asalariados | HECHO |
+| Por rama | Comercio ≈ 143 mil · servicios a empresas ≈ 81 mil · educación ≈ 60 mil · administración pública ≈ 51 mil · hoteles y restaurantes ≈ 42 mil · salud ≈ 50 mil [SUPUESTO] | ESTIMACIÓN: dos versiones contradictorias en la fuente; verificar con microdatos |
+| Ticket en cafeterías de Córdoba | Espresso $3.200 (especialidad) – $3.800 (Havanna) · capuccino $4.500 · café con leche $5.400–6.200 · medialuna $2.500 · combo infusión + 2 medialunas $7.500 | HECHO |
+| Ticket por persona propuesto | **$9.000–10.000** (reemplaza los $7.000 de I005) | ESTIMACIÓN |
+| Delivery | Café por delivery +33% interanual (PedidosYa 2026). Pedido de desayuno para 2 personas ≈ $14–20 mil [ESTIMACIÓN]. El ticket real del cliente no se consiguió | HECHO + ESTIMACIÓN |
+| Fin de semana | Antes de la crisis: 20–30 docenas de facturas por día hábil contra ~100 el fin de semana. La venta de facturas cayó 85% contra 2023. 77% consume facturas o pastelería al menos una vez por semana (Puratos) | HECHO (testimonios del sector) |
+
+**Implicancia [INTERPRETACIÓN]:**
+- **Plantilla:** el fin de semana tiene que estar cubierto (turnos y horneado más grandes los sábados y domingos).
+- **Oficinas:** el segmento oficinas y servicios (≈ 80–130 mil ocupados) justifica abrir temprano en zonas de oficinas.
+- **Ticket:** el de $9–10 mil cambia el SOM y el punto de equilibrio. Se valida en campo.
+
+---
+
 ## 7. Hipótesis actualizadas
 
 | Hipótesis | Evidencia nueva | Estado |
 |---|---|---|
-| A001 Ticket | Rango estimado de $1.500 a $8.000 según segmento; combo de cafetería entre $3.600 y $9.700 | NO VALIDADA; se estrecha el rango |
+| A001 Ticket | Rango estimado de $1.500 a $8.000 según segmento; combo de cafetería entre $3.600 y $9.700. **v2:** ticket por persona en cafeterías ≈ $9.000–10.000 | NO VALIDADA; se estrecha el rango |
 | A002 Frecuencia | Estimaciones por segmento; menor frecuencia fuera de casa (76% redujo salidas) | NO VALIDADA |
-| A006 Aceptación del bake-off | Evidencia mixta (frescura y "horneado acá" a favor; "hecho a mano" en contra) | NO VALIDADA → E002 |
+| A006 Aceptación del bake-off | Evidencia mixta (frescura y "horneado acá" a favor; "hecho a mano" en contra). **v2:** la queja n.º 1 de la categoría es la frescura, y el bake-off la ataca; el elogio n.º 1 es "casero" | NO VALIDADA → E002 |
 | A008 Picos predecibles | Picos a las 8–10 h, 16–18 h y domingo 17 h (delivery) | EN VALIDACIÓN |
 | A014 Delivery rentable | Comisiones de 20–35% más IVA; ticket en baja | NO VALIDADA, evidencia en contra salvo con precio diferenciado |
 | A015 Demanda de empresas | Solo Del Pilar comunica B2B; sin dato de tamaño | NO VALIDADA → entrevistas a empresas |

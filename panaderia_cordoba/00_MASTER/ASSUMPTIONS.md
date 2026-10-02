@@ -11,24 +11,26 @@
 | A002 | Frecuencia de compra del segmento objetivo | Crítica | Baja | G2 | NO VALIDADA |
 | A003 | Dotación mínima por superficie/formato | Alta | Baja | G9 | NO VALIDADA |
 | A004 | Congelados del socio: calidad percibida competitiva a costo conveniente | Crítica | Baja | G4/G5 | NO VALIDADA |
-| A005 | Centralizar reduce materialmente CAPEX, m² y personal especializado | Crítica | Media | G4 | NO VALIDADA |
+| A005 | Centralizar reduce materialmente CAPEX, m² y personal especializado | Crítica | Media | G4 | EN VALIDACIÓN (evidencia a favor, I011) |
 | A006 | El consumidor no penaliza (o no percibe) producto bake-off si el resultado es bueno | Alta | Baja | G5 | NO VALIDADA |
 | A007 | Existe un espacio de diferenciación no cubierto en Córdoba Capital | Crítica | Baja | G3 | NO VALIDADA |
 | A008 | La demanda se concentra en franjas horarias predecibles | Alta | Media | G2 | EN VALIDACIÓN |
-| A009 | Existen locales disponibles con alquiler compatible con el modelo | Alta | Baja | G8 | NO VALIDADA |
+| A009 | Existen locales disponibles con alquiler compatible con el modelo | Alta | Baja | G8 | EN VALIDACIÓN (evidencia a favor, I029) |
 | A010 | Break-even ≤ 12 meses con la inversión disponible | Crítica | Baja | G7 | NO VALIDADA |
 | A011 | Un menú acotado (SKU reducidos) no reduce ventas vs. surtido amplio | Alta | Baja | G6 | NO VALIDADA |
-| A012 | Personal sin oficio de panadero puede operar con SOPs y capacitación corta | Alta | Media | G9 | NO VALIDADA |
+| A012 | Personal sin oficio de panadero puede operar con SOPs y capacitación corta | Alta | Media | G9 | EN VALIDACIÓN (evidencia externa a favor, I004b) |
 | A013 | Las bebidas (café) elevan ticket y margen lo suficiente para justificar su complejidad | Alta | Baja | G4/G6 | NO VALIDADA |
 | A014 | Delivery por apps es rentable después de comisiones | Media | Baja | G6/G7 | NO VALIDADA |
 | A015 | Existe demanda B2B (oficinas, eventos, cafeterías) aprovechable | Media | Baja | G2 | NO VALIDADA |
 | A016 | El desperdicio se puede mantener bajo un % objetivo con cocción por demanda | Alta | Media | G9 | NO VALIDADA |
-| A017 | La habilitación de un local de cocción (sin elaboración completa) es más simple/rápida | Media | Baja | G8/G11 | NO VALIDADA |
+| A017 | La habilitación de un local de cocción (sin elaboración completa) es más simple/rápida | Media | Baja | G8/G11 | EN VALIDACIÓN (a favor si no hay consumo en el local, I035) |
 | A018 | El contexto macro permite sostener márgenes con ajustes de precio frecuentes | Crítica | Baja | G1/G7 | NO VALIDADA |
 | A019 | El modelo validado en Córdoba es trasladable a otras ciudades | Media | Baja | G14 | NO VALIDADA |
 | A020 | Existe potencial franquiciado dispuesto a invertir en el formato resultante | Media | Baja | G15 | NO VALIDADA |
 
 ---
+| A021 | "Pan con horneado + café para llevar" se habilita como riesgo bajo (sin consumo en el local) | Crítica (para PD029b opción B') | Baja | G8/G11 | NO VALIDADA |
+| A022 | El producto UC puesto en el local (transferencia + flete) cuesta menos del ~40% del precio de venta de los panificados | Crítica | Baja | G4/G7 | NO VALIDADA |
 
 ## Detalle
 
@@ -137,3 +139,20 @@
 ### A020 — Existen franquiciados potenciales
 - **Evidencia inicial (I018):** mercado argentino de más de 2.000 marcas y ~60.000 locales; el 49% requiere hasta USD 50.000 y hay tendencia hacia formatos chicos. Existen referentes de "fabricante que franquicia" (Costumbres Argentinas, Buenos Aires Bakery, Bonafide, Havanna). Confianza: Media-baja.
 - **Cómo validar:** G15, benchmark de franquicias en Argentina (I018). **Estado:** NO VALIDADA
+
+### Actualización 02/10/2026 (investigaciones I011, I029, I035, I004b, I005b, I016b)
+- **A001 Ticket:** en cafeterías de Córdoba el ticket por persona ronda $9.000–10.000 (espresso $3.200–3.800, combo infusión + 2 medialunas $7.500). Reemplaza el supuesto de $7.000 de I005. Sigue NO VALIDADA hasta el trabajo de campo.
+- **A005 Centralizar:** I011 estima −USD 20–35 mil de equipamiento, −40 m² y −USD 2.500/mes de personal frente a la elaboración completa. Granier opera ~350 tiendas así. → EN VALIDACIÓN (falta cotizar, T037).
+- **A006 Bake-off:** la queja n.º 1 de la categoría es la frescura (I016b), que el bake-off ataca; el elogio n.º 1 es "casero", que es el riesgo. Sigue dependiendo de E002.
+- **A009 Locales con alquiler compatible:** fuera de la peatonal del Centro, el alquiler entra en el 10–12% de las ventas en casi todas las zonas (I029). Vacancia alta (13,8% CPI). → EN VALIDACIÓN.
+- **A010 Break-even ≤ 12 meses:** sin cambios de estado. Insumos nuevos para G7: salarios UTHGRA, comisiones de cobro (2,1–3,1%), costo del café por taza, gas comercial y alquileres por zona (I005b, I029).
+- **A012 Personal sin oficio:** Granier, Costumbres Argentinas y Pan Pa' Ya! operan sin panaderos (I004b). → EN VALIDACIÓN.
+- **A017 Habilitación más simple:** "venta minorista de pan con horneado" es riesgo bajo con Director Técnico; con consumo en el local pasa a gastronómico, probablemente riesgo intermedio, con 3–5 meses desde la firma (I035). → EN VALIDACIÓN.
+
+### A021 — "Pan con horneado + café para llevar" se habilita como riesgo bajo
+- **Por qué importa:** es la base de la opción B' del memo PD029b (abrir en marzo sin salón).
+- **Cómo validar:** prefactibilidad HOL sobre 2–3 parcelas candidatas y consulta a un gestor (T034, T018). **Estado:** NO VALIDADA.
+
+### A022 — Precio de transferencia UC competitivo
+- **Por qué importa:** con un costo menor al ~40% del precio de venta, el modelo híbrido (M3) gana claramente contra la elaboración completa. Por encima del 48%, conviene elaborar (I011 §3.1). Caso Tim Hortons: R024.
+- **Cómo validar:** T024 (catálogo y precios de transferencia de UC) + flete semanal vs. quincenal. **Estado:** NO VALIDADA.

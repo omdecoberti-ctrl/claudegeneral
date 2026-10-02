@@ -18,5 +18,23 @@
   "marca": "Panadería San Alfonso",
   "direccion": "Av. Recta Martinolli 7290",
   "motivo": "Cerrada definitivamente (Restaurant Guru)"
+ },
+ {
+  "marca": "Panadería Del Pilar (Cerro de las Rosas)",
+  "tipo": "cadena_panaderia",
+  "direccion": "s/d",
+  "barrio": "Cerro de las Rosas",
+  "zona": "Z07",
+  "horario": null,
+  "abre_24h": false,
+  "delivery": [],
+  "google_rating": null,
+  "google_reviews": null,
+  "fuente": "https://es.foursquare.com/v/del-pilar/518166d4e4b076cf8b327983",
+  "fuente_id": "F2215",
+  "nota": "Foursquare la marca 'Ahora cerrado'. Se carga como CERRADA, no cuenta como competidor activo.",
+  "vigente": false,
+  "_origen": "P6",
+  "motivo_exclusion": "Cerrado según Foursquare (P6, 2026-10-02)"
  }
 ]

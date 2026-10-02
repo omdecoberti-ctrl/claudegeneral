@@ -28,11 +28,15 @@
 | R020 | Equipo sin experiencia en gastronomía o comercio al público; sin maestro panadero ni barista | 3 | 2 | 6 | Socios | ABIERTO |
 | R021 | Plazo comprimido (marzo 2027) lleva a decidir con poca evidencia o a firmar un local inadecuado | 3 | 3 | 9 | PM + Socios | ABIERTO |
 | R023 | Requisitos legales para franquiciar (CCyC arts. 1512–1524, p. ej. información económica de unidades similares) no se cumplen si se franquicia antes de tener historia operativa | 2 | 3 | 6 | Laura | ABIERTO |
-| R024 | Precio de suministro de UC al franquiciado demasiado alto (caso Tim Hortons: costo ~2x vs. elaborar en local) → conflicto y baja rentabilidad del franquiciado | 2 | 3 | 6 | Fabiola | ABIERTO |
+| R024 | Precio de suministro de UC al franquiciado demasiado alto (caso Tim Hortons: costo ~2x vs. elaborar en local) → conflicto y baja rentabilidad del franquiciado | 2 | 3 | 6 | Fabiola | ABIERTO: mitigación definida en I011 §3.1 (tope ~40% del precio de venta; A022) |
 | R025 | Competidores locales con el mismo modelo ya escalado (Del Pilar: 45 locales, planta ultracongelada propia, franquicias; Lo+Rico: 26–30 locales) | 3 | 2 | 6 | Estrategia | ABIERTO |
 | R026 | Reacción de La Celeste (plan de expansión a zonas donde no está; apertura cerca del local 1) o de Del Pilar y Lo+Rico (precio, franquicias) | 2 | 2 | 4 | Estrategia | ABIERTO |
 | R027 | Decidir con datos de escritorio no verificados (fragmentos de buscador, cupo de búsqueda agotado) | 3 | 2 | 6 | PM | MITIGANDO |
 | R022 | Logística desde Canals (~320 km, entregas cada 15 días) obliga a mucho stock congelado en el local o encarece el abastecimiento | 2 | 2 | 4 | Oscar | ABIERTO |
+| R028 | Encuadre gastronómico (riesgo intermedio): habilitación de 3–5 meses desde la firma, incompatible con abrir con salón en marzo | 3 | 3 | 9 | Laura + PM | ABIERTO |
+| R029 | Nuevo Código de Habilitaciones aprobado antes de marzo cambia requisitos y plazos | 2 | 2 | 4 | Laura | ABIERTO |
+| R030 | Competidores directos (Panicafé, El Vergel, La Celeste) llegan a la zona elegida antes que nosotros | 3 | 2 | 6 | PM | ABIERTO |
+| R031 | Molino Cañuelas (Costumbres Argentinas) escala un bake-off integrado desde la harina y compite por franquiciados y precio | 2 | 2 | 4 | Socios | ABIERTO |
 
 ---
 
@@ -68,3 +72,7 @@
 | R022 | Stock para 15–21 días que no entra en el freezer del local; quiebres de stock | Frecuencia semanal o depósito en Córdoba (Q054); dimensionar el frío en G10 |
 | R026 | Apertura de La Celeste cerca del local 1; guerra de precios de las cadenas | Diferenciar por experiencia y café (no por 24 h ni por precio); fidelización propia desde el día 1 |
 | R027 | Contradicciones entre fuentes; fechas sin confirmar | Etiquetas de evidencia; verificación en origen (T032); trabajo de campo (T017); capa OSM en vivo (T030) |
+| R028 | Prefactibilidad que devuelve "gastronómico"; inspección sin fecha; local firmado después del 30/11 | Memo PD029b: apertura en dos etapas (take-away en marzo, salón después); prefactibilidad antes de firmar (T034); gestor (T018); Director Técnico (T035); cláusula de salida en el contrato |
+| R029 | Sanción del Código en el Concejo Deliberante | Seguimiento mensual (Laura); diseñar el local con el estándar más exigente (informe de higiene y seguridad firmado) |
+| R030 | Aperturas de cadenas en Z06–Z08 (Panicafé Villa Belgrano y La Celeste Valle Escondido en 2025–26) | Decidir zona antes del 13/11; preferir Z06 y Villa Cabrera (E-04 §4b); diferenciarse por frescura visible y atención |
+| R031 | Aperturas de Costumbres "nueva etapa" en Córdoba; baja de inversión de franquicia | Posicionamiento distinto (calidad media-alta, no low cost); precio de transferencia transparente para atraer franquiciados (Q082) |

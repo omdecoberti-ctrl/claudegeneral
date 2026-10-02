@@ -37,3 +37,32 @@
   - 4 registros excluidos (fuera de Capital o cerrados).
   - Mapa con plano Esri/OSM.
   - E-04 v2 y E-07 (resumen y próximos pasos).
+
+## 2026-10-02
+- Pendientes completados con 7 equipos de investigación (presupuesto de búsquedas por equipo):
+  - **I035** normativa y plazos de habilitación (14_LEGAL);
+  - **I029** alquileres comerciales por zona (08_UBICACIONES);
+  - **I004b** benchmark de referentes v2;
+  - **I005b** costos operativos y datos de cliente;
+  - **I014h** zonas candidatas y competidores directos;
+  - **I016b** quejas y elogios de clientes;
+  - **I040** verificación de datos y marco legal de franquicias;
+  - **I010b** complemento de Canalsenses.
+- Fuentes F1701–F2339 registradas (336 nuevas).
+- **I011** comparación de modelos productivos (09_OPERACIONES): recomendación de híbrido liviano. **Memo PD029b**: ajuste del plan a marzo por plazos de habilitación.
+- Competencia v3:
+  - 397 locales (+16; Del Pilar del Cerro excluido por cerrado);
+  - mapa reconstruido;
+  - gráficos de cadenas y escalera de precios actualizados;
+  - nuevo gráfico de alquiler por zona;
+  - E-04 §4b (zonas candidatas);
+  - tabla de zonas reparada.
+- E-05 v2 (ENGHo, referentes v2, costos, alquileres) · E-06 v2 (quejas y elogios, ocupados, ticket) · E-07 v2.
+- Registros:
+  - hipótesis A021–A022 (A005, A009, A012 y A017 pasan a EN VALIDACIÓN);
+  - preguntas Q076–Q083 (Q057 respondida);
+  - riesgos R028–R031;
+  - tareas T034–T037 con fichas (T032 finalizada; T020 y T031 en proceso);
+  - aprendizajes L003–L005;
+  - log de franquiciabilidad;
+  - PD011, PD029 y PD030 actualizadas.

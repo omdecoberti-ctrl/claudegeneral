@@ -6,7 +6,7 @@ Cada tarea abierta tiene su ficha con: para qué sirve, qué hay que hacer paso 
 - [T005 — Definir gobernanza y roles](T005.md) · Socios · 05/10 (revisión semanal 1)
 - [T017 — Trabajo de campo: entrevistas, encuesta, observación y cliente incógnito](T017.md) · Socios (con encuestadores o estudiantes según PD031); la IA diseña y analiza · Del 12/10 al 06/11
 - [T018 — Identificar asesores externos (contable, legal, habilitaciones, arquitecto)](T018.md) · Socios · Antes del 31/10
-- [T020 — Relevamiento normativo: habilitación municipal y bromatología](T020.md) · IA + Laura · 16/10 (ruta crítica)
+- [T020 — Relevamiento normativo: habilitación municipal y bromatología](T020.md) · IA + Laura · 16/10 (ruta crítica) · escritorio hecho
 - [T022 — Decidir PD029, PD030 y PD031](T022.md) · Socios (por mayoría) · 05/10
 - [T023 — Responder Q046–Q048 (mayoría, dedicación, interlocutor)](T023.md) · Socios · 05/10
 - [T024 — Datos internos de Canalsenses para el proyecto](T024.md) · Oscar · 05/10
@@ -16,5 +16,9 @@ Cada tarea abierta tiene su ficha con: para qué sirve, qué hay que hacer paso 
 - [T029 — (Futuro) Sitio interactivo con Supabase](T029.md) · IA · Sin fecha (backlog)
 - [T030 — Exportar las panaderías de OpenStreetMap desde el mapa](T030.md) · Cualquier socio (5 minutos) · Esta semana
 - [T031 — Completar el relevamiento web de competencia](T031.md) · IA · Continuo (según cupo de búsquedas)
-- [T032 — Verificar en origen los datos críticos](T032.md) · IA · Antes del 30/10 (Gate Review G1–G3)
+- [T032 — Verificar en origen los datos críticos](T032.md) · IA · FINALIZADA 02/10
+- [T034 — Prefactibilidad online (HOL) de los locales candidatos](T034.md) · Laura + IA · 31/10 (ruta crítica)
+- [T035 — Identificar un Director Técnico bromatológico](T035.md) · Laura · 31/10
+- [T036 — Buscar local en las zonas candidatas](T036.md) · Socios + IA · Octubre–noviembre
+- [T037 — Cotizar el equipamiento del modelo híbrido](T037.md) · Oscar · 06/11
 - [T033 — Degustación a ciegas E002 (producto UC vs. competencia)](T033.md) · Hermanos + IA · Antes del 13/11 (idealmente entre el 26/10 y el 06/11)

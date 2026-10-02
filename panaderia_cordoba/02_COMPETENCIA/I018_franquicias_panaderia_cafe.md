@@ -230,3 +230,14 @@ Fecha de consulta de todas: **2026-09-28**. Confiabilidad: A = oficial/regulator
 - [ ] ASSUMPTIONS · [ ] OPEN_QUESTIONS · [ ] RISKS · [ ] TASKS · [ ] STATUS · [ ] SOURCES · [ ] PROJECT_MASTER · [ ] FRANCHISE_READINESS_LOG
 
 > Nota: por instrucción del encargo, esta sesión **no modificó otros archivos**. Pendiente: cargar F200–F246 en `00_MASTER/SOURCES.md`, nuevas preguntas en `OPEN_QUESTIONS.md`, evidencia indirecta para A020 en `ASSUMPTIONS.md`, riesgo "conflicto de precio de suministro con franquiciados" y "requisito legal de 2 años de información" en `RISKS.md` / `FRANCHISE_READINESS_LOG.md`, y actualizar T013 / STATUS.
+
+## 12. Actualización 02/10/2026 (I040 e I004b)
+- **Corrección de citas legales** [HECHO, I040]:
+  - el art. 1524 **no** trata de confidencialidad ni de no competencia;
+  - la confidencialidad es una obligación del franquiciado (art. 1515);
+  - la no competencia posterior al contrato está en el art. 1522: máximo **1 año** y territorio razonable;
+  - el plazo mínimo del contrato es de **4 años** (art. 1516).
+- **Cuándo se puede franquiciar** [INTERPRETACIÓN, I040]: el art. 1514 exige 2 años de datos de unidades similares. Con apertura en marzo de 2027, **las primeras franquicias quedan para ≈ marzo de 2029**. La certificación voluntaria de la AAMF (FRANQ) pide 5 años desde la primera franquicia, 2 franquiciados y 5 puntos de venta.
+- **Riesgo laboral** [HECHO]: el art. 1520 excluye la relación laboral entre el franquiciante y los empleados del franquiciado, salvo fraude. La jurisprudencia sobre el art. 30 de la LCT no es unánime. Para mitigarlo, los franquiciados tienen que tener autonomía real de gestión.
+- **Marca** [HECHO]: INPI ≈ **$40.569 por clase** (sep-2026). Clases sugeridas: 30, 43 y 35, que suman ≈ $121.700 sin honorarios; el registro lleva 6–12 meses. **Conviene registrar ya** (I038, Q037).
+- **Arquetipo "fabricante-franquiciante"** [HECHO + INTERPRETACIÓN, I004b]: Buenos Aires Bakery no cobra regalías y gana con el abastecimiento. Tim Hortons muestra el riesgo de un precio de suministro caro (R024). Granier tiene ~313 franquicias con producto de obrador central.

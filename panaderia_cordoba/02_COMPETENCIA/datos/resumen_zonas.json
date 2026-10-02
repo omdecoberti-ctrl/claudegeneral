@@ -1,9 +1,9 @@
 {
   "Z01": {
     "zona": "Centro",
-    "total": 49,
+    "total": 51,
     "por_tipo": {
-      "cadena_panaderia": 19,
+      "cadena_panaderia": 21,
       "especialidad": 1,
       "cafeteria_cadena": 7,
       "panaderia_barrio": 9,
@@ -12,7 +12,7 @@
       "fast_food": 5,
       "supermercado": 4
     },
-    "panaderias": 30,
+    "panaderias": 32,
     "poblacion_barrios_relevados": 28200
   },
   "Z02": {
@@ -63,71 +63,72 @@
   },
   "Z05": {
     "zona": "Este",
-    "total": 37,
+    "total": 38,
     "por_tipo": {
       "cadena_panaderia": 9,
       "panaderia_barrio": 11,
       "otro": 2,
-      "bakery_cafe": 4,
+      "bakery_cafe": 5,
       "medialuneria_dulces": 2,
       "fast_food": 3,
       "conveniencia": 2,
       "supermercado": 4
     },
-    "panaderias": 24,
+    "panaderias": 25,
     "poblacion_barrios_relevados": 6520
   },
   "Z06": {
     "zona": "Norte cercano",
-    "total": 33,
+    "total": 37,
     "por_tipo": {
-      "cadena_panaderia": 4,
+      "cadena_panaderia": 7,
       "medialuneria_dulces": 7,
       "cafeteria_cadena": 3,
       "panaderia_barrio": 12,
       "bakery_cafe": 2,
       "fast_food": 1,
       "supermercado": 3,
-      "otro": 1
+      "otro": 1,
+      "especialidad": 1
     },
-    "panaderias": 18,
+    "panaderias": 21,
     "poblacion_barrios_relevados": 34600
   },
   "Z07": {
     "zona": "Noroeste",
-    "total": 30,
+    "total": 35,
     "por_tipo": {
-      "bakery_cafe": 3,
-      "especialidad": 1,
+      "bakery_cafe": 5,
+      "especialidad": 2,
       "cafeteria_cadena": 2,
       "panaderia_barrio": 7,
       "medialuneria_dulces": 5,
-      "cadena_panaderia": 5,
+      "cadena_panaderia": 7,
       "fast_food": 4,
       "supermercado": 3
     },
-    "panaderias": 15,
+    "panaderias": 19,
     "poblacion_barrios_relevados": 6440
   },
   "Z08": {
     "zona": "Norte premium / Noroeste lejano",
-    "total": 26,
+    "total": 30,
     "por_tipo": {
-      "cadena_panaderia": 4,
-      "medialuneria_dulces": 6,
+      "cadena_panaderia": 7,
+      "medialuneria_dulces": 7,
       "cafeteria_cadena": 1,
       "panaderia_barrio": 8,
       "conveniencia": 2,
       "supermercado": 5
     },
-    "panaderias": 12,
+    "panaderias": 15,
     "poblacion_barrios_relevados": 8100
   },
   "Z09": {
     "zona": "Sur",
-    "total": 42,
+    "total": 43,
     "por_tipo": {
-      "cadena_panaderia": 9,
+      "cadena_panaderia": 10,
       "bakery_cafe": 4,
       "medialuneria_dulces": 7,
       "panaderia_barrio": 14,
@@ -136,7 +137,7 @@
       "conveniencia": 3,
       "supermercado": 3
     },
-    "panaderias": 27,
+    "panaderias": 28,
     "poblacion_barrios_relevados": 3200
   },
   "Z10": {

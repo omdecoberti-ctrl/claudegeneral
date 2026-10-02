@@ -55,7 +55,7 @@
 | Código | Pregunta | Gate | Prioridad | Vinculado | Estado |
 |---|---|---|---|---|---|
 | Q032 | ¿Qué barrios/microzonas presentan mayor potencial para el concepto elegido? | G8 | P1 | PD016 | ABIERTA |
-| Q033 | ¿Qué restricciones municipales (zonificación, habilitación, bromatología) aplican según tipo de local? | G8 | P1 | A017 | ABIERTA |
+| Q033 | ¿Qué restricciones municipales (zonificación, habilitación, bromatología) aplican según tipo de local? | G8 | P1 | A017 | EN INVESTIGACIÓN: I035 (prefactibilidad, riesgo por rubro, Director Técnico); falta confirmar con gestor |
 | Q034 | ¿Qué dotación y perfiles necesitamos? | G9 | P2 | A003, A012 | ABIERTA |
 | Q035 | ¿Qué stack tecnológico (POS, ERP, inventario, fidelización) es adecuado y escalable? | G9 | P2 | PD021 | ABIERTA |
 | Q036 | ¿Qué equipamiento es imprescindible vs. opcional para cada modelo productivo? | G10 | P2 | PD023 | ABIERTA |
@@ -71,7 +71,7 @@
 | Código | Pregunta | Gate | Prioridad | Vinculado | Estado |
 |---|---|---|---|---|---|
 | Q040 | ¿Qué empresa es, qué relación societaria/comercial tendría con el proyecto (socio, proveedor, accionista)? *(Nota: en este entorno existen herramientas vinculadas a "Ultracongelados Canalsenses S.R.L."; confirmar si es la empresa en cuestión — no asumido).* | G0 | P1 | R003 | RESPONDIDA: Ultracongelados Canalsenses S.R.L.; subsidiaria (D002); ver I010 |
-| Q041 | ¿Qué portfolio produce hoy y qué podría desarrollar (panes, facturas, bollería, pastelería, salados)? | G0/G4 | P1 | A004 | EN INVESTIGACIÓN: unos 26 de ~35 SKUs identificados (I010); falta el catálogo interno |
+| Q041 | ¿Qué portfolio produce hoy y qué podría desarrollar (panes, facturas, bollería, pastelería, salados)? | G0/G4 | P1 | A004 | EN INVESTIGACIÓN: 34 productos en 4 categorías (I010b); ~5–7 SKUs sin nombre → T024 |
 | Q042 | ¿Qué capacidad ociosa tiene y qué escala mínima de pedido/logística maneja? | G4 | P1 | — | ABIERTA |
 | Q043 | ¿Qué costos y precios de transferencia serían posibles? | G4/G7 | P1 | Q013 | ABIERTA |
 | Q044 | ¿Qué habilitaciones (RNE/RNPA), controles de calidad y trazabilidad tiene? | G4 | P2 | — | ABIERTA |
@@ -91,7 +91,7 @@
 | Q054 | ¿Cómo abastecer un local en Córdoba Capital (a ~320 km de Canals)? ¿Frecuencia semanal o depósito en la ciudad? ¿Costo por caja? | G4/G9 | P1 | R022 | ABIERTA |
 | Q055 | ¿Cuántos clientes tiene UC en Córdoba Capital, dónde están y hay exclusividades? ¿Cómo reaccionarían a una marca propia al público? | G4 | P1 | R019, PD032 | ABIERTA |
 | Q056 | ¿La marca al público es "Canalsenses" o una nueva? (el objetivo es una "marca conocida por la gente") | G5/G10 | P2 | PD024, PD032 | ABIERTA |
-| Q057 | ¿Qué relevamiento de vacancia de locales sirve para buscar local (CPI 13,8% vs. 4,3% en corredores) y cuál es el alquiler en $/m² por corredor? | G8 | P1 | I001, I029 | ABIERTA |
+| Q057 | ¿Qué relevamiento de vacancia de locales sirve para buscar local (CPI 13,8% vs. 4,3% en corredores) y cuál es el alquiler en $/m² por corredor? | G8 | P1 | I001, I029 | RESPONDIDA (I029, I040): sirve el dato de corredores (4,3%) y por zona; alquiler USD 5–24/m² según zona |
 | Q058 | ¿Cuántas personas trabajan (no residen) en el Centro, Nueva Córdoba y la zona norte? | G8 | P2 | I001, I027 | ABIERTA |
 | Q059 | ¿Cómo afecta al consumo la suba de pobreza (31,1%) y de desempleo (10,5%) en el Gran Córdoba en 2026? | G1 | P1 | A018, I002 | ABIERTA |
 | Q060 | ¿Cuánto de la caída de ventas de panaderías reportada por las cámaras (entre −30% y −65%) es consumo real y cuánto se desvió a súper, informales o elaboración casera? | G1 | P1 | I002, A018 | ABIERTA |
@@ -110,3 +110,15 @@
 | Q073 | ¿La Celeste produce de forma centralizada? ¿Cómo abastece a 16 locales, 10 de ellos 24 h? | G3 | P2 | I014 | ABIERTA |
 | Q074 | ¿Por qué La Vene y Café Martínez no escalaron en Córdoba? (lecciones de expansión) | G3/G14 | P2 | I014b | ABIERTA |
 | Q075 | ¿Cuál sería el producto emblema cordobés de PAN-CBA (criollo, chipá, medialuna de autor), fabricable en la planta de UC? | G6 | P2 | EB7 | ABIERTA |
+
+## Nuevas (2026-10-02)
+| Código | Pregunta | Gate | Prioridad | Vinculado | Estado |
+|---|---|---|---|---|---|
+| Q076 | ¿La prefactibilidad HOL encuadra "pan con horneado + café para llevar" como riesgo bajo, o el café lo vuelve gastronómico? | G8/G11 | P1 | A021, PD029b, T034 | ABIERTA |
+| Q077 | ¿Quién será el Director Técnico bromatológico del local, con qué dedicación y costo? | G9/G11 | P1 | I035, T035 | ABIERTA |
+| Q078 | ¿El nuevo Código de Habilitaciones se aprueba antes de marzo de 2027? ¿Qué cambia para una panadería con café? | G11 | P1 | R029 | ABIERTA |
+| Q079 | ¿Precio de transferencia de UC por SKU, puesto en Córdoba, y costo del flete semanal contra el quincenal? | G4/G7 | P1 | A022, I011, T024 | ABIERTA |
+| Q080 | Canalsenses fase 2: lista completa de los 34 productos, estado y fecha de BRC, superficie real (810 o 900 m²) y capacidad libre para abastecer la red | G4 | P1 | I010b, T024 | ABIERTA |
+| Q081 | ¿Cuál es la escala salarial vigente de la Sociedad Obreros Panaderos de Córdoba (homologada con el CIPAC)? | G7/G9 | P2 | I005b | ABIERTA |
+| Q082 | ¿Cómo nos posicionamos frente a Costumbres Argentinas, ahora de Molino Cañuelas (bake-off integrado desde la harina)? | G4/G14 | P2 | I004b, R031 | ABIERTA |
+| Q083 | ¿Juniors / San Vicente (Z05) y Cofico / Gral. Bustos (Z06) tienen el flujo de gente que sostiene USD 30–35 mil de ventas por mes? | G8 | P1 | E-04 §4b, T017 | ABIERTA |

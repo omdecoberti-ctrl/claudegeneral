@@ -35,3 +35,16 @@
 - **Pedido:** faltaban competidores; mejorar el análisis y resumir todo lo hecho y lo pendiente.
 - **Hecho:** 6 equipos con presupuesto de búsquedas controlado; censo de 381 locales; mapa y E-04 actualizados; E-07 con qué hicimos, aprendizajes, decisiones, tareas por persona y qué repasar.
 - **Aprendizaje (L):** con un cupo fijo de búsquedas, conviene asignar un presupuesto por equipo y priorizar directorios con dirección en el fragmento (lahelveticaonline, empresasdecordoba, waze).
+
+## S005 — 2026-10-02 — Completar los pendientes por límite de búsqueda
+- **Pedido:** "completar todo lo que quedó pendiente por límite".
+- **Hecho:**
+  - 7 equipos con presupuesto de búsquedas por equipo (normativa, alquileres, benchmark, costos y cliente, zonas candidatas, ley de franquicias y verificación, Canalsenses y reseñas);
+  - integración en E-04 v3, E-05 v2, E-06 v2 y E-07 v2;
+  - comparación de modelos productivos I011;
+  - memo PD029b;
+  - registros y fichas de tareas actualizados;
+  - mapa y gráficos regenerados.
+- **Hallazgo crítico:** con café y mesas la habilitación lleva 3–5 meses desde la firma, y no hay habilitación provisoria. Abrir en marzo exige buscar local ya y abrir primero sin salón (PD029b).
+- **Limitaciones:** todo sale de fragmentos de buscador (no se pueden abrir páginas). Siguen sin verificar la escala de panaderos de Córdoba, la lista del CIPAC posterior a abril, el $/kWh de EPEC y el ticket de delivery.
+- **Pendiente de socios:** PD029 + PD029b, PD031, PD002, T024, T034–T037.
