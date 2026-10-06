@@ -121,4 +121,5 @@
 | Q080 | Canalsenses fase 2: lista completa de los 34 productos, estado y fecha de BRC, superficie real (810 o 900 m²) y capacidad libre para abastecer la red | G4 | P1 | I010b, T024 | ABIERTA |
 | Q081 | ¿Cuál es la escala salarial vigente de la Sociedad Obreros Panaderos de Córdoba (homologada con el CIPAC)? | G7/G9 | P2 | I005b | ABIERTA |
 | Q082 | ¿Cómo nos posicionamos frente a Costumbres Argentinas, ahora de Molino Cañuelas (bake-off integrado desde la harina)? | G4/G14 | P2 | I004b, R031 | ABIERTA |
+| Q084 | ¿Qué IVA corresponde a cada producto en la venta al público (10,5% pan y facturas sin envasar / 21% el resto) y qué alícuota de Ingresos Brutos y tasa municipal aplica? | G7 | P1 | E-11, PD027 | ABIERTA |
 | Q083 | ¿Juniors / San Vicente (Z05) y Cofico / Gral. Bustos (Z06) tienen el flujo de gente que sostiene USD 30–35 mil de ventas por mes? | G8 | P1 | E-04 §4b, T017 | ABIERTA |

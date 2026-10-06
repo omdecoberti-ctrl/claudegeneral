@@ -73,3 +73,10 @@
   - **E-04 §9b** reseñas de panaderías de medialunas, facturas y café, con gráfico (I016c).
 - Evidencia nueva: I041 (corner, delivery, dark kitchen) e I016c (reseñas). Fuentes F2400–F2474.
 - Nueva sección "Análisis especiales" en el sitio. Tareas T038–T039.
+
+## 2026-10-06
+- **E-11 Calculadora de punto de equilibrio y precios** (`07_MODELO_FINANCIERO/CALCULADORA_PUNTO_EQUILIBRIO.html` + guía `CALCULADORA_EQUILIBRIO.md`): incluye la lista de precios de UC sin IVA (54 productos, también en `07_MODELO_FINANCIERO/datos/`).
+  - Todo es editable.
+  - Calcula equilibrio en $ y tickets por día, factor y PVP de equilibrio, bultos por quincena y escenarios exportables.
+  - Escenario de partida: equilibrio ≈ $41 M por mes con IVA (≈ 162 tickets por día).
+- Registros: T040 con ficha, Q084 y evidencia en A022.

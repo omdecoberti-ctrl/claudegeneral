@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Calculadora de equilibrio · PAN-CBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#F18A00;--brand2:#B12028;--tx:#404040;--tx2:#808080;--line:#E6E6E6;--soft:#FFF4E5;--bg:#FFFFFF;--panel:#FAFAF8;--ok:#2E7D32;--okbg:#E8F5E9;--bad:#B12028;--badbg:#FBEDEE;--blue:#1F6FD0;--grid:#ECECEC}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:'Montserrat','Segoe UI',Helvetica,Arial,sans-serif;font-size:13.5px;line-height:1.45}
+header{border-bottom:3px solid var(--brand);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:#fff}
+.logo{font-weight:800;color:var(--brand);font-size:18px;text-decoration:none}.logo small{display:block;font-size:9.5px;color:var(--tx2);font-weight:600;letter-spacing:1.3px}
+.hbtns{display:flex;gap:6px;flex-wrap:wrap}
+button,.btn{font:inherit;font-size:12px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--tx);border-radius:6px;padding:6px 10px;cursor:pointer}
+button:hover{border-color:var(--brand)}button.fill{background:var(--brand);border-color:var(--brand);color:#fff}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px 40px}
+h1{color:var(--brand);font-size:22px;margin:16px 0 4px}
+h2{color:var(--brand);font-size:16px;border-left:4px solid var(--brand);padding-left:8px;margin:20px 0 8px}
+h3{color:var(--brand2);font-size:13.5px;margin:14px 0 6px}
+.note{color:var(--tx2);font-size:12px}
+.kpis{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:10px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+.kpi .l{font-size:10.5px;color:var(--tx2);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.kpi .v{font-size:18px;font-weight:800;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .s{font-size:11px;color:var(--tx2)}
+.kpi.hl{border-color:var(--brand);background:var(--soft)}
+.pos{color:var(--ok)!important}.neg{color:var(--bad)!important}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:14px 0 4px;border-bottom:2px solid var(--line)}
+.tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:8px 12px;font-size:13px;color:var(--tx2);margin-bottom:-2px}
+.tabs button.on{color:var(--brand);border-bottom-color:var(--brand)}
+.tab{display:none}.tab.on{display:block}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fff;min-width:0}
+.field{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:8px;align-items:center;padding:4px 0;border-bottom:1px dashed var(--line)}
+.field label{font-size:12.5px}.field .hint{display:block;font-size:10.5px;color:var(--tx2)}
+input[type=number],input[type=text],select{font:inherit;font-size:12.5px;width:100%;padding:5px 6px;border:1px solid #D6D6D6;border-radius:5px;background:#fff;color:var(--tx);text-align:right}
+input[type=text]{text-align:left}
+input:focus,select:focus{outline:2px solid var(--brand);outline-offset:0;border-color:var(--brand)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:6px 0 10px}
+table{border-collapse:collapse;width:100%;font-size:12px}
+th{background:var(--brand);color:#fff;text-align:left;padding:6px 6px;font-weight:700;white-space:nowrap;position:sticky;top:0}
+td{border-bottom:1px solid var(--line);padding:3px 6px;vertical-align:middle;white-space:nowrap}
+td.n,th.n{text-align:right}
+tr.cat td{background:var(--soft);font-weight:800;color:var(--brand2)}
+tr.off td{opacity:.45}
+td input[type=number]{width:92px}td input.w60{width:64px}td input.w120{width:120px}td input[type=text]{width:260px}
+tfoot td{font-weight:800;background:var(--panel)}
+.res td:first-child{white-space:normal}
+.res tr.tot td{font-weight:800;border-top:2px solid var(--tx)}
+.res tr.sub td{font-weight:700;background:var(--panel)}
+.badge{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px}
+.badge.ok{background:var(--okbg);color:var(--ok)}.badge.bad{background:var(--badbg);color:var(--bad)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin:4px 0}
+.legend span::before{content:"";display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--c)}
+.chart{position:relative}.chart svg{width:100%;height:auto;display:block}
+.tip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.12);border-radius:6px;padding:6px 8px;font-size:12px;display:none;min-width:190px;z-index:5}
+.tip b{display:block;margin-bottom:2px}
+.callout{background:var(--soft);border-left:4px solid var(--brand);border-radius:6px;padding:10px 12px;margin:10px 0}
+.warn{background:var(--badbg);border-left-color:var(--bad)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0}
+.row label{font-size:12.5px}
+.row input{width:110px}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:8px;font-size:11px;color:var(--tx2)}
+@media print{.kpis{position:static}.tabs,.hbtns,button{display:none!important}.tab{display:block!important}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/index.html">CANALSENSES<small>PROYECTO PANADERÍA CÓRDOBA · PAN-CBA</small></a>
+  <div class="hbtns">
+    <button id="bSave">Guardar escenario</button>
+    <select id="selScen" aria-label="Escenarios guardados" style="width:170px;text-align:left"><option value="">Escenarios guardados…</option></select>
+    <button id="bDelScen" title="Borrar el escenario elegido">Borrar</button>
+    <button id="bExport">Exportar (JSON)</button>
+    <button id="bImport">Importar</button>
+    <button id="bCsv">Productos a CSV</button>
+    <button id="bReset">Restablecer valores</button>
+    <input type="file" id="fImport" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<div class="wrap">
+<h1>Calculadora de punto de equilibrio y precios</h1>
+<p class="note">Costo de cada producto = <b>lista de precios de Ultracongelados Canalsenses, sin IVA</b>. Todos los valores son editables. Los precios de venta (PVP), el mix y los costos vienen cargados con <b>supuestos de partida</b> (ver pestaña “Cómo se calcula”): cámbienlos con los datos reales. Lo que cambien queda guardado en este navegador; para compartir un escenario, usen “Exportar”.</p>
+
+<div class="kpis" id="kpis"></div>
+
+<div class="tabs" role="tablist">
+  <button class="on" data-t="t1">1 · Resultado</button>
+  <button data-t="t2">2 · Ventas y mix</button>
+  <button data-t="t3">3 · Productos (lista UC)</button>
+  <button data-t="t4">4 · Costos variables</button>
+  <button data-t="t5">5 · Costos fijos</button>
+  <button data-t="t6">6 · Precio de equilibrio</button>
+  <button data-t="t7">Cómo se calcula</button>
+</div>
+
+<!-- 1 RESULTADO -->
+<section class="tab on" id="t1">
+  <div class="grid2">
+    <div class="card">
+      <h3>Estado de resultados mensual (ARS)</h3>
+      <div class="tw" style="border:none"><table class="res" id="tRes"></table></div>
+    </div>
+    <div class="card">
+      <h3>Punto de equilibrio: margen de contribución vs. costos fijos</h3>
+      <div class="legend"><span style="--c:#F18A00">Margen de contribución</span><span style="--c:#1F6FD0">Costos fijos</span></div>
+      <div class="chart" id="chBE"></div>
+      <p class="note">Eje horizontal: ventas mensuales con IVA. El equilibrio es donde el margen de contribución cubre los costos fijos. La línea gris punteada marca las ventas cargadas.</p>
+      <div id="beText" class="callout"></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Margen de contribución mensual por producto (los 12 que más aportan)</h3>
+    <div class="chart" id="chProd"></div>
+  </div>
+</section>
+
+<!-- 2 VENTAS -->
+<section class="tab" id="t2">
+  <div class="grid2">
+    <div class="card">
+      <h3>Nivel de ventas</h3>
+      <div class="field"><label>Cómo cargar las ventas<span class="hint">Por tickets o por un total mensual</span></label>
+        <select id="v_modo"><option value="tickets">Tickets × ticket promedio</option><option value="total">Total mensual</option></select></div>
+      <div class="field"><label>Tickets por día</label><input type="number" id="v_tickets" min="0" step="5"></div>
+      <div class="field"><label>Ticket promedio con IVA ($)<span class="hint">Referencia cafeterías Córdoba: $9–10 mil por persona (I005b)</span></label><input type="number" id="v_ticket" min="0" step="100"></div>
+      <div class="field"><label>Días abiertos por mes</label><input type="number" id="v_dias" min="1" max="31" step="1"></div>
+      <div class="field"><label>Ventas mensuales con IVA ($)<span class="hint">Solo si el modo es “Total mensual”</span></label><input type="number" id="v_total" min="0" step="100000"></div>
+      <div class="field"><label>Tipo de cambio ($ por USD)</label><input type="number" id="tc" min="1" step="5"></div>
+    </div>
+    <div class="card">
+      <h3>Mix de ventas por línea (% de la venta con IVA)</h3>
+      <div class="field"><label>Panificados y pastelería (productos UC)<span class="hint">El detalle por producto está en la pestaña 3</span></label><input type="number" id="s_pan" min="0" max="100" step="1"></div>
+      <div class="field"><label>Café y bebidas</label><input type="number" id="s_cafe" min="0" max="100" step="1"></div>
+      <div class="field"><label>Otros (sándwiches, tostados, terceros)</label><input type="number" id="s_otros" min="0" max="100" step="1"></div>
+      <p id="splitMsg" class="note"></p>
+      <h3>Costo de mercadería de las líneas que no son UC</h3>
+      <div class="field"><label>Café y bebidas: costo de mercadería (% de la venta sin IVA)<span class="hint">Café con leche ≈ 15–20% (I005b)</span></label><input type="number" id="cafe_cmv" min="0" max="100" step="1"></div>
+      <div class="field"><label>Café y bebidas: IVA (%)</label><input type="number" id="cafe_iva" min="0" step="0.5"></div>
+      <div class="field"><label>Otros: costo de mercadería (% de la venta sin IVA)</label><input type="number" id="otros_cmv" min="0" max="100" step="1"></div>
+      <div class="field"><label>Otros: IVA (%)</label><input type="number" id="otros_iva" min="0" step="0.5"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 PRODUCTOS -->
+<section class="tab" id="t3">
+  <div class="card">
+    <h3>Ajustes generales sobre la lista de Canalsenses</h3>
+    <div class="row">
+      <label>Descuento sobre lista (%) <input type="number" id="uc_desc" step="0.5"></label>
+      <label>Flete y logística Canals → Córdoba (% sobre costo) <input type="number" id="uc_flete" step="0.5"></label>
+      <label>Markup objetivo (veces el costo, PVP con IVA) <input type="number" id="markup" step="0.1" min="0"></label>
+      <button id="bMarkup" title="Pone en cada producto: PVP = costo final × markup × (1 + IVA)">Aplicar markup a todos los PVP</button>
+      <button id="bNorm">Llevar el mix a 100%</button>
+      <button id="bAdd">+ Agregar producto</button>
+    </div>
+    <p class="note">Columnas editables: “Usar”, unidades por bulto, precio del bulto, PVP, mix, merma e IVA. <b>Costo final</b> = precio unitario de lista × (1 − descuento) × (1 + flete) ÷ (1 − merma). <b>Mix</b> = % de la venta de panificados que hace cada producto. Productos por kilo: la unidad de venta es el kg.</p>
+    <p id="mixMsg" class="note"></p>
+    <div class="tw" style="max-height:70vh"><table id="tProd"></table></div>
+  </div>
+</section>
+
+<!-- 4 VARIABLES -->
+<section class="tab" id="t4">
+  <div class="card">
+    <h3>Costos que se mueven con la venta</h3>
+    <p class="note">Cada costo se calcula como un % de la venta con IVA o sin IVA. Los impuestos son supuestos a confirmar con la contadora (Fabiola).</p>
+    <div class="tw"><table id="tVar"></table></div>
+    <div class="row"><button id="bAddVar">+ Agregar costo variable</button></div>
+    <h3>Delivery por apps</h3>
+    <div class="field"><label>% de la venta que entra por PedidosYa o Rappi</label><input type="number" id="d_share" min="0" max="100" step="1"></div>
+    <div class="field"><label>Comisión de la app con IVA (% del pedido)<span class="hint">PedidosYa 25–35%, Rappi 20–25% + IVA (E-05)</span></label><input type="number" id="d_com" min="0" max="100" step="0.5"></div>
+  </div>
+</section>
+
+<!-- 5 FIJOS -->
+<section class="tab" id="t5">
+  <div class="card">
+    <h3>Costos fijos mensuales (ARS)</h3>
+    <p class="note">Personal = cantidad × costo empleador mensual (sueldo + cargas + aguinaldo). Valores de partida: oct-2026 (I005b, I029, I011).</p>
+    <div class="tw"><table id="tFix"></table></div>
+    <div class="row"><button id="bAddFix">+ Agregar costo fijo</button></div>
+    <h3>Recupero de la inversión (amortización)</h3>
+    <div class="field"><label>Inversión inicial (USD)</label><input type="number" id="inv_usd" min="0" step="1000"></div>
+    <div class="field"><label>Meses para amortizar</label><input type="number" id="inv_meses" min="1" step="1"></div>
+    <div class="field"><label>¿Incluir la amortización en el equilibrio?<span class="hint">Sí = equilibrio económico (recupera la inversión). No = equilibrio de caja.</span></label><select id="inv_incl"><option value="1">Sí</option><option value="0">No</option></select></div>
+  </div>
+</section>
+
+<!-- 6 PRECIO DE EQUILIBRIO -->
+<section class="tab" id="t6">
+  <div class="card">
+    <h3>¿A qué precio quedamos en equilibrio con este volumen?</h3>
+    <div id="peqText" class="callout"></div>
+    <p class="note"><b>PVP de equilibrio</b> = PVP actual × factor de equilibrio (mismas unidades vendidas, todos los precios ajustados en la misma proporción). <b>PVP mínimo</b> = el precio que apenas cubre el costo del producto y los costos variables (sin aportar nada a los fijos). <b>Markup</b> = PVP con IVA ÷ costo final.</p>
+    <div class="tw" style="max-height:70vh"><table id="tPeq"></table></div>
+  </div>
+</section>
+
+<!-- 7 METODO -->
+<section class="tab" id="t7">
+  <div class="card">
+    <h3>Cómo se calcula</h3>
+    <ol>
+      <li><b>Ventas con IVA</b> = tickets por día × ticket promedio × días (o el total cargado). Se reparten en panificados, café y otros según el mix por línea.</li>
+      <li><b>Panificados:</b> la venta de cada producto = venta de panificados × su % de mix. Unidades vendidas = venta ÷ PVP. Venta sin IVA = venta ÷ (1 + IVA del producto).</li>
+      <li><b>Costo de mercadería</b> de cada producto = unidades × costo final (lista UC sin IVA, con descuento, flete y merma). Bultos a pedir = unidades ÷ (1 − merma) ÷ unidades por bulto.</li>
+      <li><b>Costos variables:</b> % sobre ventas (impuestos, medios de pago, packaging) + comisión de apps sobre la parte de delivery.</li>
+      <li><b>Margen de contribución</b> = ventas sin IVA − costo de mercadería − costos variables.</li>
+      <li><b>Punto de equilibrio</b> = costos fijos ÷ (margen de contribución ÷ ventas con IVA). Supone que el mix y los porcentajes se mantienen.</li>
+      <li><b>Factor de precio de equilibrio</b> = (costo de mercadería + costos fijos) ÷ (ventas sin IVA − costos variables), con las mismas unidades.</li>
+    </ol>
+    <h3>Supuestos de partida (cámbienlos)</h3>
+    <ul>
+      <li><b>Costos de producto:</b> lista de precios de UC sin IVA enviada por Oscar (oct-2026). En pastelería envasada (códigos 400–410) la unidad de venta es el paquete y el bulto trae 6–12 paquetes.</li>
+      <li><b>PVP:</b> estimados a partir de precios relevados en Córdoba (La Celeste medialuna $1.300, Lapana $1.600, docena en cadenas modernas $20–26 mil; E-04 §4b y §10). <b>No son precios decididos.</b></li>
+      <li><b>IVA:</b> 10,5% para pan y facturas de harina de trigo vendidos sin envasar; 21% para pastelería envasada, chipá, congelados especiales, café y otros. <b>Confirmar con Fabiola.</b></li>
+      <li><b>Impuestos sobre ventas:</b> Ingresos Brutos 4,5%, tasa municipal 1%, impuesto a débitos y créditos 1,2%. Supuestos a confirmar.</li>
+      <li><b>Medios de pago:</b> 2,5% (I005b: 2,1–3,1%). <b>Delivery:</b> 10% de la venta con 30% de comisión con IVA.</li>
+      <li><b>Personal:</b> 1 encargado/a ($1,84 M) + 6 personas ($1,53 M promedio) con costo empleador (UTHGRA jul–sep 2026, modelo híbrido de I011).</li>
+      <li><b>Alquiler:</b> ≈ USD 1.300 por mes (local de 100 m² en Z06–Z07, I029). <b>Energía:</b> hornos eléctricos, $1,5 M [supuesto].</li>
+      <li><b>Inversión:</b> USD 100.000 (D003) amortizada en 60 meses.</li>
+    </ul>
+    <p class="note">Es un modelo de un mes “estable” (sin estacionalidad, inflación ni aguinaldo por separado). Para la decisión de inversión (G7) se arma después el modelo financiero completo con flujo mensual.</p>
+  </div>
+</section>
+
+<footer>Ultracongelados Canalsenses S.R.L. · Proyecto PAN-CBA · Calculadora v1 (06/10/2026) · Los datos que se cargan quedan solo en este navegador.</footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+"use strict";
+const KEY = "pancba_calc_v1", KEYS = "pancba_calc_escenarios_v1";
+const CATS = {F:"Facturas y criollos", P:"Panes pre-cocidos", S:"Pastelería"};
+// [cod, nombre, cat, unidad de venta, unidades por bulto, precio bulto sin IVA, PVP con IVA, mix %, merma %, IVA %]
+const P0 = [
+ ["001","Medialunas dulces de manteca 40 g","F","u",150,33593.10,1400,16,6,10.5],
+ ["002","Medialunas saladas de manteca 40 g","F","u",150,33593.10,1400,5,6,10.5],
+ ["003","Medialunas dulces de manteca 35 g","F","u",180,36879.60,1200,0,6,10.5],
+ ["004","Medialunas saladas de manteca 35 g","F","u",180,36879.60,1200,0,6,10.5],
+ ["005","Medialunas de grasa","F","u",210,40799.10,1000,4,6,10.5],
+ ["006","Facturas surtidas c/crema y membrillo","F","u",108,35362.30,1600,7,6,10.5],
+ ["007","Facturas surtidas c/crema","F","u",108,35362.30,1600,0,6,10.5],
+ ["009","Vigilantes con crema","F","u",126,32789.30,1400,3,6,10.5],
+ ["010","Sacramentos","F","u",126,32052.50,1300,2,6,10.5],
+ ["011","Cremaditas con crema y membrillo","F","u",120,40321.10,1600,2,6,10.5],
+ ["012","Circulares con crema","F","u",120,37343.30,1600,2,6,10.5],
+ ["013","Tortitas negras","F","u",108,34664.90,1300,2,6,10.5],
+ ["014","Facturas de hojaldre con crema","F","u",135,47485.90,1800,3,6,10.5],
+ ["015","Jesuitas de hojaldre","F","u",144,44024.60,1600,1,6,10.5],
+ ["016","Criollos grandes","F","u",140,26131.20,600,2,6,10.5],
+ ["017","Criollos cordobeses","F","u",315,30978.10,300,5,6,10.5],
+ ["018","Criollos chicharrón","F","u",315,33037.10,320,2,6,10.5],
+ ["019","Coronitas","F","u",60,28456.80,2200,1,6,10.5],
+ ["020","Placas de chicharrón","F","u",63,28571.40,2000,1,6,10.5],
+ ["022","Tortillas tucumanas","F","u",120,36405.20,1300,1,6,10.5],
+ ["024","Bizcochos grandes","F","u",140,20189.00,600,1,6,10.5],
+ ["025","Chipá (por kg)","F","kg",7,61678.50,22000,6,5,21],
+ ["026","Vigilantes mixtos","F","u",126,32789.30,1400,0,6,10.5],
+ ["027","Facturas con dulce de leche","F","u",108,35362.30,1600,2,6,10.5],
+ ["030","Facturas surtidas c/crema y dulce de leche","F","u",108,35362.30,1600,3,6,10.5],
+ ["031","Criollito con queso","F","u",540,37195.00,300,2,6,10.5],
+ ["032","Croissant","F","u",60,31876.00,2900,5,6,10.5],
+ ["033","Super medialunas dulces de manteca 50 g","F","u",126,32450.90,1700,4,6,10.5],
+ ["101","Pan milonguita (por kg)","P","kg",3,11680.80,6500,2,8,10.5],
+ ["102","Pan milonguita de salvado (por kg)","P","kg",3.5,14944.60,7000,1,8,10.5],
+ ["105","Pan baguetín (por kg)","P","kg",3.5,14399.30,6500,2,8,10.5],
+ ["106","Pan flauta","P","u",48,13667.10,1200,1,8,10.5],
+ ["107","Pan de lomo","P","u",30,21478.40,1800,0,8,10.5],
+ ["108","Pan de campo","P","u",27,16481.80,2500,2,8,10.5],
+ ["110","Pan de hamburguesa","P","u",45,24603.10,1300,0,8,10.5],
+ ["111","Pan de choripán","P","u",60,23040.30,900,0,8,10.5],
+ ["116","Pan mignon (por kg)","P","kg",3.5,13728.70,6000,4,8,10.5],
+ ["400","Alfajorcito de maicena (paquete x 12)","S","paq.",8,33255.32,8500,1,2,21],
+ ["401","Alfajorcito de chocolate (paquete x 12)","S","paq.",8,37677.19,9500,1,2,21],
+ ["402","Pepas de membrillo 220 g","S","paq.",6,14727.35,5000,0,2,21],
+ ["403","Coquitos 200 g","S","paq.",6,20766.42,6500,0,2,21],
+ ["404","Palmerita mantequilla 200 g","S","paq.",12,39760.27,6500,0,2,21],
+ ["405","Pastafrola de membrillo 500 g","S","u",8,49870.72,12000,1,2,21],
+ ["406","Pastafrola de batata 500 g","S","u",8,49870.72,12000,0,2,21],
+ ["407","Budín de chocolate con chips 300 g","S","u",6,17306.93,6000,1,2,21],
+ ["408","Budín de frutos secos 320 g","S","u",6,16711.75,6000,0,2,21],
+ ["409","Budín relleno de dulce de leche 310 g","S","u",6,15593.41,6000,0,2,21],
+ ["410","Budín de limón con amapola","S","u",6,13799.41,5000,0,2,21],
+ ["450","Churros rellenos (congelados)","S","u",120,56368.80,1200,1,5,21],
+ ["451","Donas rellenas baño chocolate","S","u",48,30806.90,1900,1,5,21],
+ ["452","Donas rellenas baño rosa","S","u",48,31146.70,1900,0,5,21],
+ ["453","Pasteles de hojaldre membrillo","S","u",12,15011.40,2500,0,5,21],
+ ["454","Pasteles de hojaldre batata","S","u",12,15011.40,2500,0,5,21],
+ ["455","Tortas fritas (congeladas)","S","u",36,22870.80,1300,0,5,21]
+];
+function defaults(){
+  return {
+    v:{modo:"tickets",tickets:220,ticket:8500,dias:30,total:56100000}, tc:1545,
+    split:{pan:60,cafe:30,otros:10}, cafe:{cmv:20,iva:21}, otros:{cmv:35,iva:21},
+    uc:{desc:0,flete:5}, markup:4,
+    prods:P0.map(r=>({cod:r[0],nombre:r[1],cat:r[2],unidad:r[3],uxb:r[4],bulto:r[5],pvp:r[6],mix:r[7],merma:r[8],iva:r[9],on:true})),
+    vars:[
+      {n:"Ingresos Brutos Córdoba (supuesto)",pct:4.5,base:"neta"},
+      {n:"Tasa municipal de Comercio e Industria (supuesto)",pct:1,base:"neta"},
+      {n:"Medios de pago (tarjeta, QR)",pct:2.5,base:"bruta"},
+      {n:"Impuesto a débitos y créditos bancarios",pct:1.2,base:"bruta"},
+      {n:"Packaging y descartables",pct:2,base:"neta"}
+    ],
+    deliv:{share:10,com:30},
+    fix:[
+      {n:"Alquiler del local (≈ USD 1.300)",q:1,m:2000000},
+      {n:"Expensas, tasas e impuestos del local",q:1,m:250000},
+      {n:"Encargado/a (costo empleador)",q:1,m:1840000},
+      {n:"Atención, café y horneado (costo empleador)",q:6,m:1530000},
+      {n:"Director Técnico bromatológico",q:1,m:250000},
+      {n:"Energía eléctrica (hornos, frío, café)",q:1,m:1500000},
+      {n:"Gas",q:1,m:100000},
+      {n:"Agua, internet y telefonía",q:1,m:150000},
+      {n:"Software (caja, facturación) y mantenimiento",q:1,m:250000},
+      {n:"Contador y administración",q:1,m:400000},
+      {n:"Marketing y redes",q:1,m:500000},
+      {n:"Seguros",q:1,m:120000},
+      {n:"Limpieza e insumos fijos",q:1,m:200000},
+      {n:"Varios e imprevistos",q:1,m:300000}
+    ],
+    inv:{usd:100000,meses:60,incl:1}
+  };
+}
+let S;
+function load(){ try{ const s=localStorage.getItem(KEY); if(s){ const o=JSON.parse(s); if(o&&o.prods&&o.fix) return o; } }catch(e){} return defaults(); }
+function persist(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+
+const nf0=new Intl.NumberFormat("es-AR",{maximumFractionDigits:0});
+const nf1=new Intl.NumberFormat("es-AR",{maximumFractionDigits:1,minimumFractionDigits:1});
+const nf2=new Intl.NumberFormat("es-AR",{maximumFractionDigits:2,minimumFractionDigits:2});
+const $m=v=>(v<0?"−$":"$")+nf0.format(Math.abs(Math.round(v)));
+const usd=v=>(v<0?"−":"")+"USD "+nf0.format(Math.abs(Math.round(v)));
+const $M=v=>(v<0?"−$":"$")+nf1.format(Math.abs(v)/1e6)+" M";
+const pc=v=>isFinite(v)?nf1.format(v*100)+"%":"—";
+const num=x=>{const v=parseFloat(x);return isFinite(v)?v:0;};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function calc(){
+  const r={};
+  r.B = S.v.modo==="tickets" ? num(S.v.tickets)*num(S.v.ticket)*num(S.v.dias) : num(S.v.total);
+  const sp=num(S.split.pan), sc=num(S.split.cafe), so=num(S.split.otros), st=sp+sc+so||1;
+  r.splitSum=sp+sc+so;
+  r.Bp=r.B*sp/st; r.Bc=r.B*sc/st; r.Bo=r.B*so/st;
+  const act=S.prods.filter(p=>p.on);
+  r.mixSum=act.reduce((a,p)=>a+num(p.mix),0);
+  const fD=1-num(S.uc.desc)/100, fF=1+num(S.uc.flete)/100;
+  r.rows=S.prods.map(p=>{
+    const o={p}; const merma=Math.min(num(p.merma),95)/100, uxb=num(p.uxb)||1, iva=num(p.iva)/100;
+    o.costLista=num(p.bulto)/uxb;
+    o.cost=o.costLista*fD*fF/(1-merma);
+    o.share = p.on && r.mixSum>0 ? num(p.mix)/r.mixSum : 0;
+    o.bruta=r.Bp*o.share; o.neta=o.bruta/(1+iva);
+    o.units = num(p.pvp)>0 ? o.bruta/num(p.pvp) : 0;
+    o.cmv=o.units*o.cost;
+    o.bultos=o.units/(1-merma)/uxb;
+    o.pvpNeto=num(p.pvp)/(1+iva);
+    o.mu = o.cost>0 ? num(p.pvp)/o.cost : 0;
+    o.mgU=o.pvpNeto-o.cost; o.mgPct=o.pvpNeto>0?o.mgU/o.pvpNeto:0;
+    return o;
+  });
+  r.Np=r.rows.reduce((a,o)=>a+o.neta,0); r.CMVp=r.rows.reduce((a,o)=>a+o.cmv,0);
+  r.Nc=r.Bc/(1+num(S.cafe.iva)/100); r.CMVc=r.Nc*num(S.cafe.cmv)/100;
+  r.No=r.Bo/(1+num(S.otros.iva)/100); r.CMVo=r.No*num(S.otros.cmv)/100;
+  r.N=r.Np+r.Nc+r.No; r.CMV=r.CMVp+r.CMVc+r.CMVo;
+  r.varRows=S.vars.map(v=>({v,amt:num(v.pct)/100*(v.base==="bruta"?r.B:r.N)}));
+  r.deliv=r.B*num(S.deliv.share)/100*num(S.deliv.com)/100;
+  r.V=r.varRows.reduce((a,x)=>a+x.amt,0)+r.deliv;
+  r.C=r.N-r.CMV-r.V;
+  r.F0=S.fix.reduce((a,f)=>a+num(f.q)*num(f.m),0);
+  r.amort=num(S.inv.usd)*num(S.tc)/Math.max(1,num(S.inv.meses));
+  r.F=r.F0+(+S.inv.incl?r.amort:0);
+  r.EBITDA=r.C-r.F0; r.Res=r.C-r.F;
+  r.cB = r.B>0 ? r.C/r.B : 0;
+  r.BE = r.cB>0 ? r.F/r.cB : Infinity;
+  r.BEd=r.BE/Math.max(1,num(S.v.dias));
+  const tk=num(S.v.ticket);
+  r.BEt = tk>0 ? r.BEd/tk : NaN;
+  r.BEn = r.B>0 ? r.BE*r.N/r.B : NaN;
+  r.mseg = r.B>0 && isFinite(r.BE) ? (r.B-r.BE)/r.B : NaN;
+  r.vN = r.N>0 ? r.V/r.N : 0;
+  r.k = (r.N-r.V)>0 ? (r.CMV+r.F)/(r.N-r.V) : Infinity;
+  return r;
+}
+
+/* ---------- render inputs ---------- */
+const bind=(id,get,set)=>{const el=document.getElementById(id); el.value=get(); el.addEventListener("input",()=>{set(el.value); update();});};
+function bindAll(){
+  bind("v_modo",()=>S.v.modo,v=>S.v.modo=v);
+  bind("v_tickets",()=>S.v.tickets,v=>S.v.tickets=num(v));
+  bind("v_ticket",()=>S.v.ticket,v=>S.v.ticket=num(v));
+  bind("v_dias",()=>S.v.dias,v=>S.v.dias=num(v));
+  bind("v_total",()=>S.v.total,v=>S.v.total=num(v));
+  bind("tc",()=>S.tc,v=>S.tc=num(v));
+  bind("s_pan",()=>S.split.pan,v=>S.split.pan=num(v));
+  bind("s_cafe",()=>S.split.cafe,v=>S.split.cafe=num(v));
+  bind("s_otros",()=>S.split.otros,v=>S.split.otros=num(v));
+  bind("cafe_cmv",()=>S.cafe.cmv,v=>S.cafe.cmv=num(v));
+  bind("cafe_iva",()=>S.cafe.iva,v=>S.cafe.iva=num(v));
+  bind("otros_cmv",()=>S.otros.cmv,v=>S.otros.cmv=num(v));
+  bind("otros_iva",()=>S.otros.iva,v=>S.otros.iva=num(v));
+  bind("uc_desc",()=>S.uc.desc,v=>S.uc.desc=num(v));
+  bind("uc_flete",()=>S.uc.flete,v=>S.uc.flete=num(v));
+  bind("markup",()=>S.markup,v=>S.markup=num(v));
+  bind("d_share",()=>S.deliv.share,v=>S.deliv.share=num(v));
+  bind("d_com",()=>S.deliv.com,v=>S.deliv.com=num(v));
+  bind("inv_usd",()=>S.inv.usd,v=>S.inv.usd=num(v));
+  bind("inv_meses",()=>S.inv.meses,v=>S.inv.meses=num(v));
+  bind("inv_incl",()=>String(S.inv.incl),v=>S.inv.incl=+v);
+}
+function syncInputs(){ // tras restablecer / importar
+  const map={v_modo:S.v.modo,v_tickets:S.v.tickets,v_ticket:S.v.ticket,v_dias:S.v.dias,v_total:S.v.total,tc:S.tc,s_pan:S.split.pan,s_cafe:S.split.cafe,s_otros:S.split.otros,
+    cafe_cmv:S.cafe.cmv,cafe_iva:S.cafe.iva,otros_cmv:S.otros.cmv,otros_iva:S.otros.iva,uc_desc:S.uc.desc,uc_flete:S.uc.flete,markup:S.markup,
+    d_share:S.deliv.share,d_com:S.deliv.com,inv_usd:S.inv.usd,inv_meses:S.inv.meses,inv_incl:String(S.inv.incl)};
+  for(const k in map) document.getElementById(k).value=map[k];
+}
+
+function buildProdTable(){
+  const t=document.getElementById("tProd");
+  let h=`<thead><tr><th>Usar</th><th>Cód.</th><th>Producto</th><th>Unidad</th><th class="n">Unid./bulto</th><th class="n">Precio bulto sin IVA</th><th class="n">Costo lista / unid.</th><th class="n">Merma %</th><th class="n">Costo final / unid.</th><th class="n">PVP con IVA</th><th class="n">IVA %</th><th class="n">Markup</th><th class="n">Mix %</th><th class="n">Unid./mes</th><th class="n">Bultos/mes</th><th class="n">Bultos/15 días</th><th class="n">Margen %</th><th></th></tr></thead><tbody>`;
+  let last="";
+  S.prods.forEach((p,i)=>{
+    if(p.cat!==last){ h+=`<tr class="cat"><td colspan="18">${esc(CATS[p.cat]||p.cat)}</td></tr>`; last=p.cat; }
+    h+=`<tr data-i="${i}" class="${p.on?"":"off"}">
+      <td><input type="checkbox" data-k="on" ${p.on?"checked":""} aria-label="Usar ${esc(p.nombre)}"></td>
+      <td><input type="text" class="w60" data-k="cod" value="${esc(p.cod)}" style="width:52px"></td>
+      <td><input type="text" data-k="nombre" value="${esc(p.nombre)}"></td>
+      <td><input type="text" data-k="unidad" value="${esc(p.unidad)}" style="width:52px"></td>
+      <td class="n"><input type="number" class="w60" data-k="uxb" value="${p.uxb}" step="1" min="0"></td>
+      <td class="n"><input type="number" class="w120" data-k="bulto" value="${p.bulto}" step="0.01" min="0"></td>
+      <td class="n" data-o="costLista"></td>
+      <td class="n"><input type="number" class="w60" data-k="merma" value="${p.merma}" step="0.5" min="0" max="95"></td>
+      <td class="n" data-o="cost"></td>
+      <td class="n"><input type="number" data-k="pvp" value="${p.pvp}" step="50" min="0"></td>
+      <td class="n"><input type="number" class="w60" data-k="iva" value="${p.iva}" step="0.5" min="0"></td>
+      <td class="n" data-o="mu"></td>
+      <td class="n"><input type="number" class="w60" data-k="mix" value="${p.mix}" step="0.5" min="0"></td>
+      <td class="n" data-o="units"></td><td class="n" data-o="bultos"></td><td class="n" data-o="bultos15"></td><td class="n" data-o="mgPct"></td>
+      <td><button data-del="${i}" title="Quitar producto" aria-label="Quitar ${esc(p.nombre)}">✕</button></td></tr>`;
+  });
+  h+=`</tbody><tfoot><tr><td colspan="12">Total panificados</td><td class="n" id="ftMix"></td><td class="n" id="ftUnits"></td><td class="n" id="ftBul"></td><td class="n" id="ftBul15"></td><td class="n" id="ftMg"></td><td></td></tr></tfoot>`;
+  t.innerHTML=h;
+}
+document.getElementById("tProd").addEventListener("input",e=>{
+  const tr=e.target.closest("tr[data-i]"); if(!tr) return; const p=S.prods[+tr.dataset.i], k=e.target.dataset.k; if(!k) return;
+  if(k==="on"){ p.on=e.target.checked; tr.classList.toggle("off",!p.on); }
+  else if(["cod","nombre","unidad"].includes(k)) p[k]=e.target.value; else p[k]=num(e.target.value);
+  update();
+});
+document.getElementById("tProd").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-del]"); if(!b) return; const p=S.prods[+b.dataset.del];
+  if(confirm(`¿Quitar "${p.nombre}" de la lista?`)){ S.prods.splice(+b.dataset.del,1); buildProdTable(); update(); }
+});
+
+function buildVarTable(){
+  let h=`<thead><tr><th>Concepto</th><th class="n">% </th><th>Sobre</th><th class="n">Monto mensual</th><th></th></tr></thead><tbody>`;
+  S.vars.forEach((v,i)=>{ h+=`<tr data-i="${i}"><td><input type="text" data-k="n" value="${esc(v.n)}" style="width:330px"></td><td class="n"><input type="number" class="w60" data-k="pct" value="${v.pct}" step="0.1"></td>
+    <td><select data-k="base" style="width:150px;text-align:left"><option value="neta" ${v.base==="neta"?"selected":""}>Venta sin IVA</option><option value="bruta" ${v.base==="bruta"?"selected":""}>Venta con IVA</option></select></td>
+    <td class="n" data-o="amt"></td><td><button data-del="${i}" aria-label="Quitar">✕</button></td></tr>`; });
+  h+=`<tr><td>Comisión de apps de delivery (ver abajo)</td><td></td><td>Venta por apps</td><td class="n" id="vDeliv"></td><td></td></tr></tbody><tfoot><tr><td colspan="3">Total costos variables</td><td class="n" id="vTot"></td><td></td></tr></tfoot>`;
+  document.getElementById("tVar").innerHTML=h;
+}
+document.getElementById("tVar").addEventListener("input",e=>{ const tr=e.target.closest("tr[data-i]"); if(!tr) return; const v=S.vars[+tr.dataset.i],k=e.target.dataset.k; v[k]= k==="pct"?num(e.target.value):e.target.value; update(); });
+document.getElementById("tVar").addEventListener("click",e=>{ const b=e.target.closest("button[data-del]"); if(!b) return; S.vars.splice(+b.dataset.del,1); buildVarTable(); update(); });
+
+function buildFixTable(){
+  let h=`<thead><tr><th>Concepto</th><th class="n">Cantidad</th><th class="n">Monto unitario ($/mes)</th><th class="n">Subtotal</th><th class="n">USD</th><th></th></tr></thead><tbody>`;
+  S.fix.forEach((f,i)=>{ h+=`<tr data-i="${i}"><td><input type="text" data-k="n" value="${esc(f.n)}" style="width:330px"></td><td class="n"><input type="number" class="w60" data-k="q" value="${f.q}" step="1" min="0"></td>
+    <td class="n"><input type="number" class="w120" data-k="m" value="${f.m}" step="10000" min="0"></td><td class="n" data-o="sub"></td><td class="n" data-o="usd"></td><td><button data-del="${i}" aria-label="Quitar">✕</button></td></tr>`; });
+  h+=`<tr><td>Amortización de la inversión</td><td></td><td></td><td class="n" id="fAm"></td><td class="n" id="fAmU"></td><td></td></tr></tbody><tfoot><tr><td colspan="3">Total costos fijos</td><td class="n" id="fTot"></td><td class="n" id="fTotU"></td><td></td></tr></tfoot>`;
+  document.getElementById("tFix").innerHTML=h;
+}
+document.getElementById("tFix").addEventListener("input",e=>{ const tr=e.target.closest("tr[data-i]"); if(!tr) return; const f=S.fix[+tr.dataset.i],k=e.target.dataset.k; f[k]= k==="n"?e.target.value:num(e.target.value); update(); });
+document.getElementById("tFix").addEventListener("click",e=>{ const b=e.target.closest("button[data-del]"); if(!b) return; S.fix.splice(+b.dataset.del,1); buildFixTable(); update(); });
+
+/* ---------- outputs ---------- */
+function kpi(l,v,s,cls=""){return `<div class="kpi ${cls}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s||""}</div></div>`;}
+function update(){
+  const r=calc(), tc=num(S.tc)||1;
+  // KPIs
+  const resCls=r.Res>=0?"pos":"neg";
+  document.getElementById("kpis").innerHTML=
+    kpi("Ventas con IVA / mes",$M(r.B),"USD "+nf0.format(r.B/tc)+" · $"+nf0.format(r.B/Math.max(1,num(S.v.dias)))+"/día")+
+    kpi("Margen de contribución",pc(r.N>0?r.C/r.N:0),"de la venta sin IVA · "+$M(r.C))+
+    kpi("Costos fijos / mes",$M(r.F),(+S.inv.incl?"incluye amortización":"sin amortización")+" · USD "+nf0.format(r.F/tc))+
+    kpi("Punto de equilibrio",isFinite(r.BE)?$M(r.BE):"no se alcanza",isFinite(r.BE)?("con IVA · "+(isFinite(r.BEt)?nf0.format(Math.ceil(r.BEt))+" tickets/día":"")):"el margen es negativo","hl")+
+    kpi("Resultado del mes",`<span class="${resCls}">${$M(r.Res)}</span>`,usd(r.Res/tc)+" · EBITDA "+$M(r.EBITDA))+
+    kpi("Margen de seguridad",`<span class="${r.mseg>=0?"pos":"neg"}">${pc(r.mseg)}</span>`,"cuánto pueden caer las ventas antes de perder");
+  // estado de resultados
+  const row=(l,v,base,cls="")=>`<tr class="${cls}"><td>${l}</td><td class="n">${$m(v)}</td><td class="n">${base?pc(v/base):""}</td></tr>`;
+  document.getElementById("tRes").innerHTML=`<thead><tr><th>Concepto</th><th class="n">$ / mes</th><th class="n">% venta s/IVA</th></tr></thead><tbody>`+
+    row("Ventas con IVA",r.B,0)+row("− IVA débito",-(r.B-r.N),0)+
+    row("<b>Ventas sin IVA</b>",r.N,r.N,"sub")+
+    row("&nbsp;&nbsp;Panificados y pastelería (UC)",r.Np,r.N)+row("&nbsp;&nbsp;Café y bebidas",r.Nc,r.N)+row("&nbsp;&nbsp;Otros",r.No,r.N)+
+    row("− Costo de mercadería panificados (lista UC + flete + merma)",-r.CMVp,r.N)+row("− Costo de café y bebidas",-r.CMVc,r.N)+row("− Costo de otros",-r.CMVo,r.N)+
+    row("<b>Margen bruto</b>",r.N-r.CMV,r.N,"sub")+
+    row("− Costos variables (impuestos, cobros, packaging, apps)",-r.V,r.N)+
+    row("<b>Margen de contribución</b>",r.C,r.N,"sub")+
+    row("− Costos fijos operativos",-r.F0,r.N)+
+    row("<b>EBITDA</b>",r.EBITDA,r.N,"sub")+
+    row("− Amortización de la inversión"+(+S.inv.incl?"":" (no se incluye)"),+S.inv.incl?-r.amort:0,r.N)+
+    row("<b>Resultado</b>",r.Res,r.N,"tot")+`</tbody>`;
+  // texto equilibrio
+  const be=document.getElementById("beText");
+  if(isFinite(r.BE)){
+    be.className="callout"+(r.Res<0?" warn":"");
+    be.innerHTML=`Para no perder plata hay que vender <b>${$m(r.BE)} por mes con IVA</b> (USD ${nf0.format(r.BE/tc)}), o sea <b>${$m(r.BEd)} por día</b>`+
+      (isFinite(r.BEt)?` ≈ <b>${nf0.format(Math.ceil(r.BEt))} tickets por día</b> de ${$m(num(S.v.ticket))}`:"")+
+      `. Con las ventas cargadas (${$M(r.B)}) el resultado es <b class="${resCls}">${$m(r.Res)}</b> por mes.`;
+  } else { be.className="callout warn"; be.innerHTML="Con estos precios y costos el margen de contribución es negativo: ningún volumen de ventas alcanza el equilibrio. Revisen PVP, mix o costos variables."; }
+  document.getElementById("splitMsg").innerHTML = Math.abs(r.splitSum-100)>0.01 ? `<span class="badge bad">El mix por línea suma ${nf1.format(r.splitSum)}%</span> Se reparte en proporción, pero conviene que sume 100%.` : `<span class="badge ok">Suma 100%</span>`;
+  document.getElementById("mixMsg").innerHTML = Math.abs(r.mixSum-100)>0.01 ? `<span class="badge bad">El mix de productos suma ${nf1.format(r.mixSum)}%</span> Se calcula en proporción; usen “Llevar el mix a 100%” para ajustarlo.` : `<span class="badge ok">Mix de productos: 100%</span>`;
+  // tabla productos (salidas)
+  const rowsEl=document.querySelectorAll("#tProd tr[data-i]");
+  let tu=0,tb=0,tn=0,tc2=0;
+  rowsEl.forEach(tr=>{ const o=r.rows[+tr.dataset.i]; const set=(k,v)=>{const c=tr.querySelector(`[data-o="${k}"]`); if(c) c.textContent=v;};
+    set("costLista","$"+nf2.format(o.costLista)); set("cost","$"+nf2.format(o.cost)); set("mu",o.mu?nf1.format(o.mu)+"×":"—");
+    set("units",nf0.format(o.units)); set("bultos",nf1.format(o.bultos)); set("bultos15",nf1.format(o.bultos/2));
+    const c=tr.querySelector('[data-o="mgPct"]'); c.textContent=pc(o.mgPct); c.className="n "+(o.mgU<0?"neg":"");
+    tu+=o.units; tb+=o.bultos; tn+=o.neta; tc2+=o.cmv; });
+  document.getElementById("ftMix").textContent=nf1.format(r.mixSum)+"%";
+  document.getElementById("ftUnits").textContent=nf0.format(tu);
+  document.getElementById("ftBul").textContent=nf1.format(tb);
+  document.getElementById("ftBul15").textContent=nf1.format(tb/2);
+  document.getElementById("ftMg").textContent=pc(tn>0?(tn-tc2)/tn:0);
+  // variables
+  document.querySelectorAll("#tVar tr[data-i]").forEach(tr=>{ tr.querySelector('[data-o="amt"]').textContent=$m(r.varRows[+tr.dataset.i].amt); });
+  document.getElementById("vDeliv").textContent=$m(r.deliv); document.getElementById("vTot").textContent=$m(r.V)+" ("+pc(r.N>0?r.V/r.N:0)+" de la venta sin IVA)";
+  // fijos
+  document.querySelectorAll("#tFix tr[data-i]").forEach(tr=>{ const f=S.fix[+tr.dataset.i], s=num(f.q)*num(f.m); tr.querySelector('[data-o="sub"]').textContent=$m(s); tr.querySelector('[data-o="usd"]').textContent=nf0.format(s/tc); });
+  document.getElementById("fAm").textContent=$m(r.amort)+(+S.inv.incl?"":" (no incluida)"); document.getElementById("fAmU").textContent=nf0.format(r.amort/tc);
+  document.getElementById("fTot").textContent=$m(r.F); document.getElementById("fTotU").textContent=nf0.format(r.F/tc);
+  // precio de equilibrio
+  renderPeq(r);
+  drawBE(r); drawProd(r);
+  persist();
+}
+function renderPeq(r){
+  const k=r.k, t=document.getElementById("peqText");
+  if(isFinite(k)){
+    const d=(k-1)*100;
+    t.className="callout"+(k>1?" warn":"");
+    t.innerHTML=`<b>Factor de precio de equilibrio: ${nf2.format(k)}×</b>. Con el volumen cargado (${$M(r.B)} por mes) los precios `+
+      (k<=1?`podrían <b>bajar hasta ${nf1.format(-d)}%</b> y seguir sin perder plata.`:`tendrían que <b>subir ${nf1.format(d)}%</b> para no perder plata.`)+
+      ` Costos variables: ${pc(r.vN)} de la venta sin IVA.`;
+  } else { t.className="callout warn"; t.innerHTML="No hay precio de equilibrio con este volumen: los costos variables superan la venta."; }
+  let h=`<thead><tr><th>Cód.</th><th>Producto</th><th>Unidad</th><th class="n">Costo final</th><th class="n">PVP actual</th><th class="n">Markup actual</th><th class="n">PVP mínimo (sin cubrir fijos)</th><th class="n">PVP de equilibrio</th><th class="n">PVP con markup objetivo (${nf1.format(num(S.markup))}×)</th><th class="n">Unid./mes</th><th class="n">Contribución / mes</th></tr></thead><tbody>`;
+  let last="";
+  r.rows.forEach(o=>{ const p=o.p; if(!p.on) return; if(p.cat!==last){ h+=`<tr class="cat"><td colspan="11">${esc(CATS[p.cat]||p.cat)}</td></tr>`; last=p.cat; }
+    const iva=num(p.iva)/100, minP=o.cost/Math.max(0.01,1-r.vN)*(1+iva), eq=isFinite(k)?num(p.pvp)*k:NaN, mk=o.cost*num(S.markup)*(1+iva);
+    const contrib=o.neta*(1-r.vN)-o.cmv;
+    h+=`<tr><td>${esc(p.cod)}</td><td>${esc(p.nombre)}</td><td>${esc(p.unidad)}</td><td class="n">$${nf2.format(o.cost)}</td><td class="n">${$m(num(p.pvp))}</td><td class="n">${nf1.format(o.mu)}×</td>
+      <td class="n">${$m(minP)}</td><td class="n"><b>${isFinite(eq)?$m(eq):"—"}</b></td><td class="n">${$m(mk)}</td><td class="n">${nf0.format(o.units)}</td><td class="n ${contrib<0?"neg":""}">${$m(contrib)}</td></tr>`; });
+  document.getElementById("tPeq").innerHTML=h+"</tbody>";
+}
+
+/* ---------- charts (SVG) ---------- */
+const tip=document.getElementById("tip");
+function drawBE(r){
+  const el=document.getElementById("chBE"), W=640,H=300,L=64,R=16,T=14,Bm=40;
+  const xmax=Math.max(isFinite(r.BE)?r.BE*1.8:0, r.B*1.4, 1);
+  const ymax=Math.max(r.F*1.6, (r.cB>0?r.cB*xmax:0)*1.05, 1);
+  const X=v=>L+(W-L-R)*v/xmax, Y=v=>T+(H-T-Bm)*(1-Math.max(0,v)/ymax);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de punto de equilibrio">`;
+  for(let i=0;i<=4;i++){ const yv=ymax*i/4; s+=`<line x1="${L}" x2="${W-R}" y1="${Y(yv)}" y2="${Y(yv)}" stroke="#ECECEC"/><text x="${L-6}" y="${Y(yv)+4}" text-anchor="end" font-size="10.5" fill="#808080">${nf0.format(yv/1e6)} M</text>`; }
+  for(let i=0;i<=4;i++){ const xv=xmax*i/4; s+=`<text x="${X(xv)}" y="${H-Bm+16}" text-anchor="middle" font-size="10.5" fill="#808080">${nf0.format(xv/1e6)} M</text>`; }
+  s+=`<text x="${(L+W-R)/2}" y="${H-6}" text-anchor="middle" font-size="11" fill="#404040">Ventas mensuales con IVA ($)</text>`;
+  // fijos
+  s+=`<line x1="${X(0)}" x2="${X(xmax)}" y1="${Y(r.F)}" y2="${Y(r.F)}" stroke="#1F6FD0" stroke-width="2"/>`;
+  s+=`<text x="${X(xmax)-4}" y="${Y(r.F)-6}" text-anchor="end" font-size="11" font-weight="700" fill="#404040">Costos fijos ${$M(r.F)}</text>`;
+  // contribución
+  if(r.cB>0){ s+=`<line x1="${X(0)}" y1="${Y(0)}" x2="${X(xmax)}" y2="${Y(r.cB*xmax)}" stroke="#F18A00" stroke-width="2"/>`;
+    s+=`<text x="${X(xmax*0.97)}" y="${Y(r.cB*xmax*0.97)+16}" text-anchor="end" font-size="11" font-weight="700" fill="#404040">Margen de contribución</text>`; }
+  // ventas actuales
+  s+=`<line x1="${X(r.B)}" x2="${X(r.B)}" y1="${T}" y2="${H-Bm}" stroke="#808080" stroke-dasharray="4 4"/><text x="${X(r.B)+4}" y="${T+10}" font-size="10.5" fill="#404040">Ventas cargadas</text>`;
+  if(isFinite(r.BE)&&r.BE<=xmax){ s+=`<circle cx="${X(r.BE)}" cy="${Y(r.F)}" r="6" fill="#F18A00" stroke="#fff" stroke-width="2"/><text x="${X(r.BE)+8}" y="${Y(r.F)+18}" font-size="11" font-weight="700" fill="#404040">Equilibrio ${$M(r.BE)}</text>`; }
+  s+=`<line id="xh" x1="0" x2="0" y1="${T}" y2="${H-Bm}" stroke="#404040" stroke-width="1" visibility="hidden"/><rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-Bm}" fill="transparent" id="hit"/></svg>`;
+  el.innerHTML=s;
+  const svg=el.querySelector("svg"), hit=svg.querySelector("#hit"), xh=svg.querySelector("#xh");
+  hit.addEventListener("mousemove",ev=>{ const b=svg.getBoundingClientRect(); const px=(ev.clientX-b.left)*W/b.width; const xv=Math.max(0,Math.min(xmax,(px-L)/(W-L-R)*xmax));
+    xh.setAttribute("x1",X(xv)); xh.setAttribute("x2",X(xv)); xh.setAttribute("visibility","visible");
+    const c=r.cB*xv, res=c-r.F; tip.style.display="block";
+    tip.innerHTML=`<b>Ventas ${$m(xv)}</b>Margen de contribución: ${$m(c)}<br>Costos fijos: ${$m(r.F)}<br>Resultado: <span class="${res>=0?"pos":"neg"}">${$m(res)}</span><br>${nf0.format(xv/Math.max(1,num(S.v.dias))/Math.max(1,num(S.v.ticket)))} tickets/día`;
+    const cb=el.getBoundingClientRect(); let lx=ev.clientX-cb.left+14; if(lx+210>cb.width) lx=ev.clientX-cb.left-214; tip.style.left=(cb.left+window.scrollX+lx)+"px"; tip.style.top=(cb.top+window.scrollY+ev.clientY-cb.top-10)+"px"; });
+  hit.addEventListener("mouseleave",()=>{ tip.style.display="none"; xh.setAttribute("visibility","hidden"); });
+}
+function drawProd(r){
+  const el=document.getElementById("chProd");
+  const d=r.rows.filter(o=>o.p.on&&o.units>0).map(o=>({n:o.p.nombre,v:o.neta*(1-r.vN)-o.cmv,u:o.units,m:o.mgPct})).sort((a,b)=>b.v-a.v).slice(0,12);
+  if(!d.length){ el.innerHTML='<p class="note">No hay productos con ventas.</p>'; return; }
+  const W=760,lw=290,rh=26,T=6,H=T+rh*d.length+10, vmax=Math.max(...d.map(x=>Math.abs(x.v)))*1.18||1;
+  const X=v=>lw+(W-lw-90)*Math.max(0,v)/vmax;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Contribución mensual por producto">`;
+  d.forEach((x,i)=>{ const y=T+i*rh; s+=`<text x="${lw-8}" y="${y+15}" text-anchor="end" font-size="12" fill="#404040">${esc(x.n.length>40?x.n.slice(0,39)+"…":x.n)}</text>
+    <g><title>${esc(x.n)}: ${$m(x.v)} por mes · ${nf0.format(x.u)} unidades · margen ${pc(x.m)}</title><rect x="${lw}" y="${y+4}" width="${Math.max(2,X(x.v)-lw)}" height="16" rx="4" fill="#F18A00"/></g>
+    <text x="${X(x.v)+6}" y="${y+16}" font-size="11.5" font-weight="700" fill="#404040">${$M(x.v)}</text>`; });
+  el.innerHTML=s+"</svg>";
+}
+
+/* ---------- acciones ---------- */
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("on",x===b));
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.id===b.dataset.t));
+  try{ sessionStorage.setItem("pancba_tab",b.dataset.t); }catch(e){}
+}));
+document.getElementById("bNorm").onclick=()=>{ const s=S.prods.filter(p=>p.on).reduce((a,p)=>a+num(p.mix),0); if(s>0){ S.prods.forEach(p=>{ if(p.on) p.mix=Math.round(num(p.mix)/s*1000)/10; }); buildProdTable(); update(); } };
+document.getElementById("bMarkup").onclick=()=>{ const m=num(S.markup); if(m<=0) return; if(!confirm(`Esto reemplaza el PVP de todos los productos por costo final × ${m} con IVA. ¿Seguir?`)) return;
+  const fD=1-num(S.uc.desc)/100, fF=1+num(S.uc.flete)/100;
+  S.prods.forEach(p=>{ const c=num(p.bulto)/(num(p.uxb)||1)*fD*fF/(1-Math.min(num(p.merma),95)/100); p.pvp=Math.round(c*m*(1+num(p.iva)/100)/50)*50; }); buildProdTable(); update(); };
+document.getElementById("bAdd").onclick=()=>{ S.prods.push({cod:"",nombre:"Producto nuevo",cat:"S",unidad:"u",uxb:1,bulto:0,pvp:0,mix:0,merma:5,iva:21,on:true}); buildProdTable(); update(); };
+document.getElementById("bAddVar").onclick=()=>{ S.vars.push({n:"Nuevo costo variable",pct:0,base:"neta"}); buildVarTable(); update(); };
+document.getElementById("bAddFix").onclick=()=>{ S.fix.push({n:"Nuevo costo fijo",q:1,m:0}); buildFixTable(); update(); };
+function rebuild(){ syncInputs(); buildProdTable(); buildVarTable(); buildFixTable(); update(); }
+document.getElementById("bReset").onclick=()=>{ if(confirm("¿Volver a los valores de partida? Se pierden los cambios no guardados como escenario.")){ S=defaults(); rebuild(); } };
+document.getElementById("bExport").onclick=()=>{ const blob=new Blob([JSON.stringify(S,null,1)],{type:"application/json"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="escenario_pancba_"+new Date().toISOString().slice(0,10)+".json"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); };
+document.getElementById("bImport").onclick=()=>document.getElementById("fImport").click();
+document.getElementById("fImport").onchange=e=>{ const f=e.target.files[0]; if(!f) return; const rd=new FileReader(); rd.onload=()=>{ try{ const o=JSON.parse(rd.result); if(!o.prods||!o.fix||!o.vars) throw 0; S=Object.assign(defaults(),o); rebuild(); }catch(x){ alert("El archivo no es un escenario válido de esta calculadora."); } }; rd.readAsText(f); e.target.value=""; };
+document.getElementById("bCsv").onclick=()=>{ const r=calc(); const q=v=>'"'+String(v).replace(/"/g,'""')+'"';
+  const lines=[["Código","Producto","Categoría","Unidad","Unid. por bulto","Precio bulto sin IVA","Costo final unid.","PVP con IVA","IVA %","Mix %","Unid./mes","Bultos/mes","Margen %"].map(q).join(";")];
+  r.rows.forEach(o=>{ const p=o.p; lines.push([p.cod,p.nombre,CATS[p.cat]||p.cat,p.unidad,p.uxb,p.bulto,o.cost.toFixed(2),p.pvp,p.iva,p.mix,o.units.toFixed(0),o.bultos.toFixed(1),(o.mgPct*100).toFixed(1)].map(q).join(";")); });
+  const blob=new Blob(["﻿"+lines.join("\n")],{type:"text/csv"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="productos_pancba.csv"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); };
+// escenarios con nombre
+function scenList(){ try{ return JSON.parse(localStorage.getItem(KEYS)||"{}"); }catch(e){ return {}; } }
+function fillScen(){ const sel=document.getElementById("selScen"), l=scenList(); sel.innerHTML='<option value="">Escenarios guardados…</option>'+Object.keys(l).map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join(""); }
+document.getElementById("bSave").onclick=()=>{ const n=prompt("Nombre del escenario (ej.: Base, Optimista, Villa Cabrera 120 m²):"); if(!n) return; const l=scenList(); l[n]=S; try{ localStorage.setItem(KEYS,JSON.stringify(l)); fillScen(); document.getElementById("selScen").value=n; }catch(e){ alert("No se pudo guardar en este navegador. Usen “Exportar”."); } };
+document.getElementById("selScen").onchange=e=>{ const l=scenList(), o=l[e.target.value]; if(o){ S=JSON.parse(JSON.stringify(o)); rebuild(); } };
+document.getElementById("bDelScen").onclick=()=>{ const sel=document.getElementById("selScen"), n=sel.value; if(!n) return; if(!confirm(`¿Borrar el escenario "${n}"?`)) return; const l=scenList(); delete l[n]; try{ localStorage.setItem(KEYS,JSON.stringify(l)); }catch(e){} fillScen(); };
+
+S=load(); bindAll(); buildProdTable(); buildVarTable(); buildFixTable(); fillScen(); update();
+try{ const t=sessionStorage.getItem("pancba_tab"); if(t){ const b=document.querySelector(`.tabs button[data-t="${t}"]`); if(b) b.click(); } }catch(e){}
+</script>
+</body>
+</html>

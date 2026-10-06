@@ -45,6 +45,7 @@
 | T037 | Cotizar equipamiento del modelo híbrido: 2 hornos convectores eléctricos, fermentadora, freezers (3–4 m³) y máquina de café de 2 grupos con molino | G9/G10 | Oscar | P2 | I011 | PENDIENTE | 2 cotizaciones por equipo |
 | T038 | Verificar en campo los corners existentes (Del Pilar en Carrefour Martinolli, La Milkería en Paseo Rivera) y consultar condiciones a 2 estaciones no-YPF y 1 concesión (universidad u hospital) | G4 | Socios + IA | P2 | — | PENDIENTE | Canon, % y m² reales (E-09) |
 | T039 | Relevar a mano reseñas de Google Maps: 20 locales × 20 reseñas recientes (La Celeste, Perdú, El Vergel, Independencia, Panicafé, Lapana, Del Pilar, Lo+Rico, 707, Armando…) y pasarlas a la planilla | G3 | Socios / campo | P2 | T017 | PENDIENTE | Base de reseñas codificada (E-04 §9b) |
+| T040 | Revisar la calculadora de equilibrio (E-11): cargar PVP, mix, IVA, impuestos y flete reales; guardar el escenario "Base" y exportarlo | G6/G7 | Fabiola + Oscar | P1 | T024 | PENDIENTE | Escenario base validado por los socios |
 | T026 | Gate Review G0 (fecha objetivo 09/10) | G0 | IA + Socios | P1 | T022, T023 | BACKLOG | GO a G1–G3 |
 
 \* Las investigaciones de escritorio (desk research) pueden empezar antes del cierre formal de G0 porque no comprometen inversión; se recomienda arrancarlas en paralelo si los socios lo aprueban.

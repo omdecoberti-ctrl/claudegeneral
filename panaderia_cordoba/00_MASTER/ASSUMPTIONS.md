@@ -154,5 +154,6 @@
 - **Cómo validar:** prefactibilidad HOL sobre 2–3 parcelas candidatas y consulta a un gestor (T034, T018). **Estado:** NO VALIDADA.
 
 ### A022 — Precio de transferencia UC competitivo
+- **Evidencia (06/10):** con la lista de UC (sin IVA) y PVP de mercado, el markup ronda **4,4–5,6 veces** en medialunas y facturas: el costo de UC con flete y merma queda en **~18–25%** del PVP sin IVA, bastante por debajo del umbral de ~40% de I011. Pendiente: confirmar el flete real y los PVP (calculadora E-11).
 - **Por qué importa:** con un costo menor al ~40% del precio de venta, el modelo híbrido (M3) gana claramente contra la elaboración completa. Por encima del 48%, conviene elaborar (I011 §3.1). Caso Tim Hortons: R024.
 - **Cómo validar:** T024 (catálogo y precios de transferencia de UC) + flete semanal vs. quincenal. **Estado:** NO VALIDADA.

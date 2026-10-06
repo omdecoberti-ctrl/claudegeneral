@@ -23,4 +23,5 @@ Cada tarea abierta tiene su ficha con: para qué sirve, qué hay que hacer paso 
 - [T037 — Cotizar el equipamiento del modelo híbrido](T037.md) · Oscar · 06/11
 - [T038 — Verificar corners y consultar condiciones de shop in shop](T038.md) · Socios + IA · 13/11
 - [T039 — Relevar reseñas de Google Maps a mano](T039.md) · Socios / campo · 12/10 → 06/11
+- [T040 — Revisar y cargar datos reales en la calculadora de equilibrio](T040.md) · Fabiola + Oscar · 23/10
 - [T033 — Degustación a ciegas E002 (producto UC vs. competencia)](T033.md) · Hermanos + IA · Antes del 13/11 (idealmente entre el 26/10 y el 06/11)

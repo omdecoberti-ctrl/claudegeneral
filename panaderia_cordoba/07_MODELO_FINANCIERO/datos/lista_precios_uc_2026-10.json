@@ -1,0 +1,438 @@
+{
+ "fuente": "Lista de precios Ultracongelados Canalsenses, sin IVA (captura enviada por Oscar, 06/10/2026)",
+ "nota": "Pastelería 400–410: la unidad es el paquete y el bulto trae 6–12 paquetes",
+ "productos": [
+  {
+   "codigo": "001",
+   "producto": "Medialunas dulces de manteca 40 g",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 150,
+   "precio_bulto_sin_iva": 33593.1
+  },
+  {
+   "codigo": "002",
+   "producto": "Medialunas saladas de manteca 40 g",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 150,
+   "precio_bulto_sin_iva": 33593.1
+  },
+  {
+   "codigo": "003",
+   "producto": "Medialunas dulces de manteca 35 g",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 180,
+   "precio_bulto_sin_iva": 36879.6
+  },
+  {
+   "codigo": "004",
+   "producto": "Medialunas saladas de manteca 35 g",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 180,
+   "precio_bulto_sin_iva": 36879.6
+  },
+  {
+   "codigo": "005",
+   "producto": "Medialunas de grasa",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 210,
+   "precio_bulto_sin_iva": 40799.1
+  },
+  {
+   "codigo": "006",
+   "producto": "Facturas surtidas c/crema y membrillo",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 108,
+   "precio_bulto_sin_iva": 35362.3
+  },
+  {
+   "codigo": "007",
+   "producto": "Facturas surtidas c/crema",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 108,
+   "precio_bulto_sin_iva": 35362.3
+  },
+  {
+   "codigo": "009",
+   "producto": "Vigilantes con crema",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 126,
+   "precio_bulto_sin_iva": 32789.3
+  },
+  {
+   "codigo": "010",
+   "producto": "Sacramentos",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 126,
+   "precio_bulto_sin_iva": 32052.5
+  },
+  {
+   "codigo": "011",
+   "producto": "Cremaditas con crema y membrillo",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 120,
+   "precio_bulto_sin_iva": 40321.1
+  },
+  {
+   "codigo": "012",
+   "producto": "Circulares con crema",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 120,
+   "precio_bulto_sin_iva": 37343.3
+  },
+  {
+   "codigo": "013",
+   "producto": "Tortitas negras",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 108,
+   "precio_bulto_sin_iva": 34664.9
+  },
+  {
+   "codigo": "014",
+   "producto": "Facturas de hojaldre con crema",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 135,
+   "precio_bulto_sin_iva": 47485.9
+  },
+  {
+   "codigo": "015",
+   "producto": "Jesuitas de hojaldre",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 144,
+   "precio_bulto_sin_iva": 44024.6
+  },
+  {
+   "codigo": "016",
+   "producto": "Criollos grandes",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 140,
+   "precio_bulto_sin_iva": 26131.2
+  },
+  {
+   "codigo": "017",
+   "producto": "Criollos cordobeses",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 315,
+   "precio_bulto_sin_iva": 30978.1
+  },
+  {
+   "codigo": "018",
+   "producto": "Criollos chicharrón",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 315,
+   "precio_bulto_sin_iva": 33037.1
+  },
+  {
+   "codigo": "019",
+   "producto": "Coronitas",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 60,
+   "precio_bulto_sin_iva": 28456.8
+  },
+  {
+   "codigo": "020",
+   "producto": "Placas de chicharrón",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 63,
+   "precio_bulto_sin_iva": 28571.4
+  },
+  {
+   "codigo": "022",
+   "producto": "Tortillas tucumanas",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 120,
+   "precio_bulto_sin_iva": 36405.2
+  },
+  {
+   "codigo": "024",
+   "producto": "Bizcochos grandes",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 140,
+   "precio_bulto_sin_iva": 20189.0
+  },
+  {
+   "codigo": "025",
+   "producto": "Chipá (por kg)",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "kg",
+   "unidades_por_bulto": 7,
+   "precio_bulto_sin_iva": 61678.5
+  },
+  {
+   "codigo": "026",
+   "producto": "Vigilantes mixtos",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 126,
+   "precio_bulto_sin_iva": 32789.3
+  },
+  {
+   "codigo": "027",
+   "producto": "Facturas con dulce de leche",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 108,
+   "precio_bulto_sin_iva": 35362.3
+  },
+  {
+   "codigo": "030",
+   "producto": "Facturas surtidas c/crema y dulce de leche",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 108,
+   "precio_bulto_sin_iva": 35362.3
+  },
+  {
+   "codigo": "031",
+   "producto": "Criollito con queso",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 540,
+   "precio_bulto_sin_iva": 37195.0
+  },
+  {
+   "codigo": "032",
+   "producto": "Croissant",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 60,
+   "precio_bulto_sin_iva": 31876.0
+  },
+  {
+   "codigo": "033",
+   "producto": "Super medialunas dulces de manteca 50 g",
+   "categoria": "Facturas y criollos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 126,
+   "precio_bulto_sin_iva": 32450.9
+  },
+  {
+   "codigo": "101",
+   "producto": "Pan milonguita (por kg)",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "kg",
+   "unidades_por_bulto": 3,
+   "precio_bulto_sin_iva": 11680.8
+  },
+  {
+   "codigo": "102",
+   "producto": "Pan milonguita de salvado (por kg)",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "kg",
+   "unidades_por_bulto": 3.5,
+   "precio_bulto_sin_iva": 14944.6
+  },
+  {
+   "codigo": "105",
+   "producto": "Pan baguetín (por kg)",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "kg",
+   "unidades_por_bulto": 3.5,
+   "precio_bulto_sin_iva": 14399.3
+  },
+  {
+   "codigo": "106",
+   "producto": "Pan flauta",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 48,
+   "precio_bulto_sin_iva": 13667.1
+  },
+  {
+   "codigo": "107",
+   "producto": "Pan de lomo",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 30,
+   "precio_bulto_sin_iva": 21478.4
+  },
+  {
+   "codigo": "108",
+   "producto": "Pan de campo",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 27,
+   "precio_bulto_sin_iva": 16481.8
+  },
+  {
+   "codigo": "110",
+   "producto": "Pan de hamburguesa",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 45,
+   "precio_bulto_sin_iva": 24603.1
+  },
+  {
+   "codigo": "111",
+   "producto": "Pan de choripán",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 60,
+   "precio_bulto_sin_iva": 23040.3
+  },
+  {
+   "codigo": "116",
+   "producto": "Pan mignon (por kg)",
+   "categoria": "Panes pre-cocidos",
+   "unidad_venta": "kg",
+   "unidades_por_bulto": 3.5,
+   "precio_bulto_sin_iva": 13728.7
+  },
+  {
+   "codigo": "400",
+   "producto": "Alfajorcito de maicena (paquete x 12)",
+   "categoria": "Pastelería",
+   "unidad_venta": "paq.",
+   "unidades_por_bulto": 8,
+   "precio_bulto_sin_iva": 33255.32
+  },
+  {
+   "codigo": "401",
+   "producto": "Alfajorcito de chocolate (paquete x 12)",
+   "categoria": "Pastelería",
+   "unidad_venta": "paq.",
+   "unidades_por_bulto": 8,
+   "precio_bulto_sin_iva": 37677.19
+  },
+  {
+   "codigo": "402",
+   "producto": "Pepas de membrillo 220 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "paq.",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 14727.35
+  },
+  {
+   "codigo": "403",
+   "producto": "Coquitos 200 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "paq.",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 20766.42
+  },
+  {
+   "codigo": "404",
+   "producto": "Palmerita mantequilla 200 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "paq.",
+   "unidades_por_bulto": 12,
+   "precio_bulto_sin_iva": 39760.27
+  },
+  {
+   "codigo": "405",
+   "producto": "Pastafrola de membrillo 500 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 8,
+   "precio_bulto_sin_iva": 49870.72
+  },
+  {
+   "codigo": "406",
+   "producto": "Pastafrola de batata 500 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 8,
+   "precio_bulto_sin_iva": 49870.72
+  },
+  {
+   "codigo": "407",
+   "producto": "Budín de chocolate con chips 300 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 17306.93
+  },
+  {
+   "codigo": "408",
+   "producto": "Budín de frutos secos 320 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 16711.75
+  },
+  {
+   "codigo": "409",
+   "producto": "Budín relleno de dulce de leche 310 g",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 15593.41
+  },
+  {
+   "codigo": "410",
+   "producto": "Budín de limón con amapola",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 6,
+   "precio_bulto_sin_iva": 13799.41
+  },
+  {
+   "codigo": "450",
+   "producto": "Churros rellenos (congelados)",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 120,
+   "precio_bulto_sin_iva": 56368.8
+  },
+  {
+   "codigo": "451",
+   "producto": "Donas rellenas baño chocolate",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 48,
+   "precio_bulto_sin_iva": 30806.9
+  },
+  {
+   "codigo": "452",
+   "producto": "Donas rellenas baño rosa",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 48,
+   "precio_bulto_sin_iva": 31146.7
+  },
+  {
+   "codigo": "453",
+   "producto": "Pasteles de hojaldre membrillo",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 12,
+   "precio_bulto_sin_iva": 15011.4
+  },
+  {
+   "codigo": "454",
+   "producto": "Pasteles de hojaldre batata",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 12,
+   "precio_bulto_sin_iva": 15011.4
+  },
+  {
+   "codigo": "455",
+   "producto": "Tortas fritas (congeladas)",
+   "categoria": "Pastelería",
+   "unidad_venta": "u",
+   "unidades_por_bulto": 36,
+   "precio_bulto_sin_iva": 22870.8
+  }
+ ]
+}
