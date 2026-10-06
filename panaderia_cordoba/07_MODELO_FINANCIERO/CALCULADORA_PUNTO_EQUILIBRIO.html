@@ -126,7 +126,7 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:8px;font-siz
     <div class="card">
       <h3>Nivel de ventas</h3>
       <div class="field"><label>Cómo cargar las ventas<span class="hint">Por tickets o por un total mensual</span></label>
-        <select id="v_modo"><option value="tickets">Tickets × ticket promedio</option><option value="total">Total mensual</option></select></div>
+        <select id="v_modo"><option value="tickets">Tickets × ticket promedio</option><option value="total">Total mensual</option><option value="bultos">Bultos comprados por mes (pestaña 3)</option></select></div>
       <div class="field"><label>Tickets por día</label><input type="number" id="v_tickets" min="0" step="5"></div>
       <div class="field"><label>Ticket promedio con IVA ($)<span class="hint">Referencia cafeterías Córdoba: $9–10 mil por persona (I005b)</span></label><input type="number" id="v_ticket" min="0" step="100"></div>
       <div class="field"><label>Días abiertos por mes</label><input type="number" id="v_dias" min="1" max="31" step="1"></div>
@@ -345,18 +345,23 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 function calc(){
   const r={};
-  r.B = S.v.modo==="tickets" ? num(S.v.tickets)*num(S.v.ticket)*num(S.v.dias) : num(S.v.total);
   const sp=num(S.split.pan), sc=num(S.split.cafe), so=num(S.split.otros), st=sp+sc+so||1;
+  if(S.v.modo==="bultos"){ // la venta sale de los bultos comprados por mes
+    const bp=S.prods.reduce((a,p)=>a+(p.on?num(p.bul)*(num(p.uxb)||1)*(1-Math.min(num(p.merma),95)/100)*num(p.pvp):0),0);
+    r.B = sp>0 ? bp*st/sp : bp;
+  } else r.B = S.v.modo==="tickets" ? num(S.v.tickets)*num(S.v.ticket)*num(S.v.dias) : num(S.v.total);
   r.splitSum=sp+sc+so;
   r.Bp=r.B*sp/st; r.Bc=r.B*sc/st; r.Bo=r.B*so/st;
   const act=S.prods.filter(p=>p.on);
   r.mixSum=act.reduce((a,p)=>a+num(p.mix),0);
+  if(S.v.modo==="bultos"){ const v=S.prods.map(p=>p.on?num(p.bul)*(num(p.uxb)||1)*(1-Math.min(num(p.merma),95)/100)*num(p.pvp):0), tot=v.reduce((a,x)=>a+x,0);
+    S.prods.forEach((p,i)=>{ p._mixB = tot>0 ? v[i]/tot*100 : 0; }); r.mixSum=100; }
   const fD=1-num(S.uc.desc)/100, fF=1+num(S.uc.flete)/100;
   r.rows=S.prods.map(p=>{
     const o={p}; const merma=Math.min(num(p.merma),95)/100, uxb=num(p.uxb)||1, iva=num(p.iva)/100;
     o.costLista=num(p.bulto)/uxb;
     o.cost=o.costLista*fD*fF/(1-merma);
-    o.share = p.on && r.mixSum>0 ? num(p.mix)/r.mixSum : 0;
+    o.share = S.v.modo==="bultos" ? (p.on?p._mixB/100:0) : (p.on && r.mixSum>0 ? num(p.mix)/r.mixSum : 0);
     o.bruta=r.Bp*o.share; o.neta=o.bruta/(1+iva);
     o.units = num(p.pvp)>0 ? o.bruta/num(p.pvp) : 0;
     o.cmv=o.units*o.cost;
@@ -424,10 +429,10 @@ function syncInputs(){ // tras restablecer / importar
 
 function buildProdTable(){
   const t=document.getElementById("tProd");
-  let h=`<thead><tr><th>Usar</th><th>Cód.</th><th>Producto</th><th>Unidad</th><th class="n">Unid./bulto</th><th class="n">Precio bulto sin IVA</th><th class="n">Costo lista / unid.</th><th class="n">Merma %</th><th class="n">Costo final / unid.</th><th class="n">PVP con IVA</th><th class="n">IVA %</th><th class="n">Markup</th><th class="n">Mix %</th><th class="n">Unid./mes</th><th class="n">Bultos/mes</th><th class="n">Bultos/15 días</th><th class="n">Margen %</th><th></th></tr></thead><tbody>`;
+  let h=`<thead><tr><th>Usar</th><th>Cód.</th><th>Producto</th><th>Unidad</th><th class="n">Unid./bulto</th><th class="n">Precio bulto sin IVA</th><th class="n">Costo lista / unid.</th><th class="n">Merma %</th><th class="n">Costo final / unid.</th><th class="n">PVP con IVA</th><th class="n">IVA %</th><th class="n">Markup</th><th class="n">Mix %</th><th class="n" title="Solo en el modo “Bultos comprados por mes”">Compra bultos/mes</th><th class="n">Unid./mes</th><th class="n">Bultos/mes</th><th class="n">Bultos/15 días</th><th class="n">Margen %</th><th></th></tr></thead><tbody>`;
   let last="";
   S.prods.forEach((p,i)=>{
-    if(p.cat!==last){ h+=`<tr class="cat"><td colspan="18">${esc(CATS[p.cat]||p.cat)}</td></tr>`; last=p.cat; }
+    if(p.cat!==last){ h+=`<tr class="cat"><td colspan="19">${esc(CATS[p.cat]||p.cat)}</td></tr>`; last=p.cat; }
     h+=`<tr data-i="${i}" class="${p.on?"":"off"}">
       <td><input type="checkbox" data-k="on" ${p.on?"checked":""} aria-label="Usar ${esc(p.nombre)}"></td>
       <td><input type="text" class="w60" data-k="cod" value="${esc(p.cod)}" style="width:52px"></td>
@@ -442,10 +447,11 @@ function buildProdTable(){
       <td class="n"><input type="number" class="w60" data-k="iva" value="${p.iva}" step="0.5" min="0"></td>
       <td class="n" data-o="mu"></td>
       <td class="n"><input type="number" class="w60" data-k="mix" value="${p.mix}" step="0.5" min="0"></td>
+      <td class="n"><input type="number" class="w60" data-k="bul" value="${p.bul||0}" step="0.5" min="0"></td>
       <td class="n" data-o="units"></td><td class="n" data-o="bultos"></td><td class="n" data-o="bultos15"></td><td class="n" data-o="mgPct"></td>
       <td><button data-del="${i}" title="Quitar producto" aria-label="Quitar ${esc(p.nombre)}">✕</button></td></tr>`;
   });
-  h+=`</tbody><tfoot><tr><td colspan="12">Total panificados</td><td class="n" id="ftMix"></td><td class="n" id="ftUnits"></td><td class="n" id="ftBul"></td><td class="n" id="ftBul15"></td><td class="n" id="ftMg"></td><td></td></tr></tfoot>`;
+  h+=`</tbody><tfoot><tr><td colspan="12">Total panificados</td><td class="n" id="ftMix"></td><td class="n" id="ftCompra"></td><td class="n" id="ftUnits"></td><td class="n" id="ftBul"></td><td class="n" id="ftBul15"></td><td class="n" id="ftMg"></td><td></td></tr></tfoot>`;
   t.innerHTML=h;
 }
 document.getElementById("tProd").addEventListener("input",e=>{
@@ -516,7 +522,7 @@ function update(){
       `. Con las ventas cargadas (${$M(r.B)}) el resultado es <b class="${resCls}">${$m(r.Res)}</b> por mes.`;
   } else { be.className="callout warn"; be.innerHTML="Con estos precios y costos el margen de contribución es negativo: ningún volumen de ventas alcanza el equilibrio. Revisen PVP, mix o costos variables."; }
   document.getElementById("splitMsg").innerHTML = Math.abs(r.splitSum-100)>0.01 ? `<span class="badge bad">El mix por línea suma ${nf1.format(r.splitSum)}%</span> Se reparte en proporción, pero conviene que sume 100%.` : `<span class="badge ok">Suma 100%</span>`;
-  document.getElementById("mixMsg").innerHTML = Math.abs(r.mixSum-100)>0.01 ? `<span class="badge bad">El mix de productos suma ${nf1.format(r.mixSum)}%</span> Se calcula en proporción; usen “Llevar el mix a 100%” para ajustarlo.` : `<span class="badge ok">Mix de productos: 100%</span>`;
+  document.getElementById("mixMsg").innerHTML = S.v.modo==="bultos" ? `<span class="badge ok">Modo compras</span> La venta sale de los bultos por mes (columna “Compra bultos/mes”): unidades vendidas = bultos × unidades por bulto × (1 − merma). El mix se calcula solo. Café y otros se suman según el mix por línea de la pestaña 2.` : Math.abs(r.mixSum-100)>0.01 ? `<span class="badge bad">El mix de productos suma ${nf1.format(r.mixSum)}%</span> Se calcula en proporción; usen “Llevar el mix a 100%” para ajustarlo.` : `<span class="badge ok">Mix de productos: 100%</span>`;
   // tabla productos (salidas)
   const rowsEl=document.querySelectorAll("#tProd tr[data-i]");
   let tu=0,tb=0,tn=0,tc2=0;
@@ -526,6 +532,10 @@ function update(){
     const c=tr.querySelector('[data-o="mgPct"]'); c.textContent=pc(o.mgPct); c.className="n "+(o.mgU<0?"neg":"");
     tu+=o.units; tb+=o.bultos; tn+=o.neta; tc2+=o.cmv; });
   document.getElementById("ftMix").textContent=nf1.format(r.mixSum)+"%";
+  document.getElementById("ftCompra").textContent=nf1.format(S.prods.reduce((a,p)=>a+(p.on?num(p.bul):0),0));
+  const modoB=S.v.modo==="bultos";
+  document.querySelectorAll('#tProd tr[data-i]').forEach(tr=>{ const p=S.prods[+tr.dataset.i], mi=tr.querySelector('[data-k="mix"]'), bi=tr.querySelector('[data-k="bul"]');
+    mi.disabled=modoB; bi.disabled=!modoB; if(modoB) mi.value=nf1.format(p._mixB||0).replace(",","."); });
   document.getElementById("ftUnits").textContent=nf0.format(tu);
   document.getElementById("ftBul").textContent=nf1.format(tb);
   document.getElementById("ftBul15").textContent=nf1.format(tb/2);
@@ -627,11 +637,24 @@ document.getElementById("bCsv").onclick=()=>{ const r=calc(); const q=v=>'"'+Str
   r.rows.forEach(o=>{ const p=o.p; lines.push([p.cod,p.nombre,CATS[p.cat]||p.cat,p.unidad,p.uxb,p.bulto,o.cost.toFixed(2),p.pvp,p.iva,p.mix,o.units.toFixed(0),o.bultos.toFixed(1),(o.mgPct*100).toFixed(1)].map(q).join(";")); });
   const blob=new Blob(["﻿"+lines.join("\n")],{type:"text/csv"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="productos_pancba.csv"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); };
 // escenarios con nombre
+// Escenario de ejemplo: compras reales de un cliente de UC que hornea en su local (agosto 2026), con medialunas de 50 g
+function presetCliente(){
+  const s=defaults(); s.v.modo="bultos"; s.split={pan:100,cafe:0,otros:0};
+  const B={"025":14,"019":1,"011":1,"018":1,"017":3,"014":7,"007":10,"105":1,"108":5,"027":4,"452":5,"451":5,"031":3,
+           "033":17*150/126}; // 17 bultos de medialunas dulces 40 g x150 = 2.550 medialunas → en super medialunas 50 g x126
+  s.prods.forEach(p=>{ p.bul=B[p.cod]||0; p.mix=0; });
+  const i033=s.prods.findIndex(p=>p.cod==="033");
+  s.prods.splice(i033+1,0,
+    {cod:"033S",nombre:"Super medialunas SALADAS 50 g (supuesto: mismo precio que 033)",cat:"F",unidad:"u",uxb:126,bulto:32450.90,pvp:1700,mix:0,merma:6,iva:10.5,on:true,bul:5*150/126},
+    {cod:"MARG",nombre:"Margaritas c/dulce de leche x 90 (precio ESTIMADO: no está en la lista)",cat:"F",unidad:"u",uxb:90,bulto:29468.70,pvp:1600,mix:0,merma:6,iva:10.5,on:true,bul:10});
+  return s;
+}
+const PRESETS={"Ejemplo: compras de un cliente UC (ago-2026) con medialunas de 50 g":presetCliente};
 function scenList(){ try{ return JSON.parse(localStorage.getItem(KEYS)||"{}"); }catch(e){ return {}; } }
-function fillScen(){ const sel=document.getElementById("selScen"), l=scenList(); sel.innerHTML='<option value="">Escenarios guardados…</option>'+Object.keys(l).map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join(""); }
+function fillScen(){ const sel=document.getElementById("selScen"), l=scenList(); sel.innerHTML='<option value="">Escenarios guardados…</option>'+Object.keys(PRESETS).map(k=>`<option value="preset:${esc(k)}">⭐ ${esc(k)}</option>`).join("")+Object.keys(l).map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join(""); }
 document.getElementById("bSave").onclick=()=>{ const n=prompt("Nombre del escenario (ej.: Base, Optimista, Villa Cabrera 120 m²):"); if(!n) return; const l=scenList(); l[n]=S; try{ localStorage.setItem(KEYS,JSON.stringify(l)); fillScen(); document.getElementById("selScen").value=n; }catch(e){ alert("No se pudo guardar en este navegador. Usen “Exportar”."); } };
-document.getElementById("selScen").onchange=e=>{ const l=scenList(), o=l[e.target.value]; if(o){ S=JSON.parse(JSON.stringify(o)); rebuild(); } };
-document.getElementById("bDelScen").onclick=()=>{ const sel=document.getElementById("selScen"), n=sel.value; if(!n) return; if(!confirm(`¿Borrar el escenario "${n}"?`)) return; const l=scenList(); delete l[n]; try{ localStorage.setItem(KEYS,JSON.stringify(l)); }catch(e){} fillScen(); };
+document.getElementById("selScen").onchange=e=>{ const v=e.target.value; if(v.startsWith("preset:")){ const f=PRESETS[v.slice(7)]; if(f&&confirm("¿Cargar el escenario de ejemplo? Reemplaza los valores actuales (guárdenlos antes si los quieren conservar).")){ S=f(); rebuild(); } return; } const l=scenList(), o=l[v]; if(o){ S=JSON.parse(JSON.stringify(o)); rebuild(); } };
+document.getElementById("bDelScen").onclick=()=>{ const sel=document.getElementById("selScen"), n=sel.value; if(!n||n.startsWith("preset:")) return; if(!confirm(`¿Borrar el escenario "${n}"?`)) return; const l=scenList(); delete l[n]; try{ localStorage.setItem(KEYS,JSON.stringify(l)); }catch(e){} fillScen(); };
 
 S=load(); bindAll(); buildProdTable(); buildVarTable(); buildFixTable(); fillScen(); update();
 try{ const t=sessionStorage.getItem("pancba_tab"); if(t){ const b=document.querySelector(`.tabs button[data-t="${t}"]`); if(b) b.click(); } }catch(e){}

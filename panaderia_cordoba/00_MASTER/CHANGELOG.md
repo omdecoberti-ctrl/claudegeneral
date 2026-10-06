@@ -80,3 +80,4 @@
   - Calcula equilibrio en $ y tickets por día, factor y PVP de equilibrio, bultos por quincena y escenarios exportables.
   - Escenario de partida: equilibrio ≈ $41 M por mes con IVA (≈ 162 tickets por día).
 - Registros: T040 con ficha, Q084 y evidencia en A022.
+- Calculadora: modo "Bultos comprados por mes" y escenario de ejemplo con las compras reales de un cliente de UC (ago-2026), con medialunas de 50 g. Resultado: con esa compra el local pierde ≈ $7–12 M por mes; el equilibrio pide ≈ 145 bultos por mes con café o ≈ 240 solo con panificados.

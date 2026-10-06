@@ -62,3 +62,33 @@ Es un punto de partida para discutir, no una proyección.
 
 ## Relación con otros documentos
 I011 (modelo productivo: la regla del ~40% del precio de venta se ve acá en la columna "Markup") · A001 (ticket) · A010 (equilibrio en ≤ 12 meses) · A022 (precio de transferencia) · PD013 (precios) · PD014 (GO económico) · E-10 (delivery).
+
+## Escenario de ejemplo: compras reales de un cliente de UC (agosto 2026) con medialunas de 50 g
+
+En la calculadora aparece como **⭐ Ejemplo: compras de un cliente UC (ago-2026) con medialunas de 50 g** en el selector de escenarios. Usa el modo nuevo **"Bultos comprados por mes"**: la venta sale de los bultos (unidades vendidas = bultos × unidades por bulto × (1 − merma)).
+
+| Supuesto | Detalle |
+|---|---|
+| Compra mensual | 92 bultos en 16 productos (chipá 14, facturas surtidas c/crema 10, margaritas 10, hojaldre 7, etc.) |
+| Medialunas | Las 17 + 5 cajas de 40 g x150 (3.300 medialunas) se pasan a **super medialunas de 50 g x126**, manteniendo la cantidad de medialunas: ≈ 20,2 cajas dulces + 6,0 saladas |
+| Medialuna salada de 50 g | **No está en la lista:** se supone igual precio que la 033 |
+| Margaritas c/dulce de leche x90 | **No está en la lista:** precio estimado con el costo unitario de las facturas ($327,43) |
+| Facturas de hojaldre | El cliente compra la caja x150; la lista tiene x135 (se usó la de la lista) |
+| PVP, merma y costos fijos | Los de partida de la calculadora |
+
+**Resultado [ESTIMACIÓN]:**
+
+| | Solo panificados | Con café y otros (mix 60/30/10) |
+|---|---|---|
+| Ventas con IVA / mes | $14,9 M (≈ USD 9.600) | $24,8 M (≈ USD 16.000) |
+| Margen de contribución | 57% | 58% |
+| Resultado / mes | **−$12,1 M** | **−$7,1 M** |
+| Punto de equilibrio | $38,8 M/mes | $38,9 M/mes |
+| Compra necesaria para el equilibrio | **≈ 240 bultos/mes** (2,6 veces) | **≈ 145 bultos/mes** (1,6 veces) |
+| Precios necesarios con ese volumen | ×2,08 | ×1,39 |
+
+**Lectura [INTERPRETACIÓN]:**
+- El volumen de compra de ese cliente (~3.100 medialunas y ~9.000 unidades por mes, ≈ 300 por día) **no alcanza para cubrir la estructura del local propuesto**: alquiler, 7 personas y amortización.
+- Hace falta **1,6 veces ese volumen con café** o **2,6 veces solo con panificados**.
+- **El café es el que acerca el equilibrio.**
+- Si el local 1 arranca con un volumen parecido, conviene una estructura más chica: menos personal o formato corner (E-09).
